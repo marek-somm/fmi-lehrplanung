@@ -16,6 +16,12 @@ npm install -g @vue/cli
 git clone https://github.com/darafsa/fmi-lehrplanung.git
 ```
 
+or
+
+Use GitHub Desktop:
+
+<img src=".\assets\git-clone.png" style="zoom: 30%;" />
+
 ### Run Vue
 
 ```
