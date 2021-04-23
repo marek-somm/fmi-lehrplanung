@@ -1,7 +1,21 @@
 .DS_Store
-node_modules
 /dist
-!/dist/sass-loader/
+
+node_modules/*
+!node_modules/axios/
+!node_modules/core-js/
+!node_modules/vue/
+!node_modules/vue-router/
+
+!node_modules/@vue/
+node_modules/@vue/*
+!node_modules/@vue/compiler-sfc/
+
+!node_modules/babel-eslint/
+!node_modules/eslint/
+!node_modules/eslint-plugin-vue/
+!node_modules/node-sass/
+!node_modules/sass-loader/
 
 # local env files
 .env.local
