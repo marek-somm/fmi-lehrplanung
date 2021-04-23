@@ -1,3 +1,5 @@
 module.exports = {
-	publicPath: '/fmi-lehrplanung',
-}
+	publicPath: process.env.NODE_ENV === 'production'
+	? '/fmi-lehrplanung'
+	: '/'
+ }

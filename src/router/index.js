@@ -36,7 +36,7 @@ const routes = [
 
 const router = createRouter({
 	history: createWebHistory(),
-	base: 'fmi-lehrplanung',
+	base: '/fmi-lehrplanung',
 	routes,
 })
 
