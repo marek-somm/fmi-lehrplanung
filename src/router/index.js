@@ -21,21 +21,15 @@ const routes = [
 		component: ServerTest,
 	},
 	{
-		path: '/:pathMatch(.*)*',
+		path: '/:catchAll(.*)',
 		name: 'not-found',
-		component: NotFound,
-		redirect: Home,
-	},
-	{
-		path: '/:pathMatch(.*)',
-		name: 'bad-not-found',
 		component: NotFound,
 		redirect: Home,
 	},
 ]
 
 const router = createRouter({
-	history: createWebHistory(),
+	history: createWebHistory(process.env.BASE_URL),
 	base: '/fmi-lehrplanung',
 	routes,
 })
