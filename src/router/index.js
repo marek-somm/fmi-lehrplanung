@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home'
 import About from '@/views/About'
 import NotFound from '@/views/NotFound'
-import ServerTest from "@/views/ServerTest"
+import ServerTest from '@/views/ServerTest'
 
 const routes = [
 	{
@@ -18,7 +18,7 @@ const routes = [
 	{
 		path: '/api',
 		name: 'ServerTest',
-		component: ServerTest
+		component: ServerTest,
 	},
 	{
 		path: '/:pathMatch(.*)*',
@@ -36,6 +36,7 @@ const routes = [
 
 const router = createRouter({
 	history: createWebHistory(),
+	base: 'fmi-lehrplanung',
 	routes,
 })
 
