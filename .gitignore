@@ -2,6 +2,9 @@
 /dist
 node_modules
 
+# for now, will change i the future
+backend
+
 # local env files
 .env.local
 .env.*.local
