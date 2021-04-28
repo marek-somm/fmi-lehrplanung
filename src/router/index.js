@@ -22,7 +22,7 @@ const routes = [
 	},
 	{
 		path: '/:catchAll(.*)',
-		name: 'not-found',
+		name: 'NotFound',
 		component: NotFound,
 		redirect: Home,
 	},
