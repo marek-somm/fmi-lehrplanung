@@ -4,14 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DataController extends Controller
-{
+class DataController extends Controller {
     private function formatString($str) {
         $str = strtolower($str);
-        $str = str_replace(" ", "", $str);
         $str = str_replace("-", "", $str);
         return $str;
-    } 
+    }
 
     public function test(Request $request) {
         $data = [
@@ -40,13 +38,19 @@ class DataController extends Controller
 
         $name = $request->input('name');
         $answer = [];
-        
-        foreach(array_keys($data) as &$elem) {
-            if(str_contains($this->formatString($elem), $this->formatString($name))) {
-                array_push($answer, $data[$elem]);
+
+        foreach (array_keys($data) as &$item) {
+            $push = true;
+            foreach (explode(" ", $name) as &$elem) {
+                if (!str_contains($this->formatString($item), $this->formatString($elem))) {
+                    $push = false;
+                }
+            }
+            if($push) {
+                array_push($answer, $data[$item]);
             }
         }
 
         return response()->json($answer, 200);
-	}
+    }
 }

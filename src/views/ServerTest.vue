@@ -2,7 +2,6 @@
 	<div class="server-test--container">
 		<input class="search" v-model="data.input" />
 		<span>Loading: {{ data.loading }}</span>
-		Data: {{ data.data }}
 		<h3>Ergebnisse</h3>
 		<div class="results" v-if="data.data">
 			<span v-for="(elem, index) in data.data" :key="index"
@@ -11,6 +10,8 @@
 			>
 		</div>
 		<span v-show="data.error">{{ data.error }}</span>
+		<div class="break"></div>
+		Data: {{ data.data }}
 	</div>
 </template>
 
@@ -75,6 +76,10 @@ export default {
 	.results {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.break {
+		margin: 3rem;
 	}
 }
 </style>
