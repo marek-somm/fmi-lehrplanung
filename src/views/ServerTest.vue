@@ -1,28 +1,37 @@
 <template>
-	<div>
-		{{ data.loading }} <br />
-		{{ data.data }} <br>
-		{{ data.error }}
+	<div class="server-test--container">
+		<input class="search" v-model="data.input" />
+		<span>Loading: {{ data.loading }}</span>
+		<span v-show="data.data">{{ data.data }}</span>
+		<span v-show="data.error">{{ data.error }}</span>
 	</div>
 </template>
 
 <script>
-import { onMounted, reactive } from "vue";
+import { reactive, watch } from "vue";
 import axios from "axios";
 export default {
 	setup() {
 		const data = reactive({
+			input: "",
 			data: null,
-			loading: true,
-			error: null
+			loading: false,
+			error: null,
+		});
+
+		watch(() => data.input, () => {
+			fetchData(data.input);
 		})
 
-		function fetchData() {
+		function fetchData(name) {
 			data.loading = true;
 
 			axios
-				.get("http://localhost", {
-					headers: {"Content-Type": "application/json"}
+				.get("http://localhost:8000/api/data/test", {
+					headers: { "Content-Type": "application/json" },
+					params: {
+						name: name,
+					},
 				})
 				.then((res) => {
 					data.data = res.data;
@@ -34,10 +43,6 @@ export default {
 				});
 		}
 
-		onMounted(() => {
-			fetchData();
-		});
-
 		return {
 			data,
 		};
@@ -46,4 +51,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.server-test--container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	* {
+		margin-bottom: 1rem;
+	}
+
+	.search {
+		width: 15rem;
+	}
+}
 </style>
