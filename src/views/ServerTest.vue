@@ -1,6 +1,6 @@
 <template>
 	<div class="server-test--container">
-		<input class="search" v-model="data.input" />
+		<input class="search" v-model="data.input" placeholder="Modul Title"/>
 		<span>Loading: {{ data.loading }}</span>
 		<h3>Ergebnisse</h3>
 		<div class="results" v-if="data.data">
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { reactive, watch } from "vue";
+import { onMounted, reactive, watch } from "vue";
 import axios from "axios";
 export default {
 	setup() {
@@ -28,6 +28,10 @@ export default {
 		});
 
 		watch(() => data.input, () => {
+			fetchData(data.input);
+		})
+		
+		onMounted(() => {
 			fetchData(data.input);
 		})
 
