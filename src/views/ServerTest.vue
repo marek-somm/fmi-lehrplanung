@@ -2,7 +2,14 @@
 	<div class="server-test--container">
 		<input class="search" v-model="data.input" />
 		<span>Loading: {{ data.loading }}</span>
-		<span v-show="data.data">{{ data.data }}</span>
+		Data: {{ data.data }}
+		<h3>Ergebnisse</h3>
+		<div class="results" v-if="data.data">
+			<span v-for="(elem, index) in data.data" :key="index"
+				>{{ elem.name }} [{{ elem.type }}] ({{ elem.lp }}LP,
+				{{ elem.sws }}SWS)</span
+			>
+		</div>
 		<span v-show="data.error">{{ data.error }}</span>
 	</div>
 </template>
@@ -23,10 +30,11 @@ export default {
 			fetchData(data.input);
 		})
 
-		function fetchData(name) {
+		async function fetchData(name) {
 			data.loading = true;
+			data.error = null;
 
-			axios
+			await axios
 				.get("http://localhost:8000/api/data/test", {
 					headers: { "Content-Type": "application/json" },
 					params: {
@@ -55,13 +63,18 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
+
 	* {
 		margin-bottom: 1rem;
 	}
 
 	.search {
 		width: 15rem;
+	}
+
+	.results {
+		display: flex;
+		flex-direction: column;
 	}
 }
 </style>
