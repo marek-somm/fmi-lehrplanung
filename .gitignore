@@ -1,6 +1,10 @@
 .DS_Store
 /dist
 node_modules
+.github\workflows
+out
+scripts
+
 
 # local env files
 .env.local

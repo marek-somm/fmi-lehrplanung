@@ -16,7 +16,7 @@ const routes = [
 		component: About,
 	},
 	{
-		path: '/api',
+		path: '/server',
 		name: 'ServerTest',
 		component: ServerTest,
 	},

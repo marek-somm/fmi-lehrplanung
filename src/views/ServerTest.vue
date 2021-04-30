@@ -1,6 +1,6 @@
 <template>
 	<div class="server-test--container">
-		<input class="search" v-model="data.input" placeholder="Modul Title"/>
+		<input class="search" v-model="data.input" placeholder="Modul Title" />
 		<span>Loading: {{ data.loading }}</span>
 		<h3>Ergebnisse</h3>
 		<div class="results" v-if="data.data">
@@ -27,20 +27,26 @@ export default {
 			error: null,
 		});
 
-		watch(() => data.input, () => {
-			fetchData(data.input);
-		})
-		
+		watch(
+			() => data.input,
+			() => {
+				fetchData(data.input);
+			}
+		);
+
 		onMounted(() => {
 			fetchData(data.input);
-		})
+		});
 
 		async function fetchData(name) {
 			data.loading = true;
 			data.error = null;
 
+			if (!name) {
+				name = " ";
+			}
 			await axios
-				.get("http://localhost:8000/api/data/test", {
+				.get("http://arktur.inf-bb.uni-jena.de/api/search", {
 					headers: { "Content-Type": "application/json" },
 					params: {
 						name: name,

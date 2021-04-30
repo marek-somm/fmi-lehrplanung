@@ -14,7 +14,6 @@ import Box from "../components/Box.vue";
 
 export default {
 	components: { Box },
-	name: "Home",
 	setup() {
 		const data = reactive({
 		});
