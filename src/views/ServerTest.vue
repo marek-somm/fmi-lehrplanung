@@ -11,7 +11,6 @@
 		</div>
 		<span v-show="data.error">{{ data.error }}</span>
 		<div class="break"></div>
-		Data: {{ data.data }}
 	</div>
 </template>
 
@@ -46,7 +45,7 @@ export default {
 				name = " ";
 			}
 			await axios
-				.get("http://arktur.inf-bb.uni-jena.de/api/search", {
+				.get("https://arktur.fmi.uni-jena.de/api/search/", {
 					headers: { "Content-Type": "application/json" },
 					params: {
 						name: name,

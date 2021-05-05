@@ -66,7 +66,7 @@ if (input::get('name', false) != false) {
 	header('Content-Type: application/json');
 	echo(json_encode($answer, true));
 } else {
-	header("Location: .$newURL.php");
+	header("Location: /");
 	die();
 }
 

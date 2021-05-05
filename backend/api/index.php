@@ -1,4 +1,4 @@
 <?php
-header("Location: .$newURL.php");
+header("Location: /");
 die();
 ?>
