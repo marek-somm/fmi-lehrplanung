@@ -1,5 +1,7 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 class input {
 	public static function get($key, $value = false) {
 		return (!empty($_GET[$key])) ? $_GET[$key] : $value;
