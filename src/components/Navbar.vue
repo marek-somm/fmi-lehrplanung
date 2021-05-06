@@ -18,15 +18,24 @@
 			<router-link class="link" :to="{ name: 'ServerTest' }"
 				>Server-Test</router-link
 			>
-			<router-link class="link" :to="{ name: 'Login' }">Login</router-link>
+			<router-link class="link" v-if='!user' :to="{name: 'Login'}">Login</router-link>
+			<router-link class="link" v-if='user' :to="{name: 'Logout'}">Logout</router-link>
 		</div>
 	</div>
 </template>
 
 <script>
+import { useStore } from 'vuex';
+import { computed } from 'vue';
+
 export default {
 	setup() {
-		return {};
+		const store = useStore();
+		const user = computed(() => store.state.User.user);
+
+		return {
+			user
+		};
 	},
 };
 </script>

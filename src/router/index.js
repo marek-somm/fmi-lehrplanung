@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home'
 import Login from '@/views/Login'
+import Logout from '@/views/Logout'
 import About from '@/views/About'
 import NotFound from '@/views/NotFound'
 import ServerTest from '@/views/ServerTest'
@@ -17,6 +18,11 @@ const routes = [
 		component: Login,
 	},
 	{
+		path: '/logout',
+		name: 'Logout',
+		component: Logout,
+	},
+	{
 		path: '/about',
 		name: 'About',
 		component: About,
@@ -30,7 +36,6 @@ const routes = [
 		path: '/:catchAll(.*)',
 		name: 'NotFound',
 		component: NotFound,
-		redirect: Home,
 	},
 ]
 

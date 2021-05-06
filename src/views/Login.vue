@@ -2,12 +2,12 @@
 	<div>
 		<h1>Login</h1>
 	</div>
-
+<!-- Placeholder sind nur vorübergehend um login zu testen -->
 	<form class="login_input" @submit.prevent="loginSubmit">
 		<label for="username">
 			<strong>Benutzername:</strong>
 		</label>
-		<input id="username" name="username" v-model="usernameInput" />
+		<input id="username" name="username" placeholder="admin" v-model="usernameInput" />
 		<label for="password">
 			<strong>Passwort:</strong>
 		</label>
@@ -15,6 +15,7 @@
 			id="password"
 			name="password"
 			type="password"
+			placeholder="1234"
 			v-model="passwordInput"
 		/>
 		<br /><br />
@@ -25,6 +26,7 @@
 </template>
 <script>
 import axios from "axios";
+import store from '@/store'
 
 export default {
 	data(){
@@ -38,14 +40,19 @@ export default {
 	},
 	methods:{
 		async loginSubmit(){
-			// TODO Verarbeitung der Daten
 			console.log(this.usernameInput)
 			console.log(this.passwordInput)
-			// TODO Login Funktion -> Session eroeffnen
-			// TODO richtiges Ziel
 			await this.login(this.usernameInput, this.passwordInput)
 			console.log(this.loggedIn)
-			this.$router.push({path: 'About'});
+			if(this.loggedIn){
+				store.dispatch('User/setUser', this.loggedIn)
+				// TODO richtiges Ziel
+				this.$router.push({path: 'About'});
+			}
+			else{
+				// TODO ausgabe aushalb console
+				console.log("Login denied")
+			}
 		},
 		async login(user, pwd) {
 			this.loading = true;
