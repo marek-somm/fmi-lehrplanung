@@ -15,7 +15,7 @@
 		</div>
 		<div class="bottom">
 			<router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-			<router-link class="link" :to="{ name: 'ServerTest' }"
+			<router-link v-if="user" class="link" :to="{ name: 'ServerTest' }"
 				>Server-Test</router-link
 			>
 			<router-link class="link" v-if='!user' :to="{name: 'Login'}">Login</router-link>
