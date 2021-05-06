@@ -6,11 +6,15 @@
 
 <script>
 import store from '@/store'
+import { useRouter } from "vue-router";
+
 export default {
 	setup() {
+    const router = useRouter()
+    
 		store.dispatch('User/setUser', false)
-        window.location.href = '/'
-        // this.$router.push({path: 'About'});
+        //window.location.href = '/'
+        router.push({name: 'Home'});
     }
 }
 </script>
