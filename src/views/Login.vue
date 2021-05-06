@@ -2,12 +2,17 @@
 	<div>
 		<h1>Login</h1>
 	</div>
-<!-- Placeholder sind nur vorübergehend um login zu testen -->
-	<form class="login_input" @submit.prevent="loginSubmit">
-		<label for="username">
+	<!-- Placeholder sind nur vorübergehend um login zu testen -->
+	<form class="login_input" @submit.prevent="loginSubmit()">
+		<label :for="data.username">
 			<strong>Benutzername:</strong>
 		</label>
-		<input id="username" name="username" placeholder="admin" v-model="usernameInput" />
+		<input
+			id="username"
+			name="username"
+			placeholder="admin"
+			v-model="data.usernameInput"
+		/>
 		<label for="password">
 			<strong>Passwort:</strong>
 		</label>
@@ -16,7 +21,7 @@
 			name="password"
 			type="password"
 			placeholder="1234"
-			v-model="passwordInput"
+			v-model="data.passwordInput"
 		/>
 		<br /><br />
 		<button>
@@ -27,36 +32,38 @@
 <script>
 import axios from "axios";
 import store from '@/store'
+import { reactive } from 'vue';
+import { useRouter } from "vue-router";
 
 export default {
-	data() {
-		return {
-			usernameInput: "",
-			passwordInput: "",
+	setup() {
+		const request = reactive({
 			loading: false,
 			error: null,
+		});
+		const data = reactive({
+			usernameInput: "",
+			passwordInput: "",
 			loggedIn: false,
-		};
-	},
-	methods:{
-		async loginSubmit(){
-			console.log(this.usernameInput)
-			console.log(this.passwordInput)
-			await this.login(this.usernameInput, this.passwordInput)
-			console.log(this.loggedIn)
-			if(this.loggedIn){
-				store.dispatch('User/setUser', this.loggedIn)
+		});
+		const router = useRouter();
+
+		async function loginSubmit() {
+			await login(data.usernameInput, data.passwordInput)
+			if(data.loggedIn){
+				store.dispatch('User/setUser', data.loggedIn)
 				// TODO richtiges Ziel
-				this.$router.push({path: 'About'});
+				router.push({name: 'Home'});
 			}
 			else{
 				// TODO ausgabe aushalb console
 				console.log("Login denied")
 			}
-		},
-		async login(user, pwd) {
-			this.loading = true;
-			this.error = null;
+		}
+			
+		async function login(user, pwd) {
+			request.loading = true;
+			request.error = null;
 
 			await axios
 				.get("https://arktur.fmi.uni-jena.de/api/login/", {
@@ -67,15 +74,21 @@ export default {
 					},
 				})
 				.then((res) => {
-					this.loggedIn = res.data.success;
-					this.loading = false;
+					data.loggedIn = res.data.success;
+					request.loading = false;
 				})
 				.catch((err) => {
-					this.error = err;
-					this.loading = false;
+					request.error = err;
+					request.loading = false;
 				});
-		},
-	},
+		}
+
+		return {
+			data,
+			loginSubmit,
+			login
+		}
+	}
 };
 </script>
 
