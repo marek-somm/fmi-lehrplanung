@@ -27,25 +27,28 @@
 import axios from "axios";
 
 export default {
-	data(){
+	data() {
 		return {
-			usernameInput: '',
-			passwordInput: '',
+			usernameInput: "",
+			passwordInput: "",
 			loading: false,
 			error: null,
-			loggedIn: false
-		}
+			loggedIn: false,
+		};
 	},
-	methods:{
-		async loginSubmit(){
+	methods: {
+		async loginSubmit() {
 			// TODO Verarbeitung der Daten
-			console.log(this.usernameInput)
-			console.log(this.passwordInput)
+			console.log(this.usernameInput);
+			console.log(this.passwordInput);
 			// TODO Login Funktion -> Session eroeffnen
 			// TODO richtiges Ziel
-			await this.login(this.usernameInput, this.passwordInput)
-			console.log(this.loggedIn)
-			this.$router.push({path: 'About'});
+			await this.login(this.usernameInput, this.passwordInput);
+			console.log(this.loggedIn);
+			this.$router.push({
+				name: "About",
+				params: { loggedIn: this.loggedIn },
+			});
 		},
 		async login(user, pwd) {
 			this.loading = true;
@@ -56,8 +59,8 @@ export default {
 					headers: { "Content-Type": "application/json" },
 					params: {
 						user: user,
-						pwd: pwd
-					}
+						pwd: pwd,
+					},
 				})
 				.then((res) => {
 					this.loggedIn = res.data.success;
@@ -67,8 +70,8 @@ export default {
 					this.error = err;
 					this.loading = false;
 				});
-		}
-	}
+		},
+	},
 };
 </script>
 

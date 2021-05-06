@@ -1,7 +1,6 @@
 <template>
 	<div class="server-test--container">
 		<input class="search" v-model="data.input" placeholder="Modul Title" />
-		<span>Loading: {{ data.loading }}</span>
 		<h3>Ergebnisse</h3>
 		<div class="results" v-if="data.data">
 			<span v-for="(elem, index) in data.data" :key="index"

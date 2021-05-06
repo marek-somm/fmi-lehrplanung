@@ -52,15 +52,17 @@ $name = input::get('name', false);
 
 $answer = array();
 
-foreach (array_keys($data) as &$item) {
-	$push = true;
-    foreach (explode(" ", $name) as &$elem) {
-        if (!str_contains(formatString($item), formatString($elem))) {
-            $push = false;
+if($name != "") {
+    foreach (array_keys($data) as &$item) {
+        $push = true;
+        foreach (explode(" ", $name) as &$elem) {
+            if (!str_contains(formatString($item), formatString($elem))) {
+                $push = false;
+            }
         }
-    }
-    if($push) {
-        array_push($answer, $data[$item]);
+        if($push) {
+            array_push($answer, $data[$item]);
+        }
     }
 }
 
@@ -71,5 +73,3 @@ if (input::get('name', false) != false) {
 	header("Location: /");
 	die();
 }
-
-?>
