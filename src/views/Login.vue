@@ -29,14 +29,14 @@ import axios from "axios";
 import store from '@/store'
 
 export default {
-	data(){
+	data() {
 		return {
-			usernameInput: '',
-			passwordInput: '',
+			usernameInput: "",
+			passwordInput: "",
 			loading: false,
 			error: null,
-			loggedIn: false
-		}
+			loggedIn: false,
+		};
 	},
 	methods:{
 		async loginSubmit(){
@@ -63,8 +63,8 @@ export default {
 					headers: { "Content-Type": "application/json" },
 					params: {
 						user: user,
-						pwd: pwd
-					}
+						pwd: pwd,
+					},
 				})
 				.then((res) => {
 					this.loggedIn = res.data.success;
@@ -74,8 +74,8 @@ export default {
 					this.error = err;
 					this.loading = false;
 				});
-		}
-	}
+		},
+	},
 };
 </script>
 

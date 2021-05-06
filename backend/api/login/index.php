@@ -20,7 +20,7 @@ $user = input::get('user', false);
 $pwd = input::get('pwd', false);
 
 $answer = array();
-if($user == "test" && $pwd == "test") {
+if($user == "admin" && $pwd == "1234") {
 	$answer = array("success" => true);
 } else {
 	$answer = array("success" => false);
