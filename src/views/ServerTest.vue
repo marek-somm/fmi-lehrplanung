@@ -1,67 +1,67 @@
 <template>
 	<div class="server-test--container">
-		<input class="search" v-model="data.input" placeholder="Modul Title" />
-		<h3>Ergebnisse</h3>
-		<div class="results" v-if="data.data">
-			<span v-for="(elem, index) in data.data" :key="index"
-				>{{ elem.name }} [{{ elem.type }}] ({{ elem.lp }}LP,
-				{{ elem.sws }}SWS)</span
-			>
+		<div class="info" :class="{show: data.modul}">
+			<h2 class="titel">Modulinfo</h2>
+			<div class="modul" v-for="modul in data.modul" :key="modul.modulcode">
+				<div class="modul-item" v-for="(item, key, index) in modul" :key="index">
+					<b>{{ key }}</b> : {{ item }}
+				</div>
+			</div>
 		</div>
-		<span v-show="data.error">{{ data.error }}</span>
-		<div class="break"></div>
+		<div class="search" :class="{small: data.modul}">
+			<input
+				class="searchbar"
+				v-model="data.input"
+				placeholder="Modul Title"
+			/>
+			<h3>Ergebnisse</h3>
+			<div class="result" v-if="data.data">
+				<a
+					class="modul"
+					v-for="(elem, index) in data.data"
+					:key="index"
+					@click="getModul(elem.modulcode)"
+				>
+					{{ elem.titel_de }} [{{ elem.modulcode }}] ({{ elem.lp }}LP)
+				</a>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
 import { onMounted, reactive, watch } from "vue";
-import axios from "axios";
+import { request } from "@/scripts/request.js";
 export default {
 	setup() {
+		const rq = new request();
 		const data = reactive({
 			input: "",
 			data: null,
 			loading: false,
-			error: null,
+			modul: null,
 		});
 
 		watch(
 			() => data.input,
 			() => {
-				fetchData(data.input);
+				searchModul(data.input);
 			}
 		);
-
 		onMounted(() => {
-			fetchData(data.input);
+			searchModul(data.input);
 		});
 
-		async function fetchData(name) {
-			data.loading = true;
-			data.error = null;
-
-			if (!name) {
-				name = " ";
-			}
-			await axios
-				.get("https://arktur.fmi.uni-jena.de/api/search/", {
-					headers: { "Content-Type": "application/json" },
-					params: {
-						name: name,
-					},
-				})
-				.then((res) => {
-					data.data = res.data;
-					data.loading = false;
-				})
-				.catch((err) => {
-					data.error = err;
-					data.loading = false;
-				});
+		async function searchModul(name) {
+			data.data = await rq.searchModul(name);
+		}
+		async function getModul(modulcode) {
+			data.modul = await rq.getModul(modulcode);
 		}
 
 		return {
 			data,
+			getModul,
 		};
 	},
 };
@@ -70,24 +70,62 @@ export default {
 <style lang="scss" scoped>
 .server-test--container {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	* {
-		margin-bottom: 1rem;
-	}
+	flex-direction: row;
+	padding-bottom: .5rem;
 
 	.search {
-		width: 15rem;
-	}
-
-	.results {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		.searchbar {
+			width: 15rem;
+			margin-bottom: 1rem;
+		}
+
+		.result {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.modul {
+				transition: all 0.2s ease;
+				width: max-content;
+				margin-bottom: 1rem;
+
+				&:hover {
+					cursor: pointer;
+					text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+					transform: scale(1.05);
+				}
+			}
+		}
 	}
 
-	.break {
-		margin: 3rem;
+	.info {
+		color: transparent;
+		width: 0;
+		text-align: left;
+		padding: 0 .7rem 1rem .7rem;
+
+		.modul {
+			.modul-item {
+				margin: .4rem 0 .4rem 0;
+			}
+		}
+	}
+
+	.show {
+		transition: all .5s ease;
+		color: #2c3e50;
+		border: 1px black solid;
+		width: 500px;
+	}
+
+	.small {
+		transition: width .5s ease;
+		width: calc(100% - 800px) !important;
 	}
 }
 </style>
