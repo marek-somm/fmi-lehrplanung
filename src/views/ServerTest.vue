@@ -22,7 +22,7 @@
 					:key="index"
 					@click="getModul(elem.modulcode)"
 				>
-					{{ elem.titel_de }} [{{ elem.modulcode }}] ({{ elem.lp }}LP)
+					{{ elem.titel_de }} [{{ elem.modulcode }}]
 				</a>
 			</div>
 		</div>

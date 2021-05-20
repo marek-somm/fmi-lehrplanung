@@ -5,7 +5,6 @@ node_modules
 backend-out
 /scripts
 
-
 # local env files
 .env.local
 .env.*.local
