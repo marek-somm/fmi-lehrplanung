@@ -7,17 +7,18 @@ export class request {
 		this.data = null
 	}
 
-	async getModul(modulcode) {
+	async getVeranstaltung(vnr, semester) {
 		await this.fetchData('search/', {
-			modulcode: modulcode,
+			vnr: vnr,
+			semester: semester
 		})
 		return this.data
 	}
 
-	async searchModul(name) {
-		if (!name) name = ' '
+	async searchVeranstaltung(titel, limit) {
 		await this.fetchData('search/', {
-			titel_de: name,
+			titel: titel,
+			limit: limit
 		})
 		return this.data
 	}

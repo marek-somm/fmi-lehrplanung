@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home'
 import Login from '@/views/Login'
 import Logout from '@/views/Logout'
-import About from '@/views/About'
+import Search from '@/views/Search'
 import NotFound from '@/views/NotFound'
 import ServerTest from '@/views/ServerTest'
 import Instanziieren from '@/views/Instanziieren'
@@ -23,12 +23,11 @@ const routes = [
 		path: '/logout',
 		name: 'Logout',
 		component: Logout,
-		redirect: Home,
 	},
 	{
-		path: '/about',
-		name: 'About',
-		component: About,
+		path: '/search',
+		name: 'Search',
+		component: Search,
 	},
 	{
 		path: '/server',
