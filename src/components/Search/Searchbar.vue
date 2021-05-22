@@ -29,7 +29,8 @@ export default {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	background: lightgray;
+	background: #eee;
+	position: sticky;
 
 	.searchbar {
 		width: 15rem;

@@ -5,7 +5,6 @@ import Login from '@/views/Login'
 import Logout from '@/views/Logout'
 import Search from '@/views/Search'
 import NotFound from '@/views/NotFound'
-import ServerTest from '@/views/ServerTest'
 import Instanziieren from '@/views/Instanziieren'
 
 const routes = [
@@ -28,11 +27,6 @@ const routes = [
 		path: '/search',
 		name: 'Search',
 		component: Search,
-	},
-	{
-		path: '/server',
-		name: 'ServerTest',
-		component: ServerTest,
 	},
 	{
 		path: '/instanziieren/:id',

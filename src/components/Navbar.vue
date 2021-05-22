@@ -15,8 +15,8 @@
 		</div>
 		<div class="bottom">
 			<router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-			<router-link v-if="user" class="link" :to="{ name: 'ServerTest' }"
-				>Server-Test</router-link
+			<router-link v-if="user" class="link" :to="{ name: 'Search' }"
+				>Search</router-link
 			>
 			<router-link class="link" v-if='!user' :to="{name: 'Login'}">Login</router-link>
 			<router-link class="link" v-if='user' :to="{name: 'Logout'}">Logout</router-link>
@@ -48,6 +48,8 @@ export default {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: sticky;
+	top: 0;
 
 	.top {
 		display: flex;

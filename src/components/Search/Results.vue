@@ -8,6 +8,7 @@
 			<h3>{{ key }}</h3>
 			<div
 				class="item"
+				:class="{ deactive: !elem.aktiv }"
 				v-for="(elem, index) in semester"
 				:key="index"
 				@click="getVeranstaltung(elem.vnr, elem.semester)"
@@ -28,13 +29,11 @@ export default {
 			type: String,
 		},
 	},
-	setup(props) {
+	setup(props, { emit }) {
 		const rq = new request();
 
 		const veranstaltungen = reactive({
-			defaultLimit: 20,
 			limit: null,
-			selected: null,
 			all: [],
 		});
 
@@ -50,13 +49,11 @@ export default {
 			veranstaltungen.all = await rq.searchVeranstaltung(
 				name,
 				veranstaltungen.limit
-					? veranstaltungen.limit
-					: veranstaltungen.defaultLimit
 			);
 		}
+
 		async function getVeranstaltung(vnr, semester) {
-			console.log(vnr + ", " + semester);
-			veranstaltungen.selected = await rq.getVeranstaltung(vnr, semester);
+			emit('selected', await rq.getVeranstaltung(vnr, semester))
 		}
 
 		return {
@@ -70,8 +67,10 @@ export default {
 <style lang="scss" scoped>
 .results--container {
 	display: flex;
-	flex-direction: column;
+	flex-flow: column;
 	align-items: center;
+	overflow-y: auto;
+	height: calc(100vh - 14.55rem);
 
 	.semester {
 		width: 40%;
@@ -86,6 +85,15 @@ export default {
 				cursor: pointer;
 				background-color: rgb(240, 240, 240);
 				transform: scale(1.01);
+			}
+		}
+
+		.deactive {
+			color: #7f868f;
+			background-color: rgb(240, 240, 240);
+
+			&:hover {
+				background-color: rgb(230, 230, 230);
 			}
 		}
 	}

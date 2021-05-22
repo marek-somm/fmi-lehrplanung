@@ -13,7 +13,7 @@ function formatString($str) {
 $vnr = input::get('vnr', Null);
 $semester = input::get('semester', Null);
 $titel = input::get('titel', Null);
-$limit = input::get('limit', -1);
+$limit = input::get('limit', 20);
 
 if ($titel && trim($titel) != "") {
     $db = connectDatabase();
@@ -63,16 +63,26 @@ if ($titel && trim($titel) != "") {
     $exams = array();
 
     $ret = $db->fetchData(<<<EOF
-        SELECT inf.titel, inf.veranstaltungsnummer, semester, friedolinID, aktiv, sws, name, art, kommentar, literatur, bemerkung, zielgruppe, lerninhalte, leistungsnachweis
+        SELECT inf.titel, inf.veranstaltungsnummer, semester, friedolinID, aktiv, sws, name turnus, art
         FROM Lehrveranstaltung_Info inf
         JOIN Lehrveranstaltung l ON inf.veranstaltungsnummer=l.veranstaltungsnummer 
         JOIN Lehrveranstaltung_Rhytmus r ON l.rhythmusID=r.rhythmusID
+        WHERE inf.veranstaltungsnummer=$vnr AND inf.semester=$semester
+    EOF);
+
+    while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+        $answer['data'] = $row;
+    }
+
+    $ret = $db->fetchData(<<<EOF
+        SELECT kommentar Kommentar, literatur Literatur, bemerkung Bemerkung, zielgruppe Zielgruppe, lerninhalte Lerninhalte, leistungsnachweis Leistungsnachweis
+        FROM Lehrveranstaltung_Info inf
         JOIN Lehrveranstaltung_Inhalt inh ON inf.lehrvID=inh.lehrvID
         WHERE inf.veranstaltungsnummer=$vnr AND inf.semester=$semester
     EOF);
 
     while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-        array_push($answer, $row);
+        $answer['content'] = $row;
     }
 
     $ret = $db->fetchData(<<<EOF
@@ -86,7 +96,7 @@ if ($titel && trim($titel) != "") {
         array_push($exams, $row);
     }
 
-    array_push($answer, $exams);
+    $answer['exams'] = $exams;
 
     header('Content-Type: application/json');
     echo (json_encode($answer, true));
