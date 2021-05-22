@@ -1,13 +1,14 @@
 <template>
 	<div class="searchbar--container">
-		<input class="searchbar" v-model="data.input" placeholder="Veranstaltungstitel" />
+		<input class="searchbar" ref="searchbar" v-model="data.input" placeholder="Veranstaltungstitel" />
 	</div>
 </template>
 
 <script>
-import { reactive, watch } from "vue";
+import { onMounted, reactive, ref, watch } from "vue";
 export default {
 	setup(props, { emit }) {
+		const searchbar = new ref(null);
 		const data = reactive({
 			input: "",
 		})
@@ -16,8 +17,13 @@ export default {
 			emit('input', data.input)
 		})
 
+		onMounted(() => {
+			searchbar.value.focus();
+		})
+
 		return {
 			data,
+			searchbar
 		};
 	},
 };
