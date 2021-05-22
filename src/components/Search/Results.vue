@@ -1,8 +1,10 @@
 <template>
 	<div class="results--container" v-if="veranstaltungen.all">
+		{{ veranstaltungen.all.count }}
+		{{ veranstaltungen.limit }}
 		<div
 			class="semester"
-			v-for="(semester, key) in veranstaltungen.all"
+			v-for="(semester, key) in veranstaltungen.all.data"
 			:key="key"
 		>
 			<h3>{{ key }}</h3>
@@ -16,6 +18,7 @@
 				<a class="text"> {{ elem.titel }} [{{ elem.semester }}] </a>
 			</div>
 		</div>
+		<button class="load-more" v-show="veranstaltungen.all.count==veranstaltungen.limit">...</button>
 	</div>
 </template>
 
@@ -33,7 +36,7 @@ export default {
 		const rq = new request();
 
 		const veranstaltungen = reactive({
-			limit: null,
+			limit: 20,
 			all: [],
 		});
 
@@ -53,8 +56,10 @@ export default {
 		}
 
 		async function getVeranstaltung(vnr, semester) {
-			emit('selected', await rq.getVeranstaltung(vnr, semester))
+			emit("selected", await rq.getVeranstaltung(vnr, semester));
 		}
+
+		//TODO Add Load more button
 
 		return {
 			veranstaltungen,
@@ -95,6 +100,23 @@ export default {
 			&:hover {
 				background-color: rgb(230, 230, 230);
 			}
+		}
+	}
+
+	.load-more {
+		width: 35%;
+		margin: 1rem 0 1rem 0;
+		padding: 0.5rem;
+		border: 1px black solid;
+		transition: all 0.2s ease;
+		font-size: 1.5rem;
+		background: white;
+		color: #2c3e50;
+
+		&:hover {
+			cursor: pointer;
+			background-color: rgb(240, 240, 240);
+			transform: scale(1.01);
 		}
 	}
 

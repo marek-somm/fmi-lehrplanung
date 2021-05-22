@@ -40,7 +40,7 @@ if ($titel && trim($titel) != "") {
             } else {
                 $semStr = "WiSe ".(int)($sem/10);
             }
-            $answer["$semStr"] = array();
+            $answer["data"]["$semStr"] = array();
         }
         $ret = $db->fetchData(<<<EOF
             SELECT veranstaltungsnummer vnr, semester, titel, aktiv
@@ -49,9 +49,11 @@ if ($titel && trim($titel) != "") {
         EOF);
         while(($row = $ret->fetchArray(SQLITE3_ASSOC)) && $i != 0) {
             $i--;
-            array_push($answer["$semStr"], $row);
+            array_push($answer["data"]["$semStr"], $row);
         }
     }
+
+    $answer['count'] = $limit - $i;
 
     header('Content-Type: application/json');
     echo (json_encode($answer, true));
