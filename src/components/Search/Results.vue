@@ -16,7 +16,13 @@
 				<a class="text"> {{ elem.titel }} [{{ elem.vnr }}] </a>
 			</div>
 		</div>
-		<button class="load-more" @click="loadMore" v-show="veranstaltungen.all.count==veranstaltungen.limit">...</button>
+		<button
+			class="load-more"
+			@click="loadMore"
+			v-show="veranstaltungen.all.count == veranstaltungen.limit"
+		>
+			...
+		</button>
 	</div>
 </template>
 
@@ -60,7 +66,7 @@ export default {
 
 		function loadMore() {
 			veranstaltungen.limit += veranstaltungen.defaultLimit;
-			searchVeranstaltung(props.input)
+			searchVeranstaltung(props.input);
 		}
 
 		return {
@@ -76,9 +82,11 @@ export default {
 .results--container {
 	display: flex;
 	flex-flow: column;
+	flex-grow: 1;
 	align-items: center;
 	overflow-y: auto;
 	height: calc(100vh - 14.55rem);
+	padding: 0 0 1rem 0;
 
 	.semester {
 		width: 40%;

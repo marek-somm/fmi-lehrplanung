@@ -1,7 +1,10 @@
 <template>
-	<div class="info--container">
-		<div class="info-content" v-if="selected">
-			<h3>{{ selected.data.titel }}</h3>
+	<div class="info--container" v-if="selected">
+		<div class="header">
+			<h3 class="title">{{ selected.data.titel }}</h3>
+			<button class="close-button" @click="close">X</button>
+		</div>
+		<div class="info-content">
 			<div class="block">
 				<p class="attrib">Vnr: {{ selected.data.veranstaltungsnummer }}</p>
 				<p class="attrib">Friedolin ID: {{ selected.data.friedolinID }}</p>
@@ -44,13 +47,14 @@
 </template>
 
 <script>
+import { onMounted } from "vue";
 export default {
 	props: {
 		selected: {
 			type: Object,
 		},
 	},
-	setup() {
+	setup(props, { emit }) {
 		function convertSemester(code) {
 			if (code % 10 == 0) {
 				return "SoSe " + parseInt(code / 10);
@@ -59,8 +63,21 @@ export default {
 			}
 		}
 
+		onMounted(() => {
+			window.addEventListener("keyup", function (event) {
+				if (event.key === "Escape") {
+					close();
+				}
+			});
+		});
+
+		function close() {
+			emit("close");
+		}
+
 		return {
 			convertSemester,
+			close
 		};
 	},
 };
@@ -68,14 +85,50 @@ export default {
 
 <style lang="scss" scoped>
 .info--container {
-	position: sticky;
-	top: 0;
-	height: calc(100vh - 14.55rem);
-	overflow-y: auto;
+	height: calc(100vh - 13.5rem);
+	width: 0;
+	text-align: left;
+	transition: all 0.5s ease;
+	color: transparent;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
 
 	.info-content {
+		overflow: auto;
+		padding: 0 0.7rem 0rem 0.7rem;
+		border-right: 1px gray solid;
+		background: lightgray;
+
 		.block {
 			margin-bottom: 1.5rem;
+		}
+	}
+
+	.header {
+		display: flex;
+		justify-content: flex-end;
+		background-color: rgb(200, 200, 200);
+		border-right: 1px gray solid;
+		border-bottom: 1px gray solid;
+
+		.title {
+			padding: 0 0.7rem 0 0.7rem;
+			text-align: center;
+			margin: 1rem auto 1rem auto;
+		}
+
+		.close-button {
+			height: 2rem;
+			width: 2rem;
+			border: none;
+			background-color: rgb(255, 220, 220);
+
+			&:hover {
+				cursor: pointer;
+				background-color: rgb(255, 100, 100);
+			}
 		}
 	}
 }
@@ -89,5 +142,11 @@ p {
 	border: 1px gray solid;
 	padding: 0.5rem;
 	margin-bottom: 0.5rem;
+}
+
+.show {
+	color: #2c3e50;
+	width: 35%;
+	overflow-y: auto;
 }
 </style>

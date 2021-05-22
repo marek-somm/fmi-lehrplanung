@@ -1,6 +1,11 @@
 <template>
 	<div class="searchbar--container">
-		<input class="searchbar" ref="searchbar" v-model="data.input" placeholder="Veranstaltungstitel" />
+		<input
+			class="searchbar"
+			ref="searchbar"
+			v-model="data.input"
+			placeholder="Veranstaltungstitel"
+		/>
 	</div>
 </template>
 
@@ -11,19 +16,22 @@ export default {
 		const searchbar = new ref(null);
 		const data = reactive({
 			input: "",
-		})
+		});
 
-		watch(() => data.input, () => {
-			emit('input', data.input)
-		})
+		watch(
+			() => data.input,
+			() => {
+				emit("input", data.input);
+			}
+		);
 
 		onMounted(() => {
 			searchbar.value.focus();
-		})
+		});
 
 		return {
 			data,
-			searchbar
+			searchbar,
 		};
 	},
 };
@@ -37,11 +45,12 @@ export default {
 	align-items: center;
 	background: #eee;
 	position: sticky;
+	width: 100%;
 
 	.searchbar {
 		width: 15rem;
 		margin: 1rem;
-		padding: .3rem .7rem .3rem .7rem;
+		padding: 0.3rem 0.7rem 0.3rem 0.7rem;
 		text-align: center;
 	}
 }
