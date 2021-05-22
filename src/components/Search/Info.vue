@@ -1,10 +1,10 @@
 <template>
-	<div class="info--container" v-if="selected">
+	<div class="info--container">
 		<div class="header">
-			<h3 class="title">{{ selected.data.titel }}</h3>
+			<h3 class="title" v-if="selected">{{ selected.data.titel }}</h3>
 			<button class="close-button" @click="close">X</button>
 		</div>
-		<div class="info-content">
+		<div class="info-content" v-if="selected">
 			<div class="block">
 				<p class="attrib">Vnr: {{ selected.data.veranstaltungsnummer }}</p>
 				<p class="attrib">Friedolin ID: {{ selected.data.friedolinID }}</p>
