@@ -1,7 +1,5 @@
 <template>
 	<div class="results--container" v-if="veranstaltungen.all">
-		{{ veranstaltungen.all.count }}
-		{{ veranstaltungen.limit }}
 		<div
 			class="semester"
 			v-for="(semester, key) in veranstaltungen.all.data"
@@ -15,10 +13,10 @@
 				:key="index"
 				@click="getVeranstaltung(elem.vnr, elem.semester)"
 			>
-				<a class="text"> {{ elem.titel }} [{{ elem.semester }}] </a>
+				<a class="text"> {{ elem.titel }} [{{ elem.vnr }}] </a>
 			</div>
 		</div>
-		<button class="load-more" v-show="veranstaltungen.all.count==veranstaltungen.limit">...</button>
+		<button class="load-more" @click="loadMore" v-show="veranstaltungen.all.count==veranstaltungen.limit">...</button>
 	</div>
 </template>
 
@@ -36,8 +34,9 @@ export default {
 		const rq = new request();
 
 		const veranstaltungen = reactive({
+			defaultLimit: 20,
 			limit: 20,
-			all: [],
+			all: null,
 		});
 
 		watch(
@@ -59,11 +58,15 @@ export default {
 			emit("selected", await rq.getVeranstaltung(vnr, semester));
 		}
 
-		//TODO Add Load more button
+		function loadMore() {
+			veranstaltungen.limit += veranstaltungen.defaultLimit;
+			searchVeranstaltung(props.input)
+		}
 
 		return {
 			veranstaltungen,
 			getVeranstaltung,
+			loadMore,
 		};
 	},
 };
@@ -108,7 +111,7 @@ export default {
 		margin: 1rem 0 1rem 0;
 		padding: 0.5rem;
 		border: 1px black solid;
-		transition: all 0.2s ease;
+		transition: cursor, background, transform 0.2s ease;
 		font-size: 1.5rem;
 		background: white;
 		color: #2c3e50;
