@@ -63,6 +63,7 @@ if ($titel && trim($titel) != "") {
     $db = connectDatabase();
     $answer = array();
     $exams = array();
+    $rolls = array('verantwortlich', 'begleitend','organisatorisch');
 
     $ret = $db->fetchData(<<<EOF
         SELECT inf.titel, inf.veranstaltungsnummer, semester, friedolinID, aktiv, sws, name turnus, art
@@ -87,6 +88,24 @@ if ($titel && trim($titel) != "") {
         $answer['content'] = $row;
     }
 
+    foreach($rolls as &$roll) {
+        $ret = $db->fetchData(<<<EOF
+            SELECT p.vorname, p.nachname, p.grad, blp.rolle, p.friedolinID
+            FROM Lehrveranstaltung_Info i
+            JOIN BRIDGE_Lehrveranstaltung_Person blp, Person p ON blp.lehrvID=i.lehrvID AND blp.personenID=p.personenID
+            WHERE i.veranstaltungsnummer=$vnr AND i.semester=$semester AND blp.rolle='$roll'
+        EOF);
+
+        $people = array();
+
+        while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+            array_push($people, $row);
+        }
+
+        $roll = ucfirst($roll);
+        $answer["people"]["$roll"] = $people;
+    }
+    
     $ret = $db->fetchData(<<<EOF
         SELECT pnr, modulcode, pr.titel
         FROM Lehrveranstaltung_Info i

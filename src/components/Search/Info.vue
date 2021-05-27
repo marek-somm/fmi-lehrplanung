@@ -31,6 +31,25 @@
 				</div>
 			</div>
 			<br />
+			<h3><u>Personen:</u></h3>
+			<div v-for="(roll, key) in selected.people" :key="key">
+				<h4>{{ key }}</h4>
+				<div v-for="person in roll" :key="person.friedolinID">
+					<p>
+						{{ person.grad }} {{ person.vorname }}
+						{{ person.nachname }} [<a
+							:href="
+								'https://friedolin.uni-jena.de/qisserver/rds?state=verpublish&moduleCall=webInfo&publishConfFile=webInfoPerson&publishSubDir=personal&personal.pid=' +
+								person.friedolinID
+							"
+							target="_blank"
+						>
+							{{ person.friedolinID }} </a
+						>]
+					</p>
+				</div>
+			</div>
+			<br />
 			<h3><u>Prüfungen:</u></h3>
 			<div class="block">
 				<div class="box" v-for="exam in selected.exams" :key="exam.pnr">
@@ -77,7 +96,7 @@ export default {
 
 		return {
 			convertSemester,
-			close
+			close,
 		};
 	},
 };
@@ -85,7 +104,7 @@ export default {
 
 <style lang="scss" scoped>
 .info--container {
-	height: calc(100vh - 13.5rem);
+	height: calc(100vh - 13.51rem);
 	width: 0;
 	text-align: left;
 	transition: all 0.5s ease;
@@ -99,7 +118,8 @@ export default {
 		overflow: auto;
 		padding: 0 0.7rem 0rem 0.7rem;
 		border-right: 1px gray solid;
-		background: lightgray;
+		background: #eee;
+		flex-grow: 1;
 
 		.block {
 			margin-bottom: 1.5rem;
@@ -109,7 +129,7 @@ export default {
 	.header {
 		display: flex;
 		justify-content: flex-end;
-		background-color: rgb(200, 200, 200);
+		background-color: lightgray;
 		border-right: 1px gray solid;
 		border-bottom: 1px gray solid;
 
