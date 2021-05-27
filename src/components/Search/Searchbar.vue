@@ -39,12 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .searchbar--container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
 	background: #eee;
-	position: sticky;
 	width: 100%;
 
 	.searchbar {

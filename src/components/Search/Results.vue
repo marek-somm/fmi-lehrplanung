@@ -119,7 +119,7 @@ export default {
 		margin: 1rem 0 1rem 0;
 		padding: 0.5rem;
 		border: 1px black solid;
-		transition: cursor, background, transform 0.2s ease;
+		transition: background 0.2s ease, transform 0.2s ease;
 		font-size: 1.5rem;
 		background: white;
 		color: #2c3e50;
