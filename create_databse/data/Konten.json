@@ -1,0 +1,3538 @@
+[
+	{
+	  "id": "1",
+	  "Studiengang": "1",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Regelschule Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "2",
+	  "Studiengang": "1",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "10",
+	  "Name": "Erziehungswissenschaft / Bildungswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "3",
+	  "Studiengang": "1",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "4",
+	  "Studiengang": "1",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "5",
+	  "Studiengang": "1",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "6",
+	  "Studiengang": "1",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "7",
+	  "Studiengang": "1",
+	  "Kontonr": "2510",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlvertiefungsfach",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "8",
+	  "Studiengang": "2",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Regelschule Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "9",
+	  "Studiengang": "2",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "10",
+	  "Name": "Erziehungswissenschaft / Bildungswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "10",
+	  "Studiengang": "2",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "11",
+	  "Studiengang": "2",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "12",
+	  "Studiengang": "2",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "13",
+	  "Studiengang": "2",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "14",
+	  "Studiengang": "2",
+	  "Kontonr": "2510",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlvertiefungsfach 1",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "15",
+	  "Studiengang": "2",
+	  "Kontonr": "2520",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlvertiefungsfach 2",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "16",
+	  "Studiengang": "3",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Regelschule Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "17",
+	  "Studiengang": "3",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "10",
+	  "Name": "Erziehungswissenschaft / Bildungswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "18",
+	  "Studiengang": "3",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "19",
+	  "Studiengang": "3",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "20",
+	  "Studiengang": "3",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "21",
+	  "Studiengang": "3",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "22",
+	  "Studiengang": "4",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Gymnasium Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "23",
+	  "Studiengang": "4",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "10",
+	  "Name": "Erziehungswissenschaft / Bildungswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "24",
+	  "Studiengang": "4",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "25",
+	  "Studiengang": "4",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "26",
+	  "Studiengang": "4",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "27",
+	  "Studiengang": "4",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "28",
+	  "Studiengang": "5",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Gymnasium Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "29",
+	  "Studiengang": "5",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "10",
+	  "Name": "Erziehungswissenschaft / Bildungswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "30",
+	  "Studiengang": "5",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "31",
+	  "Studiengang": "5",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "32",
+	  "Studiengang": "5",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "33",
+	  "Studiengang": "5",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "34",
+	  "Studiengang": "5",
+	  "Kontonr": "2510",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlvertiefungsfach 1",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "35",
+	  "Studiengang": "5",
+	  "Kontonr": "2520",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlvertiefungsfach 2",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "36",
+	  "Studiengang": "5",
+	  "Kontonr": "2530",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlvertiefungsfach 3",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "37",
+	  "Studiengang": "6",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Gymnasium Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "38",
+	  "Studiengang": "6",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "10",
+	  "Name": "Erziehungswissenschaft / Bildungswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "39",
+	  "Studiengang": "6",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "40",
+	  "Studiengang": "6",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "41",
+	  "Studiengang": "6",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "42",
+	  "Studiengang": "6",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "43",
+	  "Studiengang": "7",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Gymnasium Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "44",
+	  "Studiengang": "7",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "10",
+	  "Name": "Erziehungswissenschaft / Bildungswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "45",
+	  "Studiengang": "7",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "46",
+	  "Studiengang": "7",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "47",
+	  "Studiengang": "7",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "48",
+	  "Studiengang": "7",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "49",
+	  "Studiengang": "7",
+	  "Kontonr": "2510",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Algebra/Zahlentheorie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "50",
+	  "Studiengang": "7",
+	  "Kontonr": "2520",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Analysis",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "51",
+	  "Studiengang": "7",
+	  "Kontonr": "2530",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Diskrete Mathematik und Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "52",
+	  "Studiengang": "7",
+	  "Kontonr": "2540",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Geometrie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "53",
+	  "Studiengang": "7",
+	  "Kontonr": "2550",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Grundlagen und Geschichte der Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "54",
+	  "Studiengang": "7",
+	  "Kontonr": "2560",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Praktische Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "55",
+	  "Studiengang": "7",
+	  "Kontonr": "2570",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "56",
+	  "Studiengang": "8",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Regelschule Informatik (Erweiterungsprüfung)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "57",
+	  "Studiengang": "8",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "58",
+	  "Studiengang": "8",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "59",
+	  "Studiengang": "8",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "60",
+	  "Studiengang": "9",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Regelschule Informatik (Erweiterungsprüfung)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "61",
+	  "Studiengang": "9",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "62",
+	  "Studiengang": "9",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "63",
+	  "Studiengang": "9",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "64",
+	  "Studiengang": "9",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "65",
+	  "Studiengang": "9",
+	  "Kontonr": "2510",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlvertiefungsfach",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "66",
+	  "Studiengang": "10",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Regelschule Mathematik (Erweiterungsprüfung)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "67",
+	  "Studiengang": "10",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "68",
+	  "Studiengang": "10",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "69",
+	  "Studiengang": "10",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "70",
+	  "Studiengang": "10",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "71",
+	  "Studiengang": "11",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Gymnasium Informatik (Erweiterungsprüfung)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "72",
+	  "Studiengang": "11",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "73",
+	  "Studiengang": "11",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "74",
+	  "Studiengang": "11",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "75",
+	  "Studiengang": "11",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "76",
+	  "Studiengang": "12",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Gymnasium Informatik (Erweiterungsprüfung)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "77",
+	  "Studiengang": "12",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "78",
+	  "Studiengang": "12",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "79",
+	  "Studiengang": "12",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "80",
+	  "Studiengang": "12",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "81",
+	  "Studiengang": "13",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Lehramt Gymnasium Mathematik (Erweiterungsprüfung)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "82",
+	  "Studiengang": "13",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "10",
+	  "Name": "Fachdidaktik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "83",
+	  "Studiengang": "13",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "10",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "84",
+	  "Studiengang": "13",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "10",
+	  "Name": "Vorbereitungsmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "85",
+	  "Studiengang": "14",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Ergänzungsfach Informatik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "86",
+	  "Studiengang": "14",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtkonto EF",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "87",
+	  "Studiengang": "15",
+	  "Kontonr": "10",
+	  "Mutterkonto": "-1",
+	  "Name": "Ergänzungsfach Mathematik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "88",
+	  "Studiengang": "15",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "10",
+	  "Name": "Wahlpflichtkonto EF",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "89",
+	  "Studiengang": "16",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "90",
+	  "Studiengang": "16",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "91",
+	  "Studiengang": "16",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "92",
+	  "Studiengang": "16",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto A: Module zur Vermittlung von informatischen Fach- und Methodenkompetenzen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "93",
+	  "Studiengang": "16",
+	  "Kontonr": "3300",
+	  "Mutterkonto": "3000",
+	  "Name": "Konto A: Seminar [SEM]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "94",
+	  "Studiengang": "16",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Konto A: Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "95",
+	  "Studiengang": "16",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "Konto A: Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "96",
+	  "Studiengang": "16",
+	  "Kontonr": "3210",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "97",
+	  "Studiengang": "16",
+	  "Kontonr": "3230",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Parallele und eingebettete Systeme [PAR]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "98",
+	  "Studiengang": "16",
+	  "Kontonr": "3220",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "99",
+	  "Studiengang": "16",
+	  "Kontonr": "3240",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "100",
+	  "Studiengang": "16",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto B: Module zur Vermittlung von mathematischen und naturwissenschaftlich-technischen Grundlagen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "101",
+	  "Studiengang": "16",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "Konto B: Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "102",
+	  "Studiengang": "16",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto C: Module zur Vermittlung von fachübergreifenden Grundlagen und überfachlichen Schlüsselkompetenzen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "103",
+	  "Studiengang": "16",
+	  "Kontonr": "5020",
+	  "Mutterkonto": "5000",
+	  "Name": "Konto C: Wahlpflichtmodule allgemeine Schlüsselqualifikationen [ASQ]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "104",
+	  "Studiengang": "16",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "5020",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "105",
+	  "Studiengang": "16",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "Konto C: Wahlpflichtmodule Nebenfach [NF]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "106",
+	  "Studiengang": "16",
+	  "Kontonr": "5800",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Computational Neuroscience",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "107",
+	  "Studiengang": "16",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "108",
+	  "Studiengang": "16",
+	  "Kontonr": "5700",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "109",
+	  "Studiengang": "16",
+	  "Kontonr": "5500",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Ökologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "110",
+	  "Studiengang": "16",
+	  "Kontonr": "5600",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Philosophie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "111",
+	  "Studiengang": "16",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "112",
+	  "Studiengang": "16",
+	  "Kontonr": "5300",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "113",
+	  "Studiengang": "16",
+	  "Kontonr": "5400",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "114",
+	  "Studiengang": "17",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "115",
+	  "Studiengang": "17",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "116",
+	  "Studiengang": "17",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "117",
+	  "Studiengang": "17",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto A: Module zur Vermittlung von informatischen Fach- und Methodenkompetenzen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "118",
+	  "Studiengang": "17",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Konto A: Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "119",
+	  "Studiengang": "17",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "Konto A: Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "120",
+	  "Studiengang": "17",
+	  "Kontonr": "3210",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "121",
+	  "Studiengang": "17",
+	  "Kontonr": "3230",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Paralleles Rechnen [PAR]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "122",
+	  "Studiengang": "17",
+	  "Kontonr": "3290",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Seminar [SEM]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "123",
+	  "Studiengang": "17",
+	  "Kontonr": "3220",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "124",
+	  "Studiengang": "17",
+	  "Kontonr": "3240",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "125",
+	  "Studiengang": "17",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto B: Module zur Vermittlung von mathematischen und naturwissenschaftlich-technischen Grundlagen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "126",
+	  "Studiengang": "17",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "Konto B: Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "127",
+	  "Studiengang": "17",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto C: Übergreifende Inhalte",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "128",
+	  "Studiengang": "17",
+	  "Kontonr": "5020",
+	  "Mutterkonto": "5000",
+	  "Name": "Konto C: Wahlpflichtmodule allgemeine Schlüsselqualifikationen [ASQ]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "129",
+	  "Studiengang": "17",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "Konto C: Wahlpflichtmodule Nebenfach [NF]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "130",
+	  "Studiengang": "17",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "131",
+	  "Studiengang": "17",
+	  "Kontonr": "5700",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "132",
+	  "Studiengang": "17",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Medical Data Science",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "133",
+	  "Studiengang": "17",
+	  "Kontonr": "5500",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Ökologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "134",
+	  "Studiengang": "17",
+	  "Kontonr": "5600",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Philosophie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "135",
+	  "Studiengang": "17",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "136",
+	  "Studiengang": "17",
+	  "Kontonr": "5300",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "137",
+	  "Studiengang": "17",
+	  "Kontonr": "5900",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Soziologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "138",
+	  "Studiengang": "17",
+	  "Kontonr": "5400",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "139",
+	  "Studiengang": "17",
+	  "Kontonr": "5040",
+	  "Mutterkonto": "5000",
+	  "Name": "Konto C: Wahlpflichtmodule Seminar",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "140",
+	  "Studiengang": "17",
+	  "Kontonr": "5030",
+	  "Mutterkonto": "5000",
+	  "Name": "Konto C: Wahlpflichtmodule Mathematik/Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "141",
+	  "Studiengang": "18",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "142",
+	  "Studiengang": "18",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "143",
+	  "Studiengang": "18",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "144",
+	  "Studiengang": "18",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflichtmodule Grundlagen der Mathematik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "145",
+	  "Studiengang": "18",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflichtmodule Angew. Mathematik/Stochastik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "146",
+	  "Studiengang": "18",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "-1",
+	  "Name": "Wahlpflichtmodule Mathematik Erweiterungen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "147",
+	  "Studiengang": "18",
+	  "Kontonr": "4120",
+	  "Mutterkonto": "4100",
+	  "Name": "WP-Module Mathematik Erweiterung: Angewandte Mathematik/Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "148",
+	  "Studiengang": "18",
+	  "Kontonr": "4110",
+	  "Mutterkonto": "4100",
+	  "Name": "WP-Module Mathematik Erweiterung: Reine Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "149",
+	  "Studiengang": "18",
+	  "Kontonr": "4200",
+	  "Mutterkonto": "-1",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefungen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "150",
+	  "Studiengang": "18",
+	  "Kontonr": "4210",
+	  "Mutterkonto": "4200",
+	  "Name": "WP-Module Mathematik Vertiefung: Algebra",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "151",
+	  "Studiengang": "18",
+	  "Kontonr": "4270",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Algorithmik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "152",
+	  "Studiengang": "18",
+	  "Kontonr": "4220",
+	  "Mutterkonto": "4200",
+	  "Name": "WP-Module Mathematik Vertiefung: Analysis",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "153",
+	  "Studiengang": "18",
+	  "Kontonr": "4230",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Geometrie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "154",
+	  "Studiengang": "18",
+	  "Kontonr": "4240",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Num. Mathematik/Wiss. Rechnen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "155",
+	  "Studiengang": "18",
+	  "Kontonr": "4250",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Optimierung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "156",
+	  "Studiengang": "18",
+	  "Kontonr": "4260",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "157",
+	  "Studiengang": "18",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Wahlpflicht Nebenfach u. ASQ",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "158",
+	  "Studiengang": "18",
+	  "Kontonr": "5020",
+	  "Mutterkonto": "5000",
+	  "Name": "Wahlpflichtmodule Allgemeine Schlüsselqualifikationen (ASQ)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "159",
+	  "Studiengang": "18",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "5020",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "160",
+	  "Studiengang": "18",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "Wahlpflicht Nebenfach",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "161",
+	  "Studiengang": "18",
+	  "Kontonr": "5700",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "162",
+	  "Studiengang": "18",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "163",
+	  "Studiengang": "18",
+	  "Kontonr": "5500",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Ökologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "164",
+	  "Studiengang": "18",
+	  "Kontonr": "5600",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Philosophie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "165",
+	  "Studiengang": "18",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "166",
+	  "Studiengang": "18",
+	  "Kontonr": "5300",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "167",
+	  "Studiengang": "18",
+	  "Kontonr": "5900",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Soziologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "168",
+	  "Studiengang": "18",
+	  "Kontonr": "5400",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "169",
+	  "Studiengang": "19",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "170",
+	  "Studiengang": "19",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "171",
+	  "Studiengang": "19",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "172",
+	  "Studiengang": "19",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflichtbereich Mathematik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "173",
+	  "Studiengang": "19",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflichtbereich Proseminar",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "174",
+	  "Studiengang": "19",
+	  "Kontonr": "3300",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflichtbereich Programmierung",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "175",
+	  "Studiengang": "19",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "-1",
+	  "Name": "Wahlpflichtmodule Mathematik Erweiterungen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "176",
+	  "Studiengang": "19",
+	  "Kontonr": "4120",
+	  "Mutterkonto": "4100",
+	  "Name": "WP-Module Mathematik Erweiterung: Angewandte Mathematik/Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "177",
+	  "Studiengang": "19",
+	  "Kontonr": "4110",
+	  "Mutterkonto": "4100",
+	  "Name": "WP-Module Mathematik Erweiterung: Reine Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "178",
+	  "Studiengang": "19",
+	  "Kontonr": "4200",
+	  "Mutterkonto": "-1",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefungen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "179",
+	  "Studiengang": "19",
+	  "Kontonr": "4210",
+	  "Mutterkonto": "4200",
+	  "Name": "WP-Module Mathematik Vertiefung: Algebra",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "180",
+	  "Studiengang": "19",
+	  "Kontonr": "4270",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Algorithmik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "181",
+	  "Studiengang": "19",
+	  "Kontonr": "4220",
+	  "Mutterkonto": "4200",
+	  "Name": "WP-Module Mathematik Vertiefung: Analysis",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "182",
+	  "Studiengang": "19",
+	  "Kontonr": "4230",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Geometrie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "183",
+	  "Studiengang": "19",
+	  "Kontonr": "4240",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Num. Mathematik/Wiss. Rechnen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "184",
+	  "Studiengang": "19",
+	  "Kontonr": "4250",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Optimierung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "185",
+	  "Studiengang": "19",
+	  "Kontonr": "4260",
+	  "Mutterkonto": "4200",
+	  "Name": "Wahlpflichtmodule Mathematik Vertiefung: Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "186",
+	  "Studiengang": "19",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Wahlpflicht Nebenfach u. ASQ",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "187",
+	  "Studiengang": "19",
+	  "Kontonr": "5020",
+	  "Mutterkonto": "5000",
+	  "Name": "Wahlpflichtmodule Allgemeine Schlüsselqualifikationen (ASQ)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "188",
+	  "Studiengang": "19",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "5020",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "189",
+	  "Studiengang": "19",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "Wahlpflicht Nebenfach",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "190",
+	  "Studiengang": "19",
+	  "Kontonr": "5700",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "191",
+	  "Studiengang": "19",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "192",
+	  "Studiengang": "19",
+	  "Kontonr": "5800",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Medical Data Science",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "193",
+	  "Studiengang": "19",
+	  "Kontonr": "5500",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Ökologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "194",
+	  "Studiengang": "19",
+	  "Kontonr": "5600",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Philosophie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "195",
+	  "Studiengang": "19",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "196",
+	  "Studiengang": "19",
+	  "Kontonr": "5300",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "197",
+	  "Studiengang": "19",
+	  "Kontonr": "5900",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Soziologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "198",
+	  "Studiengang": "19",
+	  "Kontonr": "5400",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "199",
+	  "Studiengang": "19",
+	  "Kontonr": "6990",
+	  "Mutterkonto": "-1",
+	  "Name": "Zusatzmodule/Sonderkonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "200",
+	  "Studiengang": "20",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunkte Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "201",
+	  "Studiengang": "20",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunkte Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "202",
+	  "Studiengang": "20",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto A1: Bioinformatik und Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "203",
+	  "Studiengang": "20",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "A1: Bioinformatik - Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "204",
+	  "Studiengang": "20",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "A1: Wahlpflichtbereich 1 (Bioinformatik)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "205",
+	  "Studiengang": "20",
+	  "Kontonr": "3300",
+	  "Mutterkonto": "3000",
+	  "Name": "A1: Informatik - Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "206",
+	  "Studiengang": "20",
+	  "Kontonr": "3400",
+	  "Mutterkonto": "3000",
+	  "Name": "A1: Wahlpflichtbereich 2 (Informatik)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "207",
+	  "Studiengang": "20",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto A2: Biologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "208",
+	  "Studiengang": "20",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "A2: Biologie - Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "209",
+	  "Studiengang": "20",
+	  "Kontonr": "4200",
+	  "Mutterkonto": "4000",
+	  "Name": "A2: Wahlpflichtbereich 3 (Biologie)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "210",
+	  "Studiengang": "20",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto B: mathematische, naturwissenschaftliche und technische Grundlagen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "211",
+	  "Studiengang": "20",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5000",
+	  "Name": "B: mathematische, naturwissenschaftliche und technische Grundlagen - Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "212",
+	  "Studiengang": "20",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto C: Module Fachübergreifende Inhalte und überfachliche Schlüsselkompetenzen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "213",
+	  "Studiengang": "21",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "214",
+	  "Studiengang": "21",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "215",
+	  "Studiengang": "21",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "216",
+	  "Studiengang": "21",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflichtmodule Mathematik und Informatik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "217",
+	  "Studiengang": "21",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflicht- u. Wahlpflichtmodule Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "218",
+	  "Studiengang": "21",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "PF-Module Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "219",
+	  "Studiengang": "21",
+	  "Kontonr": "4200",
+	  "Mutterkonto": "4000",
+	  "Name": "WP-Module (Basismodule) Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "220",
+	  "Studiengang": "21",
+	  "Kontonr": "4300",
+	  "Mutterkonto": "4000",
+	  "Name": "WP-Module (Vertiefungsmodule) Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "221",
+	  "Studiengang": "21",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Allgemeiner WP-Bereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "222",
+	  "Studiengang": "21",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5000",
+	  "Name": "WP Mathematik/Informatik/ Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "223",
+	  "Studiengang": "21",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5000",
+	  "Name": "WP Optimierung/Wissenschaftliches Rechnen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "224",
+	  "Studiengang": "22",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "225",
+	  "Studiengang": "22",
+	  "Kontonr": "1000",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflichtbereiche",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "226",
+	  "Studiengang": "22",
+	  "Kontonr": "1200",
+	  "Mutterkonto": "1000",
+	  "Name": "Pflichtbereich Informatik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "227",
+	  "Studiengang": "22",
+	  "Kontonr": "1100",
+	  "Mutterkonto": "1000",
+	  "Name": "Pflichtbereich Mathematik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "228",
+	  "Studiengang": "22",
+	  "Kontonr": "1300",
+	  "Mutterkonto": "1000",
+	  "Name": "Pflichtbereich zum Studienprofil",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "229",
+	  "Studiengang": "22",
+	  "Kontonr": "1320",
+	  "Mutterkonto": "1300",
+	  "Name": "Pflichtbereich Studienprofil Business Optimization",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "230",
+	  "Studiengang": "22",
+	  "Kontonr": "1310",
+	  "Mutterkonto": "1300",
+	  "Name": "Pflichtbereich Regelprofil",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "231",
+	  "Studiengang": "22",
+	  "Kontonr": "1330",
+	  "Mutterkonto": "1300",
+	  "Name": "Pflichtbereich Studienprofil Stochastics and Financial Engineering",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "232",
+	  "Studiengang": "22",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "-1",
+	  "Name": "Wahlpflichtbereiche",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "233",
+	  "Studiengang": "22",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "2000",
+	  "Name": "Wahlpflichtbereich Praktikum und ASQ",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "234",
+	  "Studiengang": "22",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "Allgemeine Schlüsselqualifikationen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "235",
+	  "Studiengang": "22",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Praktikum",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "236",
+	  "Studiengang": "22",
+	  "Kontonr": "2400",
+	  "Mutterkonto": "2000",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Business Optimization",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "237",
+	  "Studiengang": "22",
+	  "Kontonr": "2410",
+	  "Mutterkonto": "2400",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Business Optimization: Basismodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "238",
+	  "Studiengang": "22",
+	  "Kontonr": "2430",
+	  "Mutterkonto": "2400",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Business Optimization: Seminar",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "239",
+	  "Studiengang": "22",
+	  "Kontonr": "2420",
+	  "Mutterkonto": "2400",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Business Optimization: Vertiefungsmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "240",
+	  "Studiengang": "22",
+	  "Kontonr": "2300",
+	  "Mutterkonto": "2000",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Regelprofil",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "241",
+	  "Studiengang": "22",
+	  "Kontonr": "2310",
+	  "Mutterkonto": "2300",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Regelprofil: Basismodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "242",
+	  "Studiengang": "22",
+	  "Kontonr": "2330",
+	  "Mutterkonto": "2300",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Regelprofil: Seminar",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "243",
+	  "Studiengang": "22",
+	  "Kontonr": "2320",
+	  "Mutterkonto": "2300",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Regelprofil: Vertiefungsmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "244",
+	  "Studiengang": "22",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "2000",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Stochastics and Financial Engineering",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "245",
+	  "Studiengang": "22",
+	  "Kontonr": "2510",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Stochastics and Financial Engineering: Basismodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "246",
+	  "Studiengang": "22",
+	  "Kontonr": "2530",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Stochastics and Financial Engineering: Seminar",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "247",
+	  "Studiengang": "22",
+	  "Kontonr": "2520",
+	  "Mutterkonto": "2500",
+	  "Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Stochastics and Financial Engineering: Vertiefungsmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "248",
+	  "Studiengang": "22",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "2000",
+	  "Name": "Wahlpflichtbereich Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "249",
+	  "Studiengang": "22",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "2000",
+	  "Name": "Wahlpflichtbereich Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "250",
+	  "Studiengang": "22",
+	  "Kontonr": "2110",
+	  "Mutterkonto": "2100",
+	  "Name": "Wahlpflichtbereich Mathematik - allgemein",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "251",
+	  "Studiengang": "22",
+	  "Kontonr": "2120",
+	  "Mutterkonto": "2100",
+	  "Name": "Wahlpflichtbereich Mathematik - Bereich Optimierung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "252",
+	  "Studiengang": "22",
+	  "Kontonr": "2130",
+	  "Mutterkonto": "2100",
+	  "Name": "Wahlpflichtbereich Mathematik - Bereich Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "253",
+	  "Studiengang": "22",
+	  "Kontonr": "6990",
+	  "Mutterkonto": "-1",
+	  "Name": "Zusatzmodule/Sonderkonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "254",
+	  "Studiengang": "23",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "255",
+	  "Studiengang": "23",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "256",
+	  "Studiengang": "23",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "-1",
+	  "Name": "LP-Konto Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "257",
+	  "Studiengang": "23",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto A: Module zur Vermittlung von informatischen Fach- und Methodenkompetenzen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "258",
+	  "Studiengang": "23",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Konto A: Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "259",
+	  "Studiengang": "23",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "Konto A: Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "260",
+	  "Studiengang": "23",
+	  "Kontonr": "3210",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "261",
+	  "Studiengang": "23",
+	  "Kontonr": "3230",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Paralleles Rechnen [PAR]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "262",
+	  "Studiengang": "23",
+	  "Kontonr": "3290",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Seminar [SEM]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "263",
+	  "Studiengang": "23",
+	  "Kontonr": "3220",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "264",
+	  "Studiengang": "23",
+	  "Kontonr": "3240",
+	  "Mutterkonto": "3200",
+	  "Name": "Konto A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "265",
+	  "Studiengang": "23",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto B: Module zur Vermittlung von mathematischen und naturwissenschaftlich-technischen Grundlagen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "266",
+	  "Studiengang": "23",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "Konto B: Pflichtmodule",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "267",
+	  "Studiengang": "23",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto C: Berufsfeldorientierte Qualifikationen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "268",
+	  "Studiengang": "23",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "Konto C: Module Anwendungsfach (AF)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "269",
+	  "Studiengang": "23",
+	  "Kontonr": "5600",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Anwendungsfach Geographie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "270",
+	  "Studiengang": "23",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Anwendungsfach Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "271",
+	  "Studiengang": "23",
+	  "Kontonr": "5800",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Anwendungsfach Medical Data Science",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "272",
+	  "Studiengang": "23",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Anwendungsfach Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "273",
+	  "Studiengang": "23",
+	  "Kontonr": "5300",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Anwendungsfach Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "274",
+	  "Studiengang": "23",
+	  "Kontonr": "5700",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Anwendungsfach Soziologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "275",
+	  "Studiengang": "23",
+	  "Kontonr": "5400",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Anwendungsfach Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "276",
+	  "Studiengang": "23",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "-1",
+	  "Name": "Konto D: Übergreifende Inhalte",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "277",
+	  "Studiengang": "23",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "6000",
+	  "Name": "D: ASQ-Module aus dem Angebot der FMI",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "278",
+	  "Studiengang": "23",
+	  "Kontonr": "6200",
+	  "Mutterkonto": "6000",
+	  "Name": "D: ASQ-Module (Seminare) aus dem Angebot der FMI",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "279",
+	  "Studiengang": "24",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "280",
+	  "Studiengang": "24",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "A: Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "281",
+	  "Studiengang": "24",
+	  "Kontonr": "3500",
+	  "Mutterkonto": "3000",
+	  "Name": "A: Vertiefung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "282",
+	  "Studiengang": "24",
+	  "Kontonr": "3510",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Algorithmik (ALG)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "283",
+	  "Studiengang": "24",
+	  "Kontonr": "3520",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Digitale Bildverarbeitung (DBV)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "284",
+	  "Studiengang": "24",
+	  "Kontonr": "3540",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Künstliche Intelligenz und Mustererkennung (KIME)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "285",
+	  "Studiengang": "24",
+	  "Kontonr": "3530",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Entwicklung und Management komplexer Softwaresysteme (KSS)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "286",
+	  "Studiengang": "24",
+	  "Kontonr": "3550",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Rechnerarithmetik (RAR)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "287",
+	  "Studiengang": "24",
+	  "Kontonr": "3560",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Technische Informatik (TI)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "288",
+	  "Studiengang": "24",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "A: Wahlpflichtmodule Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "289",
+	  "Studiengang": "24",
+	  "Kontonr": "3210",
+	  "Mutterkonto": "3200",
+	  "Name": "A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "290",
+	  "Studiengang": "24",
+	  "Kontonr": "3230",
+	  "Mutterkonto": "3200",
+	  "Name": "A: Wahlpflichtmodule Parallele und eingebettete Systeme [PAR]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "291",
+	  "Studiengang": "24",
+	  "Kontonr": "3220",
+	  "Mutterkonto": "3200",
+	  "Name": "A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "292",
+	  "Studiengang": "24",
+	  "Kontonr": "3240",
+	  "Mutterkonto": "3200",
+	  "Name": "A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "293",
+	  "Studiengang": "24",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "B: Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "294",
+	  "Studiengang": "24",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "B: Wahlpflichtmodule Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "295",
+	  "Studiengang": "24",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "C: Fachübergreifenden Grundlagen und überfachlichen Schlüsselkompetenzen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "296",
+	  "Studiengang": "24",
+	  "Kontonr": "5005",
+	  "Mutterkonto": "5000",
+	  "Name": "C: Pflichtmodul Projektarbeit",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "297",
+	  "Studiengang": "24",
+	  "Kontonr": "5020",
+	  "Mutterkonto": "5000",
+	  "Name": "C: Wahlpflichtmodule allgemeine Schlüsselqualifikationen [ASQ]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "298",
+	  "Studiengang": "24",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "5020",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "299",
+	  "Studiengang": "24",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "C: Wahlpflichtmodule Nebenfach [NF]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "300",
+	  "Studiengang": "24",
+	  "Kontonr": "5800",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Computational Neuroscience",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "301",
+	  "Studiengang": "24",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "302",
+	  "Studiengang": "24",
+	  "Kontonr": "5700",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "303",
+	  "Studiengang": "24",
+	  "Kontonr": "5500",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Ökologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "304",
+	  "Studiengang": "24",
+	  "Kontonr": "5600",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Philosophie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "305",
+	  "Studiengang": "24",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "306",
+	  "Studiengang": "24",
+	  "Kontonr": "5300",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "307",
+	  "Studiengang": "24",
+	  "Kontonr": "5400",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "308",
+	  "Studiengang": "24",
+	  "Kontonr": "5501",
+	  "Mutterkonto": "-1",
+	  "Name": "C: Nebenfach Ökologie - Siko",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "309",
+	  "Studiengang": "25",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "310",
+	  "Studiengang": "25",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "A: Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "311",
+	  "Studiengang": "25",
+	  "Kontonr": "3500",
+	  "Mutterkonto": "3000",
+	  "Name": "A: Vertiefung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "312",
+	  "Studiengang": "25",
+	  "Kontonr": "3510",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Algorithmik (ALG)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "313",
+	  "Studiengang": "25",
+	  "Kontonr": "3520",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Digitale Bildverarbeitung (DBV)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "314",
+	  "Studiengang": "25",
+	  "Kontonr": "3540",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Künstliche Intelligenz und Mustererkennung (KIME)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "315",
+	  "Studiengang": "25",
+	  "Kontonr": "3530",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Entwicklung und Management komplexer Softwaresysteme (KSS)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "316",
+	  "Studiengang": "25",
+	  "Kontonr": "3550",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Rechnerarithmetik (RAR)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "317",
+	  "Studiengang": "25",
+	  "Kontonr": "3560",
+	  "Mutterkonto": "3500",
+	  "Name": "A: Vertiefung Technische Informatik (TI)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "318",
+	  "Studiengang": "25",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "A: Wahlpflichtmodule Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "319",
+	  "Studiengang": "25",
+	  "Kontonr": "3210",
+	  "Mutterkonto": "3200",
+	  "Name": "A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "320",
+	  "Studiengang": "25",
+	  "Kontonr": "3230",
+	  "Mutterkonto": "3200",
+	  "Name": "A: Wahlpflichtmodule Parallele und eingebettete Systeme [PAR]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "321",
+	  "Studiengang": "25",
+	  "Kontonr": "3220",
+	  "Mutterkonto": "3200",
+	  "Name": "A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "322",
+	  "Studiengang": "25",
+	  "Kontonr": "3240",
+	  "Mutterkonto": "3200",
+	  "Name": "A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "323",
+	  "Studiengang": "25",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "B: Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "324",
+	  "Studiengang": "25",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "B: Wahlpflichtmodule Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "325",
+	  "Studiengang": "25",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "C: Übergreifende Inhalte",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "326",
+	  "Studiengang": "25",
+	  "Kontonr": "5005",
+	  "Mutterkonto": "5000",
+	  "Name": "C: Pflichtmodul Projektarbeit",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "327",
+	  "Studiengang": "25",
+	  "Kontonr": "5020",
+	  "Mutterkonto": "5000",
+	  "Name": "C: Wahlpflichtmodule allgemeine Schlüsselqualifikationen [ASQ]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "328",
+	  "Studiengang": "25",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "C: Wahlpflichtmodule Nebenfach [NF]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "329",
+	  "Studiengang": "25",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "330",
+	  "Studiengang": "25",
+	  "Kontonr": "5700",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "331",
+	  "Studiengang": "25",
+	  "Kontonr": "5500",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Ökologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "332",
+	  "Studiengang": "25",
+	  "Kontonr": "5600",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Philosophie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "333",
+	  "Studiengang": "25",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "334",
+	  "Studiengang": "25",
+	  "Kontonr": "5300",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "335",
+	  "Studiengang": "25",
+	  "Kontonr": "5400",
+	  "Mutterkonto": "5010",
+	  "Name": "C: Nebenfach Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "336",
+	  "Studiengang": "25",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Medical Data Science",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "337",
+	  "Studiengang": "25",
+	  "Kontonr": "5900",
+	  "Mutterkonto": "5010",
+	  "Name": "C: NF Soziologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "338",
+	  "Studiengang": "25",
+	  "Kontonr": "5030",
+	  "Mutterkonto": "5000",
+	  "Name": "C: Wahlpflichtmodule Mathematik/Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "339",
+	  "Studiengang": "26",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "340",
+	  "Studiengang": "26",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "341",
+	  "Studiengang": "26",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "Angewandte Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "342",
+	  "Studiengang": "26",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Reine Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "343",
+	  "Studiengang": "26",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "3000",
+	  "Name": "Vertiefung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "344",
+	  "Studiengang": "26",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "Vertiefung Algebra",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "345",
+	  "Studiengang": "26",
+	  "Kontonr": "4700",
+	  "Mutterkonto": "4000",
+	  "Name": "Vertiefung Algorithmik (Theoretische Informatik)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "346",
+	  "Studiengang": "26",
+	  "Kontonr": "4200",
+	  "Mutterkonto": "4000",
+	  "Name": "Vertiefung Analysis",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "347",
+	  "Studiengang": "26",
+	  "Kontonr": "4300",
+	  "Mutterkonto": "4000",
+	  "Name": "Vertiefung Geometrie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "348",
+	  "Studiengang": "26",
+	  "Kontonr": "4400",
+	  "Mutterkonto": "4000",
+	  "Name": "Vertiefung Num. Mathematik/ Wiss. Rechnen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "349",
+	  "Studiengang": "26",
+	  "Kontonr": "4500",
+	  "Mutterkonto": "4000",
+	  "Name": "Vertiefung Optimierung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "350",
+	  "Studiengang": "26",
+	  "Kontonr": "4600",
+	  "Mutterkonto": "4000",
+	  "Name": "Vertiefung Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "351",
+	  "Studiengang": "26",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Nebenfach u. ASQ",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "352",
+	  "Studiengang": "26",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "Wahlpflichtmodule Nebenfach [NF]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "353",
+	  "Studiengang": "26",
+	  "Kontonr": "5700",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "354",
+	  "Studiengang": "26",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5010",
+	  "Name": "NF Computerlinguistik/ Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "355",
+	  "Studiengang": "26",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Medical Data Science",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "356",
+	  "Studiengang": "26",
+	  "Kontonr": "5500",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Ökologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "357",
+	  "Studiengang": "26",
+	  "Kontonr": "5600",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Philosophie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "358",
+	  "Studiengang": "26",
+	  "Kontonr": "5200",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "359",
+	  "Studiengang": "26",
+	  "Kontonr": "5300",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "360",
+	  "Studiengang": "26",
+	  "Kontonr": "5900",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Soziologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "361",
+	  "Studiengang": "26",
+	  "Kontonr": "6000",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Fremdsprache",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "362",
+	  "Studiengang": "26",
+	  "Kontonr": "5400",
+	  "Mutterkonto": "5010",
+	  "Name": "Nebenfach Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "363",
+	  "Studiengang": "26",
+	  "Kontonr": "5020",
+	  "Mutterkonto": "5000",
+	  "Name": "Wahlpflichtmodule allgemeine Schlüsselqualifikationen [ASQ]",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "364",
+	  "Studiengang": "26",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "5020",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "365",
+	  "Studiengang": "27",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "366",
+	  "Studiengang": "27",
+	  "Kontonr": "1000",
+	  "Mutterkonto": "-1",
+	  "Name": "Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "367",
+	  "Studiengang": "27",
+	  "Kontonr": "1200",
+	  "Mutterkonto": "1000",
+	  "Name": "Angewandte Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "368",
+	  "Studiengang": "27",
+	  "Kontonr": "1100",
+	  "Mutterkonto": "1000",
+	  "Name": "Reine Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "369",
+	  "Studiengang": "27",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "-1",
+	  "Name": "Nebenfach und ASQ und German",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "370",
+	  "Studiengang": "27",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "2000",
+	  "Name": "Allgemeine Schlüsselqualifikationen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "371",
+	  "Studiengang": "27",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "2100",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "372",
+	  "Studiengang": "27",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "2000",
+	  "Name": "German",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "373",
+	  "Studiengang": "27",
+	  "Kontonr": "2300",
+	  "Mutterkonto": "2000",
+	  "Name": "Nebenfach",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "374",
+	  "Studiengang": "27",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "375",
+	  "Studiengang": "27",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "376",
+	  "Studiengang": "27",
+	  "Kontonr": "3800",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Medical Data Science",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "377",
+	  "Studiengang": "27",
+	  "Kontonr": "3300",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Ökologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "378",
+	  "Studiengang": "27",
+	  "Kontonr": "3400",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Philosophie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "379",
+	  "Studiengang": "27",
+	  "Kontonr": "3500",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Physik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "380",
+	  "Studiengang": "27",
+	  "Kontonr": "3600",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Psychologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "381",
+	  "Studiengang": "27",
+	  "Kontonr": "3900",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Soziologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "382",
+	  "Studiengang": "27",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Fremdsprache",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "383",
+	  "Studiengang": "27",
+	  "Kontonr": "3700",
+	  "Mutterkonto": "2300",
+	  "Name": "Nebenfach Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "384",
+	  "Studiengang": "28",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "385",
+	  "Studiengang": "28",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Pflichtbereich",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "386",
+	  "Studiengang": "28",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "Computational Informatics",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "387",
+	  "Studiengang": "28",
+	  "Kontonr": "3300",
+	  "Mutterkonto": "3000",
+	  "Name": "Data Sciences",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "388",
+	  "Studiengang": "28",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Scientific Computing",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "389",
+	  "Studiengang": "28",
+	  "Kontonr": "3400",
+	  "Mutterkonto": "3000",
+	  "Name": "Seminar",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "390",
+	  "Studiengang": "28",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "Wahlpflichtbereich",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "391",
+	  "Studiengang": "28",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "Wahlpflichtmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "392",
+	  "Studiengang": "28",
+	  "Kontonr": "4200",
+	  "Mutterkonto": "4000",
+	  "Name": "WP-Nivellierungsmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "393",
+	  "Studiengang": "28",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Nivellierungsmodule",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "394",
+	  "Studiengang": "29",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "395",
+	  "Studiengang": "29",
+	  "Kontonr": "1000",
+	  "Mutterkonto": "-1",
+	  "Name": "Bereich Bioinformatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "396",
+	  "Studiengang": "29",
+	  "Kontonr": "1100",
+	  "Mutterkonto": "1000",
+	  "Name": "Pflichtmodule Bioinformatik",
+	  "Pflicht": "1"
+	},
+	{
+	  "id": "397",
+	  "Studiengang": "29",
+	  "Kontonr": "1200",
+	  "Mutterkonto": "1000",
+	  "Name": "Wahlpflichtmodule Bioinformatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "398",
+	  "Studiengang": "29",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "-1",
+	  "Name": "Bereich Biologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "399",
+	  "Studiengang": "29",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "2000",
+	  "Name": "Wahlpflichtmodule Biologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "400",
+	  "Studiengang": "29",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "2000",
+	  "Name": "Wahlpflichtmodule Molekularbiologie",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "401",
+	  "Studiengang": "29",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Bereich Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "402",
+	  "Studiengang": "29",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "Wahlpflichbereich bioinformatisch relevante Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "403",
+	  "Studiengang": "29",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Wahlpflichbereich Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "404",
+	  "Studiengang": "29",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "Bereich Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "405",
+	  "Studiengang": "29",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "Wahlpflichtmodule Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "406",
+	  "Studiengang": "29",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "Bereich Schlüsselkompetenzen",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "407",
+	  "Studiengang": "29",
+	  "Kontonr": "5100",
+	  "Mutterkonto": "5000",
+	  "Name": "ASQ der FMI",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "408",
+	  "Studiengang": "29",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "5000",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "409",
+	  "Studiengang": "30",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "410",
+	  "Studiengang": "30",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "411",
+	  "Studiengang": "30",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Wahlpflichtbereich Optimierung/Stochatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "412",
+	  "Studiengang": "30",
+	  "Kontonr": "3110",
+	  "Mutterkonto": "3100",
+	  "Name": "Optimierung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "413",
+	  "Studiengang": "30",
+	  "Kontonr": "3120",
+	  "Mutterkonto": "3100",
+	  "Name": "Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "414",
+	  "Studiengang": "30",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "Wahlpflichtbereich sonstige Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "415",
+	  "Studiengang": "30",
+	  "Kontonr": "4000",
+	  "Mutterkonto": "-1",
+	  "Name": "Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "416",
+	  "Studiengang": "30",
+	  "Kontonr": "4100",
+	  "Mutterkonto": "4000",
+	  "Name": "Schwerpunkt Financial Risk",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "417",
+	  "Studiengang": "30",
+	  "Kontonr": "4200",
+	  "Mutterkonto": "4000",
+	  "Name": "Schwerpunkt Management Science",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "418",
+	  "Studiengang": "30",
+	  "Kontonr": "4300",
+	  "Mutterkonto": "4000",
+	  "Name": "Schwerpunkt Accounting, Taxation and Capital Markets",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "419",
+	  "Studiengang": "30",
+	  "Kontonr": "4400",
+	  "Mutterkonto": "4000",
+	  "Name": "Schwerpunkt Marketing Management",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "420",
+	  "Studiengang": "30",
+	  "Kontonr": "4500",
+	  "Mutterkonto": "4000",
+	  "Name": "Schwerpunkt Innovation and Change",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "421",
+	  "Studiengang": "30",
+	  "Kontonr": "4600",
+	  "Mutterkonto": "4000",
+	  "Name": "Schwerpunkt Economics and Strategy",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "422",
+	  "Studiengang": "30",
+	  "Kontonr": "5000",
+	  "Mutterkonto": "-1",
+	  "Name": "WP Informatik und ASQ",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "423",
+	  "Studiengang": "30",
+	  "Kontonr": "5020",
+	  "Mutterkonto": "5000",
+	  "Name": "allgemeine Schlüsselqualifikationen (ASQ)",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "424",
+	  "Studiengang": "30",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "5020",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "425",
+	  "Studiengang": "30",
+	  "Kontonr": "5010",
+	  "Mutterkonto": "5000",
+	  "Name": "Informatik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "426",
+	  "Studiengang": "31",
+	  "Kontonr": "900",
+	  "Mutterkonto": "-1",
+	  "Name": "Leistungspunktekonto",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "427",
+	  "Studiengang": "31",
+	  "Kontonr": "1000",
+	  "Mutterkonto": "-1",
+	  "Name": "Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "428",
+	  "Studiengang": "31",
+	  "Kontonr": "1100",
+	  "Mutterkonto": "1000",
+	  "Name": "Optimierung",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "429",
+	  "Studiengang": "31",
+	  "Kontonr": "1300",
+	  "Mutterkonto": "1000",
+	  "Name": "Sonstige Mathematik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "430",
+	  "Studiengang": "31",
+	  "Kontonr": "1200",
+	  "Mutterkonto": "1000",
+	  "Name": "Stochastik",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "431",
+	  "Studiengang": "31",
+	  "Kontonr": "2000",
+	  "Mutterkonto": "-1",
+	  "Name": "Wirtschaftswissenschaften",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "432",
+	  "Studiengang": "31",
+	  "Kontonr": "2100",
+	  "Mutterkonto": "2000",
+	  "Name": "Schwerpunkt Financial Risk",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "433",
+	  "Studiengang": "31",
+	  "Kontonr": "2200",
+	  "Mutterkonto": "2000",
+	  "Name": "Schwerpunkt Management Science",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "434",
+	  "Studiengang": "31",
+	  "Kontonr": "2300",
+	  "Mutterkonto": "2000",
+	  "Name": "Schwerpunkt Accounting, Taxation and Capital Markets",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "435",
+	  "Studiengang": "31",
+	  "Kontonr": "2400",
+	  "Mutterkonto": "2000",
+	  "Name": "Schwerpunkt Marketing Management",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "436",
+	  "Studiengang": "31",
+	  "Kontonr": "2500",
+	  "Mutterkonto": "2000",
+	  "Name": "Schwerpunkt Innovation and Change",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "437",
+	  "Studiengang": "31",
+	  "Kontonr": "2600",
+	  "Mutterkonto": "2000",
+	  "Name": "Schwerpunkt Economics and Strategy",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "438",
+	  "Studiengang": "31",
+	  "Kontonr": "3000",
+	  "Mutterkonto": "-1",
+	  "Name": "Informatik, ASQ, German",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "439",
+	  "Studiengang": "31",
+	  "Kontonr": "3200",
+	  "Mutterkonto": "3000",
+	  "Name": "ASQ",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "440",
+	  "Studiengang": "31",
+	  "Kontonr": "6100",
+	  "Mutterkonto": "3200",
+	  "Name": "Katalog Allgemeine SQ der Philosophischen Fakultät",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "441",
+	  "Studiengang": "31",
+	  "Kontonr": "3300",
+	  "Mutterkonto": "3000",
+	  "Name": "German",
+	  "Pflicht": "0"
+	},
+	{
+	  "id": "442",
+	  "Studiengang": "31",
+	  "Kontonr": "3100",
+	  "Mutterkonto": "3000",
+	  "Name": "Informatik",
+	  "Pflicht": "0"
+	}
+ ]

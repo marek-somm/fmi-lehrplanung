@@ -1,0 +1,32 @@
+[
+	{
+	  "id": "79",
+	  "Name": "Informatik",
+	  "Name_Kurz": "I"
+	},
+	{
+	  "id": "105",
+	  "Name": "Mathematik",
+	  "Name_Kurz": "M"
+	},
+	{
+	  "id": "200",
+	  "Name": "Computational and Data Science",
+	  "Name_Kurz": "CDS"
+	},
+	{
+	  "id": "221",
+	  "Name": "Bioinformatik",
+	  "Name_Kurz": "BI"
+	},
+	{
+	  "id": "276",
+	  "Name": "Wirtschaftsmathematik",
+	  "Name_Kurz": "WM"
+	},
+	{
+	  "id": "679",
+	  "Name": "Angewandte Informatik",
+	  "Name_Kurz": "AI"
+	}
+ ]

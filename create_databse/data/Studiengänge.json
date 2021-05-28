@@ -1,0 +1,312 @@
+[
+	{
+	  "id": "1",
+	  "Abschluss": "22",
+	  "Fach": "79",
+	  "PO-Version": "2015",
+	  "Name": "Lehramt Regelschule Informatik (V2015)",
+	  "Name_Kurz": "ILR (V2015)",
+	  "Aktiv_von": "20151",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "2",
+	  "Abschluss": "22",
+	  "Fach": "79",
+	  "PO-Version": "2020",
+	  "Name": "Lehramt Regelschule Informatik (V2020)",
+	  "Name_Kurz": "ILR (V2020)",
+	  "Aktiv_von": "20201",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "3",
+	  "Abschluss": "22",
+	  "Fach": "105",
+	  "PO-Version": "2007",
+	  "Name": "Lehramt Regelschule Mathematik (V2007)",
+	  "Name_Kurz": "MLR (V2007)",
+	  "Aktiv_von": "20071",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "4",
+	  "Abschluss": "23",
+	  "Fach": "79",
+	  "PO-Version": "2007",
+	  "Name": "Lehramt Gymnasium Informatik (V2007)",
+	  "Name_Kurz": "ILG (V2007)",
+	  "Aktiv_von": "20071",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "5",
+	  "Abschluss": "23",
+	  "Fach": "79",
+	  "PO-Version": "2020",
+	  "Name": "Lehramt Gymnasium Informatik (V2020)",
+	  "Name_Kurz": "ILG (V2020)",
+	  "Aktiv_von": "20201",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "6",
+	  "Abschluss": "23",
+	  "Fach": "105",
+	  "PO-Version": "2007",
+	  "Name": "Lehramt Gymnasium Mathematik (V2007)",
+	  "Name_Kurz": "MLG (V2007)",
+	  "Aktiv_von": "20071",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "7",
+	  "Abschluss": "23",
+	  "Fach": "105",
+	  "PO-Version": "2014",
+	  "Name": "Lehramt Gymnasium Mathematik (V2014)",
+	  "Name_Kurz": "MLG (V2014)",
+	  "Aktiv_von": "20141",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "8",
+	  "Abschluss": "32",
+	  "Fach": "79",
+	  "PO-Version": "2015",
+	  "Name": "Lehramt Regelschule (Erweiterungsfach) Informatik (V2015)",
+	  "Name_Kurz": "ILRE (V2015)",
+	  "Aktiv_von": "20151",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "9",
+	  "Abschluss": "32",
+	  "Fach": "79",
+	  "PO-Version": "2020",
+	  "Name": "Lehramt Regelschule (Erweiterungsfach) Informatik (V2020)",
+	  "Name_Kurz": "ILRE (V2020)",
+	  "Aktiv_von": "20201",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "10",
+	  "Abschluss": "32",
+	  "Fach": "105",
+	  "PO-Version": "2010",
+	  "Name": "Lehramt Regelschule (Erweiterungsfach) Mathematik (V2010)",
+	  "Name_Kurz": "MLRE (V2010)",
+	  "Aktiv_von": "20101",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "11",
+	  "Abschluss": "33",
+	  "Fach": "79",
+	  "PO-Version": "2010",
+	  "Name": "Lehramt Gymnasium (Erweiterungsfach) Informatik (V2010)",
+	  "Name_Kurz": "ILGE (V2010)",
+	  "Aktiv_von": "20101",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "12",
+	  "Abschluss": "33",
+	  "Fach": "79",
+	  "PO-Version": "2020",
+	  "Name": "Lehramt Gymnasium (Erweiterungsfach) Informatik (V2020)",
+	  "Name_Kurz": "ILGE (V2020)",
+	  "Aktiv_von": "20201",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "13",
+	  "Abschluss": "33",
+	  "Fach": "105",
+	  "PO-Version": "2010",
+	  "Name": "Lehramt Gymnasium (Erweiterungsfach) Mathematik (V2010)",
+	  "Name_Kurz": "MLGE (V2010)",
+	  "Aktiv_von": "20101",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "14",
+	  "Abschluss": "68",
+	  "Fach": "79",
+	  "PO-Version": "2007",
+	  "Name": "BA (Ergänzungsfach) Informatik (V2007)",
+	  "Name_Kurz": "IBE (V2007)",
+	  "Aktiv_von": "20071",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "15",
+	  "Abschluss": "68",
+	  "Fach": "105",
+	  "PO-Version": "2007",
+	  "Name": "BA (Ergänzungsfach) Mathematik (V2007)",
+	  "Name_Kurz": "MBE (V2007)",
+	  "Aktiv_von": "20071",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "16",
+	  "Abschluss": "82",
+	  "Fach": "79",
+	  "PO-Version": "2008",
+	  "Name": "BSc Informatik (V2008)",
+	  "Name_Kurz": "IB (V2008)",
+	  "Aktiv_von": "20081",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "17",
+	  "Abschluss": "82",
+	  "Fach": "79",
+	  "PO-Version": "2014",
+	  "Name": "BSc Informatik (V2014)",
+	  "Name_Kurz": "IB (V2014)",
+	  "Aktiv_von": "20141",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "18",
+	  "Abschluss": "82",
+	  "Fach": "105",
+	  "PO-Version": "2008",
+	  "Name": "BSc Mathematik (V2008)",
+	  "Name_Kurz": "MB (V2008)",
+	  "Aktiv_von": "20081",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "19",
+	  "Abschluss": "82",
+	  "Fach": "105",
+	  "PO-Version": "2018",
+	  "Name": "BSc Mathematik (V2018)",
+	  "Name_Kurz": "MB (V2018)",
+	  "Aktiv_von": "20181",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "20",
+	  "Abschluss": "82",
+	  "Fach": "221",
+	  "PO-Version": "2014",
+	  "Name": "BSc Bioinformatik (V2014)",
+	  "Name_Kurz": "BIB (V2014)",
+	  "Aktiv_von": "20141",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "21",
+	  "Abschluss": "82",
+	  "Fach": "276",
+	  "PO-Version": "2008",
+	  "Name": "BSc Wirtschaftsmathematik (V2008)",
+	  "Name_Kurz": "WMB (V2008)",
+	  "Aktiv_von": "20081",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "22",
+	  "Abschluss": "82",
+	  "Fach": "276",
+	  "PO-Version": "2018",
+	  "Name": "BSc Wirtschaftsmathematik (V2018)",
+	  "Name_Kurz": "WMB (V2018)",
+	  "Aktiv_von": "20181",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "23",
+	  "Abschluss": "82",
+	  "Fach": "679",
+	  "PO-Version": "2014",
+	  "Name": "BSc Angewandte Informatik (V2014)",
+	  "Name_Kurz": "AIB (V2014)",
+	  "Aktiv_von": "20141",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "24",
+	  "Abschluss": "88",
+	  "Fach": "79",
+	  "PO-Version": "2010",
+	  "Name": "MSc Informatik (V2010)",
+	  "Name_Kurz": "IM (V2010)",
+	  "Aktiv_von": "20101",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "25",
+	  "Abschluss": "88",
+	  "Fach": "79",
+	  "PO-Version": "2016",
+	  "Name": "MSc Informatik (V2016)",
+	  "Name_Kurz": "IM (V2016)",
+	  "Aktiv_von": "20161",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "26",
+	  "Abschluss": "88",
+	  "Fach": "105",
+	  "PO-Version": "2010",
+	  "Name": "MSc Mathematik (V2010)",
+	  "Name_Kurz": "MM (V2010)",
+	  "Aktiv_von": "20101",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "27",
+	  "Abschluss": "88",
+	  "Fach": "105",
+	  "PO-Version": "2020",
+	  "Name": "MSc Mathematik (V2020)",
+	  "Name_Kurz": "MM (V2020)",
+	  "Aktiv_von": "20201",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "28",
+	  "Abschluss": "88",
+	  "Fach": "200",
+	  "PO-Version": "2014",
+	  "Name": "MSc Computational and Data Science (V2014)",
+	  "Name_Kurz": "CDSM (V2014)",
+	  "Aktiv_von": "20141",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "29",
+	  "Abschluss": "88",
+	  "Fach": "221",
+	  "PO-Version": "2010",
+	  "Name": "MSc Bioinformatik (V2010)",
+	  "Name_Kurz": "BIM (V2010)",
+	  "Aktiv_von": "20101",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "30",
+	  "Abschluss": "88",
+	  "Fach": "276",
+	  "PO-Version": "2010",
+	  "Name": "MSc Wirtschaftsmathematik (V2010)",
+	  "Name_Kurz": "WMM (V2010)",
+	  "Aktiv_von": "20101",
+	  "Aktiv_bis": "1000000"
+	},
+	{
+	  "id": "31",
+	  "Abschluss": "88",
+	  "Fach": "276",
+	  "PO-Version": "2020",
+	  "Name": "MSc Wirtschaftsmathematik (V2020)",
+	  "Name_Kurz": "WMM (V2020)",
+	  "Aktiv_von": "20201",
+	  "Aktiv_bis": "1000000"
+	}
+ ]

@@ -1,0 +1,460 @@
+Robert;:;Adler;:;4607;:;
+Barbara;:;Aehnlich;:;2657;:;Dr. phil.
+Alsayed;:;Algergawy;:;10225;:;Dr.-Ing.
+Adnan;:;Alhomssi;:;14058;:;
+Walter;:;Alt;:;344;:;Universitätsprofessor Dr. rer. nat. habil.
+Ingo;:;Althöfer;:;332;:;Universitätsprofessor Dr.
+Wolfram;:;Amme;:;832;:;apl. Prof. Dr.
+Stefan;:;Ankirchner;:;9841;:;Universitätsprofessor Dr. rer. nat.
+Franka;:;Baaske;:;4834;:;Professor Dr. rer. nat.
+Emanuel;:;Barth;:;10999;:;Dr. rer. nat.
+Björn;:;Barz;:;13972;:;
+Clemens;:;Beckstein;:;382;:;Universitätsprofessor Dr.-Ing.
+Siegfried;:;Beckus;:;7496;:;Dr.
+Martin;:;Bellstedt;:;10334;:;
+Silvan;:;Bernklau;:;14565;:;
+Olaf;:;Beyersdorff;:;12630;:;Universitätsprofessor Dr. rer. nat.
+Mark;:;Blacher;:;13358;:;
+Silvia;:;Blaser;:;8697;:;
+Joshua;:;Blinkhorn;:;14862;:;
+Toni;:;Bock;:;13674;:;
+Sebastian;:;Böcker;:;4265;:;Universitätsprofessor Dr.
+Paul;:;Bodesheim;:;12925;:;Dr.-Ing.
+Benjamin;:;Böhm;:;13865;:;
+Markus;:;Böhm;:;9583;:;
+Lena-Susanne;:;Boltz;:;8885;:;
+Torsten;:;Bosse;:;11818;:;Dr. rer. nat.
+Erik;:;Braun;:;1092;:;M. Sc.
+Sofia;:;Brenner;:;13369;:;
+Alexander;:;Breuer;:;14254;:;Universitätsprofessor Dr.
+Clemens-Alexander;:;Brust;:;12031;:;M.Sc.
+Chris;:;Buchwald;:;1466;:;
+Martin;:;Bücker;:;8900;:;Universitätsprofessor Dr.-Ing.
+Glenn;:;Byrenheid;:;8115;:;Dr. rer. nat.
+Bernd;:;Carl;:;709;:;Universitätsprofessor Dr.
+Jhonatan;:;Contreras Duarte;:;12223;:;
+Markus;:;Dafinger;:;13580;:;Dr. rer. nat.
+Joachim;:;Denzler;:;1164;:;Universitätsprofessor Dr.-Ing.
+Stephan;:;Deubler;:;10519;:;
+Peter;:;Dittrich;:;747;:;apl. Prof. Dr. rer. nat. habil.
+Daniel;:;Dörfler;:;14556;:;
+Volker;:;Dörsing;:;1108;:;Dipl. Phys.
+Kai;:;Dührkop;:;8964;:;
+Carola;:;Eichner;:;2317;:;
+Hans-Jürgen;:;Engelbert;:;238;:;Universitätsprofessor Dr.
+Stefan;:;Engelhardt;:;9596;:;
+Jan;:;Ewald;:;10437;:;
+Bettina;:;Färber;:;12452;:;Dr. rer. nat.
+Markus;:;Fleischauer;:;9822;:;
+Michael;:;Fothe;:;946;:;Universitätsprofessor Dr. rer. nat.
+Hans;:;Franzen;:;14889;:;Privatdozent Dr.
+Nadin;:;Friebe;:;11573;:;
+Janna;:;Friedel;:;13534;:;
+Alexander;:;Fromm;:;13164;:;Dr. rer. nat.
+Dietmar;:;Gallistl;:;13538;:;Professor Dr. rer. nat.
+Andreas;:;Gerhardus;:;14891;:;Dr.
+Roman;:;Gerlach;:;4457;:;Dipl.-Geograph
+Joachim;:;Giesen;:;5434;:;Universitätsprofessor Dr.
+Fabian;:;Graap;:;13166;:;
+Holger;:;Grabow;:;1089;:;
+Jana;:;Grajetzki;:;2263;:;Dr.
+David;:;Green;:;3925;:;Universitätsprofessor Dr.
+Karl-Heinz;:;Günther;:;1077;:;
+Roland;:;Günther;:;1026;:;Privatdozent Dr. rer. nat. habil.
+Gabriel;:;Haas;:;13672;:;
+Matthias;:;Hagen;:;4606;:;
+Frank;:;Haney;:;12116;:;Dr.
+Maximilian;:;Hanske;:;11838;:;
+Dorothee;:;Haroske;:;2068;:;Universitätsprofessor Dr. rer. nat. habil.
+David Gerold;:;Hasler;:;8948;:;Universitätsprofessor Dr.
+Jens;:;Haueisen;:;3190;:;Professor Dr.-Ing. habil.
+Till;:;Hauser;:;14328;:;
+Hans-Dietrich;:;Hecker;:;277;:;Universitätsprofessor Dr.
+Thomas;:;Heinze;:;6022;:;Dr. rer. nat.
+Harald;:;Hempel;:;987;:;Privatdozent Dr.
+Jakob;:;Henkel;:;13205;:;
+Christian;:;Hercher;:;9482;:;
+Martin;:;Hermann;:;1218;:;Universitätsprofessor Dr.
+Robert;:;Hesse;:;8875;:;
+Christine;:;Heuschild;:;2264;:;
+Nicole;:;Hickethier;:;2332;:;
+Benjamin;:;Hinrichs;:;9276;:;
+Martin;:;Hoffmann;:;11895;:;
+Martin;:;Hölzer;:;10520;:;Dr. rer. nat.
+Günter;:;Horn;:;1012;:;Dr. rer. nat.
+Franziska;:;Hufsky;:;7826;:;Dr. rer. nat.
+Jana;:;Huwald;:;10292;:;
+Bashar;:;Ibrahim;:;8227;:;Privatdozent Dr. rer. nat.
+Jutta;:;Jäger;:;2324;:;Dipl.-Phys.
+Stefan;:;Jäger;:;14855;:;Dr.
+Joachim;:;Jüngel;:;1025;:;Dr.
+Paul;:;Kahlmeyer;:;14408;:;
+Anahita;:;Kazem;:;14679;:;Dr. phil.
+Jan Martin;:;Keil;:;12151;:;
+Monika;:;Keilich;:;11005;:;
+Henning;:;Kempka;:;650;:;Dr.
+Simon;:;King;:;7886;:;Privatdozent Dr. math.
+Ksenija;:;Kitanov;:;13867;:;Dr. rer. nat.
+Friederike;:;Klan;:;4723;:;Dr.-Ing.
+Julien;:;Klaus;:;11806;:;
+Constantin;:;Kleiner;:;14991;:;
+Oliver;:;Klinger;:;4272;:;Dipl.-Inf.
+Christian;:;Knüpfer;:;6024;:;Dr. rer. nat.
+Jannis;:;Koberstein;:;8119;:;
+Wolfgang;:;Koch;:;1032;:;Dr.-Ing.
+Adelhard;:;Köhler;:;1391;:;Dr.
+Günter;:;Köhler;:;4188;:;Privatdozent Dr. rer. nat.
+Birgitta;:;König-Ries;:;2351;:;Universitätsprofessor Dr.
+Verena;:;Köpp;:;11379;:;
+Dimitri;:;Korsch;:;11387;:;M. Sc.
+Jan;:;Kotrbatý;:;12228;:;
+Sebastian;:;Krautwurst;:;11657;:;M. Sc.
+Fleming;:;Kretschmer;:;14506;:;
+Johannes;:;Kretzschmar;:;6844;:;Dipl. Inf.
+Bernd;:;Kühne;:;1124;:;Dipl. Ing.
+Lars;:;Kühne;:;10035;:;Dr.-Ing.
+Burkhard;:;Külshammer;:;353;:;Universitätsprofessor Dr.
+Annemarie;:;Kunze;:;8701;:;
+Kevin;:;Lamkiewicz;:;13038;:;
+Julius;:;Lang;:;11497;:;M. Sc.
+Carina;:;Lange;:;14591;:;
+Markus;:;Lange;:;6512;:;
+Sören;:;Laue;:;6318;:;Dr.-Ing.
+Kai;:;Lawonn;:;13639;:;Juniorprofessor Dr.-Ing.
+Viktor;:;Leis;:;13118;:;Universitätsprofessor Dr.
+Lutz;:;Leistritz;:;3323;:;Dr. rer. nat.
+Daniel;:;Lenz;:;5716;:;Universitätsprofessor Dr.
+Hans-Gerd;:;Leopold;:;1020;:;apl. Prof. Dr.
+Jörg;:;Linde;:;11084;:;Dr.
+Werner;:;Linde;:;1358;:;Universitätsprofessor Dr. rer. nat. habil.
+Henry;:;Lindemann;:;11880;:;M. Sc.
+Anke;:;Lindmeier;:;13979;:;Universitätsprofessor Dr.
+Felicitas;:;Löffler;:;9301;:;
+Frank;:;Löffler;:;12287;:;Dr. rer. nat.
+Andreas;:;Löhne;:;10724;:;Universitätsprofessor Dr.
+Philipp Paul Thomas;:;Lucas;:;11799;:;
+Marcus;:;Ludwig;:;10226;:;
+Lutz;:;Maicher;:;9853;:;Juniorprofessor Dr.
+Julia;:;Marx;:;13345;:;
+Manuela;:;Marz;:;8559;:;Universitätsprofessor Dr.
+Vladimir;:;Matveev;:;4471;:;Universitätsprofessor Dr.
+Marianne;:;Mauch;:;12178;:;
+Oliver;:;Mauroner;:;7557;:;Juniorprofessor Dr.
+Johannes;:;Meißner;:;6845;:;Dipl. Inf.
+Hartmut;:;Menzer;:;1035;:;Privatdozent Dr. rer. nat. habil.
+Marvin;:;Meusel;:;9291;:;
+Manuela;:;Meyer;:;8699;:;
+Wolfgang;:;Meyer;:;6858;:;
+Thomas;:;Milde;:;3922;:;
+Matthias;:;Mitterreiter;:;12767;:;
+Oliver;:;Mothes;:;13125;:;
+Matthias;:;Müller;:;8553;:;Dr. rer. nat.
+Anke;:;Müller-Drabant;:;14925;:;
+Gunnar;:;Münch;:;14957;:;
+Martin;:;Mundhenk;:;641;:;Universitätsprofessor Dr.
+Cornelia;:;Müsse;:;2334;:;
+Werner;:;Nagel;:;1027;:;Privatdozent Dr.
+Nils;:;Nestler;:;11442;:;
+Michael;:;Neumann;:;4004;:;Universitätsprofessor Dr.
+Erich;:;Novak;:;599;:;Universitätsprofessor Dr. Dr.
+Frank;:;Nußbaum;:;8552;:;
+Markus;:;Oehme;:;5292;:;
+Tobias Henrik;:;Oertel-Jäger;:;10705;:;Universitätsprofessor Dr.
+Vladislav;:;Olkhovskiy;:;14059;:;
+Wolfgang;:;Ortmann;:;1058;:;Dr.-Ing.
+Marcus;:;Paradies;:;14780;:;Dr.-Ing.
+Ilya;:;Pavlyukevich;:;6607;:;Universitätsprofessor Dr.
+Stefan;:;Perko;:;14480;:;
+Stephan;:;Peter;:;4612;:;
+Eleonora;:;Petzold;:;9001;:;
+André;:;Prater;:;9556;:;M. Sc.
+Andriy;:;Regeta;:;13741;:;Dr. phil.
+Stephanie;:;Reinhardt;:;10119;:;
+Andreas;:;Reinsch;:;1131;:;Dr.-Ing.
+Christian;:;Richter;:;791;:;apl. Prof. Dr. rer. nat. habil.
+Mathias;:;Richter;:;1059;:;Dr. rer. nat.
+René;:;Richter;:;10814;:;
+Susanne;:;Richter;:;2265;:;
+Uwe;:;Richter;:;1079;:;
+Konstantin;:;Riege;:;10290;:;
+Marian;:;Ritsch;:;13673;:;
+Marcel;:;Rosenthal;:;5290;:;Dr. rer. nat.
+Wilhelm;:;Rossak;:;478;:;Universitätsprofessor Dr.
+Marc;:;Roßner;:;10320;:;
+Mohammad Ali;:;Rostami;:;9497;:;Dr.
+Jakob;:;Runge;:;12769;:;Dr.
+Sheeba;:;Samuel;:;13540;:;
+Christian;:;Schachtzabel;:;5557;:;Dipl. Inf.
+Constanze;:;Schadl;:;14458;:;
+André;:;Schäfer;:;12488;:;
+Martin;:;Schaffer;:;7513;:;Dr.
+Volkmar;:;Schau;:;4493;:;Dr.-Ing.
+Manuela;:;Scheffel;:;1689;:;
+Gisela;:;Schilpp;:;9415;:;
+Sirko;:;Schindler;:;7942;:;
+Björn;:;Schmalfuß;:;8764;:;Universitätsprofessor Dr.
+Hans-Jürgen;:;Schmeißer;:;853;:;Universitätsprofessor Dr.
+Marcel;:;Schmidt;:;8269;:;
+Michael;:;Schmitz;:;1046;:;Privatdozent Dr.
+Christopher;:;Schneider;:;7216;:;Professor Dr. rer. nat.
+Felix;:;Schneider;:;13013;:;
+Gero;:;Schnücke;:;14060;:;Dr.rer.nat.
+Johannes;:;Schoder;:;13717;:;
+Günter;:;Schorr;:;1128;:;Dr. rer. nat.
+Kathrin;:;Schowtka;:;5736;:;
+Ernst Günter;:;Schukat-Talamazzini;:;455;:;Universitätsprofessor Dr.
+Jens;:;Schumacher;:;795;:;Dr. rer. nat.
+Jan;:;Schumm;:;10717;:;B. Sc.
+Simeon;:;Schüz;:;14028;:;
+Volker;:;Schwartze;:;14222;:;Dr. rer. nat.
+Nora;:;Seeliger;:;12798;:;
+Ralf;:;Seidler;:;8910;:;Dipl.-Inf.
+Winfried;:;Sickel;:;1013;:;apl. Prof. Dr.
+Sven;:;Sickert;:;9747;:;Dr. rer. nat.
+Oliver;:;Siebert;:;10430;:;
+Franziska;:;Sieron;:;9600;:;
+Marian Stefan;:;Smesny;:;13719;:;
+Steffen;:;Späthe;:;5542;:;
+Ines;:;Spilling;:;2288;:;
+Nadine;:;Steinbach;:;11380;:;
+Gerhard;:;Strubbe;:;14122;:;
+Oleksiy;:;Sukaylo;:;11440;:;
+Andrew;:;Sutton;:;10286;:;
+Kristóf;:;Szarvas;:;14574;:;Dr.
+Kinga;:;Szücs;:;5974;:;Dr.
+Frank;:;Taubert;:;11012;:;Dr.-Ing.
+Sven;:;Thiel;:;8158;:;
+Raphael;:;Thiele;:;10219;:;
+Renate;:;Tobies;:;7160;:;Dr. paed. habil.
+Lukas;:;Traxl;:;11483;:;
+Anke;:;Truß;:;4469;:;Dipl. Inf.
+Marita;:;Venth;:;2266;:;
+Bertram;:;Vogel;:;10287;:;
+Jörg;:;Vogel;:;1028;:;Dr.
+Ronny;:;Vogel;:;10138;:;
+Henrik;:;Voigt;:;14769;:;
+Philipp;:;Wächter;:;14357;:;
+Daniel;:;Walther;:;11095;:;
+Thomas;:;Wannerer;:;11080;:;Universitätsprofessor Dr.
+Albin;:;Weber;:;451;:;Universitätsprofessor Dr.
+Benjamin;:;Weißing;:;12301;:;Dr. rer. nat.
+Martin;:;Welsch;:;4222;:;Honorarprofessor Dr.
+Julian;:;Wendt;:;11381;:;
+Gregor;:;Weske;:;1068;:;Dr. rer. nat.
+Tim;:;White;:;10288;:;
+Jürgen;:;Winkler;:;295;:;Universitätsprofessor Dr.
+Oxana;:;Yakimova;:;8218;:;Universitätsprofessor Dr. rer. nat.
+Deniz;:;Yilmaz;:;14882;:;Dr. rer. nat.
+Martina;:;Zähle;:;2260;:;Universitätsprofessor Dr.
+Franziska;:;Zander;:;7613;:;Dipl-Geographin
+Sina;:;Zarrieß;:;13417;:;Juniorprofessor Dr.
+Eberhard;:;Zehendner;:;407;:;Universitätsprofessor Dr.
+Fangyuan;:;Zhao;:;11881;:;
+Ian;:;Zimmermann;:;14530;:;
+Gerhard;:;Zumbusch;:;566;:;Universitätsprofessor Dr.
+Stefan;:;Heinemann;:;2861;:;Universitätsprofessor Dr. rer. nat. habil.
+Stefan;:;Schuster;:;913;:;Universitätsprofessor Dr.
+Gottfried;:;Jetschke;:;1386;:;Privatdozent Dr. rer. nat. habil.
+Ina;:;Weiß;:;1468;:;Dr. rer. nat.
+Günter;:;Theißen;:;652;:;Universitätsprofessor Dr.
+Thorsten;:;Heinzel;:;3454;:; Universitätsprofessor Dr.
+Matthias;:;Görlach;:;4236;:;Dr. rer. nat.
+Jörg;:;Müller;:;6048;:;Privatdozent Dr. rer. nat.
+Sabine;:;Brantl;:;2244;:;Privatdozent Dr. rer. nat. habil.
+Reinhard;:;Wetzker;:;2862;:;Professor Dr. rer. nat.
+Stefan;:;Halle;:;416;:;Universitätsprofessor Dr.
+Berit;:;Jungnickel;:;7219;:;Universitätsprofessor Dr.
+Maria;:;Mittag;:;2020;:;Universitätsprofessor Dr.
+Lennart;:;Olsson;:;616;:;Universitätsprofessor Dr.
+Marc Thilo;:;Figge;:;8082;:;Professor Dr.
+Thomas;:;Hinze;:;4283;:;Privatdozent Dr.-Ing. habil.
+Kerstin;:;Voigt;:;2126;:;Akademischer Rat Dr.
+Torsten;:;Schwarz;:;7586;:;Dr. rer. pol.
+Dieter;:;Kaiser;:;1066;:;Dr.
+Herbert;:;Süße;:;1029;:;Dr. rer. nat. habil.
+Bernd-Olaf;:;Küppers;:;254;:;Universitätsprofessor Dr.
+
+Valentin;:;Wesp;:;14978;:;
+René;:;Thierbach;:;8156;:;Dr. rer. nat.
+André;:;Scherag;:;14089;:;Universitätsprofessor Dr.
+Christian;:;Gaser;:;11885;:;Universitätsprofessor Dr.
+Sonja;:;Türpitz;:;14810;:;
+Wassili;:;Dimitriew;:;13943;:;
+Steve;:;Hoffmann;:;12890;:;Universitätsprofessor Dr. med. Dr. rer. nat.
+Suman;:;Chakraborty;:;14425;:;
+André;:;Then;:;12889;:;
+Carl-Eric;:;Wegner;:;11323;:;
+Kirsten;:;Küsel;:;2276;:;Universitätsprofessor Dr.
+Michael;:;Habeck;:;14091;:;Universitätsprofessor Dr.
+Peter;:;Schlattmann;:;8458;:;Universitätsprofessor Dr.
+Philip;:;Lenke;:;9813;:;
+Stefanie;:;Gräfe;:;9233;:;Universitätsprofessor Dr. rer. nat.
+Dirk;:;Bender;:;1334;:;Dr.
+
+Susanne;:;Hoffmann;:;;:;
+
+
+
+Matthias;:;Keller;:;;:;Dr. rer. nat.
+Marlis;:;Bärthel;:;;:;
+Frank;:;Geyer;:;;:;Dr.-Ing.
+Kai;:;Kümmel;:;;:;Dr. rer. nat.
+Nadine;:;Müller;:;;:;
+Sebastian;:;Germerodt;:;;:;Dr. rer. nat.
+Martin;:;Engler;:;;:;Dr. rer. nat.
+Jens;:;Kubieziel;:;;:;
+Therese;:;Mieth;:;;:;
+Christian;:;Deppe;:;;:;Dr. math.
+Kerstin;:;Scheubert;:;;:;Dipl. -Bioinf.
+Michael;:;Schwarz;:;;:;B.Sc.
+Kai;:;Gebhardt;:;;:;
+Christian;:;Schäufler;:;;:;
+Manfred;:;Roux;:;;:;
+Klaus;:;Friedel;:;;:;Dr.
+Katharina;:;Büchse;:;;:;
+Juliane;:;Geller;:;;:;
+Gerhard;:;Bräunlich;:;;:;Dr. rer. nat.
+Sabrina;:;Leiwat;:;;:;
+Katharina;:;Nagel;:;;:;
+Pascal;:;Lenzner;:;;:;Dr. rer. nat.
+Pierre;:;Landrock;:;;:;
+Ernst;:;Dietzel;:;;:;Dr. rer. nat.
+Maike;:;Klein;:;;:;
+Alexandra;:;Neamtu;:;;:;Dr.
+Michael;:;Fritsche;:;;:;Dr.
+Alexander;:;Freytag;:;;:;Dr.
+Bernhard;:;Pietsch;:;;:;
+Steffen;:;Avemarg;:;;:;Dr. -Ing.
+Marc;:;Rauch;:;;:;Dr. rer. nat.
+Christoph;:;Koch;:;;:;Dipl. Inf.
+Daniel;:;Rudolf;:;;:;Dr. rer. nat
+Jürgen R.;:;Reichenbach;:;;:;Professor
+Karin;:;Schiecke;:;;:;Dr. -Ing.
+Herbert;:;Witte;:;;:;Professor
+Anja;:;Lück;:;;:;
+Jens K.;:;Müller;:;;:;
+Benjamin;:;Sambale;:;;:;Privatdozent
+Sebastian;:;Apel;:;;:;Dr. -Ing.
+Erik;:;Schneider;:;;:;
+Thomas;:;Prinz;:;;:;Dr. rer. nat.
+Stefan;:;Artmann;:;;:;Privatdozent
+Stefanie;:;Jäckel;:;;:;
+Patricia;:;Sieber;:;;:;
+Stephan;:;Wolf;:;;:;
+Vsevolod;:;Shevchishin;:;;:;Dr.
+Stefan;:;Rosemann;:;;:;Dr. rer. nat.
+Elisabeth;:;Golbing;:;;:;
+Jürgen Manfred;:;Müller;:;;:;Privatdozent
+Jan;:;Schneider;:;;:;Dr. rer. nat.
+Philipp;:;Skandera;:;;:;
+Andreas;:;Vollmer;:;;:;
+Matthias;:;Beckmann;:;;:;
+Gabriel;:;Fuhrmann;:;;:;Dr. rer. nat.
+Robert;:;Kunsch;:;;:;
+Kim;:;Lammers;:;;:;M.Sc.
+Stephan;:;Fischer;:;;:;
+Sebastian;:;Vlaic;:;;:;Dr. rer. nat.
+Christian;:;Schnelle;:;;:;
+Sybille;:;Dühring;:;;:;
+René;:;Reichenbach;:;;:;
+Sebastian;:;Uschmann;:;;:;
+Alexandra;:;Rittmann;:;;:;
+Christoph;:;Redies;:;;:;Professor
+Hans-Georg;:;Schaible;:;;:;Professor
+Dirk;:;Hoyer;:;;:;apl. Prof.
+Maximilian;:;Fichtner;:;;:;
+Jan;:;Fricke;:;;:;Dr.
+Carsten;:;Strecker;:;;:;
+Peter;:;Großmann;:;;:;
+Christian;:;Stolcis;:;;:;
+Wolfram;:;Krech;:;;:;Privatdozent
+Daniel;:;Sell;:;;:;
+Christian;:;Oertel;:;;:;Dr. rer. nat.
+Stefan Norbert;:;Lang;:;;:;
+Purva;:;Kulkarni;:;;:;
+Charlotte;:;Pfeifer;:;;:;
+Robert;:;Gramsch-Stehfest;:;;:;apl. Prof.
+David;:;Krieg;:;;:;
+Daniel;:;Ciripoi;:;;:;
+Matthias;:;Liebisch;:;;:;Dr.
+Rico;:;Besteher;:;;:;
+Jana;:;Schleicher;:;;:;Dr. rer. nat.
+Mykhailo;:;Saienko;:;;:;Dr. rer. nat.
+Martin;:;Tautenhahn;:;;:;Dr. rer. nat.
+Louis Raoul;:;Soares Correia;:;;:;
+Patricia;:;Schäfer;:;;:;
+Felix;:;Schremmer;:;;:;
+Maximilian;:;Wechsung;:;;:;
+Eugenia;:;Saorín Gómez;:;;:;Dr.
+Johannes;:;Hahn;:;;:;Dr. rer. nat.
+Nina;:;Bartelmeß;:;;:;
+Javad;:;Chamanara;:;;:;
+Thomas;:;Köhler;:;;:;
+Markus;:;Mieth;:;;:;
+Tim;:;Hausknecht;:;;:;
+Mario;:;Ullrich;:;;:;Dr. rer. nat.
+Joscha;:;Prochno;:;;:;Dr. rer. nat.
+Michael;:;Livesey;:;;:;Dr.
+Daria;:;Livesey;:;;:;Dr.
+Thomas;:;Bocklitz;:;;:;Privatdozent
+David Rhys;:;Sherratt;:;;:;
+Christoph;:;Trautwein;:;;:;Dr.rer.nat.
+Sander;:;Münster;:;;:;Juniorprofessor
+Luise;:;Modersohn;:;;:;
+Anna;:;Mittag;:;;:;
+Felix;:;Meyer;:;;:;
+Kathrin;:;Stamms;:;;:;
+Mandy;:;Schalowski;:;;:;
+Jamal;:;Drewlo;:;;:;
+Daniel;:;Max;:;;:;
+Katharina;:;Mey;:;;:;
+Heiko;:;Stark;:;;:;Dr. rer. nat.
+
+
+
+
+David;:;Heckel;:;;:;
+Konrad;:;Schöbel;:;;:;
+Klaus;:;Haberland;:;;:;
+Jürgen;:;Müller;:;;:;
+Anke;:;Pohl;:;;:;
+Manja;:;Marz;:;;:;
+Klaus;:;Küspert;:;;:;
+Erik;:;Rodner;:;;:;
+Tabea;:;Rohr;:;;:;
+Tobias;:;Friedrich;:;;:;
+Christian;:;Komusiewicz;:;;:;
+David;:;Neuhäuser;:;;:;
+;:;Wiedemann;:;;:;Dozent der EAH Jena
+;:;Kutzbora;:;;:;Dozent der EAH Jena
+;:;Klingebiel;:;;:;Dozent der EAH Jena
+Burkart;:;Voß;:;;:;Dozent der EAH Jena
+Oliver;:;Jack;:;;:;Dozent der EAH Jena
+Hubert;:;Ostermaier;:;;:;Dozent der EAH Jena
+Ralph;:;Schuhmann;:;;:;Dozent der EAH Jena
+
+
+
+Eigenverantwortlich Lehrender;:;;:;;:;
+Studiendekan;:;;:;;:;
+z.Zt. nicht besetzt;:;;:;;:;
+Hochschullehrer der AG Stochastik;:;;:;;:;
+Hochschullehrer des Instituts für Mathematik;:;;:;;:;
+Hochschullehrer der Fakultät für Mathematik und Informatik;:;;:;;:;
+Hochschullehrer der Analysis, Algebra/Zahlentheorie, Geometrie, Numerischen Mathematik/Wissenschaftliches Rechnen;:;;:;;:;
+Betreuer der Bachelor-Arbeit entsprechend Prüfungsordnung §20(3);:;;:;;:;
+Betreuer der Master-Arbeit entsprechend Prüfungsordnung §20(3);:;;:;;:;
+Betreuer der Bachelor-Arbeit entsprechend Prüfungsordnung §20(3) bzw. §21(3) (B.Sc. Angewandte Informatik);:;;:;;:;
+Betreuer des Praktikums entsprechend Praktikumsordnung §8;:;;:;;:;
+Dozenten des Institutes für Mathematik;:;;:;;:;
+Dozenten der Informatik;:;;:;;:;
+Dozenten der Theoretischen Informatik;:;;:;;:;
+Der Fachvertreter des gewählten Bereiches (siehe Inhalte);:;;:;;:;
+Studiengangverantwortlicher MSc Mathematik;:;;:;;:;
+vom Landesprüfungsamt bestellte Prüfer;:;;:;;:;
+weitere beteiligte Dozenten;:;;:;;:;
+Dozent der EAH Jena;:;;:;;:;
+alle Dozenten der Informatik;:;;:;;:;
+Fachvertreter des gewählten Inhaltsbereichs;:;;:;;:;
+Betreuer;:;;:;;:;
+Klaus Küspert (organisatorische Betreuung an der Fakultät);:;;:;;:;
