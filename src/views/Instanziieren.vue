@@ -1,54 +1,72 @@
 <template>
-	<div class="results" v-if="data.modul">
-	<!-- <div>
-		<h1>Login</h1>
-	</div> -->
-	<form class="modul_imput" @submit.prevent="übernehmen()">
-		<label for="name">
-			<strong>Titel:</strong>
-		</label>
-		<input
-			id="name"
-			name="name"
-			:placeholder=data.modul.TitelDE
-			v-model="input.name"
-		/>
-		<label for="zielgruppe">
-			<strong>Zielgruppe:</strong>
-		</label>
-		<input
-			id="zielgruppe"
-			name="zielgruppe"
-			:placeholder=data.modul.Art
-			v-model="input.type"
-		/>
-		<label for="lp">
-			<strong>LP:</strong>
-		</label>
-		<input
-			id="lp"
-			name="lp"
-			:placeholder=data.modul.LP
-			v-model="input.lp"
-		/>
-		<label for="sws">
-			<strong>Workload:</strong>
-		</label>
-		<input
-			id="sws"
-			name="sws"
-			:placeholder=data.modul.Workload
-			v-model="input.sws"
-		/>
-		<label for="info">
-			<strong>Zusammensetzung:</strong>
-		</label>
-		<input
-			id="info"
-			name="info"
-			:placeholder=data.modul.Zusammensetzung
-			v-model="input.info"
-		/>
+	<div class="results" v-if="data.veranstaltung">
+	<form class="veranstaltung_input" @submit.prevent="übernehmen()">
+			<!-- <p>{{data.veranstaltung}}</p> -->
+			<h1>Veranstaltung</h1>
+			<!-- <p>{{data.veranstaltung.data}}</p> -->
+			<div class="modul-item" v-for="(item, key, index) in ret.data" :key="index">
+			<div v-if="!(key == 'friedolinID') && !(key == 'aktiv')">
+			<!-- <p>key: {{key}} item: {{item}} index: {{index}}</p> -->
+			<label :for=key>
+				<strong>{{key}}:</strong>
+			</label>
+			<input
+				:id=key
+				:name=key
+				:placeholder=item
+				:v-model=input[key]
+			/>
+			</div></div>
+			<h1>Inhalt</h1>
+			<!-- <p>{{data.veranstaltung.content}}</p> -->
+			<div class="modul-item" v-for="(item, key, index) in ret.content" :key="index">
+			<!-- <p>key: {{key}} item: {{item}} index: {{index}}</p> -->
+			<label :for=key>
+				<strong>{{key}}:</strong>
+			</label>
+			<input
+				:id=key
+				:name=key
+				:placeholder=item
+				:v-model=input[key]
+			/>
+			<p>{{item}}</p>
+			</div>
+			<h1>Personen</h1>
+			<!-- <p>{{data.veranstaltung.people}}</p> -->
+			<div class="modul-item" v-for="(item, key, index) in ret.people" :key="index">
+				<h1>{{key}}</h1>
+				<p>key: {{key}} item: {{item}} index: {{index}}</p>
+			<div v-for="(item, key, index) in item" :key="index">
+			<div v-for="(item, key, index) in item" :key="index">
+					<label :for=key>
+						<strong>{{key}}:</strong>
+					</label>
+					<input
+						:id=key
+						:name=key
+						:placeholder=item
+						:v-model=input[key]
+					/>
+			</div>
+			</div>
+			</div>
+			<h1>Prüfungen</h1>
+			<!-- <p>{{data.veranstaltung.exams}}</p> -->
+			<div class="modul-item" v-for="(item, key, index) in ret.exams" :key="index">
+			<p>key: {{key}} item: {{item}} index: {{index}}</p>
+			<div v-for="(item, key, index) in item" :key="index">
+			<label :for=key>
+				<strong>{{key}}:</strong>
+			</label>
+			<input
+				:id=key
+				:name=key
+				:placeholder=item
+				:v-model=input[key]
+			/>
+			</div>
+			</div>
 		<br /><br />
 		<button>
 			<strong>Übernehmen</strong>
@@ -64,74 +82,153 @@ import { request } from "@/scripts/request.js";
 export default {
 	setup() {
 		const rq = new request();
-		const input = reactive({
-			name: "",
-			type: "",
-			lp: "",
-			sws: "",
-			info: ""
-		});
+		const input = reactive({});
 		const ret = reactive({
-			name: "",
-			type: "",
-			lp: "",
-			sws: "",
-			info: ""
+			data:{
+				titel: "Der Titel der Veranstaltung",
+				veranstaltungsnummer: "Die Nummer der Veranstaltung",
+				semester: "Das Anfangsjahr des Semester mit 0 für SoSe und 1 für WiSe",
+				friedolinID: null,
+				aktiv: "0",
+				sws: "Anzahl der Semester Wochen Stunden",
+				turnus: "Wie oft wird diese LV angeboten",
+				art: "Vorlesung, Übung, Seminar, etc.",
+			},
+			content:{
+				Kommentar: "Wichtige Informationen für die Studenten",
+				Literatur: "Emfohlene Literatur",
+				Bemerkung: "Weniger wichtige Informationen für die Studenten",
+				Zielgruppe: "Studiengänge an die sich die LV richtet",
+				Lerninhalte: "Was soll in der LV vermittelt werden",
+				Leistungsnachweis: "Welche Prüfungsform ist geplant"
+			},
+			person:{
+				Verantwortlich: [{
+					vorname:"",
+					nachname:"",
+					grad:"",
+					rolle:"verantwortlich",
+					friedolinID:""
+				},
+				{
+					vorname:"",
+					nachname:"",
+					grad:"",
+					rolle:"verantwortlich",
+					friedolinID:""
+				}],
+				Begleitend: [{
+					vorname:"",
+					nachname:"",
+					grad:"",
+					rolle:"begleitend",
+					friedolinID:""
+				},
+				{
+					vorname:"",
+					nachname:"",
+					grad:"",
+					rolle:"begleitend",
+					friedolinID:""
+				}],
+				Organisatorisch: [{
+					vorname:"",
+					nachname:"",
+					grad:"",
+					rolle:"organisatorisch",
+					friedolinID:""
+				},
+				{
+					vorname:"",
+					nachname:"",
+					grad:"",
+					rolle:"organisatorisch",
+					friedolinID:""
+				}]
+			},
+			exams:[
+				{ "pnr": 0, "modulcode": "", "titel": "" },
+				{ "pnr": 0, "modulcode": "", "titel": "" },
+				{ "pnr": 0, "modulcode": "", "titel": "" },
+				{ "pnr": 0, "modulcode": "", "titel": "" },
+			]
 		});
 		const data = reactive({
-			loading: false,
+			veranstaltung: null,
 			modul: null
-		});
+			});
+
         const route = useRoute();
         const id = route.params.id;
+		const sem = route.params.sem;
+		console.log(id);
+		console.log(sem);
 		watch(
 			() => id,
+			() => sem,
 			() => {
-				getModul(id);
+				getModul(id, sem);
 			}
 		);
 
 		onMounted(() => {
-			getModul(id);
+			getModul(id, sem);
 		});
+		function isNumber(n) {
+			return !isNaN(parseFloat(n)) && isFinite(n);
+		}
 
-		async function getModul(modulcode) {
-			data.modul = await rq.getModul(modulcode);
-			data.modul = data.modul[0]
+		async function getModul(id, sem) {
+			console.log(ret.data)
+			if (isNumber(id)){
+				console.log("Veranstaltung")
+				data.veranstaltung = await rq.getVeranstaltung(id, sem);
+				for (var key in data.veranstaltung){
+					console.log("key ", key)
+					if (!(key == "people")){
+						for (var entry in data.veranstaltung[key]){
+							console.log("eintrag ",entry)
+							if (data.veranstaltung[key][entry] && !(entry == "friedolinID")){
+								console.log("data",data.veranstaltung[key][entry])
+								ret[key][entry] = data.veranstaltung[key][entry]
+							}
+						}
+					}
+					else{
+						// if ("Verantwortlich" in data.veranstaltung[key] && data.veranstaltung[key]["Verantwortlich"]){
+						// 	console.log("data1",data.veranstaltung[key]["Verantwortlich"])
+						// 	ret[key]["Verantwortlich"] = data.veranstaltung[key]["Verantwortlich"]
+						// }
+						// if (data.veranstaltung[key]["Begleitend"]){
+						// 	ret[key]["Begleitend"] = data.veranstaltung[key]["Begleitend"]
+						// }
+						// if (data.veranstaltung[key]["Organisatorisch"]){
+						// 	ret[key]["Organisatorisch"] = data.veranstaltung[key]["Organisatorisch"]
+						// }
+						ret[key] = data.veranstaltung[key]
+					}
+					
+				}
+				// data.veranstaltung.forEach(element => ret[element])
+				// console.log(data.veranstaltung)
+				// console.log(ret.data)
+			}
+			else{
+				console.log("Modul")
+				data.modul = await rq.getModul(id);
+				console.log(data.modul)
+			}
 		}
 
 		async function übernehmen() {
-			if (input.name){
-				ret.name = input.name
+			console.log("Ret")
+			for (var key in ret){
+				console.log(ret[key])
 			}
-			else{
-				ret.name = data.modul.TitelDE
+			console.log("Input")
+			for (var entry in input){
+				console.log(input[entry])
 			}
-			if (input.type){
-				ret.type = input.type
-			}
-			else{
-				ret.type = data.modul.Art
-			}
-			if (input.lp){
-				ret.lp = input.lp
-			}
-			else{
-				ret.lp = data.modul.LP
-			}
-			if (input.sws){
-				ret.sws = input.sws
-			}
-			else{
-				ret.sws = data.modul.Workload
-			}
-			if (input.info){
-				ret.info = input.info
-			}
-			else{
-				ret.info = data.modul.Zusammensetzung
-			}
-			console.log(ret)
 		}
 
 		return {
@@ -146,7 +243,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.modul_imput {
+.veranstaltung_input {
 	padding: 2em 1em;
 	font-family: helvetica, sans-serif;
 
@@ -159,7 +256,7 @@ export default {
 	}
 
 	input {
-		width: 25%;
+		width: 94%;
 		padding: 0.5em 0.25em;
 		margin: 0 3% 1em;
 		font-size: 1.2em;
