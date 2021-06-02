@@ -1,25 +1,21 @@
 <template>
-	<div class="results--container" v-if="veranstaltungen.all">
-		<div
-			class="semester"
-			v-for="(semester, key) in veranstaltungen.all.data"
-			:key="key"
-		>
-			<h3>{{ key }}</h3>
+	<div class="results--container" v-if="data.all">
+		<div class="category" v-for="(category, key) in data.all.data" :key="key">
+			<h3>&nbsp;{{ key }}&nbsp;</h3>
 			<div
 				class="item"
-				:class="{ deactive: !elem.aktiv }"
-				v-for="(elem, index) in semester"
+				:class="{ deactive: !item.aktiv }"
+				v-for="(item, index) in category"
 				:key="index"
-				@click="getVeranstaltung(elem.vnr, elem.semester)"
+				@click="select(item.nr, item.semester)"
 			>
-				<a class="text"> {{ elem.titel }} [{{ elem.vnr }}] </a>
+				<a class="text"> {{ item.titel }} [{{ item.nr }}] </a>
 			</div>
 		</div>
 		<button
 			class="load-more"
 			@click="loadMore"
-			v-show="veranstaltungen.all.count == veranstaltungen.limit"
+			v-show="data.all.count == data.limit"
 		>
 			...
 		</button>
@@ -27,52 +23,24 @@
 </template>
 
 <script>
-import { reactive, watch } from "vue";
-import { request } from "@/scripts/request.js";
-
 export default {
 	props: {
-		input: {
-			type: String,
+		data: {
+			type: Object,
 		},
 	},
 	setup(props, { emit }) {
-		const rq = new request();
-
-		const veranstaltungen = reactive({
-			defaultLimit: 20,
-			limit: 20,
-			all: null,
-		});
-
-		watch(
-			() => props.input,
-			() => {
-				veranstaltungen.limit = veranstaltungen.defaultLimit;
-				searchVeranstaltung(props.input);
-			}
-		);
-
-		async function searchVeranstaltung(name) {
-			veranstaltungen.all = await rq.searchVeranstaltung(
-				name,
-				veranstaltungen.limit
-			);
-		}
-
-		async function getVeranstaltung(vnr, semester) {
-			emit("selected", await rq.getVeranstaltung(vnr, semester));
-		}
-
 		function loadMore() {
-			veranstaltungen.limit += veranstaltungen.defaultLimit;
-			searchVeranstaltung(props.input);
+			emit('loadMore')
+		}
+
+		function select(nr, semester) {
+			emit('select', nr, semester)
 		}
 
 		return {
-			veranstaltungen,
-			getVeranstaltung,
 			loadMore,
+			select
 		};
 	},
 };
@@ -88,7 +56,7 @@ export default {
 	height: calc(100vh - 14.55rem);
 	padding: 0 0 1rem 0;
 
-	.semester {
+	.category {
 		width: 40%;
 
 		.item {
@@ -111,6 +79,9 @@ export default {
 			&:hover {
 				background-color: rgb(230, 230, 230);
 			}
+		}
+
+		.break {
 		}
 	}
 

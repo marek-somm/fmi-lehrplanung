@@ -15,8 +15,11 @@
 		</div>
 		<div class="bottom">
 			<router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-			<router-link v-if="user" class="link" :to="{ name: 'Search' }"
-				>Search</router-link
+			<router-link v-if="user" class="link" :to="{ name: 'Veranstaltungen' }"
+				>Veranstaltungen</router-link
+			>
+			<router-link v-if="user" class="link" :to="{ name: 'Module' }"
+				>Module</router-link
 			>
 			<router-link class="link" v-if='!user' :to="{name: 'Login'}">Login</router-link>
 			<router-link class="link" v-if='user' :to="{name: 'Logout'}">Logout</router-link>

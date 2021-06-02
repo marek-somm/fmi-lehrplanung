@@ -13,12 +13,3 @@ class input {
         return (!empty($_COOKIE[$key])) ? $_COOKIE[$key] : $value;
     }
 }
-
-function connectDatabase() {
-	$db = new Database();
-	if (!$db) {
-		 die($db->lastErrorMsg());
-	} else {
-		 return $db;
-	}
-}

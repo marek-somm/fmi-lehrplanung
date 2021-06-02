@@ -9,16 +9,35 @@ export class request {
 
 	async getVeranstaltung(vnr, semester) {
 		await this.fetchData('search/', {
+			typ: 'v',
 			vnr: vnr,
-			semester: semester
+			semester: semester,
 		})
 		return this.data
 	}
 
 	async searchVeranstaltung(titel, limit) {
 		await this.fetchData('search/', {
+			typ: 'v',
 			titel: titel,
-			limit: limit
+			limit: limit,
+		})
+		return this.data
+	}
+
+	async getModul(modulcode) {
+		await this.fetchData('search/', {
+			typ: 'm',
+			modulcode: modulcode,
+		})
+		return this.data
+	}
+
+	async searchModul(titel, limit) {
+		await this.fetchData('search/', {
+			typ: 'm',
+			titel: titel,
+			limit: limit,
 		})
 		return this.data
 	}

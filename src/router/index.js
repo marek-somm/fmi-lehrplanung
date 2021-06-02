@@ -3,7 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home'
 import Login from '@/views/Login'
 import Logout from '@/views/Logout'
-import Search from '@/views/Search'
+import Veranstaltungen from '@/views/Veranstaltungen'
+import Module from '@/views/Module'
 import NotFound from '@/views/NotFound'
 import Instanziieren from '@/views/Instanziieren'
 
@@ -24,9 +25,14 @@ const routes = [
 		component: Logout,
 	},
 	{
-		path: '/search',
-		name: 'Search',
-		component: Search,
+		path: '/veranstaltungen',
+		name: 'Veranstaltungen',
+		component: Veranstaltungen,
+	},
+	{
+		path: '/module',
+		name: 'Module',
+		component: Module,
 	},
 	{
 		path: '/instanziieren/:id',

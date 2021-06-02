@@ -117,8 +117,8 @@ for elem in data:
 	vor_zulassung = str(data[elem]['Voraussetzung_Modulzulassung']) if "Voraussetzung_Modulzulassung" in data[elem] else None
 	zusatzinfos = str(data[elem]['Zusatzinformationen']) if "Zusatzinformationen" in data[elem] and data[elem]["Zusatzinformationen"] != "" else None
 	literatur = str(data[elem]['Literatur']) if "Literatur" in data[elem] else None
-	c.execute('INSERT INTO Modul VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-		[modulcode,aktivvon,aktivbis,ects,praesenzzeit,workload,turnus,lp,titel,"",zusammensetzung,vorkenntnisse,art,inhalte,vor_lp,vor_pruefung,vor_zulassung,zusatzinfos,literatur]
+	c.execute('INSERT INTO Modul VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+		[modulcode,aktivvon,aktivbis,praesenzzeit,workload,turnus,lp,titel,"",zusammensetzung,vorkenntnisse,art,inhalte,vor_lp,vor_pruefung,vor_zulassung,zusatzinfos,literatur]
 	)
 
 	# INSERT MODUL_VERANTWORTUNG

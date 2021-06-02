@@ -4,7 +4,7 @@
 			class="searchbar"
 			ref="searchbar"
 			v-model="data.input"
-			placeholder="Veranstaltungstitel"
+			:placeholder="placeholder"
 		/>
 	</div>
 </template>
@@ -12,6 +12,9 @@
 <script>
 import { onMounted, reactive, ref, watch } from "vue";
 export default {
+	props: {
+		placeholder: String
+	},
 	setup(props, { emit }) {
 		const searchbar = new ref(null);
 		const data = reactive({
@@ -39,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .searchbar--container {
-	background: #eee;
+	background: #1d60bd;
 	width: 100%;
 
 	.searchbar {

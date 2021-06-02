@@ -10,3 +10,12 @@ class Database extends SQLite3 {
         return $ret;
     }
 }
+
+function connectDatabase() {
+	$db = new Database();
+	if (!$db) {
+		 die($db->lastErrorMsg());
+	} else {
+		 return $db;
+	}
+}
