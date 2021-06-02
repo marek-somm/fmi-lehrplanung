@@ -35,7 +35,7 @@ const routes = [
 		component: Module,
 	},
 	{
-		path: '/instanziieren/:id',
+		path: '/instanziieren/:id/:sem',
 		name: 'Instanziieren',
 		component: Instanziieren,
 	},
