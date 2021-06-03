@@ -2,7 +2,8 @@
 	<div class="info--container">
 		<div class="header">
 			<h3 class="title" v-if="selected">{{ selected.data.titel }}</h3>
-			<button class="close-button" @click="close">X</button>
+			<button class="new button" @click="newInstance">New</button>
+			<button class="close button" @click="close">X</button>
 		</div>
 		<div class="info-content" v-if="selected">
 			<div class="block">
@@ -67,6 +68,8 @@
 
 <script>
 import { onMounted } from "vue";
+import { useRouter } from "vue-router";
+
 export default {
 	props: {
 		selected: {
@@ -74,6 +77,8 @@ export default {
 		},
 	},
 	setup(props, { emit }) {
+		const router = useRouter()
+
 		function convertSemester(code) {
 			if (code % 10 == 0) {
 				return "SoSe " + parseInt(code / 10);
@@ -94,9 +99,20 @@ export default {
 			emit("close");
 		}
 
+		function newInstance() {
+			router.push({
+				name: 'Instanziieren',
+				params: {
+					id: props.selected.data.veranstaltungsnummer,
+					sem: props.selected.data.semester
+				}
+			});
+		}
+
 		return {
 			convertSemester,
 			close,
+			newInstance
 		};
 	},
 };
@@ -139,15 +155,30 @@ export default {
 			margin: 1rem auto 1rem auto;
 		}
 
-		.close-button {
+		.button {
 			height: 2rem;
 			width: 2rem;
 			border: none;
-			background-color: rgb(255, 220, 220);
 
 			&:hover {
 				cursor: pointer;
+			}
+		}
+
+		.close {
+			background-color: rgb(255, 220, 220);
+
+			&:hover {
 				background-color: rgb(255, 100, 100);
+			}
+		}
+
+		.new {
+			width: 3rem;
+			//background-color: rgb(255, 220, 220);
+
+			&:hover {
+				background-color: rgb(190, 190, 190);
 			}
 		}
 	}
