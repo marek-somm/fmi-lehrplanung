@@ -2,12 +2,19 @@
 	<div class="module--container">
 		<Searchbar @input="updateInput" placeholder="Modultitel/Modulcode" />
 		<div class="module-content">
-			<Info
-				:selected="data.selected"
-				:class="{ show: data.show }"
-				@close="close"
+			<InfoModul
+				:selected="data.selectedModul"
+				:class="{ show: data.showModul }"
+				@close="closeModul"
+				@exam="updateVeranstaltung"
 			/>
-			<Results @loadMore="loadMore" @select="updateSelected" :data="module"/>
+			<InfoVeranstaltung
+				:selected="data.selectedVeranstaltung"
+				:class="{ show: data.showVeranstaltung }"
+				@close="closeVeranstaltung"
+				@exam="updateModulWithExam"
+			/>
+			<Results @loadMore="loadMore" @select="updateModul" :data="module"/>
 		</div>
 	</div>
 </template>
@@ -15,7 +22,8 @@
 <script>
 import Searchbar from "@/components/Search/Searchbar.vue";
 import Results from "@/components/Search/Results.vue";
-import Info from "@/components/Search/InfoModul.vue";
+import InfoModul from "@/components/Search/InfoModul.vue";
+import InfoVeranstaltung from "@/components/Search/InfoVeranstaltung.vue";
 import { reactive } from "vue";
 import { request } from "@/scripts/request.js";
 
@@ -23,7 +31,8 @@ export default {
 	components: {
 		Searchbar,
 		Results,
-		Info,
+		InfoModul,
+		InfoVeranstaltung,
 	},
 	setup() {
 		const rq = new request();
@@ -36,18 +45,34 @@ export default {
 
 		const data = reactive({
 			input: "",
-			show: false,
-			selected: null,
+			showVeranstaltung: false,
+			showModul: false,
+			selectedVeranstaltung: null,
+			selectedModul: null,
 		});
 
-		async function updateSelected(value, semester) {
-			console.log(value + ", " + semester)
-			data.selected = await rq.getModul(value);
-			data.show = true;
+		async function updateModul(value) {
+			console.log(value)
+			data.selectedModul = await rq.getModul(value);
+			data.showModul = true;
 		}
 
-		function close() {
-			data.show = false;
+		async function updateModulWithExam(exam) {
+			updateModul(exam.Modulcode)
+		}
+
+		async function updateVeranstaltung(exam) {
+			console.log(exam);
+			data.selectedVeranstaltung = await rq.getVeranstaltung(exam.Vnr, exam.semester);
+			data.showVeranstaltung = true;
+		}
+
+		function closeVeranstaltung() {
+			data.showVeranstaltung = false;
+		}
+
+		function closeModul() {
+			data.showModul = false;
 		}
 
 		function loadMore() {
@@ -73,8 +98,11 @@ export default {
 		return {
 			data,
 			updateInput,
-			updateSelected,
-			close,
+			updateModul,
+			updateModulWithExam,
+			updateVeranstaltung,
+			closeVeranstaltung,
+			closeModul,
 			module,
 			loadMore
 		};

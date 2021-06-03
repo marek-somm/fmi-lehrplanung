@@ -2,12 +2,22 @@
 	<div class="veranstaltungen--container">
 		<Searchbar @input="updateInput" placeholder="Veranstaltungstitel" />
 		<div class="veranstaltungen-content">
-			<Info
-				:selected="data.selected"
-				:class="{ show: data.show }"
-				@close="close"
+			<InfoVeranstaltung
+				:selected="data.selectedVeranstaltung"
+				:class="{ show: data.showVeranstaltung }"
+				@close="closeVeranstaltung"
+				@exam="updateModul"
 			/>
-			<Results @loadMore="loadMore" @select="updateSelected" :data="veranstaltungen"/>
+			<InfoModul
+				:selected="data.selectedModul"
+				:class="{ show: data.showModul }"
+				@close="closeModul"
+			/>
+			<Results
+				@loadMore="loadMore"
+				@select="updateVeranstaltung"
+				:data="veranstaltungen"
+			/>
 		</div>
 	</div>
 </template>
@@ -15,7 +25,8 @@
 <script>
 import Searchbar from "@/components/Search/Searchbar.vue";
 import Results from "@/components/Search/Results.vue";
-import Info from "@/components/Search/InfoVeranstaltung.vue";
+import InfoVeranstaltung from "@/components/Search/InfoVeranstaltung.vue";
+import InfoModul from "@/components/Search/InfoModul.vue";
 import { reactive } from "vue";
 import { request } from "@/scripts/request.js";
 
@@ -23,7 +34,8 @@ export default {
 	components: {
 		Searchbar,
 		Results,
-		Info,
+		InfoVeranstaltung,
+		InfoModul,
 	},
 	setup() {
 		const rq = new request();
@@ -31,23 +43,35 @@ export default {
 		const veranstaltungen = reactive({
 			defaultLimit: 20,
 			limit: 20,
-			all: null
-		})
+			all: null,
+		});
 
 		const data = reactive({
 			input: "",
-			show: false,
-			selected: null,
+			showVeranstaltung: false,
+			showModul: false,
+			selectedVeranstaltung: null,
+			selectedModul: null,
 		});
 
-		async function updateSelected(value, semester) {
-			console.log(value + ", " + semester)
-			data.selected = await rq.getVeranstaltung(value, semester);
-			data.show = true;
+		async function updateVeranstaltung(value, semester) {
+			console.log(value + ", " + semester);
+			data.selectedVeranstaltung = await rq.getVeranstaltung(value, semester);
+			data.showVeranstaltung = true;
 		}
 
-		function close() {
-			data.show = false;
+		async function updateModul(exam) {
+			console.log(exam);
+			data.selectedModul = await rq.getModul(exam.Modulcode);
+			data.showModul = true;
+		}
+
+		function closeVeranstaltung() {
+			data.showVeranstaltung = false;
+		}
+
+		function closeModul() {
+			data.showModul = false;
 		}
 
 		function loadMore() {
@@ -56,7 +80,7 @@ export default {
 		}
 
 		function updateInput(input) {
-			if(input != "[object InputEvent]") {
+			if (input != "[object InputEvent]") {
 				data.input = input;
 				veranstaltungen.limit = veranstaltungen.defaultLimit;
 				searchVeranstaltung(data.input);
@@ -67,16 +91,18 @@ export default {
 			veranstaltungen.all = await rq.searchVeranstaltung(
 				name,
 				veranstaltungen.limit
-			)
+			);
 		}
 
 		return {
 			data,
 			updateInput,
-			updateSelected,
-			close,
+			updateVeranstaltung,
+			updateModul,
+			closeVeranstaltung,
+			closeModul,
 			veranstaltungen,
-			loadMore
+			loadMore,
 		};
 	},
 };

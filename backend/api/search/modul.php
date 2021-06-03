@@ -28,6 +28,9 @@ class modul {
 
 	public static function search($modulcode) {
 		$db = connectDatabase();
+		$people = array();
+		$allSemester = array();
+		$exams = array();
 		$answer = array();
 
 		$ret = $db->fetchData(<<<EOF
@@ -52,6 +55,56 @@ class modul {
 			$answer['content'] = $row;
 		}
 
+		$ret = $db->fetchData(<<<EOF
+			SELECT p.vorname, p.nachname, p.grad, p.friedolinID
+			FROM modul m
+			JOIN BRIDGE_Modul_Person bmp ON bmp.modulcode=m.modulcode
+			JOIN Person p ON bmp.personenID=p.personenID
+			WHERE m.modulcode="$modulcode"
+		EOF);
+
+		while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+			array_push($people, $row);
+		}
+
+
+
+		$ret = $db->fetchData(<<<EOF
+			SELECT li.semester
+			FROM modul m
+			JOIN Pruefung p ON m.modulcode=p.modulcode
+			JOIN BRIDGE_Lehrveranstaltung_Pruefung blp ON p.venr=blp.venr
+			JOIN Lehrveranstaltung_Info li ON blp.lehrvID=li.lehrvID
+			WHERE m.modulcode="$modulcode"
+			GROUP BY li.semester
+			ORDER BY li.semester DESC
+		EOF);
+
+		while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+			array_push($allSemester, $row['semester']);
+		}
+
+		foreach ($allSemester as &$sem) {
+			if ($sem % 10 == 0) {
+				$semStr = "SoSe " . (int)($sem / 10);
+			} else {
+				$semStr = "WiSe " . (int)($sem / 10);
+			}
+			$answer["exams"]["$semStr"] = array();
+			$ret = $db->fetchData(<<<EOF
+				SELECT p.titel, p.pnr, li.veranstaltungsnummer Vnr, li.semester
+				FROM modul m
+				JOIN Pruefung p ON m.modulcode=p.modulcode
+				JOIN BRIDGE_Lehrveranstaltung_Pruefung blp ON p.venr=blp.venr
+				JOIN Lehrveranstaltung_Info li ON blp.lehrvID=li.lehrvID
+				WHERE m.modulcode="$modulcode" AND li.semester=$sem
+			EOF);
+			while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+				array_push($answer["exams"]["$semStr"], $row);
+			}
+		}
+
+		$answer['people'][''] = $people;
 		$answer['modulcode'] = $modulcode;
 
 		header('Content-Type: application/json');

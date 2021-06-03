@@ -1,7 +1,7 @@
 <template>
 	<div class="info--container">
-		<div class="header">
-			<h3 class="title" v-if="selected">{{ selected.data.titel }}</h3>
+		<div class="header" v-if="selected">
+			<h3 class="title">{{ selected.data.titel }}</h3>
 			<button class="new button" @click="newInstance">New</button>
 			<button class="close button" @click="close">X</button>
 		</div>
@@ -32,36 +32,8 @@
 				</div>
 			</div>
 			<br />
-			<h3><u>Personen:</u></h3>
-			<div v-for="(roll, key) in selected.people" :key="key">
-				<h4>{{ key }}</h4>
-				<div v-for="person in roll" :key="person.friedolinID">
-					<p>
-						{{ person.grad }} {{ person.vorname }}
-						{{ person.nachname }} [<a
-							:href="
-								'https://friedolin.uni-jena.de/qisserver/rds?state=verpublish&moduleCall=webInfo&publishConfFile=webInfoPerson&publishSubDir=personal&personal.pid=' +
-								person.friedolinID
-							"
-							target="_blank"
-						>
-							{{ person.friedolinID }} </a
-						>]
-					</p>
-				</div>
-			</div>
-			<br />
-			<h3><u>Prüfungen:</u></h3>
-			<div class="block">
-				<div class="box" v-for="exam in selected.exams" :key="exam.pnr">
-					<p>
-						<b>{{ exam.titel }}</b>
-					</p>
-					<br />
-					<p>Pnr: {{ exam.pnr }}</p>
-					<p>Modulcode: {{ exam.modulcode }}</p>
-				</div>
-			</div>
+			<People :people="selected.people"/>
+			<Exams :exams="selected.exams" @exam="view"/>
 		</div>
 	</div>
 </template>
@@ -69,15 +41,18 @@
 <script>
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
+import People from "./Info/People.vue";
+import Exams from './Info/Exams.vue';
 
 export default {
+	components: { People, Exams },
 	props: {
 		selected: {
 			type: Object,
 		},
 	},
 	setup(props, { emit }) {
-		const router = useRouter()
+		const router = useRouter();
 
 		function convertSemester(code) {
 			if (code % 10 == 0) {
@@ -101,18 +76,23 @@ export default {
 
 		function newInstance() {
 			router.push({
-				name: 'Instanziieren',
+				name: "Instanziieren",
 				params: {
 					id: props.selected.data.veranstaltungsnummer,
-					sem: props.selected.data.semester
-				}
+					sem: props.selected.data.semester,
+				},
 			});
+		}
+
+		function view(exam) {
+			emit('exam', exam)
 		}
 
 		return {
 			convertSemester,
 			close,
-			newInstance
+			newInstance,
+			view,
 		};
 	},
 };

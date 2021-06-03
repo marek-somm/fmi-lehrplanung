@@ -1,12 +1,12 @@
 <template>
 	<div class="info--container">
-		<div class="header">
-			<h3 class="title" v-if="selected">{{ selected.modulcode }}</h3>
+		<div class="header" v-if="selected">
+			<h3 class="title">{{ selected.modulcode }}</h3>
 			<button class="close-button" @click="close">X</button>
 		</div>
 		<div class="info-content" v-if="selected">
 			<div class="block">
-				<br>
+				<br />
 				<h4 class="title">Titel DE: {{ selected.data.titel_de }}</h4>
 				<h4 class="title">Titel EN: {{ selected.data.titel_en }}</h4>
 			</div>
@@ -29,13 +29,20 @@
 					<div class="box" v-html="value" v-if="value"></div>
 				</div>
 			</div>
+			<br />
+			<People :people="selected.people" />
+			<Exams :exams="selected.exams" @exam="view"/>
 		</div>
 	</div>
 </template>
 
 <script>
 import { onMounted } from "vue";
+import People from "./Info/People.vue";
+import Exams from "./Info/Exams.vue";
+
 export default {
+	components: { People, Exams },
 	props: {
 		selected: {
 			type: Object,
@@ -62,9 +69,14 @@ export default {
 			emit("close");
 		}
 
+		function view(exam) {
+			emit('exam', exam)
+		}
+
 		return {
 			convertSemester,
 			close,
+			view,
 		};
 	},
 };

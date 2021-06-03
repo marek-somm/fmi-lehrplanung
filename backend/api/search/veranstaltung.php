@@ -81,7 +81,8 @@ class veranstaltung {
 			$ret = $db->fetchData(<<<EOF
 				SELECT p.vorname, p.nachname, p.grad, blp.rolle, p.friedolinID
 				FROM Lehrveranstaltung_Info i
-				JOIN BRIDGE_Lehrveranstaltung_Person blp, Person p ON blp.lehrvID=i.lehrvID AND blp.personenID=p.personenID
+				JOIN BRIDGE_Lehrveranstaltung_Person blp ON blp.lehrvID=i.lehrvID
+				JOIN Person p ON blp.personenID=p.personenID
 				WHERE i.veranstaltungsnummer=$vnr AND i.semester=$semester AND blp.rolle='$roll'
 			EOF);
 
@@ -96,17 +97,18 @@ class veranstaltung {
 		}
 
 		$ret = $db->fetchData(<<<EOF
-			SELECT pnr, modulcode, pr.titel
-			FROM Lehrveranstaltung_Info i
-			JOIN BRIDGE_Lehrveranstaltung_Pruefung blp, Pruefung pr ON blp.lehrvID=i.lehrvID AND blp.VENR=pr.VENR
-			WHERE i.veranstaltungsnummer=$vnr AND i.semester=$semester
+			SELECT pr.titel, pnr, modulcode Modulcode 
+			FROM Lehrveranstaltung_Info li
+			JOIN BRIDGE_Lehrveranstaltung_Pruefung blp ON blp.lehrvID=li.lehrvID
+			JOIN Pruefung pr ON blp.VENR=pr.VENR
+			WHERE li.veranstaltungsnummer=$vnr AND li.semester=$semester
 		EOF);
 
 		while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
 			array_push($exams, $row);
 		}
 
-		$answer['exams'] = $exams;
+		$answer['exams'][''] = $exams;
 
 		header('Content-Type: application/json');
 		echo (json_encode($answer, true));

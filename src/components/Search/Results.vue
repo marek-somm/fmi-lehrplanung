@@ -61,7 +61,7 @@ export default {
 
 		.item {
 			border: 1px black solid;
-			transition: all 0.2s ease;
+			transition: all 0.1s ease;
 			padding: 2rem;
 			margin-bottom: 0.5rem;
 
@@ -79,9 +79,6 @@ export default {
 			&:hover {
 				background-color: rgb(230, 230, 230);
 			}
-		}
-
-		.break {
 		}
 	}
 
