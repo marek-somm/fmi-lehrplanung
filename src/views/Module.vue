@@ -56,9 +56,11 @@ export default {
 		}
 
 		function updateInput(input) {
-			data.input = input;
-			module.limit = module.defaultLimit;
-			searchModul(data.input);
+			if(input != "[object InputEvent]") {
+				data.input = input;
+				module.limit = module.defaultLimit;
+				searchModul(data.input);
+			}
 		}
 
 		async function searchModul(name) {

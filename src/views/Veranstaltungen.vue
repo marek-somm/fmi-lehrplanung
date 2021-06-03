@@ -56,9 +56,11 @@ export default {
 		}
 
 		function updateInput(input) {
-			data.input = input;
-			veranstaltungen.limit = veranstaltungen.defaultLimit;
-			searchVeranstaltung(data.input);
+			if(input != "[object InputEvent]") {
+				data.input = input;
+				veranstaltungen.limit = veranstaltungen.defaultLimit;
+				searchVeranstaltung(data.input);
+			}
 		}
 
 		async function searchVeranstaltung(name) {
