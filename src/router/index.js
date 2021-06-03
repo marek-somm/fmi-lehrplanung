@@ -7,6 +7,7 @@ import Veranstaltungen from '@/views/Veranstaltungen'
 import Module from '@/views/Module'
 import NotFound from '@/views/NotFound'
 import Instanziieren from '@/views/Instanziieren'
+import store from '@/store/index'
 
 const routes = [
 	{
@@ -28,16 +29,19 @@ const routes = [
 		path: '/veranstaltungen',
 		name: 'Veranstaltungen',
 		component: Veranstaltungen,
+		beforeEnter: checkAccess
 	},
 	{
 		path: '/module',
 		name: 'Module',
 		component: Module,
+		beforeEnter: checkAccess
 	},
 	{
 		path: '/instanziieren/:id/:sem',
 		name: 'Instanziieren',
 		component: Instanziieren,
+		beforeEnter: checkAccess
 	},
 	{
 		path: '/:catchAll(.*)',
@@ -47,14 +51,15 @@ const routes = [
 	},
 ]
 
+function checkAccess(to, from, next) {
+	const user = store.state.User.user
+	if (!user) next({ name: 'Login' })
+	else next()
+}
+
 const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
 })
-
-// router.beforeEach(async (to, from, next) => {
-// 	const user = store.state.User.user;
-// 	next()
-// })
 
 export default router
