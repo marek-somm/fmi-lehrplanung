@@ -3,7 +3,6 @@
 node_modules
 .github\workflows
 backend-out
-/scripts
 
 # local env files
 .env.local
