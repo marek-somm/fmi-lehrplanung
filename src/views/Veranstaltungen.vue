@@ -12,6 +12,7 @@
 				:selected="data.selectedModul"
 				:class="{ show: data.showModul }"
 				@close="closeModul"
+				@exam="updateVeranstaltungWithExam"
 			/>
 			<Results
 				@loadMore="loadMore"
@@ -60,6 +61,10 @@ export default {
 			data.showVeranstaltung = true;
 		}
 
+		async function updateVeranstaltungWithExam(exam) {
+			updateVeranstaltung(exam.Vnr, exam.semester)
+		}
+
 		async function updateModul(exam) {
 			console.log(exam);
 			data.selectedModul = await rq.getModul(exam.Modulcode);
@@ -98,6 +103,7 @@ export default {
 			data,
 			updateInput,
 			updateVeranstaltung,
+			updateVeranstaltungWithExam,
 			updateModul,
 			closeVeranstaltung,
 			closeModul,
