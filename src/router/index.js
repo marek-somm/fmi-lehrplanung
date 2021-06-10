@@ -53,7 +53,7 @@ const routes = [
 
 function checkAccess(to, from, next) {
 	const user = store.state.User.user
-	const active = false
+	const active = true
 	if (!user && active) next({ name: 'Login' })
 	else next()
 }

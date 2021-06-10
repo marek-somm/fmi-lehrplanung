@@ -17,12 +17,14 @@ export class request {
 	}
 
 	async searchVeranstaltung(titel, limit) {
+		titel = titel.trim()
 		await this.fetchData('search/', {
 			typ: 'v',
 			titel: titel,
 			limit: limit,
 		})
-		return this.data
+		if(titel == '') return null
+		else return this.data
 	}
 
 	async getModul(modulcode) {
@@ -34,12 +36,14 @@ export class request {
 	}
 
 	async searchModul(titel, limit) {
+		titel = titel.trim()
 		await this.fetchData('search/', {
 			typ: 'm',
 			titel: titel,
 			limit: limit,
 		})
-		return this.data
+		if(titel == '') return null
+		else return this.data
 	}
 
 	async fetchData(path, params) {
