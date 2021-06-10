@@ -2,7 +2,7 @@
 	height: calc(100vh - 13.51rem);
 	width: 0;
 	text-align: left;
-	transition: all 0.5s ease;
+	transition: all 0.5s ease, height 0s ease;
 	color: transparent;
 	overflow: hidden;
 
@@ -34,15 +34,30 @@
 			margin: 1rem auto 1rem auto;
 		}
 
-		.close-button {
+		.button {
 			height: 2rem;
 			width: 2rem;
 			border: none;
-			background-color: rgb(255, 220, 220);
 
 			&:hover {
 				cursor: pointer;
+			}
+		}
+
+		.close {
+			background-color: rgb(255, 220, 220);
+
+			&:hover {
 				background-color: rgb(255, 100, 100);
+			}
+		}
+
+		.new {
+			width: 3rem;
+			//background-color: rgb(255, 220, 220);
+
+			&:hover {
+				background-color: rgb(190, 190, 190);
 			}
 		}
 	}
