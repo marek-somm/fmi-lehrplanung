@@ -52,7 +52,8 @@ class veranstaltung {
 		$db = connectDatabase();
 		$answer = array();
 		$exams = array();
-		$rolls = array('verantwortlich', 'begleitend', 'organisatorisch');
+		$people = array();
+		// $rolls = array('verantwortlich', 'begleitend', 'organisatorisch');
 
 		$ret = $db->fetchData(<<<EOF
 			SELECT inf.titel, inf.veranstaltungsnummer, semester, friedolinID, aktiv, sws, name turnus, art
@@ -67,34 +68,35 @@ class veranstaltung {
 		}
 
 		$ret = $db->fetchData(<<<EOF
-			SELECT kommentar Kommentar, literatur Literatur, bemerkung Bemerkung, zielgruppe Zielgruppe, lerninhalte Lerninhalte, leistungsnachweis Leistungsnachweis
+		SELECT zielgruppe Zielgruppe
 			FROM Lehrveranstaltung_Info inf
 			JOIN Lehrveranstaltung_Inhalt inh ON inf.lehrvID=inh.lehrvID
 			WHERE inf.veranstaltungsnummer=$vnr AND inf.semester=$semester
 		EOF);
+		// SELECT kommentar Kommentar, literatur Literatur, bemerkung Bemerkung, zielgruppe Zielgruppe, lerninhalte Lerninhalte, leistungsnachweis Leistungsnachweis
 
 		while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
 			$answer['content'] = $row;
 		}
 
-		foreach ($rolls as &$roll) {
-			$ret = $db->fetchData(<<<EOF
-				SELECT p.vorname, p.nachname, p.grad, blp.rolle, p.friedolinID
-				FROM Lehrveranstaltung_Info i
-				JOIN BRIDGE_Lehrveranstaltung_Person blp ON blp.lehrvID=i.lehrvID
-				JOIN Person p ON blp.personenID=p.personenID
-				WHERE i.veranstaltungsnummer=$vnr AND i.semester=$semester AND blp.rolle='$roll'
-			EOF);
+		//foreach ($rolls as &$roll) {
+		
+		$ret = $db->fetchData(<<<EOF
+			SELECT p.vorname, p.nachname, p.grad, p.friedolinID
+			FROM Lehrveranstaltung_Info i
+			JOIN BRIDGE_Lehrveranstaltung_Person blp ON blp.lehrvID=i.lehrvID
+			JOIN Person p ON blp.personenID=p.personenID
+			WHERE i.veranstaltungsnummer=$vnr AND i.semester=$semester
+		EOF);
+		// AND blp.rolle='$roll'
 
-			$people = array();
-
-			while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-				array_push($people, $row);
-			}
-
-			$roll = ucfirst($roll);
-			$answer["people"]["$roll"] = $people;
+		while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+			array_push($people, $row);
 		}
+
+		// $roll = ucfirst($roll);
+		// $answer["people"]["$roll"] = $people;
+		$answer['people'][''] = $people;
 
 		$ret = $db->fetchData(<<<EOF
 			SELECT pr.titel, pnr, modulcode Modulcode 

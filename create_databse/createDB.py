@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('arktur.db')
+conn = sqlite3.connect('dc5a2a51976a32643a33ef6746dbf45a.db')
 c = conn.cursor()
 
 # CLEAR TABLES
@@ -153,8 +153,7 @@ c.execute('''CREATE TABLE [BRIDGE_Modul_Person] (
 
 c.execute('''CREATE TABLE [BRIDGE_Lehrveranstaltung_Person] (
   [lehrvID] integer NOT NULL,
-  [personenID] integer NOT NULL,
-  [rolle] text NOT NULL
+  [personenID] integer NOT NULL
 )''')
 
 c.execute('''CREATE TABLE [BRIDGE_Lehrveranstaltung_Pruefung] (

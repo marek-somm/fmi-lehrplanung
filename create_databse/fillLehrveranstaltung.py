@@ -101,8 +101,11 @@ for filename in files:
             if vorname == "N." and nachname == "N.":
                persID = 0
 
-            c.execute('''INSERT INTO BRIDGE_Lehrveranstaltung_Person VALUES(?,?,?)''', 
-               [lehrvID, persID, rolle]
+            # c.execute('''INSERT INTO BRIDGE_Lehrveranstaltung_Person VALUES(?,?,?)''', 
+            #    [lehrvID, persID, rolle]
+            # )
+            c.execute('''INSERT INTO BRIDGE_Lehrveranstaltung_Person VALUES(?,?)''', 
+               [lehrvID, persID]
             )
       
       # PRUEFUNG
