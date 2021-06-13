@@ -1,5 +1,10 @@
 <?php
 
+if(basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
+	header("Location: /");
+	die();
+}
+
 class modul {
 	public static function searchAll($titel, $limit) {
 		$db = connectDatabase();
