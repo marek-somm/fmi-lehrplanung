@@ -1,20 +1,12 @@
-<template>
-  <div>
-    <h1>Logout</h1>
-  </div>
-</template>
+
 
 <script>
-import store from '@/store'
-import { useRouter } from "vue-router";
+import { request } from "@/scripts/request.js";
 
 export default {
 	setup() {
-    const router = useRouter()
-    
-		store.dispatch('User/setUser', false)
-        //window.location.href = '/'
-        router.push({name: 'Home'});
+    const rq = new request();
+    rq.logout();
     }
 }
 </script>
