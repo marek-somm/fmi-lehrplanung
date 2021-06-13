@@ -1,6 +1,6 @@
 import axios from 'axios'
-
-const offline = true
+import store from '@/store'
+import { useRouter } from "vue-router";
 
 export class request {
 	constructor() {
@@ -10,7 +10,7 @@ export class request {
 	}
 
 	async getVeranstaltung(vnr, semester) {
-		if (offline) {
+		if (store.state.local) {
 			return results.veranstaltung
 		}
 		await this.fetchData('search/', {
@@ -22,7 +22,7 @@ export class request {
 	}
 
 	async searchVeranstaltung(titel, limit) {
-		if (offline) {
+		if (store.state.local) {
 			return results.veranstaltungen
 		}
 		titel = titel.trim()
@@ -36,7 +36,7 @@ export class request {
 	}
 
 	async getModul(modulcode) {
-		if (offline) {
+		if (store.state.local) {
 			return results.modul
 		}
 		await this.fetchData('search/', {
@@ -47,7 +47,7 @@ export class request {
 	}
 
 	async searchModul(titel, limit) {
-		if (offline) {
+		if (store.state.local) {
 			return results.module
 		}
 		titel = titel.trim()
@@ -58,6 +58,32 @@ export class request {
 		})
 		if(titel == '') return null
 		else return this.data
+	}
+
+	async session() {
+		if(store.state.local) {
+			return true
+		}
+		await this.fetchData('session/test.php', {})
+		return this.data.success
+	}
+	
+	async login(user, pwd) {
+		if(store.state.local) {
+			return true
+		}
+		await this.fetchData('session/login.php', {
+			user: user,
+			pwd: pwd,
+		})
+		return this.data.success
+	}
+
+	async logout() {
+		const router = useRouter()
+		await this.fetchData('session/logout.php', {})
+		store.dispatch('User/setUser', false)
+      router.push({name: 'Home'});
 	}
 
 	async fetchData(path, params) {

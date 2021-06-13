@@ -8,12 +8,16 @@ import Module from '@/views/Module'
 import NotFound from '@/views/NotFound'
 import Instanziieren from '@/views/Instanziieren'
 import store from '@/store/index'
+import { request } from "@/scripts/request.js";
+
+const rq = new request();
 
 const routes = [
 	{
 		path: '/',
 		name: 'Home',
 		component: Home,
+		beforeEnter: checkSession,
 	},
 	{
 		path: '/login',
@@ -51,11 +55,15 @@ const routes = [
 	},
 ]
 
-function checkAccess(to, from, next) {
+async function checkAccess(to, from, next) {
+	await checkSession()
 	const user = store.state.User.user
-	const active = true
-	if (!user && active) next({ name: 'Login' })
+	if (!user && !store.state.debug) next({ name: 'Login' })
 	else next()
+}
+
+async function checkSession() {
+	store.dispatch('User/setUser', await rq.session())
 }
 
 const router = createRouter({

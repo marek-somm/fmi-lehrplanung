@@ -1,10 +1,17 @@
 <?php
 require('../src/input.php');
 require('../src/database.php');
+require('../src/session.php');
 require('veranstaltung.php');
 require('modul.php');
 
 header('Access-Control-Allow-Origin: *');
+
+if(!session::isAlive()) {
+    header('Content-Type: application/json');
+	echo (json_encode(array("data" => "Invalid Session"), true));
+    die();
+}
 
 function formatString($str) {
     $str = strtolower($str);

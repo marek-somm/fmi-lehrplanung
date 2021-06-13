@@ -2,6 +2,7 @@
 	<div>
 		<h1>Login</h1>
 	</div>
+	{{ data.loggedIn }}
 	<!-- Placeholder sind nur vorübergehend um login zu testen -->
 	<form class="login_input" @submit.prevent="loginSubmit()">
 		<label :for="data.username">
@@ -30,26 +31,28 @@
 	</form>
 </template>
 <script>
-import axios from "axios";
 import store from '@/store'
 import { reactive } from 'vue';
 import { useRouter } from "vue-router";
+import { request } from "@/scripts/request.js";
 
 export default {
 	setup() {
-		const request = reactive({
-			loading: false,
-			error: null,
-		});
+		const rq = new request();
+		const router = useRouter();
+
 		const data = reactive({
 			usernameInput: "",
 			passwordInput: "",
 			loggedIn: false,
 		});
-		const router = useRouter();
+		
+		if(store.state.User.user) {
+			router.push({name: 'Home'});
+		}
 
 		async function loginSubmit() {
-			await login(data.usernameInput, data.passwordInput)
+			data.loggedIn = await rq.login(data.usernameInput, data.passwordInput)
 			if(data.loggedIn){
 				store.dispatch('User/setUser', data.loggedIn)
 				// TODO richtiges Ziel
@@ -59,34 +62,12 @@ export default {
 				// TODO ausgabe aushalb console
 				console.log("Login denied")
 			}
-		}
-			
-		async function login(user, pwd) {
-			request.loading = true;
-			request.error = null;
-
-			await axios
-				.get("https://arktur.fmi.uni-jena.de/api/login/", {
-					headers: { "Content-Type": "application/json" },
-					params: {
-						user: user,
-						pwd: pwd,
-					},
-				})
-				.then((res) => {
-					data.loggedIn = res.data.success;
-					request.loading = false;
-				})
-				.catch((err) => {
-					request.error = err;
-					request.loading = false;
-				});
+			rq.session()
 		}
 
 		return {
 			data,
 			loginSubmit,
-			login
 		}
 	}
 };
