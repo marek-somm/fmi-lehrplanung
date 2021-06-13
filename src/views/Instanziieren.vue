@@ -1,71 +1,41 @@
 <template>
-	<div class="results" v-if="data.veranstaltung">
+	<div class="results" v-if="input.original">
 	<form class="veranstaltung_input" @submit.prevent="übernehmen()">
-			<!-- <p>{{data.veranstaltung}}</p> -->
-			<h1>Veranstaltung</h1>
+			<!-- <p>{{input.original}}</p> -->
 			<!-- <p>{{data.veranstaltung.data}}</p> -->
-			<div class="modul-item" v-for="(item, key, index) in ret.data" :key="index">
-			<div v-if="!(key == 'friedolinID') && !(key == 'aktiv')">
-			<!-- <p>key: {{key}} item: {{item}} index: {{index}}</p> -->
-			<label :for=key>
-				<strong>{{key}}:</strong>
-			</label>
-			<input
-				:id=key
-				:name=key
-				:placeholder=item
-				:v-model=input[key]
-			/>
-			</div></div>
-			<h1>Inhalt</h1>
-			<!-- <p>{{data.veranstaltung.content}}</p> -->
-			<div class="modul-item" v-for="(item, key, index) in ret.content" :key="index">
-			<!-- <p>key: {{key}} item: {{item}} index: {{index}}</p> -->
-			<label :for=key>
-				<strong>{{key}}:</strong>
-			</label>
-			<input
-				:id=key
-				:name=key
-				:placeholder=item
-				:v-model=input[key]
-			/>
-			<p>{{item}}</p>
-			</div>
-			<h1>Personen</h1>
-			<!-- <p>{{data.veranstaltung.people}}</p> -->
-			<div class="modul-item" v-for="(item, key, index) in ret.people" :key="index">
-				<h1>{{key}}</h1>
-				<p>key: {{key}} item: {{item}} index: {{index}}</p>
-			<div v-for="(item, key, index) in item" :key="index">
-			<div v-for="(item, key, index) in item" :key="index">
-					<label :for=key>
-						<strong>{{key}}:</strong>
-					</label>
-					<input
-						:id=key
-						:name=key
-						:placeholder=item
-						:v-model=input[key]
-					/>
-			</div>
-			</div>
-			</div>
-			<h1>Prüfungen</h1>
-			<!-- <p>{{data.veranstaltung.exams}}</p> -->
-			<div class="modul-item" v-for="(item, key, index) in ret.exams" :key="index">
-			<p>key: {{key}} item: {{item}} index: {{index}}</p>
-			<div v-for="(item, key, index) in item" :key="index">
-			<label :for=key>
-				<strong>{{key}}:</strong>
-			</label>
-			<input
-				:id=key
-				:name=key
-				:placeholder=item
-				:v-model=input[key]
-			/>
-			</div>
+			<div class="modul-item" v-for="(inhalt, category, index) in input.original" :key="index">
+				<h1>{{category}}</h1>
+				<!-- key: {{category}}
+				item: {{inhalt}} -->
+				<div class="modul-item" v-for="(item, key, index) in inhalt" :key="index">
+					<div v-if="!(category == 'exams') && !(category == 'people')">
+						<!-- <p>key: {{key}} item: {{item}} index: {{index}}</p> -->
+						<!-- <p>mau</p> -->
+						<label :for=key><strong>{{key}}:</strong></label>
+						<input
+							:id=key
+							:name=key
+							:placeholder=item
+							v-model=out.input[category][key]
+						/>
+					</div>
+					<div v-if="(category == 'people') ||(category == 'exams')">
+						<div class="modul-item" v-for="(item, number, index) in item" :key="index">
+							<!-- <p>key: {{number}} item: {{item}} index: {{index}}</p> -->
+							<h2>{{category}}: {{number}}</h2>
+							<!-- <p>mau</p> -->
+							<div class="modul-item" v-for="(item, key, index) in item" :key="index">
+								<label :for=key><strong>{{key}}:</strong></label>
+								<input
+									:id=key
+									:name=key
+									:placeholder=item
+									v-model=out.input[category][number][key]
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		<br /><br />
 		<button>
@@ -82,87 +52,17 @@ import { request } from "@/scripts/request.js";
 export default {
 	setup() {
 		const rq = new request();
-		const input = reactive({});
-		const ret = reactive({
-			data:{
-				titel: "Der Titel der Veranstaltung",
-				veranstaltungsnummer: "Die Nummer der Veranstaltung",
-				semester: "Das Anfangsjahr des Semester mit 0 für SoSe und 1 für WiSe",
-				friedolinID: null,
-				aktiv: "0",
-				sws: "Anzahl der Semester Wochen Stunden",
-				turnus: "Wie oft wird diese LV angeboten",
-				art: "Vorlesung, Übung, Seminar, etc.",
-			},
-			content:{
-				Kommentar: "Wichtige Informationen für die Studenten",
-				Literatur: "Emfohlene Literatur",
-				Bemerkung: "Weniger wichtige Informationen für die Studenten",
-				Zielgruppe: "Studiengänge an die sich die LV richtet",
-				Lerninhalte: "Was soll in der LV vermittelt werden",
-				Leistungsnachweis: "Welche Prüfungsform ist geplant"
-			},
-			person:{
-				Verantwortlich: [{
-					vorname:"",
-					nachname:"",
-					grad:"",
-					rolle:"verantwortlich",
-					friedolinID:""
-				},
-				{
-					vorname:"",
-					nachname:"",
-					grad:"",
-					rolle:"verantwortlich",
-					friedolinID:""
-				}],
-				Begleitend: [{
-					vorname:"",
-					nachname:"",
-					grad:"",
-					rolle:"begleitend",
-					friedolinID:""
-				},
-				{
-					vorname:"",
-					nachname:"",
-					grad:"",
-					rolle:"begleitend",
-					friedolinID:""
-				}],
-				Organisatorisch: [{
-					vorname:"",
-					nachname:"",
-					grad:"",
-					rolle:"organisatorisch",
-					friedolinID:""
-				},
-				{
-					vorname:"",
-					nachname:"",
-					grad:"",
-					rolle:"organisatorisch",
-					friedolinID:""
-				}]
-			},
-			exams:[
-				{ "pnr": 0, "modulcode": "", "titel": "" },
-				{ "pnr": 0, "modulcode": "", "titel": "" },
-				{ "pnr": 0, "modulcode": "", "titel": "" },
-				{ "pnr": 0, "modulcode": "", "titel": "" },
-			]
-		});
-		const data = reactive({
-			veranstaltung: null,
-			modul: null
+		const input = reactive({
+			original: {},
+			});
+		const out = reactive({
+			input: {},
+			return: {},
 			});
 
         const route = useRoute();
         const id = route.params.id;
 		const sem = route.params.sem;
-		console.log(id);
-		console.log(sem);
 		watch(
 			() => id,
 			() => sem,
@@ -174,68 +74,67 @@ export default {
 		onMounted(() => {
 			getModul(id, sem);
 		});
-		function isNumber(n) {
-			return !isNaN(parseFloat(n)) && isFinite(n);
-		}
 
 		async function getModul(id, sem) {
-			console.log(ret.data)
-			if (isNumber(id)){
-				console.log("Veranstaltung")
-				data.veranstaltung = await rq.getVeranstaltung(id, sem);
-				for (var key in data.veranstaltung){
-					console.log("key ", key)
-					if (!(key == "people")){
-						for (var entry in data.veranstaltung[key]){
-							console.log("eintrag ",entry)
-							if (data.veranstaltung[key][entry] && !(entry == "friedolinID")){
-								console.log("data",data.veranstaltung[key][entry])
-								ret[key][entry] = data.veranstaltung[key][entry]
-							}
-						}
+			// console.log("data", input.original)
+			// console.log("input", out.input)
+			// console.log("return", out.return)
+			input.original = await rq.getVeranstaltung(id, sem);
+			// übernimmt data für input mit ausschließlich dict
+			for (var key in input.original){
+				if (key == "people" || key == "exams"){
+					out.input[key] = {}
+					// console.log("len", input.original[key])
+					for (var i in input.original[key][""]){
+						// console.log(i)
+						out.input[key][i] = {}
+						// console.log("liste", i, out.input[key])
 					}
-					else{
-						// if ("Verantwortlich" in data.veranstaltung[key] && data.veranstaltung[key]["Verantwortlich"]){
-						// 	console.log("data1",data.veranstaltung[key]["Verantwortlich"])
-						// 	ret[key]["Verantwortlich"] = data.veranstaltung[key]["Verantwortlich"]
-						// }
-						// if (data.veranstaltung[key]["Begleitend"]){
-						// 	ret[key]["Begleitend"] = data.veranstaltung[key]["Begleitend"]
-						// }
-						// if (data.veranstaltung[key]["Organisatorisch"]){
-						// 	ret[key]["Organisatorisch"] = data.veranstaltung[key]["Organisatorisch"]
-						// }
-						ret[key] = data.veranstaltung[key]
-					}
-					
+					// console.log("verschachtelt")
 				}
-				// data.veranstaltung.forEach(element => ret[element])
-				// console.log(data.veranstaltung)
-				// console.log(ret.data)
+				else{
+					out.input[key] = {}
+					// console.log("einfach", out.input)
+				}
 			}
-			else{
-				console.log("Modul")
-				data.modul = await rq.getModul(id);
-				console.log(data.modul)
-			}
+			// übernimmt data für return ohne format zu ändern
+            for (key in input.original){
+                out.return[key] = input.original[key]
+            }
+			console.log("data", input.original)
+			console.log("input", out.input)
+			console.log("return", out.return)
 		}
 
 		async function übernehmen() {
-			console.log("Ret")
-			for (var key in ret){
-				console.log(ret[key])
-			}
-			console.log("Input")
-			for (var entry in input){
-				console.log(input[entry])
+			// übernimm nicht leere input datan für return
+			// wandel dabei in format von data zurück
+			for (var entry in out.input){
+				if (entry == "people" || entry == "exams"){
+					for (var i in out.input[entry]){
+						for (var value in out.input[entry][i])
+						if (out.input[entry][i][value]){
+							console.log("data", input.original[entry][""][i])
+							console.log("return", out.return[entry][""][i])
+							out.return[entry][""][i][value] = out.input[entry][i][value]
+							console.log("data", input.original[entry][""][i])
+							console.log("return", out.return[entry][""][i])
+							console.log("input", out.input[entry][i])
+						}
+					}
+				}
+				else{
+					if (out.input[entry]){
+						out.return[entry] = out.input[entry]
+					}	
+				}
 			}
 		}
 
 		return {
-			data,
-            id,
 			input,
-			ret,
+			out,
+            id,
 			übernehmen
 		};
 	}
@@ -256,7 +155,7 @@ export default {
 	}
 
 	input {
-		width: 94%;
+		width: 50%;
 		padding: 0.5em 0.25em;
 		margin: 0 3% 1em;
 		font-size: 1.2em;
