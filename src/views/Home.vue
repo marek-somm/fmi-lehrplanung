@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>This is Home</h1>
+		<h1>Welcome to Arktur!</h1>
 	</div>
 </template>
 

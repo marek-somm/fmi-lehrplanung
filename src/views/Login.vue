@@ -2,7 +2,6 @@
 	<div>
 		<h1>Login</h1>
 	</div>
-	{{ data.loggedIn }}
 	<!-- Placeholder sind nur vorübergehend um login zu testen -->
 	<form class="login_input" @submit.prevent="loginSubmit()">
 		<label :for="data.username">

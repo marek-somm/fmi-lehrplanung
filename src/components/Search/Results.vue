@@ -53,7 +53,7 @@ export default {
 	flex-grow: 1;
 	align-items: center;
 	overflow-y: auto;
-	height: calc(100vh - 14.55rem);
+	height: calc(100vh - 17.675rem);
 	padding: 0 0 1rem 0;
 
 	.category {

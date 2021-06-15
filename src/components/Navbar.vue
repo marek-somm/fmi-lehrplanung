@@ -1,6 +1,6 @@
 <template>
-	<div id="nav">
-		<div class="top">
+	<div id="head-wrapper">
+		<div class="head-top">
 			<div class="nav-container left">
 				<router-link class="identity-link" :to="{ name: 'Home' }">
 					<div class="identity"></div>
@@ -13,40 +13,68 @@
 			<div class="nav-container center"></div>
 			<div class="nav-container"></div>
 		</div>
-		<div class="bottom">
-			<router-link class="link" :to="{ name: 'Home' }">Home</router-link>
+		<div class="head-bottom">
 			<router-link v-if="user" class="link" :to="{ name: 'Veranstaltungen' }"
 				>Veranstaltungen</router-link
 			>
 			<router-link v-if="user" class="link" :to="{ name: 'Module' }"
 				>Module</router-link
 			>
-			<router-link class="link" v-if='!user' :to="{name: 'Login'}">Login</router-link>
-			<router-link class="link" v-if='user' :to="{name: 'Logout'}">Logout</router-link>
+			<router-link class="link" v-if="!user" :to="{ name: 'Login' }"
+				>Login</router-link
+			>
+			<router-link class="link" v-if="user" :to="{ name: 'Logout' }"
+				>Logout</router-link
+			>
 		</div>
+	</div>
+	<div id="history-wrapper" v-show="getPathElements()[0] != ''">
+		<ul class="history">
+			<li class="history-item home">
+				<router-link class="link" :to="{name: 'Home' }">
+					Startseite
+				</router-link>
+			</li>
+			<li class="history-item" v-for="(item, index) in getPathElements()" :key="index">
+				<router-link class="link" :to="{name: item}">
+					{{ item }}
+				</router-link>
+			</li>
+		</ul>
 	</div>
 </template>
 
 <script>
-import { useStore } from 'vuex';
-import { computed } from 'vue';
+import { useStore } from "vuex";
+import { computed } from "vue";
+import { useRoute } from "vue-router";
 
 export default {
 	setup() {
 		const store = useStore();
+		const route = useRoute();
+
 		const user = computed(() => store.state.User.user);
+		const path = computed(() => route.path);
+
+		function getPathElements() {
+			var path = route.path
+			var nodes = path.slice(1).split("/")
+			nodes = nodes.map(node => node.charAt(0).toUpperCase() + node.slice(1))
+			return nodes
+		}
 
 		return {
-			user
+			user,
+			path,
+			getPathElements
 		};
 	},
 };
 </script>
 
 <style lang="scss" scoped>
-#nav {
-	padding: 1rem;
-	padding-left: 10rem;
+#head-wrapper {
 	background: #008198;
 	display: flex;
 	flex-direction: column;
@@ -54,10 +82,11 @@ export default {
 	position: sticky;
 	top: 0;
 
-	.top {
+	.head-top {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		margin: 1rem 10rem 1rem 10rem;
 
 		.nav-container {
 			width: 33%;
@@ -80,20 +109,20 @@ export default {
 					}
 
 					.identity {
-						background-image: url("https://www.fmi.uni-jena.de/skin/mirz/_images/fsu_word_mark_hover.svg");
+						background-image: url("https://arktur.fmi.uni-jena.de/assets/fsu_word_mark_hover.svg");
 					}
 				}
 
 				.identity {
 					height: 3.5rem;
-					background: url("https://www.fmi.uni-jena.de/pub/theme/vorlage_fe/skin/_images/fsu_word_mark.png");
+					background: url("https://arktur.fmi.uni-jena.de/assets/fsu_word_mark.png");
 					background-repeat: no-repeat;
 				}
 
 				.subidentity {
 					position: absolute;
 					top: 2.4rem;
-					left: 4.0rem;
+					left: 4rem;
 					font-size: 0.75em;
 					font-family: "Roboto", Arial, Geneva, sans-serif;
 					letter-spacing: 0.05em;
@@ -120,8 +149,9 @@ export default {
 		}
 	}
 
-	.bottom {
-		padding: 3rem 0 0 0;
+	.head-bottom {
+		padding: 1rem 0 0 0;
+		margin: 1rem 10rem 1rem 10rem;
 		text-align: left;
 
 		.link {
@@ -140,5 +170,47 @@ export default {
 			}
 		}
 	}
+}
+
+#history-wrapper {
+	background: #174488;
+	color: white;
+	line-height: 3.125rem;
+
+	.history {
+		margin: 0 11rem 0 11rem;
+		padding: 0rem;
+		text-align: left;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+
+		.history-item {
+			padding: 0 1rem 0 1rem;
+			width: max-content;
+			background: url('https://arktur.fmi.uni-jena.de/assets/history_default.svg') no-repeat left center;
+
+			.link {
+				font-size: .9em;
+				opacity: .7;
+				display: block;
+				color: white;
+				text-decoration: none;
+				width: max-content;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.home {
+			background: url('https://arktur.fmi.uni-jena.de/assets/history_home.svg') no-repeat left center;
+		}
+	}
+}
+
+.router-link-exact-active.link {
+	background: #174488;
 }
 </style>

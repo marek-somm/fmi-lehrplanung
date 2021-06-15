@@ -2,7 +2,7 @@
 	<div class="info--container">
 		<div class="header" v-if="selected">
 			<h3 class="title">{{ selected.modulcode }}</h3>
-			<button class="close-button" @click="close">X</button>
+			<button class="close button" @click="close">X</button>
 		</div>
 		<div class="info-content" v-if="selected">
 			<div class="block">

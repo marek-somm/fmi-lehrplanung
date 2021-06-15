@@ -56,14 +56,15 @@ const routes = [
 ]
 
 async function checkAccess(to, from, next) {
-	await checkSession()
+	await checkSession(to, from)
 	const user = store.state.User.user
 	if (!user && !store.state.debug) next({ name: 'Login' })
 	else next()
 }
 
-async function checkSession() {
-	store.dispatch('User/setUser', await rq.session())
+async function checkSession(to, from) {
+	if(!from.name)
+		store.dispatch('User/setUser', await rq.session())
 }
 
 const router = createRouter({
