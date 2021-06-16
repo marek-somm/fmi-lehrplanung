@@ -1,51 +1,81 @@
 <template>
 	<div class="results" v-if="input.original">
 	<form class="veranstaltung_input" @submit.prevent="">
-			<!-- <p>{{input.original}}</p>
-			{{out.return}} -->
-			<div class="modul-item" v-for="(inhalt, category, index) in input.original" :key="index">
-				<h1>{{beschriftung[category]}}</h1>
-				<!-- key: {{category}}
-				item: {{inhalt}} -->
-				<div class="modul-item" v-for="(item, key, index) in inhalt" :key="index">
-						<!-- <p>key: {{key}} item: {{item}} index: {{index}}</p> -->
-					<div v-if="!(key == '')">
-						<div v-if="!(key == 'aktiv') && !(key == 'friedolinID')">
+		<div class="veranstaltung">
+			<h1>Veranstaltung</h1>
+			<div class="Gruppen">
+				<div class="item" v-for="(item, key, index) in input.original.data" :key="index">
+					<div v-if="!(key == 'aktiv') && !(key == 'friedolinID')">
 						<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
 						<input
 							:id=key
 							:name=key
 							:placeholder=item
-							v-model=out.input[category][key]
+							v-model=out.input.data[key]
 						/>
-						</div>
 					</div>
-					<div v-if="(key == '')">
-						<!-- item:{{item}} -->
-						<!-- {{item[""]}} -->
-						<div class="modul-item" v-for="(item, number, index) in item" :key="index">
-							<!-- <p>key: {{number}} item: {{item}} index: {{index}}</p> -->
-							<h2>{{number+1}}. {{beschriftung[category].slice(0, -2)}}</h2>
-							<div class="modul-item" v-for="(item, key, index) in item" :key="index">
-								<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
-								<input
-									:id=key
-									:name=key
-									:placeholder=item
-									v-model='out.input[category][""][number][key]'
-								/>
-							</div>
+				</div>
+				<div class="item" v-for="(item, key, index) in input.original.content" :key="index">
+					<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+					<input
+						:id=key
+						:name=key
+						:placeholder=item
+						v-model=out.input.data[key]
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="veranstaltung">
+			<h1>Personen</h1>
+			<div class="Gruppen">
+				<div class="item" v-for="(item, number, index) in input.original.people" :key="index">
+					<div class="item" v-for="(item, number, index) in item" :key="index">
+						<h2>{{number+1}}. Person</h2>
+
+						<div class="item" v-for="(item, key, index) in item" :key="index">
+							<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+							<input
+								:id=key
+								:name=key
+								:placeholder=item
+								v-model='out.input.people[""][number][key]'
+							/>
 						</div>
-						<button class="new button" @click="newInstance(category)">Hinzufügen</button>
-						<button class="new button" @click="removeInstance(category)">Entfernen</button>
 					</div>
 				</div>
 			</div>
-		<br /><br />
-		<button class="new button" @click="übernehmen()">Übernehmen</button>
+			<button class="new button" @click="newInstance('people')">Hinzufügen</button>
+			<button class="new button" @click="removeInstance('people')">Entfernen</button>
+		</div>
+		<div class="veranstaltung">
+			<h1>Prüfungen</h1>
+			<div class="Gruppen">
+				<div class="item" v-for="(item, number, index) in input.original.exams" :key="index">
+					<div class="item" v-for="(item, number, index) in item" :key="index">
+						<h2>{{number+1}}. Prüfung</h2>
+						<div class="item" v-for="(item, key, index) in item" :key="index">
+							<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+							<input
+								:id=key
+								:name=key
+								:placeholder=item
+								v-model='out.input.exams[""][number][key]'
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="new button" @click="newInstance('exams')">Hinzufügen</button>
+			<button class="new button" @click="removeInstance('exams')">Entfernen</button>
+		</div>
+		<button class="succ button" @click="übernehmen()">Übernehmen</button>
 	</form>
+	rückgabe:<br>
+	{{out.return}}
 	</div>
 </template>
+
 <script>
 import { onMounted, reactive, watch } from "vue";
 import { useRoute } from "vue-router";
@@ -185,40 +215,62 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.veranstaltung_input {
-	padding: 2em 1em;
-	font-family: helvetica, sans-serif;
-
-	label {
-		color: #2c3e50;
-		margin: 0 3% 0.25em;
-		font-size: 1.2em;
-		display: block;
+// TODO: rechts und unten ist immer noch ein ungewollter abstand
+.results{
+	.veranstaltung_input {
+		padding: 2em 1em;
 		font-family: helvetica, sans-serif;
-	}
+		height: calc(100vh - 16.78rem);
+		overflow-y: auto;
 
-	input {
-		width: 50%;
-		padding: 0.5em 0.25em;
-		margin: 0 3% 1em;
-		font-size: 1.2em;
-		border: 2px solid #000;
-		outline: none;
-		color: #2c3e50;
-	}
+		label {
+			color: #2c3e50;
+			margin: 0 3% 0.25em;
+			font-size: 1.2em;
+			display: block;
+		}
+		input {
+			width: 100%;
+			margin: 0 3% 1em;
+			font-size: 1.2em;
+			border: 2px solid #000;
+			outline: none;
+			color: #2c3e50;
+		}
 
-	button {
-		width: 25%;
-		padding: 0.5em 0.25em;
-		margin: 0 3% 1em;
-		font-size: 1.2em;
-		border: 2px solid #000;
-		color: #2c3e50;
-		transition: box-shadow 0.5s ease, background 0.2s ease;
+		button {
+			width: 25%;
+			margin: 0 3% 1em;
+			font-size: 1.2em;
+			border: 2px solid #000;
+			color: #2c3e50;
+			transition: box-shadow 0.5s ease, background 0.2s ease;
 
-		&:hover {
-			box-shadow: rgba(0, 0, 0, 0.349) 3px 3px;
-			background: rgb(201, 201, 201);
+			&:hover {
+				box-shadow: rgba(0, 0, 0, 0.349) 3px 3px;
+				background: rgb(201, 201, 201);
+			}
+		}
+		.veranstaltung{
+			width:30%;
+			margin-right: 2%;
+			float: left; 
+			.Gruppen{ 
+				height: calc(100vh - 28rem);
+				overflow-y: auto;
+			}
+
+			input {
+				width: 90%;
+			}
+
+			button {
+				width: 40%;
+			}
+		}
+		.veranstaltung:last-child{
+			float: none;
+			margin-right: 0;
 		}
 	}
 }
