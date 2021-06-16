@@ -1,6 +1,6 @@
 <template>
 	<div class="results" v-if="input.original">
-	<form class="veranstaltung_input" @submit.prevent="übernehmen()">
+	<form class="veranstaltung_input" @submit.prevent="">
 			<!-- <p>{{input.original}}</p>
 			{{out.return}} -->
 			<div class="modul-item" v-for="(inhalt, category, index) in input.original" :key="index">
@@ -36,19 +36,19 @@
 								/>
 							</div>
 						</div>
+						<button class="new button" @click="newInstance(category)">Hinzufügen</button>
+						<button class="new button" @click="removeInstance(category)">Entfernen</button>
 					</div>
 				</div>
 			</div>
 		<br /><br />
-		<button>
-			<strong>Übernehmen</strong>
-		</button>
+		<button class="new button" @click="übernehmen()">Übernehmen</button>
 	</form>
 	</div>
 </template>
 <script>
 import { onMounted, reactive, watch } from "vue";
-import { useRoute } from "vue-router";
+// import { useRoute } from "vue-router";
 import { request } from "@/scripts/request.js";
 
 export default {
@@ -81,7 +81,7 @@ export default {
 			return: {},
 			});
 
-        const route = useRoute();
+        // const route = useRoute();
         const id = route.params.id;
 		const sem = route.params.sem;
 		watch(
@@ -155,12 +155,29 @@ export default {
 				}
 			}
 		}
+		function newInstance(category) {
+			var dict = {}
+			if (category == "people")
+				dict = {"vorname":"", "nachname":"", "grad":"", "friedolinID":""}
+			else if (category == "exams")
+				dict = {"titel":"", "pnr":"", "Modulcode":""}
+			input.original[category][""].push(dict)
+			out.input[category][""].push(dict)
+			out.return[category][""].push(dict)
+		}
+		function removeInstance(category) {
+			input.original[category][""].pop()
+			out.input[category][""].pop()
+			out.return[category][""].pop()
+		}
 
 		return {
 			input,
 			out,
             id,
 			beschriftung,
+			newInstance,
+			removeInstance,
 			übernehmen
 		};
 	}
