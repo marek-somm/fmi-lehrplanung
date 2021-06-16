@@ -60,6 +60,8 @@ export default {
 		function getPathElements() {
 			var path = route.path
 			var nodes = path.slice(1).split("/")
+			if(nodes[0] == 'instanziieren')
+				nodes = nodes.splice(0,1)
 			nodes = nodes.map(node => node.charAt(0).toUpperCase() + node.slice(1))
 			return nodes
 		}
