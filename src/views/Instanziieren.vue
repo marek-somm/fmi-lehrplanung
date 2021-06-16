@@ -48,7 +48,7 @@
 </template>
 <script>
 import { onMounted, reactive, watch } from "vue";
-// import { useRoute } from "vue-router";
+import { useRoute } from "vue-router";
 import { request } from "@/scripts/request.js";
 
 export default {
@@ -81,7 +81,7 @@ export default {
 			return: {},
 			});
 
-        // const route = useRoute();
+        const route = useRoute();
         const id = route.params.id;
 		const sem = route.params.sem;
 		watch(
