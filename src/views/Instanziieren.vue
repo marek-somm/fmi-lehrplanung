@@ -1,36 +1,38 @@
 <template>
 	<div class="results" v-if="input.original">
 	<form class="veranstaltung_input" @submit.prevent="übernehmen()">
-			<!-- <p>{{input.original}}</p> -->
-			<!-- <p>{{data.veranstaltung.data}}</p> -->
+			<!-- <p>{{input.original}}</p>
+			{{out.return}} -->
 			<div class="modul-item" v-for="(inhalt, category, index) in input.original" :key="index">
-				<h1>{{category}}</h1>
+				<h1>{{beschriftung[category]}}</h1>
 				<!-- key: {{category}}
 				item: {{inhalt}} -->
 				<div class="modul-item" v-for="(item, key, index) in inhalt" :key="index">
-					<div v-if="!(category == 'exams') && !(category == 'people')">
 						<!-- <p>key: {{key}} item: {{item}} index: {{index}}</p> -->
-						<!-- <p>mau</p> -->
-						<label :for=key><strong>{{key}}:</strong></label>
+					<div v-if="!(key == '')">
+						<div v-if="!(key == 'aktiv') && !(key == 'friedolinID')">
+						<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
 						<input
 							:id=key
 							:name=key
 							:placeholder=item
 							v-model=out.input[category][key]
 						/>
+						</div>
 					</div>
-					<div v-if="(category == 'people') ||(category == 'exams')">
+					<div v-if="(key == '')">
+						<!-- item:{{item}} -->
+						<!-- {{item[""]}} -->
 						<div class="modul-item" v-for="(item, number, index) in item" :key="index">
 							<!-- <p>key: {{number}} item: {{item}} index: {{index}}</p> -->
-							<h2>{{category}}: {{number}}</h2>
-							<!-- <p>mau</p> -->
+							<h2>{{number+1}}. {{beschriftung[category].slice(0, -2)}}</h2>
 							<div class="modul-item" v-for="(item, key, index) in item" :key="index">
-								<label :for=key><strong>{{key}}:</strong></label>
+								<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
 								<input
 									:id=key
 									:name=key
 									:placeholder=item
-									v-model=out.input[category][number][key]
+									v-model='out.input[category][""][number][key]'
 								/>
 							</div>
 						</div>
@@ -51,6 +53,25 @@ import { request } from "@/scripts/request.js";
 
 export default {
 	setup() {
+		const beschriftung = {
+			"data": "Veranstaltung",
+			"titel": "Titel",
+			"veranstaltungsnummer": "Vnr",
+			"semester": "Semester",
+			"sws": "SWS",
+			"turnus": "Turnus",
+			"art": "Art",
+			"content": "Inhalt",
+			"Zielgruppe":"Zielgruppe",
+			"people": "Personen",
+			"vorname": "Vorname",
+			"nachname": "Nachname",
+			"grad": "Akademischer Grad",
+			"friedolinID": "FriedolinID",
+			"exams": "Prüfungen",
+			"pnr":"Pnr",
+			"Modulcode": "Modulcode"
+		}
 		const rq = new request();
 		const input = reactive({
 			original: {},
@@ -76,57 +97,61 @@ export default {
 		});
 
 		async function getModul(id, sem) {
-			// console.log("data", input.original)
-			// console.log("input", out.input)
-			// console.log("return", out.return)
 			input.original = await rq.getVeranstaltung(id, sem);
-			// übernimmt data für input mit ausschließlich dict
+			// baut für input und return die struktur von original nach
+			// beides bleibt leer, da return bei übernahme überschrieben wird
+			// original = {"d":{"t":"", "n":"",...}, "i":{"z":""}, "p":{"":[{"t":"","n":"", ...}, {...},...]}, "e":{"":[{"t":"","n":"", ...}, {...},...]}}
 			for (var key in input.original){
-				if (key == "people" || key == "exams"){
-					out.input[key] = {}
-					// console.log("len", input.original[key])
-					for (var i in input.original[key][""]){
-						// console.log(i)
-						out.input[key][i] = {}
-						// console.log("liste", i, out.input[key])
+				out.input[key] = {}
+                out.return[key] = {}
+				for (var key1 in input.original[key]){
+					if (key1 != ""){
+						out.input[key][key1] = ""
+						out.return[key][key1] = ""
 					}
-					// console.log("verschachtelt")
-				}
-				else{
-					out.input[key] = {}
-					// console.log("einfach", out.input)
+					else{
+						out.input[key][key1] = []
+						out.return[key][key1] = []
+						for (var i in input.original[key][key1]){
+							out.input[key][key1].push({})
+							out.return[key][key1].push({})
+							for(var j in input.original[key][key1][i]){
+								out.input[key][key1][i][j] = ""
+								out.return[key][key1][i][j] = ""
+							}
+						}
+					}
 				}
 			}
-			// übernimmt data für return ohne format zu ändern
-            for (key in input.original){
-                out.return[key] = input.original[key]
-            }
-			console.log("data", input.original)
-			console.log("input", out.input)
-			console.log("return", out.return)
 		}
 
 		async function übernehmen() {
 			// übernimm nicht leere input datan für return
 			// wandel dabei in format von data zurück
-			for (var entry in out.input){
-				if (entry == "people" || entry == "exams"){
-					for (var i in out.input[entry]){
-						for (var value in out.input[entry][i])
-						if (out.input[entry][i][value]){
-							console.log("data", input.original[entry][""][i])
-							console.log("return", out.return[entry][""][i])
-							out.return[entry][""][i][value] = out.input[entry][i][value]
-							console.log("data", input.original[entry][""][i])
-							console.log("return", out.return[entry][""][i])
-							console.log("input", out.input[entry][i])
+			for (var key in input.original){
+				for (var key1 in input.original[key]){
+					if (key1 != ""){
+						if (out.input[key][key1])
+							out.return[key][key1] = out.input[key][key1]
+						else
+							out.return[key][key1] = input.original[key][key1]
+						console.log("data", input.original[key][key1])
+						console.log("return", out.return[key][key1])
+						console.log("input", out.input[key][key1])
+					}
+					else{
+						for (var i in input.original[key][key1]){
+							for(var j in input.original[key][key1][i]){
+								if (out.input[key][key1][i][j])
+									out.return[key][key1][i][j] = out.input[key][key1][i][j]
+								else
+									out.return[key][key1][i][j] = input.original[key][key1][i][j]
+							}
+							console.log("data", input.original[key][key1][i])
+							console.log("return", out.return[key][key1][i])
+							console.log("input", out.input[key][key1][i])
 						}
 					}
-				}
-				else{
-					if (out.input[entry]){
-						out.return[entry] = out.input[entry]
-					}	
 				}
 			}
 		}
@@ -135,6 +160,7 @@ export default {
 			input,
 			out,
             id,
+			beschriftung,
 			übernehmen
 		};
 	}
