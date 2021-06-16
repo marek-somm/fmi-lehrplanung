@@ -1,37 +1,44 @@
 <template>
-	<div>
-		<h1>Login</h1>
+	<div class="login--container">
+		<div class="head-wrapper">
+			<div class="head">
+				<img
+					src="https://www.fmi.uni-jena.de/skin/_global/_images/blocks/meta_headline_white.svg"
+				/>
+				<h1 class="title">Login</h1>
+			</div>
+		</div>
+		<div class="login-wrapper">
+			<div class="row username">
+				<div class="label"><label>Login: </label></div>
+				<div class="input">
+					<input placeholder="admin" v-model="data.usernameInput" />
+				</div>
+			</div>
+			<div class="row password">
+				<div class="label"><label>Passwort: </label></div>
+				<div class="input">
+					<input
+						type="password"
+						placeholder="1234"
+						v-model="data.passwordInput"
+						@keyup.enter="loginSubmit"
+					/>
+				</div>
+				<div class="submit"><button @click="loginSubmit"></button></div>
+			</div>
+			<div class="row error" v-show="data.error">
+				<div class="label"></div>
+				<div class="message">
+					Falscher Benutzername oder falsches Passwort.
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- Placeholder sind nur vorübergehend um login zu testen -->
-	<form class="login_input" @submit.prevent="loginSubmit()">
-		<label :for="data.username">
-			<strong>Benutzername:</strong>
-		</label>
-		<input
-			id="username"
-			name="username"
-			placeholder="admin"
-			v-model="data.usernameInput"
-		/>
-		<label for="password">
-			<strong>Passwort:</strong>
-		</label>
-		<input
-			id="password"
-			name="password"
-			type="password"
-			placeholder="1234"
-			v-model="data.passwordInput"
-		/>
-		<br /><br />
-		<button>
-			<strong>Einloggen</strong>
-		</button>
-	</form>
 </template>
 <script>
-import store from '@/store'
-import { reactive } from 'vue';
+import store from "@/store";
+import { reactive } from "vue";
 import { useRouter } from "vue-router";
 import { request } from "@/scripts/request.js";
 
@@ -44,35 +51,142 @@ export default {
 			usernameInput: "",
 			passwordInput: "",
 			loggedIn: false,
+			error: false,
 		});
-		
-		if(store.state.User.user) {
-			router.push({name: 'Home'});
+
+		if (store.state.User.user) {
+			router.push({ name: "Home" });
 		}
 
 		async function loginSubmit() {
-			data.loggedIn = await rq.login(data.usernameInput, data.passwordInput)
-			if(data.loggedIn){
-				store.dispatch('User/setUser', data.loggedIn)
-				// TODO richtiges Ziel
-				router.push({name: 'Home'});
+			data.loggedIn = await rq.login(data.usernameInput, data.passwordInput);
+			if (data.loggedIn) {
+				store.dispatch("User/setUser", data.loggedIn);
+				router.push({ name: "Home" });
+			} else {
+				data.error = true
 			}
-			else{
-				// TODO ausgabe aushalb console
-				console.log("Login denied")
-			}
-			rq.session()
+			rq.session();
 		}
 
 		return {
 			data,
 			loginSubmit,
-		}
-	}
+		};
+	},
 };
 </script>
 
 <style lang="scss" scoped>
+.login--container {
+	font-family: "Palatino Linotype", "AmiriRegular", "BookAntiqua", Georgia,
+		serif;
+	font-weight: 0;
+	font-size: 0.8rem;
+
+	.head-wrapper {
+		background-color: #1d60bd;
+		padding: 5rem 0 5rem 0;
+
+		.head {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 42rem;
+			margin: auto;
+
+			.title {
+				color: white;
+				margin: 0;
+			}
+		}
+	}
+
+	.login-wrapper {
+		display: flex;
+		flex-direction: column;
+		background: #eee;
+		width: 42rem;
+		padding: 1rem;
+		margin: 2.5rem auto 0 auto;
+		color: #002350;
+
+		.row {
+			width: 100%;
+			display: table;
+
+			.label {
+				display: table-cell;
+				vertical-align: middle;
+				float: none;
+				width: 12.5rem;
+				padding-right: 1rem;
+				text-align: right;
+
+				font-size: 1.375rem;
+				font-style: italic;
+			}
+
+			.input {
+				display: table-cell;
+				vertical-align: middle;
+				float: none;
+
+				input {
+					width: 100%;
+					display: block;
+					box-sizing: border-box;
+					height: 46px;
+					padding: 0 1rem;
+					border: 1px solid white;
+
+					font-size: 1.375rem;
+					font-family: "Palatino Linotype", AmiriRegular, BookAntiqua,
+						Georgia, serif;
+					font-style: italic;
+					color: #002350;
+
+					&:focus {
+						outline: 0;
+						border: 1px solid #2285ff;
+					}
+				}
+			}
+
+			.submit {
+				display: table-cell;
+				vertical-align: middle;
+				float: none;
+				width: 48px;
+				padding-left: 1rem;
+
+				button {
+					width: 48px;
+					height: 48px;
+					padding: 0;
+					border: none;
+					cursor: pointer;
+					background-image: url("https://www.fmi.uni-jena.de/skin/_global/_images/blocks/slider_next.svg");
+				}
+			}
+
+			.message {
+				display: table-cell;
+				vertical-align: middle;
+				float: left;
+				padding-top: 0.7rem;
+
+				font-size: 0.9rem;
+				font-family: "Roboto", Arial, sans-serif;
+			}
+		}
+
+		.username {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
 .login_input {
 	padding: 2em 1em;
 	font-family: helvetica, sans-serif;
