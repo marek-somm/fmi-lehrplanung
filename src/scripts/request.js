@@ -86,6 +86,15 @@ export class request {
       router.push({name: 'Home'});
 	}
 
+	async saveVeranstaltung(veranstaltung){
+		// speichert die übergebene veranstaltung in db
+			// veranstaltung hat gleiches format wie return wert von getVeranstaltung
+		//  return: ausgabecode
+			// 0: falls speichern erfolgreich
+			// 1: falls veranstaltungsnummer + semester kombination bereits vorfanden
+			// -1: anderer fehler
+	}
+
 	async fetchData(path, params) {
 		this.loading = true
 		this.error = null

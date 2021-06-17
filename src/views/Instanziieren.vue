@@ -184,6 +184,8 @@ export default {
 					}
 				}
 			}
+			var ausgabecode = rq.saveVeranstaltung(out.return)
+			// Ausgabe gemäß ausgabecode
 		}
 		function newInstance(category) {
 			var dict = {}
