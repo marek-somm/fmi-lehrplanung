@@ -98,7 +98,24 @@ export class request {
 			// veranstaltung hat gleiches format wie return wert von getVeranstaltung
 		//  return: ausgabecode
 			// 0: falls speichern erfolgreich
-			// 1: falls veranstaltungsnummer + semester kombination bereits vorfanden
+			// 1: falls veranstaltungsnummer + semester kombination bereits vorhanden
+			// -1: anderer fehler
+	}
+
+	async editVeranstaltung(veranstaltung, vnr, semester){
+		console.log(veranstaltung, vnr, semester)
+		await this.sendData('update/create.php', {
+			data: veranstaltung
+		})
+		console.log("done")
+		return this.data
+		// speichert die übergebene veranstaltung in db
+		// wobei veranstalltung mit gegebenen vnr und semester überschrieben wird
+			// veranstaltung hat gleiches format wie return wert von getVeranstaltung
+			// vnr und semester sind wie bei getVeranstaltung
+		//  return: ausgabecode
+			// 0: falls speichern erfolgreich
+			// 1: falls veranstaltungsnummer + semester kombination bereits vorhanden
 			// -1: anderer fehler
 	}
 

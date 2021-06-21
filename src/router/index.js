@@ -7,6 +7,7 @@ import Veranstaltungen from '@/views/Veranstaltungen'
 import Module from '@/views/Module'
 import NotFound from '@/views/NotFound'
 import Instanziieren from '@/views/Instanziieren'
+import Bearbeiten from '@/views/Bearbeiten'
 import store from '@/store/index'
 import { request } from "@/scripts/request.js";
 
@@ -46,6 +47,12 @@ const routes = [
 		path: '/instanziieren/:id/:sem',
 		name: 'Instanziieren',
 		component: Instanziieren,
+		beforeEnter: checkAccess
+	},
+	{
+		path: '/bearbeiten/:id/:sem',
+		name: 'Bearbeiten',
+		component: Bearbeiten,
 		beforeEnter: checkAccess
 	},
 	{

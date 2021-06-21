@@ -1,0 +1,280 @@
+<template>
+	<div class="results" v-if="input.original">
+	<form class="veranstaltung_input" @submit.prevent="">
+		<div class="veranstaltung">
+			<h1>Veranstaltung</h1>
+			<div class="Gruppen">
+				<div class="item" v-for="(item, key, index) in input.original.data" :key="index">
+					<div v-if="!(key == 'aktiv') && !(key == 'friedolinID')">
+						<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+						<input
+							:id=key
+							:name=key
+							:placeholder=item
+							v-model=out.input.data[key]
+						/>
+					</div>
+				</div>
+				<div class="item" v-for="(item, key, index) in input.original.content" :key="index">
+					<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+					<input
+						:id=key
+						:name=key
+						:placeholder=item
+						v-model=out.input.data[key]
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="veranstaltung">
+			<h1>Personen</h1>
+			<div class="Gruppen">
+				<div class="item" v-for="(item, number, index) in input.original.people" :key="index">
+					<div class="item" v-for="(item, number, index) in item" :key="index">
+						<h2>{{number+1}}. Person</h2>
+
+						<div class="item" v-for="(item, key, index) in item" :key="index">
+							<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+							<input
+								:id=key
+								:name=key
+								:placeholder=item
+								v-model='out.input.people[""][number][key]'
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="new button" @click="newInstance('people')">Hinzufügen</button>
+			<button class="new button" @click="removeInstance('people')">Entfernen</button>
+		</div>
+		<div class="veranstaltung">
+			<h1>Prüfungen</h1>
+			<div class="Gruppen">
+				<div class="item" v-for="(item, number, index) in input.original.exams" :key="index">
+					<div class="item" v-for="(item, number, index) in item" :key="index">
+						<h2>{{number+1}}. Prüfung</h2>
+						<div class="item" v-for="(item, key, index) in item" :key="index">
+							<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+							<input
+								:id=key
+								:name=key
+								:placeholder=item
+								v-model='out.input.exams[""][number][key]'
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="new button" @click="newInstance('exams')">Hinzufügen</button>
+			<button class="new button" @click="removeInstance('exams')">Entfernen</button>
+		</div>
+		<button class="succ button" @click="übernehmen()">Übernehmen</button>
+				<div class="message">
+					{{input.ausgabecode.message}}
+				</div>
+	</form>
+	</div>
+</template>
+
+<script>
+import { onMounted, reactive, watch } from "vue";
+import { useRoute } from "vue-router";
+import { request } from "@/scripts/request.js";
+
+export default {
+	setup() {
+		const beschriftung = {
+			"data": "Veranstaltung",
+			"titel": "Titel",
+			"veranstaltungsnummer": "Vnr",
+			"semester": "Semester",
+			"sws": "SWS",
+			"turnus": "Turnus",
+			"art": "Art",
+			"content": "Inhalt",
+			"Zielgruppe":"Zielgruppe",
+			"people": "Personen",
+			"vorname": "Vorname",
+			"nachname": "Nachname",
+			"grad": "Akademischer Grad",
+			"friedolinID": "FriedolinID",
+			"exams": "Prüfungen",
+			"pnr":"Pnr",
+			"Modulcode": "Modulcode"
+		}
+		const rq = new request();
+		const input = reactive({
+			original: {},
+            ausgabecode: {},
+			});
+		const out = reactive({
+			input: {},
+			return: {},
+            alt: {},
+			});
+
+        const route = useRoute();
+        const id = route.params.id;
+		const sem = route.params.sem;
+		watch(
+			() => id,
+			() => sem,
+			() => {
+				getModul(id, sem);
+			}
+		);
+
+		onMounted(() => {
+			getModul(id, sem);
+		});
+
+		async function getModul(id, sem) {
+			input.original = await rq.getVeranstaltung(id, sem);
+			// baut für input und return die struktur von original nach
+			// beides bleibt leer, da return bei übernahme überschrieben wird
+			// original = {"d":{"t":"", "n":"",...}, "i":{"z":""}, "p":{"":[{"t":"","n":"", ...}, {...},...]}, "e":{"":[{"t":"","n":"", ...}, {...},...]}}
+			for (var key in input.original){
+				out.input[key] = {}
+                out.return[key] = {}
+				for (var key1 in input.original[key]){
+					if (key1 != ""){
+						out.input[key][key1] = ""
+						out.return[key][key1] = ""
+                        // speichert veranstaltungsnummer und semester für die übergabe an die updatefunktion 
+                        if (key1 == "veranstaltungsnummer" || key1 == "semester")
+                            out.alt[key1] = input.original[key][key1]
+					}
+					else{
+						out.input[key][key1] = []
+						out.return[key][key1] = []
+						for (var i in input.original[key][key1]){
+							out.input[key][key1].push({})
+							out.return[key][key1].push({})
+							for(var j in input.original[key][key1][i]){
+								out.input[key][key1][i][j] = ""
+								out.return[key][key1][i][j] = ""
+							}
+						}
+					}
+				}
+			}
+		}
+
+		async function übernehmen() {
+			// übernimm nicht leere input datan für return
+			// wandel dabei in format von data zurück
+			for (var key in input.original){
+				for (var key1 in input.original[key]){
+					if (key1 != ""){
+						if (out.input[key][key1])
+							out.return[key][key1] = out.input[key][key1]
+						else
+							out.return[key][key1] = input.original[key][key1]
+					}
+					else{
+						for (var i in input.original[key][key1]){
+							for(var j in input.original[key][key1][i]){
+								if (out.input[key][key1][i][j])
+									out.return[key][key1][i][j] = out.input[key][key1][i][j]
+								else
+									out.return[key][key1][i][j] = input.original[key][key1][i][j]
+							}
+						}
+					}
+				}
+			}
+			input.ausgabecode = rq.editVeranstaltung(out.return, out.alt.veranstaltungsnummer, out.alt.semster)
+            console.log(input.ausgabecode)
+			// Ausgabe gemäß ausgabecode
+		}
+		function newInstance(category) {
+			var dict = {}
+			if (category == "people")
+				dict = {"vorname":"", "nachname":"", "grad":"", "friedolinID":""}
+			else if (category == "exams")
+				dict = {"titel":"", "pnr":"", "Modulcode":""}
+			input.original[category][""].push(dict)
+			out.input[category][""].push(dict)
+			out.return[category][""].push(dict)
+		}
+		function removeInstance(category) {
+			input.original[category][""].pop()
+			out.input[category][""].pop()
+			out.return[category][""].pop()
+		}
+
+		return {
+			input,
+			out,
+            id,
+			beschriftung,
+			newInstance,
+			removeInstance,
+			übernehmen
+		};
+	}
+};
+</script>
+
+<style lang="scss" scoped>
+// TODO: rechts und unten ist immer noch ein ungewollter abstand
+.results{
+	.veranstaltung_input {
+		padding: 2em 1em;
+		font-family: helvetica, sans-serif;
+		height: calc(100vh - 16.78rem);
+		overflow-y: auto;
+
+		label {
+			color: #2c3e50;
+			margin: 0 3% 0.25em;
+			font-size: 1.2em;
+			display: block;
+		}
+		input {
+			width: 100%;
+			margin: 0 3% 1em;
+			font-size: 1.2em;
+			border: 2px solid #000;
+			outline: none;
+			color: #2c3e50;
+		}
+
+		button {
+			width: 25%;
+			margin: 0 3% 1em;
+			font-size: 1.2em;
+			border: 2px solid #000;
+			color: #2c3e50;
+			transition: box-shadow 0.5s ease, background 0.2s ease;
+
+			&:hover {
+				box-shadow: rgba(0, 0, 0, 0.349) 3px 3px;
+				background: rgb(201, 201, 201);
+			}
+		}
+		.veranstaltung{
+			width:30%;
+			margin-right: 2%;
+			float: left; 
+			.Gruppen{ 
+				height: calc(100vh - 28rem);
+				overflow-y: auto;
+			}
+
+			input {
+				width: 90%;
+			}
+
+			button {
+				width: 40%;
+			}
+		}
+		.veranstaltung:last-child{
+			float: none;
+			margin-right: 0;
+		}
+	}
+}
+</style>
