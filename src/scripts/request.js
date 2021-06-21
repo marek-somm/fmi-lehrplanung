@@ -118,6 +118,11 @@ export class request {
 			// 1: falls veranstaltungsnummer + semester kombination bereits vorhanden
 			// -1: anderer fehler
 	}
+	
+	async toggleAktiv(vnr, semester){
+		console.log(vnr, semester)
+		// wechselt den aktivstatus der gegebenen veranstaltung
+	}
 
 	async fetchData(path, params) {
 		this.loading = true
