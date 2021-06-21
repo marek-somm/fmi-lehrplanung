@@ -165,9 +165,9 @@ export default {
 							out.return[key][key1] = out.input[key][key1]
 						else
 							out.return[key][key1] = input.original[key][key1]
-						console.log("data", input.original[key][key1])
-						console.log("return", out.return[key][key1])
-						console.log("input", out.input[key][key1])
+						//console.log("data", input.original[key][key1])
+						//console.log("return", out.return[key][key1])
+						//console.log("input", out.input[key][key1])
 					}
 					else{
 						for (var i in input.original[key][key1]){
@@ -177,14 +177,15 @@ export default {
 								else
 									out.return[key][key1][i][j] = input.original[key][key1][i][j]
 							}
-							console.log("data", input.original[key][key1][i])
-							console.log("return", out.return[key][key1][i])
-							console.log("input", out.input[key][key1][i])
+							//console.log("data", input.original[key][key1][i])
+							//console.log("return", out.return[key][key1][i])
+							//console.log("input", out.input[key][key1][i])
 						}
 					}
 				}
 			}
-			var ausgabecode = rq.saveVeranstaltung(out.return)
+			var ausgabecode = await rq.saveVeranstaltung(out.return)
+			console.log(ausgabecode)
 			// Ausgabe gemäß ausgabecode
 		}
 		function newInstance(category) {

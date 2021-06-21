@@ -21,7 +21,7 @@ body {
 }
 
 #app {
-	font-family: "Roboto",Arial,Geneva,sans-serif;
+	font-family: "Roboto", Arial, Geneva, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;

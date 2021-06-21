@@ -7,13 +7,24 @@ if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
 
 class session {
 	public static function isAlive() {
-		session_start();
-		return isset($_SESSION["login"]);
+		return session::getSecurityLevel() > 0;
 	}
 
-	public static function login() {
+	public static function getSecurityLevel() {
 		session_start();
-		$_SESSION["login"] = 1;
+		if(isset($_SESSION['prfa'])) {
+			return 2;
+		}
+		if(isset($_SESSION['lehre'])) {
+			return 1;
+		}
+		return 0;
+	}
+
+	public static function login($roll) {
+		session::logout();
+		session_start();
+		$_SESSION[$roll] = 1;
 	}
 
 	public static function logout() {

@@ -12,7 +12,7 @@
 			<div class="row username">
 				<div class="label"><label>Login: </label></div>
 				<div class="input">
-					<input placeholder="admin" v-model="data.usernameInput" />
+					<input placeholder="prüfungsamt, lehre" v-model="data.usernameInput" />
 				</div>
 			</div>
 			<div class="row password">
@@ -50,18 +50,19 @@ export default {
 		const data = reactive({
 			usernameInput: "",
 			passwordInput: "",
-			loggedIn: false,
 			error: false,
 		});
 
-		if (store.state.User.user) {
+		if (store.state.User.login) {
 			router.push({ name: "Home" });
 		}
 
 		async function loginSubmit() {
-			data.loggedIn = await rq.login(data.usernameInput, data.passwordInput);
-			if (data.loggedIn) {
-				store.dispatch("User/setUser", data.loggedIn);
+			const answer = await rq.login(data.usernameInput, data.passwordInput);
+			if (await answer.success) {
+				store.dispatch('User/setLogin', answer.success)
+				store.dispatch('User/setLevel', answer.level)
+				console.log(store.state.User)
 				router.push({ name: "Home" });
 			} else {
 				data.error = true

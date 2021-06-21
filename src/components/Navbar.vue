@@ -13,30 +13,42 @@
 			<div class="nav-container center"></div>
 			<div class="nav-container"></div>
 		</div>
-		<div class="head-bottom">
-			<router-link v-if="user" class="link" :to="{ name: 'Veranstaltungen' }"
-				>Veranstaltungen</router-link
-			>
-			<router-link v-if="user" class="link" :to="{ name: 'Module' }"
-				>Module</router-link
-			>
-			<router-link class="link" v-if="!user" :to="{ name: 'Login' }"
-				>Login</router-link
-			>
-			<router-link class="link" v-if="user" :to="{ name: 'Logout' }"
-				>Logout</router-link
-			>
+		<div class="head-bottom-wrapper">
+			<div class="head-bottom">
+				<router-link
+					class="link"
+					v-if="level > 0"
+					:to="{ name: 'Veranstaltungen' }"
+					>Veranstaltungen</router-link
+				>
+				<router-link class="link" v-if="level > 0" :to="{ name: 'Module' }"
+					>Module</router-link
+				>
+				<router-link class="link" v-if="!login" :to="{ name: 'Login' }"
+					>Login</router-link
+				>
+				<router-link class="link" v-if="login" :to="{ name: 'Logout' }"
+					>Logout</router-link
+				>
+			</div>
+			<div class="level" v-if="level > 0">
+				Rolle:&nbsp;{{ level == 1 ? "Lehre" : "Prüfungsamt" }}
+			</div>
 		</div>
 	</div>
-	<div id="history-wrapper" v-show="getPathElements()[0] != ''">
+	<div id="history-wrapper" v-show="getPathElements()[0] != '' && getPathElements()[0] != 'Logout'">
 		<ul class="history">
 			<li class="history-item home">
-				<router-link class="link" :to="{name: 'Home' }">
+				<router-link class="link" :to="{ name: 'Home' }">
 					Startseite
 				</router-link>
 			</li>
-			<li class="history-item" v-for="(item, index) in getPathElements()" :key="index">
-				<router-link class="link" :to="{name: item}">
+			<li
+				class="history-item"
+				v-for="(item, index) in getPathElements()"
+				:key="index"
+			>
+				<router-link class="link" :to="{ name: item }">
 					{{ item }}
 				</router-link>
 			</li>
@@ -54,22 +66,25 @@ export default {
 		const store = useStore();
 		const route = useRoute();
 
-		const user = computed(() => store.state.User.user);
+		const login = computed(() => store.state.User.login);
+		const level = computed(() => store.state.User.level);
 		const path = computed(() => route.path);
 
 		function getPathElements() {
-			var path = route.path
-			var nodes = path.slice(1).split("/")
-			if(nodes[0] == 'instanziieren')
-				nodes = nodes.splice(0,1)
-			nodes = nodes.map(node => node.charAt(0).toUpperCase() + node.slice(1))
-			return nodes
+			var path = route.path;
+			var nodes = path.slice(1).split("/");
+			if (nodes[0] == "instanziieren") nodes = nodes.splice(0, 1);
+			nodes = nodes.map(
+				(node) => node.charAt(0).toUpperCase() + node.slice(1)
+			);
+			return nodes;
 		}
 
 		return {
-			user,
+			login,
+			level,
 			path,
-			getPathElements
+			getPathElements,
 		};
 	},
 };
@@ -151,25 +166,38 @@ export default {
 		}
 	}
 
-	.head-bottom {
-		padding: 1rem 0 0 0;
-		margin: 1rem 10rem 1rem 10rem;
-		text-align: left;
+	.head-bottom-wrapper {
+		display: flex;
+		flex-direction: row;
+		padding: 0rem 0 0 0;
+		margin: 1rem 10rem 0 10rem;
 
-		.link {
-			font-weight: normal;
-			color: white;
+		.head-bottom {
+			text-align: left;
+			width: 100%;
+			padding: 1rem 0;
+
+			.link {
+				font-weight: normal;
+				color: white;
+				padding: 1rem;
+				text-decoration: none;
+				transition: color 0.2s ease;
+
+				&.router-link-exact-active {
+					color: white !important;
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.level {
+			width: max-content;
 			padding: 1rem;
-			text-decoration: none;
-			transition: color 0.2s ease;
-
-			&.router-link-exact-active {
-				color: white !important;
-			}
-
-			&:hover {
-				text-decoration: underline;
-			}
+			color: white;
 		}
 	}
 }
@@ -190,11 +218,12 @@ export default {
 		.history-item {
 			padding: 0 1rem 0 1rem;
 			width: max-content;
-			background: url('https://arktur.fmi.uni-jena.de/assets/history_default.svg') no-repeat left center;
+			background: url("https://arktur.fmi.uni-jena.de/assets/history_default.svg")
+				no-repeat left center;
 
 			.link {
-				font-size: .9em;
-				opacity: .7;
+				font-size: 0.9em;
+				opacity: 0.7;
 				display: block;
 				color: white;
 				text-decoration: none;
@@ -207,7 +236,8 @@ export default {
 		}
 
 		.home {
-			background: url('https://arktur.fmi.uni-jena.de/assets/history_home.svg') no-repeat left center;
+			background: url("https://arktur.fmi.uni-jena.de/assets/history_home.svg")
+				no-repeat left center;
 		}
 	}
 }

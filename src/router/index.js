@@ -17,12 +17,13 @@ const routes = [
 		path: '/',
 		name: 'Home',
 		component: Home,
-		beforeEnter: checkSession,
+		beforeEnter: checkSessionAlways,
 	},
 	{
 		path: '/login',
 		name: 'Login',
 		component: Login,
+		beforeEnter: checkSessionAlways,
 	},
 	{
 		path: '/logout',
@@ -57,14 +58,25 @@ const routes = [
 
 async function checkAccess(to, from, next) {
 	await checkSession(to, from)
-	const user = store.state.User.user
-	if (!user && !store.state.debug) next({ name: 'Login' })
+	if (!store.state.User.login && !store.state.debug) next({ name: 'Login' })
 	else next()
 }
 
 async function checkSession(to, from) {
-	if(!from.name)
-		store.dispatch('User/setUser', await rq.session())
+	if(!from.name) {
+		await setSession()
+	}
+}
+
+async function checkSessionAlways() {
+	await setSession()
+}
+
+async function setSession() {
+	const answer = await rq.session()
+	await store.dispatch('User/setLogin', answer.success)
+	await store.dispatch('User/setLevel', answer.level)
+	console.log(answer.level)
 }
 
 const router = createRouter({

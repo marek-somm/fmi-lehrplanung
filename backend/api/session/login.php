@@ -8,11 +8,14 @@ $user = input::get('user', false);
 $pwd = input::get('pwd', false);
 
 $answer = array();
-if ($user == "admin" && $pwd == "1234") {
-	$answer = array("success" => true);
-	session::login();
+if ($user == "prüfungsamt" && $pwd == "1234") {
+	session::login("prfa");
+	$answer = array("success" => session::getSecurityLevel() == 2, "level" => session::getSecurityLevel());
+} else if ($user == "lehre" && $pwd == "1234") {
+	session::login("lehre");
+	$answer = array("success" => session::getSecurityLevel() == 1, "level" => session::getSecurityLevel());
 } else {
-	$answer = array("success" => false);
+	$answer = array("success" => false, "level" => session::getSecurityLevel());
 }
 
 header('Content-Type: application/json');

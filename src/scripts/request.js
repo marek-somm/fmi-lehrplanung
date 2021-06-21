@@ -62,31 +62,38 @@ export class request {
 
 	async session() {
 		if(store.state.local) {
-			return true
+			return { success: true, level: store.state.seclevel }
 		}
 		await this.fetchData('session/test.php', {})
-		return this.data.success
+		return this.data
 	}
 	
 	async login(user, pwd) {
 		if(store.state.local) {
-			return true
+			return { success: true, level: store.state.seclevel }
 		}
 		await this.fetchData('session/login.php', {
 			user: user,
 			pwd: pwd,
 		})
-		return this.data.success
+		return this.data
 	}
 
 	async logout() {
 		const router = useRouter()
 		await this.fetchData('session/logout.php', {})
-		store.dispatch('User/setUser', false)
+		store.dispatch('User/setLogin', false)
+		store.dispatch('User/setLevel', 0)
       router.push({name: 'Home'});
 	}
 
 	async saveVeranstaltung(veranstaltung){
+		console.log(veranstaltung)
+		await this.sendData('update/create.php', {
+			data: veranstaltung
+		})
+		console.log("done")
+		return this.data
 		// speichert die übergebene veranstaltung in db
 			// veranstaltung hat gleiches format wie return wert von getVeranstaltung
 		//  return: ausgabecode
@@ -96,6 +103,26 @@ export class request {
 	}
 
 	async fetchData(path, params) {
+		this.loading = true
+		this.error = null
+
+		await axios
+			.get('https://arktur.fmi.uni-jena.de/api/' + path, {
+				headers: { 'Content-Type': 'application/json' },
+				params,
+			})
+			.then((res) => {
+				this.loading = false
+				this.data = res.data
+			})
+			.catch((err) => {
+				this.error = err
+				this.loading = false
+				this.data = null
+			})
+	}
+
+	async sendData(path, params) {
 		this.loading = true
 		this.error = null
 
