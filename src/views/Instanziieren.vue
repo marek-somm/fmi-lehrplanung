@@ -70,9 +70,9 @@
 			<button class="new button" @click="removeInstance('exams')">Entfernen</button>
 		</div>
 		<button class="succ button" @click="übernehmen()">Übernehmen</button>
-				<div class="message">
-					{{input.ausgabecode.message}}
-				</div>
+		<div class="message">
+			{{input.ausgabecode.message}}
+		</div>
 	</form>
 	</div>
 </template>
@@ -217,9 +217,9 @@ export default {
 // TODO: rechts und unten ist immer noch ein ungewollter abstand
 .results{
 	.veranstaltung_input {
-		padding: 2em 1em;
+		padding: 1em 1em;
 		font-family: helvetica, sans-serif;
-		height: calc(100vh - 16.78rem);
+		height: calc(100vh - 15.78rem);
 		overflow-y: auto;
 
 		label {
@@ -252,7 +252,7 @@ export default {
 		}
 		.veranstaltung{
 			width:30%;
-			margin-right: 2%;
+			margin-right: 3%;
 			float: left; 
 			.Gruppen{ 
 				height: calc(100vh - 28rem);
@@ -264,7 +264,8 @@ export default {
 			}
 
 			button {
-				width: 40%;
+				font-size: 1em;
+				width: 44%;
 			}
 		}
 		.veranstaltung:last-child{
