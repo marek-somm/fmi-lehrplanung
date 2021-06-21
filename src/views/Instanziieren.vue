@@ -70,9 +70,10 @@
 			<button class="new button" @click="removeInstance('exams')">Entfernen</button>
 		</div>
 		<button class="succ button" @click="übernehmen()">Übernehmen</button>
+				<div class="message">
+					{{input.ausgabecode.message}}
+				</div>
 	</form>
-	rückgabe:<br>
-	{{out.return}}
 	</div>
 </template>
 
@@ -105,6 +106,7 @@ export default {
 		const rq = new request();
 		const input = reactive({
 			original: {},
+			ausgabecode: {},
 			});
 		const out = reactive({
 			input: {},
@@ -165,9 +167,6 @@ export default {
 							out.return[key][key1] = out.input[key][key1]
 						else
 							out.return[key][key1] = input.original[key][key1]
-						//console.log("data", input.original[key][key1])
-						//console.log("return", out.return[key][key1])
-						//console.log("input", out.input[key][key1])
 					}
 					else{
 						for (var i in input.original[key][key1]){
@@ -177,15 +176,12 @@ export default {
 								else
 									out.return[key][key1][i][j] = input.original[key][key1][i][j]
 							}
-							//console.log("data", input.original[key][key1][i])
-							//console.log("return", out.return[key][key1][i])
-							//console.log("input", out.input[key][key1][i])
 						}
 					}
 				}
 			}
-			var ausgabecode = await rq.saveVeranstaltung(out.return)
-			console.log(ausgabecode)
+			input.ausgabecode = await rq.saveVeranstaltung(out.return)
+			console.log(input.ausgabecode)
 			// Ausgabe gemäß ausgabecode
 		}
 		function newInstance(category) {
@@ -211,7 +207,7 @@ export default {
 			beschriftung,
 			newInstance,
 			removeInstance,
-			übernehmen
+			übernehmen,
 		};
 	}
 };
