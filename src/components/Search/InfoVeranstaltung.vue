@@ -14,7 +14,7 @@
 				</p>
 				<p class="attrib">Turnus: {{ selected.data.turnus }}</p>
 				<p class="attrib">
-					Aktiv: {{ selected.data.aktiv ? "Ja" : "Nein" }}
+					Aktiv: <button class="new button" @click="toggleAktiv">{{ selected.data.aktiv ? "X" : "" }}</button>
 				</p>
 			</div>
 			<div class="block">
@@ -43,6 +43,7 @@ import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import People from "./Info/People.vue";
 import Exams from './Info/Exams.vue';
+import { request } from "@/scripts/request.js";
 
 export default {
 	components: { People, Exams },
@@ -53,6 +54,7 @@ export default {
 	},
 	setup(props, { emit }) {
 		const router = useRouter();
+		const rq = new request();
 
 		function convertSemester(code) {
 			if (code % 10 == 0) {
@@ -84,6 +86,11 @@ export default {
 			});
 		}
 
+		function toggleAktiv() {
+			// speichern von !props.selected.data.aktiv in der datenbank
+			rq.toggleAktiv(props.selected.data.veranstaltungsnummer, props.selected.data.semester)
+		}
+
 		function view(exam) {
 			emit('exam', exam)
 		}
@@ -92,6 +99,7 @@ export default {
 			convertSemester,
 			close,
 			newInstance,
+			toggleAktiv,
 			view,
 		};
 	},
@@ -100,4 +108,10 @@ export default {
 
 <style lang="scss" scoped>
 @import 'info.scss';
+.attrib{
+	button{
+		height:1.4em;
+		width:1.8em;
+	}
+}
 </style>

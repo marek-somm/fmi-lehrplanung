@@ -70,9 +70,9 @@
 			<button class="new button" @click="removeInstance('exams')">Entfernen</button>
 		</div>
 		<button class="succ button" @click="übernehmen()">Übernehmen</button>
-		<div class="message">
-			{{input.ausgabecode.message}}
-		</div>
+        <div class="message">
+            {{input.ausgabecode.message}}
+        </div>
 	</form>
 	</div>
 </template>
@@ -106,11 +106,12 @@ export default {
 		const rq = new request();
 		const input = reactive({
 			original: {},
-			ausgabecode: {},
+            ausgabecode: {},
 			});
 		const out = reactive({
 			input: {},
 			return: {},
+            alt: {},
 			});
 
         const route = useRoute();
@@ -140,6 +141,9 @@ export default {
 					if (key1 != ""){
 						out.input[key][key1] = ""
 						out.return[key][key1] = ""
+                        // speichert veranstaltungsnummer und semester für die übergabe an die updatefunktion 
+                        if (key1 == "veranstaltungsnummer" || key1 == "semester")
+                            out.alt[key1] = input.original[key][key1]
 					}
 					else{
 						out.input[key][key1] = []
@@ -180,8 +184,8 @@ export default {
 					}
 				}
 			}
-			input.ausgabecode = await rq.saveVeranstaltung(out.return)
-			console.log(input.ausgabecode)
+			input.ausgabecode = rq.editVeranstaltung(out.return, out.alt.veranstaltungsnummer, out.alt.semster)
+            console.log(input.ausgabecode)
 			// Ausgabe gemäß ausgabecode
 		}
 		function newInstance(category) {
@@ -207,7 +211,7 @@ export default {
 			beschriftung,
 			newInstance,
 			removeInstance,
-			übernehmen,
+			übernehmen
 		};
 	}
 };
