@@ -12,7 +12,7 @@
 			<div class="row username">
 				<div class="label"><label>Login: </label></div>
 				<div class="input">
-					<input placeholder="prüfungsamt, lehre" v-model="data.usernameInput" />
+					<input placeholder="" v-model="data.usernameInput" />
 				</div>
 			</div>
 			<div class="row password">
@@ -20,7 +20,7 @@
 				<div class="input">
 					<input
 						type="password"
-						placeholder="1234"
+						placeholder=""
 						v-model="data.passwordInput"
 						@keyup.enter="loginSubmit"
 					/>
