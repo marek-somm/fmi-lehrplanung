@@ -2,6 +2,7 @@
 	<div class="info--container">
 		<div class="header" v-if="selected">
 			<h3 class="title">{{ selected.data.titel }}</h3>
+			<button class="new button" @click="editInstance">Edit</button>
 			<button class="new button" @click="newInstance">New</button>
 			<button class="close button" @click="close">X</button>
 		</div>
@@ -86,6 +87,16 @@ export default {
 			});
 		}
 
+		function editInstance() {
+			router.push({
+				name: "Bearbeiten",
+				params: {
+					id: props.selected.data.veranstaltungsnummer,
+					sem: props.selected.data.semester,
+				},
+			});
+		}
+
 		function toggleAktiv() {
 			// speichern von !props.selected.data.aktiv in der datenbank
 			rq.toggleAktiv(props.selected.data.veranstaltungsnummer, props.selected.data.semester)
@@ -99,6 +110,7 @@ export default {
 			convertSemester,
 			close,
 			newInstance,
+			editInstance,
 			toggleAktiv,
 			view,
 		};
