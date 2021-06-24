@@ -62,7 +62,7 @@ export class request {
 
 	async session() {
 		if(store.state.local) {
-			return { success: true, level: store.state.seclevel }
+			return { success: true, level: store.state.seclevel, uid: store.state.uid }
 		}
 		await this.fetchData('session/test.php', {})
 		return this.data
@@ -70,7 +70,7 @@ export class request {
 	
 	async login(user, pwd) {
 		if(store.state.local) {
-			return { success: true, level: store.state.seclevel }
+			return { success: true, level: store.state.seclevel, uid: store.state.uid }
 		}
 		await this.fetchData('session/login.php', {
 			user: user,

@@ -83,6 +83,7 @@ async function setSession() {
 	const answer = await rq.session()
 	await store.dispatch('User/setLogin', answer.success)
 	await store.dispatch('User/setLevel', answer.level)
+	await store.dispatch('User/setUid', answer.uid)
 	console.log(answer.level)
 }
 

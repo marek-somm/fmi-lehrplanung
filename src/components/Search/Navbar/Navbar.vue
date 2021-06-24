@@ -25,18 +25,23 @@
 					>Module</router-link
 				>
 				<router-link class="link" v-if="!login" :to="{ name: 'Login' }"
-					>Login</router-link
+					>Anmelden</router-link
 				>
 				<router-link class="link" v-if="login" :to="{ name: 'Logout' }"
-					>Logout</router-link
+					>Abmelden</router-link
 				>
 			</div>
-			<div class="level" v-if="level > 0">
-				Rolle:&nbsp;{{ level == 1 ? "Lehre" : "Prüfungsamt" }}
+			<div class="uid-wrapper" v-if="uid">
+				Angemeldet&nbsp;als
+				<div class="uid">{{ uid }}</div>
+				<Settings/>
 			</div>
 		</div>
 	</div>
-	<div id="history-wrapper" v-show="getPathElements()[0] != '' && getPathElements()[0] != 'Logout'">
+	<div
+		id="history-wrapper"
+		v-show="getPathElements()[0] != '' && getPathElements()[0] != 'Logout'"
+	>
 		<ul class="history">
 			<li class="history-item home">
 				<router-link class="link" :to="{ name: 'Home' }">
@@ -60,20 +65,26 @@
 import { useStore } from "vuex";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
+import Settings from "./Settings.vue";
 
 export default {
+	components: {
+		Settings
+	},
 	setup() {
 		const store = useStore();
 		const route = useRoute();
 
 		const login = computed(() => store.state.User.login);
 		const level = computed(() => store.state.User.level);
+		const uid = computed(() => store.state.User.uid);
 		const path = computed(() => route.path);
 
 		function getPathElements() {
 			var path = route.path;
 			var nodes = path.slice(1).split("/");
-			if (nodes[0] == "instanziieren" || nodes[0] == "bearbeiten") nodes = nodes.splice(0, 1);
+			if (nodes[0] == "instanziieren" || nodes[0] == "bearbeiten")
+				nodes = nodes.splice(0, 1);
 			nodes = nodes.map(
 				(node) => node.charAt(0).toUpperCase() + node.slice(1)
 			);
@@ -83,6 +94,7 @@ export default {
 		return {
 			login,
 			level,
+			uid,
 			path,
 			getPathElements,
 		};
@@ -92,7 +104,7 @@ export default {
 
 <style lang="scss" scoped>
 #head-wrapper {
-	background: #008198;
+	background: $color1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -122,7 +134,7 @@ export default {
 				&:hover {
 					.subidentity,
 					.name {
-						color: #002350;
+						color: $color2_dark;
 					}
 
 					.identity {
@@ -144,7 +156,7 @@ export default {
 					font-family: "Roboto", Arial, Geneva, sans-serif;
 					letter-spacing: 0.05em;
 					line-height: normal;
-					color: white;
+					color: $font_color;
 				}
 
 				.name {
@@ -156,7 +168,7 @@ export default {
 					font-style: italic;
 					letter-spacing: 0.05em;
 					line-height: normal;
-					color: white;
+					color: $font_color;
 				}
 			}
 		}
@@ -179,13 +191,13 @@ export default {
 
 			.link {
 				font-weight: normal;
-				color: white;
+				color: $font_color;
 				padding: 1rem;
 				text-decoration: none;
 				transition: color 0.2s ease;
 
 				&.router-link-exact-active {
-					color: white !important;
+					color: $font_color !important;
 				}
 
 				&:hover {
@@ -194,17 +206,31 @@ export default {
 			}
 		}
 
-		.level {
+		.uid-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
 			width: max-content;
 			padding: 1rem;
-			color: white;
+			margin-right: 1rem;
+			color: $font_color;
+
+			.uid {
+				font-style: italic;
+				color: darken($color: $font_color, $amount: 10%);
+			}
+
+			* {
+				margin: 0 0.25rem;
+			}
 		}
 	}
 }
 
 #history-wrapper {
-	background: #174488;
-	color: white;
+	background: $color2;
+	color: $font_color;
 	line-height: 3.125rem;
 
 	.history {
@@ -225,7 +251,7 @@ export default {
 				font-size: 0.9em;
 				opacity: 0.7;
 				display: block;
-				color: white;
+				color: $font_color;
 				text-decoration: none;
 				width: max-content;
 
@@ -243,6 +269,6 @@ export default {
 }
 
 .router-link-exact-active.link {
-	background: #174488;
+	background: $color2;
 }
 </style>

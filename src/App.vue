@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
+import Navbar from "./components/Search/Navbar/Navbar.vue";
 export default {
 	components: { Navbar },
 	setup() {
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 body {
 	margin: 0;
 }
