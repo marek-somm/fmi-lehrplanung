@@ -1,4 +1,5 @@
 <?php
+require('../src/session.php');
 
 if(basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
 	header("Location: /");
@@ -6,10 +7,11 @@ if(basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
 }
 
 class ldap {
-	public static function checkAccess($user, $pwd) {
+	public static function login($user, $pwd) {
 		if ($conn = ldap::connect()) {
 			$dn = "uid=$user,ou=users,dc=uni-jena, dc=de";
-			if(ldap::login($conn, $dn, $pwd)) {
+			if(ldap_bind($conn, $dn, $pwd)) {
+				session::login("lehre");
 				$status = ldap::getData($conn, $dn);
 				return $status;
 			} else {
@@ -24,12 +26,12 @@ class ldap {
 		$result = ldap_read($conn, $dn, $filter);
 		$entries = ldap_get_entries($conn, $result);
 		$json = json_encode($entries, true);
-		file_put_contents("data/".$entries["0"]["uid"]["0"].".json", $json);
-		return end($entries["0"]["edupersonaffiliation"]);
-	}
 
-	private static function login($conn, $dn, $pwd) {
-		return ldap_bind($conn, $dn, $pwd);
+		$uid = $entries["0"]["uid"]["0"];
+
+		file_put_contents("data/".$uid.".json", $json);
+		session::setVar("uid", $uid);
+		return end($entries["0"]["edupersonaffiliation"]);
 	}
 
 	private static function connect() {
