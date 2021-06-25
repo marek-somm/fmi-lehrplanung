@@ -18,6 +18,7 @@ $answer = array("answer" => -1, "message" => "Unhandled Error");
 $data = json_decode($in, true);
 
 if($data != Null) {
+	log::info("UPDATE>CREATE", "Insert new LV");
 	$vnr = $data['data']['veranstaltungsnummer'];
 	$sem = $data['data']['semester'];
 	$titel = $data['data']['titel'];

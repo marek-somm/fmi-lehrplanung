@@ -9,7 +9,8 @@ header('Access-Control-Allow-Origin: *');
 
 if(!session::isAlive()) {
     header('Content-Type: application/json');
-	echo (json_encode(array("data" => "Invalid Session"), true));
+    log::database("WARN", "SEARCH", "Invalid Session!");
+	echo (json_encode(array("error" => "Invalid Session"), true));
     die();
 }
 

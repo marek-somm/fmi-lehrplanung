@@ -7,6 +7,7 @@ if(basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
 
 class modul {
 	public static function searchAll($titel, $limit) {
+		log::database("INFO", "SEARCH>MODUL>searchAll", "titel:$titel, limit:$limit");
 		$db = connectDatabase();
 		$all = array();
 		$answer = array();
@@ -25,6 +26,7 @@ class modul {
 		$answer['data'][''] = $all;
 		$answer['count'] = sizeof($all);
 
+		log::database("INFO", "SEARCH>MODUL>searchAll", "Found " . $answer['count'] . " Results");
 		header('Content-Type: application/json');
 		echo (json_encode($answer, true));
 
@@ -32,6 +34,7 @@ class modul {
 	}
 
 	public static function search($modulcode) {
+		log::database("INFO", "SEARCH>MODUL>search", "modulcode:$modulcode");
 		$db = connectDatabase();
 		$people = array();
 		$allSemester = array();
@@ -109,9 +112,15 @@ class modul {
 			}
 		}
 
-		$answer['people'][''] = $people;
-		$answer['modulcode'] = $modulcode;
+		if(!empty($people)) {
+			$answer['people'][''] = $people;
+		}
 
+		if(!empty($answer)) {
+			$answer['modulcode'] = $modulcode;
+		}
+
+		log::database("INFO", "SEARCH>MODUL>search", "Found " . !empty($answer) . " Results");
 		header('Content-Type: application/json');
 		echo (json_encode($answer, true));
 
