@@ -5,7 +5,7 @@
 			<h1>Veranstaltung</h1>
 			<div class="Gruppen">
 				<div class="item" v-for="(item, key, index) in input.original.data" :key="index">
-					<div v-if="!(key == 'aktiv') && !(key == 'friedolinID')">
+					<div v-if="level == 2 || !(key == 'aktiv') && !(key == 'friedolinID') && !(key == 'veranstaltungsnummer') && !(key == 'turnus')">
 						<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
 						<input
 							:id=key
@@ -21,7 +21,7 @@
 						:id=key
 						:name=key
 						:placeholder=item
-						v-model=out.input.data[key]
+						v-model=out.input.content[key]
 					/>
 				</div>
 			</div>
@@ -34,13 +34,15 @@
 						<h2>{{number+1}}. Person</h2>
 
 						<div class="item" v-for="(item, key, index) in item" :key="index">
-							<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
-							<input
-								:id=key+number
-								:name=key+number
-								:placeholder=item
-								v-model='out.input.people[""][number][key]'
-							/>
+							<div v-if="level == 2 || !(key == 'grad') && !(key == 'friedolinID')">
+								<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
+								<input
+									:id=key+number
+									:name=key+number
+									:placeholder=item
+									v-model='out.input.people[""][number][key]'
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -55,13 +57,15 @@
 					<div class="item" v-for="(item, number, index) in item" :key="index">
 						<h2>{{number+1}}. Prüfung</h2>
 						<div class="item" v-for="(item, key, index) in item" :key="index">
-							<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
-							<input
-								:id=key+number
-								:name=key+number
-								:placeholder=item
-								v-model='out.input.exams[""][number][key]'
-							/>
+							<div v-if="level == 2 || !(key == 'titel') && !(key == 'pnr')">
+								<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
+								<input
+									:id=key+number
+									:name=key+number
+									:placeholder=item
+									v-model='out.input.exams[""][number][key]'
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -78,8 +82,9 @@
 </template>
 
 <script>
-import { onMounted, reactive, watch } from "vue";
+import { onMounted, reactive, watch, computed } from "vue";
 import { useRoute } from "vue-router";
+import { useStore } from "vuex";
 import { request } from "@/scripts/request.js";
 
 export default {
@@ -89,6 +94,7 @@ export default {
 			"titel": "Titel",
 			"veranstaltungsnummer": "Vnr",
 			"semester": "Semester",
+			"aktiv": "Aktiv",
 			"sws": "SWS",
 			"turnus": "Turnus",
 			"art": "Art",
@@ -103,6 +109,8 @@ export default {
 			"pnr":"Pnr",
 			"Modulcode": "Modulcode"
 		}
+		const store = useStore();
+		const level = computed(() => store.state.User.level);
 		const rq = new request();
 		const input = reactive({
 			original: {},
@@ -164,6 +172,7 @@ export default {
 		async function übernehmen() {
 			// übernimm nicht leere input datan für return
 			// wandel dabei in format von data zurück
+			var newPerson = false;
 			for (var key in input.original){
 				for (var key1 in input.original[key]){
 					if (key1 != ""){
@@ -171,20 +180,36 @@ export default {
 							out.return[key][key1] = out.input[key][key1]
 						else
 							out.return[key][key1] = input.original[key][key1]
+						console.log(key, key1, out.return[key][key1])
 					}
 					else{
 						for (var i in input.original[key][key1]){
 							for(var j in input.original[key][key1][i]){
-								if (out.input[key][key1][i][j])
+								if (out.input[key][key1][i][j]){
+									if (level.value != 2 && (j == "vorname" || j == "nachname")){
+										newPerson = true
+									}
+									else{if (level.value != 2 && j == "Modulcode"){
+										out.return[key][key1][i]["pnr"] = null
+										out.return[key][key1][i]["titel"] = null
+									}}
 									out.return[key][key1][i][j] = out.input[key][key1][i][j]
+								}
+								else{if (level.value != 2 && newPerson && j == "friedolinID"){
+									out.return[key][key1][i][j] = null
+									out.return[key][key1][i]["grad"] = null
+									newPerson = false
+								}
 								else
 									out.return[key][key1][i][j] = input.original[key][key1][i][j]
+								}
 							}
+							console.log(key, key1, out.return[key][key1][i])
 						}
 					}
 				}
 			}
-			var ausgabecode = rq.editVeranstaltung(out.return, out.alt.veranstaltungsnummer, out.alt.semster)
+			var ausgabecode = rq.saveVeranstaltung(out.return, out.alt.veranstaltungsnummer, out.alt.semester)
             console.log(ausgabecode)
 			if (ausgabecode.status == 0){
 				out.message = "Lehrveranstaltung wurde erfolgreich bearbeitet.";
@@ -219,7 +244,8 @@ export default {
 			beschriftung,
 			newInstance,
 			removeInstance,
-			übernehmen
+			übernehmen,
+			level
 		};
 	}
 };
