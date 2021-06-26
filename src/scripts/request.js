@@ -35,6 +35,11 @@ export class request {
 		else return this.data
 	}
 
+	async getNewVeranstaltungen(semester){
+		console.log(semester)
+		// gibt alle noch nicht ins friedolin übertragene veranstaltungen (des gegebenen semesters) zurück
+	}
+
 	async getModul(modulcode) {
 		if (store.state.local) {
 			return results.modul
