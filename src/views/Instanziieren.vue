@@ -137,13 +137,35 @@ export default {
 		});
 
 		async function getVeranstaltung(id, sem) {
-			input.original = await rq.getVeranstaltung(id, sem);
+			if (Number(id)){ // Veranstaltungsnummer bestehen nur aus Ziffern
+				input.original = await rq.getVeranstaltung(id, sem);
+			}
+			else{ // Modulcode hat Buchstaben
+				input.original = { 
+					"data": { 
+						"titel": "", 
+						"veranstaltungsnummer": "", 
+						"semester": "", 
+						"friedolinID": "", 
+						"aktiv": "", 
+						"sws": "", 
+						"turnus": "", 
+						"art": "" 
+					}, 
+					"content": { 
+						"Zielgruppe": ""
+					}, 
+					"people": { "": [] }, 
+					"exams": { "": [ 
+						{ "titel": "", "pnr": "", "Modulcode": id } 
+					] } }
+			}
 			// baut für input und return die struktur von original nach
 			// beides bleibt leer, da return bei übernahme überschrieben wird
 			// original = {"d":{"t":"", "n":"",...}, "i":{"z":""}, "p":{"":[{"t":"","n":"", ...}, {...},...]}, "e":{"":[{"t":"","n":"", ...}, {...},...]}}
 			for (var key in input.original){
 				out.input[key] = {}
-                out.return[key] = {}
+				out.return[key] = {}
 				for (var key1 in input.original[key]){
 					if (key1 != ""){
 						out.input[key][key1] = ""

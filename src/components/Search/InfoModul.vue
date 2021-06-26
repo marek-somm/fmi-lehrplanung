@@ -2,6 +2,7 @@
 	<div class="info--container">
 		<div class="header" v-if="selected">
 			<h3 class="title">{{ selected.modulcode }}</h3>
+			<button class="new button" @click="newInstance">New</button>
 			<button class="close button" @click="close">X</button>
 		</div>
 		<div class="info-content" v-if="selected">
@@ -38,6 +39,7 @@
 
 <script>
 import { onMounted } from "vue";
+import { useRouter } from "vue-router";
 import People from "./Info/People.vue";
 import Exams from "./Info/Exams.vue";
 
@@ -49,6 +51,7 @@ export default {
 		},
 	},
 	setup(props, { emit }) {
+		const router = useRouter();
 		function convertSemester(code) {
 			if (code % 10 == 0) {
 				return "SoSe " + parseInt(code / 10);
@@ -69,6 +72,16 @@ export default {
 			emit("close");
 		}
 
+		function newInstance() {
+			router.push({
+				name: "Instanziieren",
+				params: {
+					id: props.selected.modulcode,
+					sem: 0,
+				},
+			});
+		}
+
 		function view(exam) {
 			emit('exam', exam)
 		}
@@ -76,6 +89,7 @@ export default {
 		return {
 			convertSemester,
 			close,
+			newInstance,
 			view,
 		};
 	},
