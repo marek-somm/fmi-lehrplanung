@@ -129,15 +129,15 @@ export default {
 			() => id,
 			() => sem,
 			() => {
-				getModul(id, sem);
+				getVeranstaltung(id, sem);
 			}
 		);
 
 		onMounted(() => {
-			getModul(id, sem);
+			getVeranstaltung(id, sem);
 		});
 
-		async function getModul(id, sem) {
+		async function getVeranstaltung(id, sem) {
 			input.original = await rq.getVeranstaltung(id, sem);
 			// baut für input und return die struktur von original nach
 			// beides bleibt leer, da return bei übernahme überschrieben wird
