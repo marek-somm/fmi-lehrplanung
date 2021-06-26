@@ -166,8 +166,7 @@ export default {
 		}
 
 		async function übernehmen() {
-			// übernimm nicht leere input datan für return
-			// wandel dabei in format von data zurück
+			// übernimm nicht leere input daten für return
 			var newPerson = false;
 			for (var key in input.original){
 				for (var key1 in input.original[key]){
@@ -181,7 +180,6 @@ export default {
 						else
 							out.return[key][key1] = input.original[key][key1]
 						}}
-						console.log(key, key1, out.return[key][key1])
 					}
 					else{
 						for (var i in input.original[key][key1]){
@@ -205,13 +203,13 @@ export default {
 									out.return[key][key1][i][j] = input.original[key][key1][i][j]
 								}
 							}
-							console.log(key, key1, out.return[key][key1][i])
 						}
 					}
 				}
 			}
 			var ausgabecode = await rq.saveVeranstaltung(out.return)
 			console.log(ausgabecode)
+			// Ausgabe gemäß ausgabecode
 			if (ausgabecode.status == 0){
 				out.message = "Lehrveranstaltung wurde erfolgreich angelegt.";
 			}
@@ -220,7 +218,6 @@ export default {
 			}else{
 				out.message = "Fehler: Ein unbekannter Fehler ist aufgetreten, bitte melden Sie dies dem Prüfungsamt.";
 			}}
-			// Ausgabe gemäß ausgabecode
 		}
 		function newInstance(category) {
 			var dict = {}
