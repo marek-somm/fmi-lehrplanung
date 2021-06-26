@@ -5,6 +5,7 @@ import Login from '@/views/Login'
 import Logout from '@/views/Logout'
 import Veranstaltungen from '@/views/Veranstaltungen'
 import Module from '@/views/Module'
+import Export from '@/views/Export'
 import NotFound from '@/views/NotFound'
 import Instanziieren from '@/views/Instanziieren'
 import Bearbeiten from '@/views/Bearbeiten'
@@ -41,6 +42,12 @@ const routes = [
 		path: '/module',
 		name: 'Module',
 		component: Module,
+		beforeEnter: checkAccess
+	},
+	{
+		path: '/export',
+		name: 'Export',
+		component: Export,
 		beforeEnter: checkAccess
 	},
 	{
