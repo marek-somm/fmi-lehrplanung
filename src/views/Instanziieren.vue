@@ -34,10 +34,10 @@
 						<h2>{{number+1}}. Person</h2>
 
 						<div class="item" v-for="(item, key, index) in item" :key="index">
-							<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+							<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
 							<input
-								:id=key
-								:name=key
+								:id=key+number
+								:name=key+number
 								:placeholder=item
 								v-model='out.input.people[""][number][key]'
 							/>
@@ -55,10 +55,10 @@
 					<div class="item" v-for="(item, number, index) in item" :key="index">
 						<h2>{{number+1}}. Prüfung</h2>
 						<div class="item" v-for="(item, key, index) in item" :key="index">
-							<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
+							<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
 							<input
-								:id=key
-								:name=key
+								:id=key+number
+								:name=key+number
 								:placeholder=item
 								v-model='out.input.exams[""][number][key]'
 							/>
@@ -71,7 +71,7 @@
 		</div>
 		<button class="succ button" @click="übernehmen()">Übernehmen</button>
 		<div class="message">
-			{{input.ausgabecode.message}}
+			{{out.message}}
 		</div>
 	</form>
 	</div>
@@ -106,11 +106,11 @@ export default {
 		const rq = new request();
 		const input = reactive({
 			original: {},
-			ausgabecode: {},
 			});
 		const out = reactive({
 			input: {},
 			return: {},
+			message: ""
 			});
 
         const route = useRoute();
@@ -180,8 +180,16 @@ export default {
 					}
 				}
 			}
-			input.ausgabecode = await rq.saveVeranstaltung(out.return)
-			console.log(input.ausgabecode)
+			var ausgabecode = await rq.saveVeranstaltung(out.return)
+			console.log(ausgabecode)
+			if (ausgabecode.status == 0){
+				out.message = "Lehrveranstaltung wurde erfolgreich angelegt.";
+			}
+			else{if(ausgabecode.status == 1){
+				out.message = "Fehler: Es existiert bereits eine Lehrveranstaltung mit dieser Veranstaltungsnummer und Semester Kombination.";
+			}else{
+				out.message = "Fehler: Ein unbekannter Fehler ist aufgetreten, bitte melden Sie dies dem Prüfungsamt.";
+			}}
 			// Ausgabe gemäß ausgabecode
 		}
 		function newInstance(category) {
