@@ -7,13 +7,22 @@
             <caption><button class="export" @click="exportTableToExcel(semester, semester)">Semester: {{semester}}</button></caption>
             
             <tr>
-            <th>Friedolin</th><th>LV Nr.</th><th>Modul Nr.</th><th>Prüfüngs Nr.</th><th>Titel</th><th>Dozent</th><th>Art</th><th>SWS</th><th>Zielgruppe</th>
+            <th>Friedolin</th><th>LV Nr.</th><th>Modul Nr.</th><th>Prüfüngs Nr.</th><th>Titel</th><th>Lehrende</th><th>Art</th><th>SWS</th><th>Zielgruppe</th>
             </tr>
             <tbody v-for="(prüfung, key, index) in item" :key="index">
                 <tr v-for="(item, key, index) in prüfung.veranstaltungen" :key="index">
                 <td><button class="übertragen" @click="toggleÜbertragen(item.veranstaltungsnummer, semester)">{{ item.übertragen ? "X" : "" }}</button></td><td>{{item.veranstaltungsnummer}}</td>
                 <td :rowspan="prüfung.veranstaltungen.length" v-if="key==0">{{prüfung.Modulcode}}</td><td :rowspan="prüfung.veranstaltungen.length" v-if="key==0">{{prüfung.pnr}}</td>
-                <td>{{item.titel}}</td><td>{{item.vorname}} {{item.nachname}}</td><td>{{item.art}}</td><td>{{item.sws}}</td><td>{{item.Zielgruppe}}</td>
+                <td>{{item.titel}}</td>
+                <td><p v-for="(item, semester, index) in item.lehrpersonal" :key="index"><a style="color:#2c3e50; text-decoration:none"
+					:href="
+						'https://friedolin.uni-jena.de/qisserver/rds?state=verpublish&moduleCall=webInfo&publishConfFile=webInfoPerson&publishSubDir=personal&personal.pid=' +
+						item.friedolinID
+					"
+					target="_blank">
+                {{item.vorname}} {{item.nachname}}
+                </a></p></td>
+                <td>{{item.art}}</td><td>{{item.sws}}</td><td>{{item.Zielgruppe}}</td>
 
                 </tr>
             </tbody>
