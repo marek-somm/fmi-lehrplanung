@@ -315,6 +315,13 @@ export default {
 			.Gruppen{ 
 				height: calc(100vh - 28rem);
 				overflow-y: auto;
+				/* Hide scrollbar for IE, Edge and Firefox */
+				-ms-overflow-style: none;  /* IE and Edge */
+				scrollbar-width: none;  /* Firefox */
+			}
+			/* Hide scrollbar for Chrome, Safari and Opera */
+			.Gruppen::-webkit-scrollbar {
+				display: none;
 			}
 
 			input {
@@ -332,4 +339,5 @@ export default {
 		}
 	}
 }
+
 </style>
