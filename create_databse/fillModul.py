@@ -69,7 +69,7 @@ modulturnus = {
 
 
 
-conn = sqlite3.connect('arktur.db')
+conn = sqlite3.connect('dc5a2a51976a32643a33ef6746dbf45a.db')
 c = conn.cursor()
 
 # clean tables

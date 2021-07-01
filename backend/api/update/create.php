@@ -5,7 +5,7 @@ require('../src/session.php');
 
 header('Access-Control-Allow-Origin: *');
 
-if(!session::isAlive() && false) {
+if(!session::isAlive()) {
 	header('Content-Type: application/json');
 	echo (json_encode(array("data" => "Invalid Session"), true));
    die();
@@ -18,7 +18,7 @@ $answer = array("answer" => -1, "message" => "Unhandled Error");
 $data = json_decode($in, true);
 
 if($data != Null) {
-	log::info("UPDATE>CREATE", "Insert new LV");
+	log::database("INFO","UPDATE>CREATE", "Insert new LV");
 	$vnr = $data['data']['veranstaltungsnummer'];
 	$sem = $data['data']['semester'];
 	$titel = $data['data']['titel'];

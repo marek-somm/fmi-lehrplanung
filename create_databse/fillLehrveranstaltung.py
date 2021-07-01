@@ -1,7 +1,7 @@
 import sqlite3
 import json
 
-conn = sqlite3.connect('arktur.db')
+conn = sqlite3.connect('dc5a2a51976a32643a33ef6746dbf45a.db')
 c = conn.cursor()
 
 # clean tables
@@ -12,7 +12,6 @@ c.execute('''DELETE FROM LEHRVERANSTALTUNG_Inhalt''')
 c.execute('''DELETE FROM BRIDGE_LEHRVERANSTALTUNG_PERSON''')
 c.execute('''DELETE FROM LEHRVERANSTALTUNG_RHYTMUS''')
 c.execute('''DELETE FROM PRUEFUNG''')
-c.execute('''DELETE FROM BRIDGE_Lehrveranstaltung_Pruefung''')
 
 rythm = {
    "keine Übernahme": 0,
@@ -27,6 +26,7 @@ for rhytmus in rythm:
    c.execute('''INSERT INTO Lehrveranstaltung_Rhytmus VALUES(?,?)''', [rythm[rhytmus], rhytmus])
 
 lehrvID = 0
+prID = 0
 for filename in files:
    with open("data/Lehrveranstaltungen/"+filename+".json", encoding='utf8') as file:
       data = json.load(file)
@@ -39,10 +39,10 @@ for filename in files:
       rhythmus = rythm[elem['Rhythmus']] if 'Rhythmus' in elem else 0
 
       c.execute('''INSERT INTO Lehrveranstaltung
-         SELECT ?,?,?
+         SELECT ?,?
          WHERE NOT EXISTS(
             SELECT 1 FROM lehrveranstaltung WHERE veranstaltungsnummer = ?
-         )''', [veranstaltungsnr, art, rhythmus, veranstaltungsnr])
+         )''', [veranstaltungsnr, rhythmus, veranstaltungsnr])
 
       # LEHRVERANSTALTUNG_INFO
       semester = filename.replace("Veranstaltungen_", "")
@@ -55,8 +55,8 @@ for filename in files:
 
       lehrvID += 1
       c.execute('''INSERT INTO Lehrveranstaltung_Info
-         VALUES (?,?,?,?,?,?,?)''',
-         [lehrvID, veranstaltungsnr, semester, titel, frID, aktiv, sws]
+         VALUES (?,?,?,?,?,?,?,?,?)''',
+         [lehrvID, veranstaltungsnr, semester, titel, frID, aktiv, sws, 1, art]
       )
 
       # LEHRVERANSTALTUNG_INHALT
@@ -118,19 +118,20 @@ for filename in files:
          venr = prüfung['VENr']
          vetitel = prüfung['VETitel']
 
-         c.execute('''INSERT INTO Pruefung
-            SELECT ?,?,?,?
+         prID += 1
+         c.execute('''INSERT INTO Pruefung (pruefungenID, lehrvID, pnr, modulcode, beschreibung, titel)
+            SELECT ?,?,?,?,?,?
             WHERE NOT EXISTS(
-               SELECT 1 FROM pruefung WHERE venr = ?)''', 
-            [venr, pnr, modulcode, vetitel, venr]
+               SELECT 1 FROM pruefung WHERE lehrvID = ?)''', 
+            [prID, lehrvID, pnr, modulcode, None, vetitel, venr]
          )
       
          # PRUEFUNG_LEHRVERANSTALTUNG
 
-         c.execute('''INSERT INTO BRIDGE_Lehrveranstaltung_Pruefung 
-            VALUES(?,?)''',
-            [lehrvID, venr]
-         )
+         #c.execute('''INSERT INTO BRIDGE_Lehrveranstaltung_Pruefung 
+         #   VALUES(?,?)''',
+         #   [lehrvID, prID]
+         #)
 
  #      prüfungen = elem['Prüfungen'] if 'Prüfungen' in elem else []
  #

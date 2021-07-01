@@ -109,10 +109,9 @@ class veranstaltung {
 		}
 
 		$ret = $db->fetchData(<<<EOF
-			SELECT pr.titel, pnr, modulcode Modulcode 
+			SELECT pr.titel, pnr, modulcode Modulcode, beschreibung Beschreibung 
 			FROM Lehrveranstaltung_Info li
-			JOIN BRIDGE_Lehrveranstaltung_Pruefung blp ON blp.lehrvID=li.lehrvID
-			JOIN Pruefung pr ON blp.VENR=pr.VENR
+			JOIN Pruefung pr ON li.lehrvID=pr.lehrvID
 			WHERE li.veranstaltungsnummer=$vnr AND li.semester=$semester
 		EOF);
 

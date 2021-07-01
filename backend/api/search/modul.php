@@ -81,8 +81,7 @@ class modul {
 			SELECT li.semester
 			FROM modul m
 			JOIN Pruefung p ON m.modulcode=p.modulcode
-			JOIN BRIDGE_Lehrveranstaltung_Pruefung blp ON p.venr=blp.venr
-			JOIN Lehrveranstaltung_Info li ON blp.lehrvID=li.lehrvID
+			JOIN Lehrveranstaltung_Info li ON p.lehrvID=li.lehrvID
 			WHERE m.modulcode="$modulcode"
 			GROUP BY li.semester
 			ORDER BY li.semester DESC
@@ -103,8 +102,7 @@ class modul {
 				SELECT p.titel, p.pnr, li.veranstaltungsnummer Vnr, li.semester
 				FROM modul m
 				JOIN Pruefung p ON m.modulcode=p.modulcode
-				JOIN BRIDGE_Lehrveranstaltung_Pruefung blp ON p.venr=blp.venr
-				JOIN Lehrveranstaltung_Info li ON blp.lehrvID=li.lehrvID
+				JOIN Lehrveranstaltung_Info li ON p.lehrvID=li.lehrvID
 				WHERE m.modulcode="$modulcode" AND li.semester=$sem
 			EOF);
 			while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {

@@ -83,21 +83,20 @@ c.execute('''CREATE TABLE [Modul_Turnus] (
 # Lehrveranstaltung
 c.execute('''CREATE TABLE [Lehrveranstaltung] (
   [veranstaltungsnummer] integer,
-  [art] text NOT NULL,
   [rhythmusID] integer NOT NULL,
   PRIMARY KEY ([veranstaltungsnummer])
 )''')
-
-c.execute
 
 c.execute('''CREATE TABLE [Lehrveranstaltung_Info] (
   [lehrvID] integer,
   [veranstaltungsnummer] integer NOT NULL,
   [semester] integer NOT NULL,
   [titel] text NOT NULL,
-  [friedolinID] integer NOT NULL,
+  [friedolinID] integer,
   [aktiv] integer NOT NULL,
   [sws] integer,
+  [friedolinAdded] integer NOT NULL DEFAULT 0,
+  [art] text NOT NULL,
   PRIMARY KEY ([lehrvID])
 )''')
 
@@ -130,11 +129,13 @@ c.execute('''CREATE TABLE [Person] (
 )''')
 
 c.execute('''CREATE TABLE [Pruefung] (
-  [VENR] integer,
-  [pnr] integer NOT NULL,
-  [modulcode] text NOT NULL,
-  [titel] text NOT NULL,
-  PRIMARY KEY ([VENR])
+  [pruefungenID] integer,
+  [lehrvID] integer,
+  [pnr] integer,
+  [modulcode] text,
+  [beschreibung] text,
+  [titel] text,
+  PRIMARY KEY ([pruefungenID])
 )''')
 
 
@@ -154,11 +155,6 @@ c.execute('''CREATE TABLE [BRIDGE_Modul_Person] (
 c.execute('''CREATE TABLE [BRIDGE_Lehrveranstaltung_Person] (
   [lehrvID] integer NOT NULL,
   [personenID] integer NOT NULL
-)''')
-
-c.execute('''CREATE TABLE [BRIDGE_Lehrveranstaltung_Pruefung] (
-  [lehrvID] integer NOT NULL,
-  [VENR] integer NOT NULL
 )''')
 
 

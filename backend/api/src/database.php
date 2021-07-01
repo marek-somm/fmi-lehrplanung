@@ -14,7 +14,12 @@ class Database extends SQLite3 {
 		return $ret;
 	}
 
+	function fetchFirst($sql) {
+		return $this->fetchData($sql)->fetchArray(SQLITE3_ASSOC);
+	}
+
 	function execute($sql) {
+		echo($sql);
 		try {
 			$this->exec($sql);
 		} catch (Exception $e) {
