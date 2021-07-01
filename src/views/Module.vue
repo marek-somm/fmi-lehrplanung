@@ -1,20 +1,31 @@
 <template>
 	<div class="module--container">
-		<Searchbar @input="updateInput" placeholder="Modultitel/Modulcode" />
+		<Searchbar
+			@input="updateInput"
+			@toggleFilter="toggleFilter"
+			placeholder="Modultitel/Modulcode"
+		/>
 		<div class="module-content">
 			<InfoModul
 				:selected="data.selectedModul"
+				:filterActive="data.filterActive"
 				:class="{ show: data.showModul }"
 				@close="closeModul"
 				@exam="updateVeranstaltung"
 			/>
 			<InfoVeranstaltung
 				:selected="data.selectedVeranstaltung"
+				:filterActive="data.filterActive"
 				:class="{ show: data.showVeranstaltung }"
 				@close="closeVeranstaltung"
 				@exam="updateModulWithExam"
 			/>
-			<Results @loadMore="loadMore" @select="updateModul" :data="module"/>
+			<Results
+				@loadMore="loadMore"
+				@select="updateModul"
+				:data="module"
+				:filterActive="data.filterActive"
+			/>
 		</div>
 	</div>
 </template>
@@ -40,8 +51,8 @@ export default {
 		const module = reactive({
 			defaultLimit: 20,
 			limit: 20,
-			all: null
-		})
+			all: null,
+		});
 
 		const data = reactive({
 			input: "",
@@ -49,21 +60,25 @@ export default {
 			showModul: false,
 			selectedVeranstaltung: null,
 			selectedModul: null,
+			filterActive: false,
 		});
 
 		async function updateModul(value) {
-			console.log(value)
+			console.log(value);
 			data.selectedModul = await rq.getModul(value);
 			data.showModul = true;
 		}
 
 		async function updateModulWithExam(exam) {
-			updateModul(exam.Modulcode)
+			updateModul(exam.Modulcode);
 		}
 
 		async function updateVeranstaltung(exam) {
 			console.log(exam);
-			data.selectedVeranstaltung = await rq.getVeranstaltung(exam.Vnr, exam.semester);
+			data.selectedVeranstaltung = await rq.getVeranstaltung(
+				exam.Vnr,
+				exam.semester
+			);
 			data.showVeranstaltung = true;
 		}
 
@@ -81,7 +96,7 @@ export default {
 		}
 
 		function updateInput(input) {
-			if(input != "[object InputEvent]") {
+			if (input != "[object InputEvent]") {
 				data.input = input;
 				module.limit = module.defaultLimit;
 				searchModul(data.input);
@@ -89,10 +104,11 @@ export default {
 		}
 
 		async function searchModul(name) {
-			module.all = await rq.searchModul(
-				name,
-				module.limit
-			)
+			module.all = await rq.searchModul(name, module.limit);
+		}
+
+		function toggleFilter(value) {
+			data.filterActive = value;
 		}
 
 		return {
@@ -104,7 +120,8 @@ export default {
 			closeVeranstaltung,
 			closeModul,
 			module,
-			loadMore
+			loadMore,
+			toggleFilter,
 		};
 	},
 };

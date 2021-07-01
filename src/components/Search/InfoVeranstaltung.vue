@@ -1,5 +1,5 @@
 <template>
-	<div class="info--container">
+	<div class="info--container" :class="{ filter: filterActive }">
 		<div class="header" v-if="selected">
 			<h3 class="title">{{ selected.data.titel }}</h3>
 			<button class="new button" @click="editInstance">Edit</button>
@@ -49,9 +49,8 @@ import { request } from "@/scripts/request.js";
 export default {
 	components: { People, Exams },
 	props: {
-		selected: {
-			type: Object,
-		},
+		selected: Object,
+		filterActive: Boolean
 	},
 	setup(props, { emit }) {
 		const router = useRouter();
@@ -120,7 +119,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'info.scss';
-.attrib{
+.attrib {
 	button{
 		height:1.4em;
 		width:1.8em;

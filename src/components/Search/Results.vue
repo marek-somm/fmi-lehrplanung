@@ -1,5 +1,5 @@
 <template>
-	<div class="results--container" v-if="data.all">
+	<div class="results--container" v-if="data.all" :class="{ filter: filterActive }">
 		<div class="category" v-for="(category, key) in data.all.data" :key="key">
 			<h3>&nbsp;{{ key }}&nbsp;</h3>
 			<div
@@ -25,9 +25,8 @@
 <script>
 export default {
 	props: {
-		data: {
-			type: Object,
-		},
+		data: Object,
+		filterActive: Boolean
 	},
 	setup(props, { emit }) {
 		function loadMore() {
@@ -47,6 +46,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.filter {
+	height: calc(100vh - 17.675rem - #{$filterHeight}) !important;
+}
 .results--container {
 	display: flex;
 	flex-flow: column;
@@ -55,6 +57,7 @@ export default {
 	overflow-y: auto;
 	height: calc(100vh - 17.675rem);
 	padding: 0 0 1rem 0;
+	transition: height .2s ease;
 
 	.category {
 		width: 40%;

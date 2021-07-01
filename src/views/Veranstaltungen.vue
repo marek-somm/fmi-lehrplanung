@@ -1,15 +1,21 @@
 <template>
 	<div class="veranstaltungen--container">
-		<Searchbar @input="updateInput" placeholder="Veranstaltungstitel" />
+		<Searchbar
+			@input="updateInput"
+			@toggleFilter="toggleFilter"
+			placeholder="Veranstaltungstitel"
+		/>
 		<div class="veranstaltungen-content">
 			<InfoVeranstaltung
 				:selected="data.selectedVeranstaltung"
+				:filterActive="data.filterActive"
 				:class="{ show: data.showVeranstaltung }"
 				@close="closeVeranstaltung"
 				@exam="updateModul"
 			/>
 			<InfoModul
 				:selected="data.selectedModul"
+				:filterActive="data.filterActive"
 				:class="{ show: data.showModul }"
 				@close="closeModul"
 				@exam="updateVeranstaltungWithExam"
@@ -18,6 +24,7 @@
 				@loadMore="loadMore"
 				@select="updateVeranstaltung"
 				:data="veranstaltungen"
+				:filterActive="data.filterActive"
 			/>
 		</div>
 	</div>
@@ -53,16 +60,20 @@ export default {
 			showModul: false,
 			selectedVeranstaltung: null,
 			selectedModul: null,
+			filterActive: false,
 		});
 
 		async function updateVeranstaltung(value, semester) {
 			console.log(value + ", " + semester);
-			data.selectedVeranstaltung = await rq.getVeranstaltung(value, semester);
+			data.selectedVeranstaltung = await rq.getVeranstaltung(
+				value,
+				semester
+			);
 			data.showVeranstaltung = true;
 		}
 
 		async function updateVeranstaltungWithExam(exam) {
-			updateVeranstaltung(exam.Vnr, exam.semester)
+			updateVeranstaltung(exam.Vnr, exam.semester);
 		}
 
 		async function updateModul(exam) {
@@ -99,6 +110,10 @@ export default {
 			);
 		}
 
+		function toggleFilter(value) {
+			data.filterActive = value;
+		}
+
 		return {
 			data,
 			updateInput,
@@ -109,6 +124,7 @@ export default {
 			closeModul,
 			veranstaltungen,
 			loadMore,
+			toggleFilter,
 		};
 	},
 };

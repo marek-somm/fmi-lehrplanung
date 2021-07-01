@@ -2,7 +2,7 @@
 	height: calc(100vh - 16.68rem);
 	width: 0;
 	text-align: left;
-	transition: all 0.5s ease, height 0s ease;
+	transition: all 0.5s ease, height .2s ease;
 	color: transparent;
 	overflow: hidden;
 
@@ -78,4 +78,8 @@ p {
 	color: #2c3e50;
 	width: 35%;
 	overflow-y: auto;
+}
+
+.filter {
+	height: calc(100vh - 16.68rem - #{$filterHeight}) !important;
 }
