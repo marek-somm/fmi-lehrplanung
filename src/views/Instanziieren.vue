@@ -107,7 +107,8 @@ export default {
 			"friedolinID": "FriedolinID",
 			"exams": "Prüfungen",
 			"pnr":"Pnr",
-			"Modulcode": "Modulcode"
+			"Modulcode": "Modulcode",
+			"Beschreibung": "Beschreibung"
 		}
 		const store = useStore();
 		const level = computed(() => store.state.User.level);
@@ -157,7 +158,7 @@ export default {
 					}, 
 					"people": { "": [] }, 
 					"exams": { "": [ 
-						{ "titel": "", "pnr": "", "Modulcode": id } 
+						{ "titel": "", "pnr": "", "Modulcode": id, "Beschreibung": "" } 
 					] } }
 			}
 			// baut für input und return die struktur von original nach
@@ -246,7 +247,7 @@ export default {
 			if (category == "people")
 				dict = {"vorname":"", "nachname":"", "grad":"", "friedolinID":""}
 			else if (category == "exams")
-				dict = {"titel":"", "pnr":"", "Modulcode":""}
+				dict = {"titel":"", "pnr":"", "Modulcode":"", "Beschreibung": "" }
 			input.original[category][""].push(dict)
 			out.input[category][""].push(dict)
 			out.return[category][""].push(dict)
