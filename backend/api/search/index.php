@@ -7,17 +7,11 @@ require('modul.php');
 
 header('Access-Control-Allow-Origin: *');
 
-if(!session::isAlive() && false) {
+if (!session::isAlive()) {
     header('Content-Type: application/json');
     log::database("WARN", "SEARCH", "Invalid Session!");
-	echo (json_encode(array("error" => "Invalid Session"), true));
+    echo (json_encode(array("error" => "Invalid Session"), true));
     die();
-}
-
-function formatString($str) {
-    $str = strtolower($str);
-    $str = str_replace("-", "", $str);
-    return $str;
 }
 
 $typ = input::get('typ', NULL);
@@ -28,13 +22,13 @@ $limit = input::get('limit', 20);
 $modulcode = input::get('modulcode', Null);
 
 if ($typ == 'v') {
-    if($vnr && $semester) {
+    if ($vnr && $semester) {
         veranstaltung::search($vnr, $semester);
     } else {
         veranstaltung::searchAll($titel, $limit);
     }
 } else if ($typ == 'm') {
-    if($modulcode) {
+    if ($modulcode) {
         modul::search($modulcode);
     } else {
         modul::searchAll($titel, $limit);

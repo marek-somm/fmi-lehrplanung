@@ -19,7 +19,6 @@ class Database extends SQLite3 {
 	}
 
 	function execute($sql) {
-		echo($sql);
 		try {
 			$this->exec($sql);
 		} catch (Exception $e) {

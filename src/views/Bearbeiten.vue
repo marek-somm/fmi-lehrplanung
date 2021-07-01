@@ -206,7 +206,7 @@ export default {
 					}
 				}
 			}
-			var ausgabecode = rq.editVeranstaltung(out.return, out.alt.veranstaltungsnummer, out.alt.semester)
+			var ausgabecode = await rq.editVeranstaltung(out.return, out.alt.veranstaltungsnummer, out.alt.semester)
             console.log(ausgabecode)
 			// Ausgabe gemäß ausgabecode
 			if (ausgabecode.status == 0){
