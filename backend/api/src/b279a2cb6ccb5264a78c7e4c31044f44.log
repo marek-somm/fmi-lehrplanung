@@ -10,4 +10,166 @@
 25-06-2021 16:12:17 | 10.149.249.153> SESSION>setVar> INFO: 	var:level, val:3
 25-06-2021 16:12:17 | 10.149.249.153> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
 25-06-2021 16:12:17 | 10.149.249.153> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
-25-06-2021 16:12:27 | 10.149.249.153> UPDATE>CREATE> INFO: 	Insert new LV
+26-06-2021 12:20:49 | 10.149.249.145> TEST> INFO: 	Querry results - success:, level:, uid:
+26-06-2021 12:22:28 | 10.149.249.145> TEST> INFO: 	Querry results - success:, level:, uid:
+26-06-2021 12:22:30 | 10.149.249.145> TEST> INFO: 	Querry results - success:, level:, uid:
+26-06-2021 12:22:32 | 10.149.249.145> LDAP>login> START: 	LOGIN ATTEMPT go74dir
+26-06-2021 12:22:32 | 10.149.249.145> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+26-06-2021 12:22:32 | 10.149.249.145> LDAP>login> INFO: 	Authentication successfull
+26-06-2021 12:22:32 | 10.149.249.145> SESSION>setVar> INFO: 	var:uid, val:go74dir
+26-06-2021 12:22:32 | 10.149.249.145> SESSION>setVar> INFO: 	var:level, val:0
+26-06-2021 12:22:32 | 10.149.249.145> LDAP>login> INFO: 	Asign Roll - Student [-1]
+26-06-2021 12:22:32 | 10.149.249.145> SESSION>setVar> INFO: 	var:level, val:-1
+26-06-2021 12:22:32 | 10.149.249.145> LDAP>login> INFO: 	Asign Roll - Admin [3]
+26-06-2021 12:22:32 | 10.149.249.145> SESSION>setVar> INFO: 	var:level, val:3
+26-06-2021 12:22:32 | 10.149.249.145> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+26-06-2021 12:22:32 | 10.149.249.145> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+26-06-2021 12:26:54 | 10.149.249.145> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+26-06-2021 12:29:08 | 10.149.249.145> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+26-06-2021 13:18:15 | 37.120.149.43> TEST> INFO: 	Querry results - success:, level:, uid:
+26-06-2021 13:18:16 | 37.120.149.43> TEST> INFO: 	Querry results - success:, level:, uid:
+26-06-2021 13:18:24 | 37.120.149.43> LDAP>login> START: 	LOGIN ATTEMPT lo83gag
+26-06-2021 13:18:24 | 37.120.149.43> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+26-06-2021 13:18:24 | 37.120.149.43> LDAP>login> INFO: 	Authentication successfull
+26-06-2021 13:18:24 | 37.120.149.43> SESSION>setVar> INFO: 	var:uid, val:lo83gag
+26-06-2021 13:18:24 | 37.120.149.43> SESSION>setVar> INFO: 	var:level, val:0
+26-06-2021 13:18:24 | 37.120.149.43> LDAP>login> INFO: 	Asign Roll - Student [-1]
+26-06-2021 13:18:24 | 37.120.149.43> SESSION>setVar> INFO: 	var:level, val:-1
+26-06-2021 13:18:24 | 37.120.149.43> LDAP>login> INFO: 	Asign Roll - Admin [3]
+26-06-2021 13:18:24 | 37.120.149.43> SESSION>setVar> INFO: 	var:level, val:3
+26-06-2021 13:18:24 | 37.120.149.43> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+26-06-2021 13:18:24 | 37.120.149.43> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+26-06-2021 16:54:03 | 37.120.149.43> TEST> INFO: 	Querry results - success:, level:, uid:
+26-06-2021 16:54:06 | 37.120.149.43> TEST> INFO: 	Querry results - success:, level:, uid:
+26-06-2021 16:54:22 | 37.120.149.43> LDAP>login> START: 	LOGIN ATTEMPT lo83gag
+26-06-2021 16:54:22 | 37.120.149.43> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+26-06-2021 16:54:23 | 37.120.149.43> LDAP>login> INFO: 	Authentication successfull
+26-06-2021 16:54:23 | 37.120.149.43> SESSION>setVar> INFO: 	var:uid, val:lo83gag
+26-06-2021 16:54:23 | 37.120.149.43> SESSION>setVar> INFO: 	var:level, val:0
+26-06-2021 16:54:23 | 37.120.149.43> LDAP>login> INFO: 	Asign Roll - Student [-1]
+26-06-2021 16:54:23 | 37.120.149.43> SESSION>setVar> INFO: 	var:level, val:-1
+26-06-2021 16:54:23 | 37.120.149.43> LDAP>login> INFO: 	Asign Roll - Admin [3]
+26-06-2021 16:54:23 | 37.120.149.43> SESSION>setVar> INFO: 	var:level, val:3
+26-06-2021 16:54:23 | 37.120.149.43> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+26-06-2021 16:54:23 | 37.120.149.43> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+26-06-2021 16:57:15 | 37.120.149.43> SESSION>logout> INFO: 	lo83gag
+26-06-2021 16:57:16 | 37.120.149.43> TEST> INFO: 	Querry results - success:, level:, uid:
+28-06-2021 19:05:53 | 92.117.54.93> TEST> INFO: 	Querry results - success:, level:, uid:
+28-06-2021 19:06:02 | 92.117.54.93> TEST> INFO: 	Querry results - success:, level:, uid:
+28-06-2021 19:06:16 | 92.117.54.93> LDAP>login> START: 	LOGIN ATTEMPT m6muma2
+28-06-2021 19:06:16 | 92.117.54.93> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+28-06-2021 19:06:16 | 92.117.54.93> LDAP>login> INFO: 	Authentication successfull
+28-06-2021 19:06:16 | 92.117.54.93> SESSION>setVar> INFO: 	var:uid, val:m6muma2
+28-06-2021 19:06:16 | 92.117.54.93> SESSION>setVar> INFO: 	var:level, val:0
+28-06-2021 19:06:16 | 92.117.54.93> LDAP>login> INFO: 	Asign Roll - Lehrperson [1]
+28-06-2021 19:06:16 | 92.117.54.93> SESSION>setVar> INFO: 	var:level, val:1
+28-06-2021 19:06:16 | 92.117.54.93> TEST> INFO: 	Querry results - success:1, level:1, uid:m6muma2
+28-06-2021 19:06:16 | 92.117.54.93> TEST> INFO: 	Querry results - success:1, level:1, uid:m6muma2
+28-06-2021 19:06:36 | 92.117.54.93> TEST> INFO: 	Querry results - success:1, level:1, uid:m6muma2
+28-06-2021 19:10:45 | 92.117.54.93> SESSION>logout> INFO: 	m6muma2
+28-06-2021 19:10:45 | 92.117.54.93> TEST> INFO: 	Querry results - success:, level:, uid:
+29-06-2021 13:19:10 | 10.149.249.173> TEST> INFO: 	Querry results - success:, level:, uid:
+29-06-2021 13:19:12 | 10.149.249.173> TEST> INFO: 	Querry results - success:, level:, uid:
+29-06-2021 13:19:14 | 10.149.249.173> LDAP>login> START: 	LOGIN ATTEMPT go74dir
+29-06-2021 13:19:14 | 10.149.249.173> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+29-06-2021 13:19:14 | 10.149.249.173> LDAP>login> INFO: 	Authentication successfull
+29-06-2021 13:19:14 | 10.149.249.173> SESSION>setVar> INFO: 	var:uid, val:go74dir
+29-06-2021 13:19:14 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:0
+29-06-2021 13:19:14 | 10.149.249.173> LDAP>login> INFO: 	Asign Roll - Student [-1]
+29-06-2021 13:19:14 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:-1
+29-06-2021 13:19:14 | 10.149.249.173> TEST> INFO: 	Querry results - success:, level:-1, uid:go74dir
+29-06-2021 13:19:17 | 10.149.249.173> LDAP>login> START: 	LOGIN ATTEMPT go74dir
+29-06-2021 13:19:17 | 10.149.249.173> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+29-06-2021 13:19:17 | 10.149.249.173> LDAP>login> INFO: 	Authentication successfull
+29-06-2021 13:19:17 | 10.149.249.173> SESSION>setVar> INFO: 	var:uid, val:go74dir
+29-06-2021 13:19:17 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:0
+29-06-2021 13:19:17 | 10.149.249.173> LDAP>login> INFO: 	Asign Roll - Student [-1]
+29-06-2021 13:19:17 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:-1
+29-06-2021 13:19:17 | 10.149.249.173> TEST> INFO: 	Querry results - success:, level:-1, uid:go74dir
+29-06-2021 13:19:22 | 10.149.249.173> LDAP>login> START: 	LOGIN ATTEMPT go74dir
+29-06-2021 13:19:22 | 10.149.249.173> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+29-06-2021 13:19:22 | 10.149.249.173> LDAP>login> INFO: 	Authentication successfull
+29-06-2021 13:19:22 | 10.149.249.173> SESSION>setVar> INFO: 	var:uid, val:go74dir
+29-06-2021 13:19:22 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:0
+29-06-2021 13:19:22 | 10.149.249.173> LDAP>login> INFO: 	Asign Roll - Student [-1]
+29-06-2021 13:19:22 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:-1
+29-06-2021 13:19:22 | 10.149.249.173> LDAP>login> INFO: 	Asign Roll - Admin [3]
+29-06-2021 13:19:22 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:3
+29-06-2021 13:19:22 | 10.149.249.173> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+29-06-2021 13:19:22 | 10.149.249.173> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+29-06-2021 13:19:27 | 10.149.249.173> SESSION>logout> INFO: 	go74dir
+29-06-2021 13:19:27 | 10.149.249.173> TEST> INFO: 	Querry results - success:, level:, uid:
+29-06-2021 13:19:29 | 10.149.249.173> TEST> INFO: 	Querry results - success:, level:, uid:
+29-06-2021 13:19:36 | 10.149.249.173> LDAP>login> START: 	LOGIN ATTEMPT go74dir
+29-06-2021 13:19:36 | 10.149.249.173> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+29-06-2021 13:19:36 | 10.149.249.173> LDAP>login> INFO: 	Authentication successfull
+29-06-2021 13:19:36 | 10.149.249.173> SESSION>setVar> INFO: 	var:uid, val:go74dir
+29-06-2021 13:19:36 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:0
+29-06-2021 13:19:36 | 10.149.249.173> LDAP>login> INFO: 	Asign Roll - Student [-1]
+29-06-2021 13:19:36 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:-1
+29-06-2021 13:19:36 | 10.149.249.173> TEST> INFO: 	Querry results - success:, level:-1, uid:go74dir
+29-06-2021 13:19:45 | 10.149.249.173> LDAP>login> START: 	LOGIN ATTEMPT go74dir
+29-06-2021 13:19:45 | 10.149.249.173> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+29-06-2021 13:19:45 | 10.149.249.173> LDAP>login> INFO: 	Authentication successfull
+29-06-2021 13:19:45 | 10.149.249.173> SESSION>setVar> INFO: 	var:uid, val:go74dir
+29-06-2021 13:19:45 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:0
+29-06-2021 13:19:45 | 10.149.249.173> LDAP>login> INFO: 	Asign Roll - Student [-1]
+29-06-2021 13:19:45 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:-1
+29-06-2021 13:19:45 | 10.149.249.173> LDAP>login> INFO: 	Asign Roll - Admin [3]
+29-06-2021 13:19:45 | 10.149.249.173> SESSION>setVar> INFO: 	var:level, val:3
+29-06-2021 13:19:45 | 10.149.249.173> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+29-06-2021 13:19:45 | 10.149.249.173> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+29-06-2021 13:20:27 | 10.149.249.173> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+29-06-2021 13:23:08 | 10.149.249.173> SESSION>logout> INFO: 	
+29-06-2021 14:13:39 | 10.149.249.173> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+30-06-2021 18:37:15 | 84.247.50.57> TEST> INFO: 	Querry results - success:, level:, uid:
+30-06-2021 18:37:16 | 84.247.50.57> TEST> INFO: 	Querry results - success:, level:, uid:
+30-06-2021 18:37:24 | 84.247.50.57> LDAP>login> START: 	LOGIN ATTEMPT lo83gag
+30-06-2021 18:37:24 | 84.247.50.57> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+30-06-2021 18:37:24 | 84.247.50.57> LDAP>login> INFO: 	Authentication successfull
+30-06-2021 18:37:24 | 84.247.50.57> SESSION>setVar> INFO: 	var:uid, val:lo83gag
+30-06-2021 18:37:24 | 84.247.50.57> SESSION>setVar> INFO: 	var:level, val:0
+30-06-2021 18:37:24 | 84.247.50.57> LDAP>login> INFO: 	Asign Roll - Student [-1]
+30-06-2021 18:37:24 | 84.247.50.57> SESSION>setVar> INFO: 	var:level, val:-1
+30-06-2021 18:37:24 | 84.247.50.57> LDAP>login> INFO: 	Asign Roll - Admin [3]
+30-06-2021 18:37:24 | 84.247.50.57> SESSION>setVar> INFO: 	var:level, val:3
+30-06-2021 18:37:24 | 84.247.50.57> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+30-06-2021 18:37:24 | 84.247.50.57> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+30-06-2021 18:37:39 | 84.247.50.57> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+30-06-2021 19:04:35 | 84.247.50.57> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+30-06-2021 19:04:35 | 84.247.50.57> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+30-06-2021 20:44:04 | 84.247.50.57> TEST> INFO: 	Querry results - success:, level:, uid:
+30-06-2021 20:44:06 | 84.247.50.57> TEST> INFO: 	Querry results - success:, level:, uid:
+30-06-2021 20:44:16 | 84.247.50.57> LDAP>login> START: 	LOGIN ATTEMPT lo83gag
+30-06-2021 20:44:16 | 84.247.50.57> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+30-06-2021 20:44:16 | 84.247.50.57> LDAP>login> INFO: 	Authentication successfull
+30-06-2021 20:44:16 | 84.247.50.57> SESSION>setVar> INFO: 	var:uid, val:lo83gag
+30-06-2021 20:44:16 | 84.247.50.57> SESSION>setVar> INFO: 	var:level, val:0
+30-06-2021 20:44:16 | 84.247.50.57> LDAP>login> INFO: 	Asign Roll - Student [-1]
+30-06-2021 20:44:16 | 84.247.50.57> SESSION>setVar> INFO: 	var:level, val:-1
+30-06-2021 20:44:16 | 84.247.50.57> LDAP>login> INFO: 	Asign Roll - Admin [3]
+30-06-2021 20:44:16 | 84.247.50.57> SESSION>setVar> INFO: 	var:level, val:3
+30-06-2021 20:44:16 | 84.247.50.57> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+30-06-2021 20:44:16 | 84.247.50.57> TEST> INFO: 	Querry results - success:1, level:3, uid:lo83gag
+01-07-2021 07:39:03 | 77.183.77.47> TEST> INFO: 	Querry results - success:, level:, uid:
+01-07-2021 07:39:05 | 77.183.77.47> TEST> INFO: 	Querry results - success:, level:, uid:
+01-07-2021 12:25:28 | 10.149.249.210> TEST> INFO: 	Querry results - success:, level:, uid:
+01-07-2021 12:25:46 | 10.149.249.210> TEST> INFO: 	Querry results - success:, level:, uid:
+01-07-2021 12:25:49 | 10.149.249.210> LDAP>login> START: 	LOGIN ATTEMPT go74dir
+01-07-2021 12:25:49 | 10.149.249.210> LDAP>LOGIN> INFO: 	Connection to Server (ldaps://ldap1.uni-jena.de:636) established
+01-07-2021 12:25:49 | 10.149.249.210> LDAP>login> INFO: 	Authentication successfull
+01-07-2021 12:25:49 | 10.149.249.210> SESSION>setVar> INFO: 	var:uid, val:go74dir
+01-07-2021 12:25:49 | 10.149.249.210> SESSION>setVar> INFO: 	var:level, val:0
+01-07-2021 12:25:49 | 10.149.249.210> LDAP>login> INFO: 	Asign Roll - Student [-1]
+01-07-2021 12:25:49 | 10.149.249.210> SESSION>setVar> INFO: 	var:level, val:-1
+01-07-2021 12:25:49 | 10.149.249.210> LDAP>login> INFO: 	Asign Roll - Admin [3]
+01-07-2021 12:25:49 | 10.149.249.210> SESSION>setVar> INFO: 	var:level, val:3
+01-07-2021 12:25:49 | 10.149.249.210> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+01-07-2021 12:25:49 | 10.149.249.210> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+01-07-2021 14:22:44 | 10.149.249.210> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+01-07-2021 14:35:50 | 10.149.249.210> TEST> INFO: 	Querry results - success:1, level:3, uid:go74dir
+01-07-2021 14:43:20 | 10.149.249.210> TEST> INFO: 	Querry results - success:, level:, uid:
+01-07-2021 14:43:20 | 10.149.249.210> TEST> INFO: 	Querry results - success:, level:, uid:
+01-07-2021 14:43:21 | 10.149.249.210> TEST> INFO: 	Querry results - success:, level:, uid:
+01-07-2021 14:43:23 | 10.149.249.210> TEST> INFO: 	Querry results - success:, level:, uid:
+01-07-2021 14:43:26 | 10.149.249.210> TEST> INFO: 	Querry results - success:, level:, uid:
