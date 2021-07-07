@@ -1,13 +1,14 @@
 <template>
 	<div class="results" v-if="input.data">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="item" v-for="(item, semester, index) in input.data.data" :key="index">
             <table :id="semester">
         
             <!-- für jedes semester eigene tabelle -->
-            <caption><button class="export" @click="exportTableToExcel(semester, semester)">Semester: {{semester}}</button></caption>
+            <caption><button class="export" @click="exportTableToExcel(semester, semester)">Semester: {{semester}} <i class="fa fa-download"></i></button></caption>
             
             <tr>
-            <th>Friedolin</th><th>LV Nr.</th><th>Modul Nr.</th><th>Prüfüngs Nr.</th><th>Titel</th><th>Lehrende</th><th>Art</th><th>SWS</th><th>Zielgruppe</th>
+            <th>Friedolin</th><th>LV Nr.</th><th>Modul Nr.</th><th>Prüfungs Nr.</th><th>Titel</th><th>Lehrende</th><th>Art</th><th>SWS</th><th>Zielgruppe</th>
             </tr>
             <tbody v-for="(prüfung, key, index) in item" :key="index">
                 <tr v-for="(item, key, index) in prüfung.veranstaltungen" :key="index">
