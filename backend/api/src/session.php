@@ -31,7 +31,7 @@ class session {
 		log::info("SESSION>logout", session::getVar("uid"));
 		session::start();
 		session_destroy();
-		//header("location:/");
+		header("location:/");
 	}
 
 	private static function start() {

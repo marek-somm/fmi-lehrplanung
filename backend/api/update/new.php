@@ -8,6 +8,11 @@ if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
 function create() {
 	$in = input::get('data', NULL);
 	$data = json_decode($in, true);
+	$answer = array("answer" => -1, "message" => "Empty Input");
+
+	if(!$in) {
+		return $answer;
+	}
 
 	$vnr = $data['data']['veranstaltungsnummer'];
 	$sem = $data['data']['semester'];
@@ -16,11 +21,14 @@ function create() {
 
 	if (veranstaltungExists($vnr, $sem)) {
 		$answer = array("status" => 1, "message" => "Entry already exists");
+		log::database("ERROR", "UPDATE>new", "vnr:$vnr, sem:$sem already exists");
 	} else {
 		try {
 			createVeranstaltung($data);
 			$answer = array("status" => 0, "message" => "Entry successfully created");
+			log::database("INFO", "UPDATE>new", "vnr:$vnr, sem:$sem successfully created");
 		} catch (Exception) {
+			log::database("ERROR", "UPDATE>new", "vnr:$vnr, sem:$sem unhandled Error");
 		}
 	}
 
@@ -118,8 +126,8 @@ function createVeranstaltung($data) {
 	$db = connectDatabase();
 
 	$db->execute(<<<EOF
-		INSERT INTO Lehrveranstaltung_Info (veranstaltungsnummer, semester, titel, friedolinID, aktiv, sws, friedolinAdded, art)
-		VALUES ($vnr, $sem, '$titel', $fid, $aktiv, $sws, 0, '$art')
+		INSERT INTO Lehrveranstaltung_Info (veranstaltungsnummer, semester, titel, friedolinID, aktiv, sws, art)
+		VALUES ($vnr, $sem, '$titel', $fid, $aktiv, $sws, '$art')
 	EOF);
 
 	$vid = $db->fetchFirst(<<<EOF

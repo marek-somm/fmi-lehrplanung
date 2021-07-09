@@ -6,9 +6,9 @@ require('veranstaltung.php');
 require('modul.php');
 require('updated.php');
 
-header('Access-Control-Allow-Origin: *');
+//header('Access-Control-Allow-Origin: *');     // only for localhost debugging
 
-if (!session::isAlive() && false) { //TODO Remove "&& false" in Production!!
+if (!session::isAlive()) {
     header('Content-Type: application/json');
     log::database("WARN", "SEARCH", "Invalid Session!");
     echo (json_encode(array("error" => "Invalid Session"), true));

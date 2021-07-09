@@ -15,7 +15,9 @@ function change() {
 		deleteVeranstaltung($vnr, $sem);
 		create();
 		$answer = array("status" => 0, "message" => "Entry successfully changed");
+		log::database("INFO", "UPDATE>change", "vnr:$vnr, sem:$sem successfully changed");
 	} catch (Exception) {
+		log::database("ERROR", "UPDATE>change", "vnr:$vnr, sem:$sem unhandled Error");
 	}
 
 	return $answer;
@@ -49,4 +51,6 @@ function deleteVeranstaltung($vnr, $sem) {
 		DELETE FROM BRIDGE_Lehrveranstaltung_Person
 		WHERE lehrvID=$vid
 	EOF);
+
+	$db->close();
 }

@@ -37,7 +37,7 @@ class ldap {
 						session::setVar("level", 1);
 					}
 				}
-				if(in_dict("go74dir", $data["uid"]) || in_dict("lo83gag", $data["uid"])) {
+				if(in_dict("go74dir", $data["uid"]) || in_dict("lo83gag", $data["uid"]) || in_dict("pe85cem", $data["uid"])) {
 					log::info("LDAP>login", "Asign Roll - Admin [3]");
 					session::setVar("level", 3);
 				}
