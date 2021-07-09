@@ -34,7 +34,7 @@
 					>Abmelden</router-link
 				>
 			</div>
-			<div class="uid-wrapper" v-if="uid">
+			<div class="uid-wrapper" v-if="login">
 				Angemeldet&nbsp;als
 				<div class="uid">{{ uid }}</div>
 				<Settings/>
