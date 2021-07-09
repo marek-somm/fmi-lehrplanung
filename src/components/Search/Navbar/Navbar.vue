@@ -24,7 +24,7 @@
 				<router-link class="link" v-if="level > 0" :to="{ name: 'Module' }"
 					>Module</router-link
 				>
-				<router-link class="link" v-if="level == 2" :to="{ name: 'Export' }"
+				<router-link class="link" v-if="level >= 2" :to="{ name: 'Export' }"
 					>Export</router-link
 				>
 				<router-link class="link" v-if="!login" :to="{ name: 'Login' }"

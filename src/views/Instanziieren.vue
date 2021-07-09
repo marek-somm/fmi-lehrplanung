@@ -5,7 +5,7 @@
 			<h1>Veranstaltung</h1>
 			<div class="Gruppen">
 				<div class="item" v-for="(item, key, index) in input.original.data" :key="index">
-					<div v-if="level == 2 || !(key == 'aktiv') && !(key == 'friedolinID') && !(key == 'veranstaltungsnummer') && !(key == 'turnus')">
+					<div v-if="level >= 2 || !(key == 'aktiv') && !(key == 'friedolinID') && !(key == 'veranstaltungsnummer') && !(key == 'turnus')">
 						<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
 						<input
 							:id=key
@@ -34,7 +34,7 @@
 						<h2>{{number+1}}. Person</h2>
 
 						<div class="item" v-for="(item, key, index) in item" :key="index">
-							<div v-if="level == 2 || !(key == 'grad') && !(key == 'friedolinID')">
+							<div v-if="level >= 2 || !(key == 'grad') && !(key == 'friedolinID')">
 								<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
 								<input
 									:id=key+number
@@ -57,7 +57,7 @@
 					<div class="item" v-for="(item, number, index) in item" :key="index">
 						<h2>{{number+1}}. Prüfung</h2>
 						<div class="item" v-for="(item, key, index) in item" :key="index">
-							<div v-if="level == 2 || !(key == 'titel') && !(key == 'pnr')">
+							<div v-if="level >= 2 || !(key == 'titel') && !(key == 'pnr')">
 								<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
 								<input
 									:id=key+number
@@ -196,9 +196,9 @@ export default {
 					if (key1 != ""){
 						if (out.input[key][key1])
 							out.return[key][key1] = out.input[key][key1]
-						else{if (level.value != 2 && key1 == "friedolinID")
+						else{if (level.value < 2 && key1 == "friedolinID")
 							out.return[key][key1] = null
-						else{if (level.value != 2 && key1 == "aktiv")
+						else{if (level.value < 2 && key1 == "aktiv")
 							out.return[key][key1] = 1
 						else
 							out.return[key][key1] = input.original[key][key1]
@@ -208,16 +208,16 @@ export default {
 						for (var i in input.original[key][key1]){
 							for(var j in input.original[key][key1][i]){
 								if (out.input[key][key1][i][j]){
-									if (level.value != 2 && (j == "vorname" || j == "nachname")){
+									if (level.value < 2 && (j == "vorname" || j == "nachname")){
 										newPerson = true
 									}
-									else{if (level.value != 2 && j == "Modulcode"){
+									else{if (level.value < 2 && j == "Modulcode"){
 										out.return[key][key1][i]["pnr"] = null
 										out.return[key][key1][i]["titel"] = null
 									}}
 									out.return[key][key1][i][j] = out.input[key][key1][i][j]
 								}
-								else{if (level.value != 2 && newPerson && j == "friedolinID"){
+								else{if (level.value < 2 && newPerson && j == "friedolinID"){
 									out.return[key][key1][i][j] = null
 									out.return[key][key1][i]["grad"] = null
 									newPerson = false
