@@ -52,12 +52,13 @@ export default {
         }
 
         var conf = false;
-		function toggleÜbertragen(vnr, sem, modulcode, pnr) {
+		async function toggleÜbertragen(vnr, sem, modulcode, pnr) {
             if(!conf) {
                 conf = confirm("Wollen Sie die Veranstaltung wirklich als übernommen markieren?\nSie ist dann nicht mehr in dieser Ansicht sichtbar!\n\nDiese Meldung erscheint nur ein einziges mal!")
             }
             if(conf) {
-                rq.toggleAktiv(vnr, convertSemester(sem), modulcode, pnr)
+                await rq.toggleAktiv(vnr, convertSemester(sem), modulcode, pnr)
+                getVeranstaltungen()
             }
 		}
         function convertSemester(str) {
