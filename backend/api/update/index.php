@@ -4,8 +4,9 @@ require('../src/database.php');
 require('../src/session.php');
 require('new.php');
 require('change.php');
+require('applied.php');
 
-header('Access-Control-Allow-Origin: *');
+//header('Access-Control-Allow-Origin: *');     // only for localhost debugging
 
 if (!session::isAlive()) {
 	header('Content-Type: application/json');
@@ -14,16 +15,14 @@ if (!session::isAlive()) {
 	die();
 }
 
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-
 $typ = input::get('typ', NULL);
 
 if ($typ == 'n') {
 	$answer = create();
 } else if ($typ == 'c') {
 	$answer = change();
+} else if ($typ == 'a') {
+	$answer = applied();
 } else {
 	header("Location: /");
 	die();

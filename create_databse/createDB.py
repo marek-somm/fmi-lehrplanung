@@ -95,7 +95,6 @@ c.execute('''CREATE TABLE [Lehrveranstaltung_Info] (
   [friedolinID] integer,
   [aktiv] integer NOT NULL,
   [sws] integer,
-  [friedolinAdded] integer NOT NULL DEFAULT 0,
   [art] text NOT NULL,
   PRIMARY KEY ([lehrvID])
 )''')
@@ -135,6 +134,7 @@ c.execute('''CREATE TABLE [Pruefung] (
   [modulcode] text,
   [beschreibung] text,
   [titel] text,
+  [friedolinAdded] integer NOT NULL DEFAULT 0,
   PRIMARY KEY ([pruefungenID])
 )''')
 

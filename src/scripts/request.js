@@ -35,8 +35,11 @@ export class request {
 		else return this.data
 	}
 
-	async getNewVeranstaltungen(semester){
-		console.log(semester)
+	async getNewVeranstaltungen(){
+		await this.fetchData('search/', {
+			typ: 'nv',
+		})
+		return this.data
 		// gibt alle noch nicht ins friedolin übertragene veranstaltungen (des gegebenen semesters) zurück
 	}
 
@@ -128,8 +131,15 @@ export class request {
 			// -1: anderer fehler
 	}
 	
-	async toggleAktiv(vnr, semester){
-		console.log(vnr, semester)
+	async toggleAktiv(vnr, sem, modulcode, pnr) {
+		await this.fetchData('update/', {
+			typ: 'a',
+			vnr: vnr,
+			sem: sem,
+			modulcode: modulcode,
+			pnr: pnr,
+		})
+		console.log(vnr, sem, modulcode, pnr)
 		// wechselt den aktivstatus der gegebenen veranstaltung
 	}
 

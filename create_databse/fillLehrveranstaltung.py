@@ -55,8 +55,8 @@ for filename in files:
 
       lehrvID += 1
       c.execute('''INSERT INTO Lehrveranstaltung_Info
-         VALUES (?,?,?,?,?,?,?,?,?)''',
-         [lehrvID, veranstaltungsnr, semester, titel, frID, aktiv, sws, 1, art]
+         VALUES (?,?,?,?,?,?,?,?)''',
+         [lehrvID, veranstaltungsnr, semester, titel, frID, aktiv, sws, art]
       )
 
       # LEHRVERANSTALTUNG_INHALT
@@ -119,11 +119,11 @@ for filename in files:
          vetitel = prüfung['VETitel']
 
          prID += 1
-         c.execute('''INSERT INTO Pruefung (pruefungenID, lehrvID, pnr, modulcode, beschreibung, titel)
-            SELECT ?,?,?,?,?,?
+         c.execute('''INSERT INTO Pruefung (pruefungenID, lehrvID, pnr, modulcode, beschreibung, titel, friedolinAdded)
+            SELECT ?,?,?,?,?,?,?
             WHERE NOT EXISTS(
                SELECT 1 FROM pruefung WHERE lehrvID = ?)''', 
-            [prID, lehrvID, pnr, modulcode, None, vetitel, venr]
+            [prID, lehrvID, pnr, modulcode, None, vetitel, 1, venr]
          )
       
          # PRUEFUNG_LEHRVERANSTALTUNG
