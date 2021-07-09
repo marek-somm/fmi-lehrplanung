@@ -34,6 +34,7 @@ class veranstaltung {
 				}
 				$answer["data"]["$semStr"] = array();
 			}
+			
 			$ret = $db->fetchData(<<<EOF
 				SELECT veranstaltungsnummer nr, titel, semester, aktiv
 				FROM lehrveranstaltung_info
