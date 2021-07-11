@@ -18,9 +18,14 @@ function in_dict($str, $dict) {
 class ldap {
 	public static function login($user, $pwd) {
 		$admin = false;
+		$lehre = false;
 		if(str_starts_with($user, "admin:")) {
 			$user = str_replace("admin:", "", $user);
 			$admin = true;
+		}
+		if(str_starts_with($user, "lehre:")) {
+			$user = str_replace("lehre:", "", $user);
+			$lehre = true;
 		}
 		log::start("LDAP>login", "LOGIN ATTEMPT $user");
 		if ($conn = ldap::connect()) {
@@ -42,9 +47,14 @@ class ldap {
 						session::setVar("level", 1);
 					}
 				}
-				if($admin && (in_dict("go74dir", $data["uid"]) || in_dict("lo83gag", $data["uid"]) || in_dict("pe85cem", $data["uid"]))) {
-					log::info("LDAP>login", "Asign Roll - Admin [3]");
-					session::setVar("level", 3);
+				if(in_dict("go74dir", $data["uid"]) || in_dict("lo83gag", $data["uid"]) || in_dict("pe85cem", $data["uid"])) {
+					if($admin) {
+						log::info("LDAP>login", "Asign Roll - Admin [3]");
+						session::setVar("level", 3);
+					} else if($lehre) {
+						log::info("LDAP>login", "Asign Roll - Lehre [1]");
+						session::setVar("level", 1);
+					}
 				}
 				return true;
 			} else {
