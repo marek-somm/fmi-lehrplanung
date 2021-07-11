@@ -2,7 +2,6 @@
 	<div class="info--container" :class="{ filter: filterActive }">
 		<div class="header" v-if="selected">
 			<h3 class="title">{{ selected.modulcode }}</h3>
-			<button class="new button" @click="newInstance">New</button>
 			<button class="close button" @click="close">X</button>
 		</div>
 		<div class="info-content" v-if="selected">
