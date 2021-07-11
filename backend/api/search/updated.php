@@ -5,6 +5,10 @@ if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
 	die();
 }
 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
 class updated {
 	public static function search() {
 		$db = connectDatabase();
@@ -57,26 +61,28 @@ class updated {
 
 				$veranstaltungen = array();
 
-				$persons = array();
-				
-				$retPers = $db->fetchData(<<<EOF
-					SELECT p.vorname, p.nachname, p.friedolinID
-					FROM Person p
-					JOIN BRIDGE_Modul_Person bmp ON p.personenID=bmp.personenID
-					WHERE bmp.modulcode='$modulcode'
-				EOF);
-
-				while ($row = $retPers->fetchArray(SQLITE3_ASSOC)) {
-					$person = array();
-					$person["vorname"] = $row["vorname"];
-					$person["nachname"] = $row["nachname"];
-					$person["friedolinID"] = $row["friedolinID"];
-					array_push($persons, $person);
-				}
-
 				while ($row = $retData->fetchArray(SQLITE3_ASSOC)) {
 					$toadd = $row;
 					$toadd["uebertragen"] = true;
+
+					$persons = array();
+					$vid = $row['lehrvID'];
+
+					$retPers = $db->fetchData(<<<EOF
+						SELECT p.vorname, p.nachname, p.friedolinID
+						FROM Person p
+						JOIN BRIDGE_Lehrveranstaltung_Person blp ON p.personenID=blp.personenID
+						WHERE blp.lehrvID='$vid'
+					EOF);
+
+					while ($row = $retPers->fetchArray(SQLITE3_ASSOC)) {
+						$person = array();
+						$person["vorname"] = $row["vorname"];
+						$person["nachname"] = $row["nachname"];
+						$person["friedolinID"] = $row["friedolinID"];
+						array_push($persons, $person);
+					}
+
 					$toadd["lehrpersonal"] = array();
 					$toadd["lehrpersonal"] = $persons;
 					if (!in_array($toadd, $veranstaltungen)) {
