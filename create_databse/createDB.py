@@ -55,6 +55,7 @@ c.execute('''CREATE TABLE [Modul] (
   [modulcode] text,
   [aktiv_von] integer,
   [aktiv_bis] integer NOT NULL,
+  [ects] integer NOT NULL,
   [praesenzzeit] integer NOT NULL,
   [workload] integer NOT NULL,
   [turnusID] integer NOT NULL,
