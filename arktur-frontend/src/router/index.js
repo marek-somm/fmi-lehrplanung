@@ -9,6 +9,7 @@ import Export from '@/views/Export'
 import NotFound from '@/views/NotFound'
 import Instanziieren from '@/views/Instanziieren'
 import Bearbeiten from '@/views/Bearbeiten'
+import LaravelDebug from '@/views/LaravelDebug'
 import store from '@/store/index'
 import { request } from "@/scripts/request.js";
 
@@ -63,6 +64,11 @@ const routes = [
 		beforeEnter: checkAccess
 	},
 	{
+		path: '/beta',
+		name: 'Beta',
+		component: LaravelDebug,
+	},
+	{
 		path: '/:catchAll(.*)',
 		name: 'NotFound',
 		component: NotFound,
@@ -72,7 +78,7 @@ const routes = [
 
 async function checkAccess(to, from, next) {
 	await checkSession(to, from)
-	if (!store.state.User.login && !store.state.debug) next({ name: 'Login' })
+	if (!store.state.User.login) next({ name: 'Login' })
 	else next()
 }
 

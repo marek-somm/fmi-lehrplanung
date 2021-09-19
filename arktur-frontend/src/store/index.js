@@ -3,8 +3,8 @@ import { UserModule } from "./User";
 
 export default createStore({
   state: {
-    local: false, // TODO REMOVE IN PRODUCTION
-    seclevel: 0, // TODO REMOVE IN PRODUCTION
+    local: true, // TODO REMOVE IN PRODUCTION
+    seclevel: 1, // TODO REMOVE IN PRODUCTION
     uid: "" // TODO REMOVE IN PRODUCTION 
   },
   // Verändern STATE
