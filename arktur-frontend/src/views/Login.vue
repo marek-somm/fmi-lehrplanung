@@ -30,7 +30,7 @@
 			<div class="row error" v-show="data.error">
 				<div class="label"></div>
 				<div class="message">
-					Falscher Benutzername oder falsches Passwort.
+					{{ data.error }}
 				</div>
 			</div>
 		</div>
@@ -40,17 +40,16 @@
 import store from "@/store";
 import { reactive } from "vue";
 import { useRouter } from "vue-router";
-import { request } from "@/scripts/request.js";
+import AuthService from "@/scripts/AuthService";
 
 export default {
 	setup() {
-		const rq = new request();
 		const router = useRouter();
 
 		const data = reactive({
 			usernameInput: "",
 			passwordInput: "",
-			error: false,
+			error: null,
 		});
 
 		if (store.state.User.login) {
@@ -58,16 +57,21 @@ export default {
 		}
 
 		async function loginSubmit() {
-			const answer = await rq.login(data.usernameInput, data.passwordInput);
-			if (await answer.success) {
-				store.dispatch('User/setLogin', answer.success)
-				store.dispatch('User/setLevel', answer.level)
+			const payload = {
+				name: data.usernameInput,
+				password: data.passwordInput
+			}
+			const answer = await AuthService.login(payload);
+			console.log(answer)
+			if(answer.data.errors) {
+				data.error = answer.data.errors[Object.keys(answer.data.errors)[0]][0]
+			} else if (answer.data.success) {
+				store.dispatch('User/setLogin', answer.data.success)
+				store.dispatch('User/setLevel', answer.data.level)
+				store.dispatch('User/setUid', answer.data.uid)
 				console.log(store.state.User)
 				router.push({ name: "Home" });
-			} else {
-				data.error = true
 			}
-			rq.session();
 		}
 
 		return {

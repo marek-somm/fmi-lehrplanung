@@ -32,7 +32,7 @@ export default {
 		}
 
 		async function test() {
-			let res = await AuthService.test();
+			let res = await AuthService.check();
 			console.log(res);
 		}
 

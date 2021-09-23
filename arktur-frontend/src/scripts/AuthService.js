@@ -1,29 +1,20 @@
 import axios from 'axios';
+import store from '@/store'
+import { useRouter } from "vue-router";
 
 export const authClient = axios.create({
-	baseURL: 'http://localhost:8000',
+	baseURL: 'http://localhost:8000', //Local Testing
+	//baseURL: 'https://arktur.fmi.uni-jena.de', //Production
 	withCredentials: true, // required to handle the CSRF token
 });
 
-export function handleError(error, errorMsg = 'Unauthorized Access') {
-	console.log(error);
-	let msg = 'Unknown Error';
-	let status = 419;
-	if (error.response) {
-		if (error.response.status === 401) {
-			msg = errorMsg;
-			status = 401;
-		} else if(error.response.status === 422) {
-			msg = 'Wrong Format'
-			status = 422;
-		}
-	} else if (error.request) {
-		msg = 'Server Error \n\n Please retry in a few seconds';
-		status = 0;
+export function handleError(error) {
+	if (error.response.status === 422 || error.response.status === 401) {
+		return error.response
 	}
 	return { error: {
-		msg: msg,
-		status: status,
+		msg: 'Unhandled Error',
+		status: error.response.status,
 	}};
 }
 
@@ -40,7 +31,7 @@ async function get(url, payload) {
 }
 
 async function post(url, payload, errorMsg = null) {
-	let token = csrf();
+	let token = await csrf();
 	if (token.error) return token;
 	return authClient
 		.post('/api/' + url, payload)
@@ -48,39 +39,18 @@ async function post(url, payload, errorMsg = null) {
 }
 
 export default {
-	async test() {
-		return get('test');
+	async check() {
+		return get('check');
 	},
 	async login(payload) {
 		//TODO save login in store
-		return post('login', payload, 'Wrong Credentials');
+		return post('login', payload);
 	},
 	async logout() {
-		return post('logout');
-	},
-
-	async forgotPassword(payload) {
-		await csrf();
-		return post('/forgot-password', payload);
-	},
-	getAuthUser() {
-		return authClient.get('/api/users/auth');
-	},
-	async resetPassword(payload) {
-		await authClient.get('/sanctum/csrf-cookie');
-		return authClient.post('/reset-password', payload);
-	},
-	updatePassword(payload) {
-		return authClient.put('/user/password', payload);
-	},
-	async registerUser(payload) {
-		await authClient.get('/sanctum/csrf-cookie');
-		return authClient.post('/register', payload);
-	},
-	sendVerification(payload) {
-		return authClient.post('/email/verification-notification', payload);
-	},
-	updateUser(payload) {
-		return authClient.put('/user/profile-information', payload);
+		const router = useRouter()
+		store.dispatch('User/setLogin', false)
+		store.dispatch('User/setLevel', 0)
+		await post('logout');
+      router.push({name: 'Home'});
 	},
 };

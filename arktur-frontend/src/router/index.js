@@ -11,22 +11,20 @@ import Instanziieren from '@/views/Instanziieren'
 import Bearbeiten from '@/views/Bearbeiten'
 import LaravelDebug from '@/views/LaravelDebug'
 import store from '@/store/index'
-import { request } from "@/scripts/request.js";
-
-const rq = new request();
+import AuthService from "@/scripts/AuthService";
 
 const routes = [
 	{
 		path: '/',
 		name: 'Home',
 		component: Home,
-		beforeEnter: checkSessionAlways,
+		beforeEnter: checkAccess
 	},
 	{
 		path: '/login',
 		name: 'Login',
 		component: Login,
-		beforeEnter: checkSessionAlways,
+		beforeEnter: checkAccess,
 	},
 	{
 		path: '/logout',
@@ -78,6 +76,8 @@ const routes = [
 
 async function checkAccess(to, from, next) {
 	await checkSession(to, from)
+	if(from.name != 'Login')
+		next();
 	if (!store.state.User.login) next({ name: 'Login' })
 	else next()
 }
@@ -88,16 +88,11 @@ async function checkSession(to, from) {
 	}
 }
 
-async function checkSessionAlways() {
-	await setSession()
-}
-
 async function setSession() {
-	const answer = await rq.session()
-	await store.dispatch('User/setLogin', answer.success)
-	await store.dispatch('User/setLevel', answer.level)
-	await store.dispatch('User/setUid', answer.uid)
-	console.log(answer.level)
+	const answer = await AuthService.check()
+	store.dispatch('User/setLogin', answer.data.success)
+	store.dispatch('User/setLevel', answer.data.level)
+	store.dispatch('User/setUid', answer.data.uid)
 }
 
 const router = createRouter({

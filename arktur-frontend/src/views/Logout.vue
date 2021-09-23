@@ -1,12 +1,11 @@
 
 
 <script>
-import { request } from "@/scripts/request.js";
+import AuthService from "@/scripts/AuthService";
 
 export default {
 	setup() {
-		const rq = new request();
-		rq.logout();
+		AuthService.logout();
 	},
 };
 </script>
