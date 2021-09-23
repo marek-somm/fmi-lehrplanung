@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
+        'uid',
         'email',
-        'password',
+        'forename',
+        'surname',
+        'salutaion',
+        'displayname'
     ];
 
     /**
@@ -29,16 +32,18 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function organizations() {
+        return $this->belongsToMany(Organization::class)->withTimestamps();
+    }
+
+    public function affiliations() {
+        return $this->belongsToMany(Affiliation::class)->withTimestamps();
+    }
+
+    public function events() {
+        return $this->belongsToMany(Event::class)->withTimestamps();
+    }
 }
