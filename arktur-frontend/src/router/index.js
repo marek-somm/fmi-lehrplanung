@@ -78,7 +78,7 @@ async function checkAccess(to, from, next) {
 	await checkSession(to, from)
 	if(from.name != 'Login')
 		next();
-	if (!store.state.User.login) next({ name: 'Login' })
+	else if (!store.state.User.login) next({ name: 'Login' })
 	else next()
 }
 

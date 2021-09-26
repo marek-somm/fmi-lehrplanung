@@ -58,7 +58,7 @@ export default {
 
 		async function loginSubmit() {
 			const payload = {
-				name: data.usernameInput,
+				uid: data.usernameInput,
 				password: data.passwordInput
 			}
 			const answer = await AuthService.login(payload);

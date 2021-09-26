@@ -28,7 +28,9 @@ class EventFactory extends Factory
             'aktiv'=> $this->faker->boolean(),
             'sws' => $this->faker->randomDigit(),
             'type' => $this->faker->randomElement(['Übung', 'Seminar', 'Vorlesung', 'Tutorium']),
-            'targets' => $this->faker->word()
+            'targets' => $this->faker->word(),
+            'rythm' => random_int(0,2),
+            'changed' => random_int(0,1)
         ];
     }
 }

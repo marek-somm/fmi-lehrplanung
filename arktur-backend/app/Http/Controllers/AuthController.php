@@ -11,22 +11,20 @@ use App\Rules\Username;
 class AuthController extends Controller {
     public function login(Request $request) {
         $request->validate([
-            'name' => ['required', new Username],
+            'uid' => ['required', new Username],
             'password' => ['required']
         ],
         [
-            'name.required' => 'Login ist erforderlich.',
+            'uid.required' => 'Login ist erforderlich.',
             'password.required' => 'Passwort ist erforderlich.'
         ]);
         //PRODUCTION $ldap = new LDAP();
         //PRODUCTION $authObject = $ldap->auth($request->input('name'), $request->input('password'));
         $authObject = true;
         if ($authObject) {
-            $user = User::where('name', '=', $request->input('name'))->first();
+            $user = User::where('uid', '=', $request->input('uid'))->first();
             if ($user == null) {
-                $user = User::create([
-                    'name' => $request->input('name')
-                ]);
+                $user = User::factory(1)->create()->first();
             }
             Auth::login($user);
             return response([

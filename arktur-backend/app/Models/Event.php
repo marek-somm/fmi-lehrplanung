@@ -16,12 +16,10 @@ class Event extends Model
         'aktiv',
         'sws',
         'type',
-        'targets'
+        'targets',
+        'rythm',
+        'changed'
     ];
-
-    public function types() {
-        return $this->hasOne(Type::class)->withTimestamps();
-    }
 
     public function users() {
         return $this->belongsToMany(User::class)->withTimestamps();
