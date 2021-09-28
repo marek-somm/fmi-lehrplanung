@@ -24,4 +24,8 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::get('/test', function() {
         return response('test', 200);
     });
+
+    Route::get('/search', function() {
+        return response('ok', 200);
+    });
 });

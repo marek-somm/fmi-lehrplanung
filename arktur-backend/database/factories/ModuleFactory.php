@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Exam;
+use App\Models\Module;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ExamFactory extends Factory
+class ModuleFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Exam::class;
+    protected $model = Module::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,6 @@ class ExamFactory extends Factory
     public function definition()
     {
         return [
-            //
         ];
     }
 }
