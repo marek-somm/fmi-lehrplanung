@@ -1,40 +1,64 @@
 <template>
 	<div class="info--container" :class="{ filter: filterActive }">
 		<div class="header" v-if="selected">
-			<h3 class="title">{{ selected.data.titel }}</h3>
+			<h3 class="title">{{ selected.data.content.title }}</h3>
 			<button class="new button" @click="editInstance">Edit</button>
 			<button class="new button" @click="newInstance">New</button>
 			<button class="close button" @click="close">X</button>
 		</div>
 		<div class="info-content" v-if="selected">
+			<h3><u>Informationen:</u></h3>
 			<div class="block">
-				<p class="attrib">Vnr: {{ selected.data.veranstaltungsnummer }}</p>
-				<p class="attrib">Friedolin ID: {{ selected.data.friedolinID }}</p>
 				<p class="attrib">
-					Semester: {{ convertSemester(selected.data.semester) }}
+					Veranstaltungsnummer: {{ selected.data.content.vnr }}
 				</p>
-				<p class="attrib">Turnus: {{ selected.data.turnus }}</p>
 				<p class="attrib">
-					Aktiv: <button class="new button" @click="toggleAktiv">{{ selected.data.aktiv ? "X" : "" }}</button>
+					Semester:
+					{{ helper.convertSemester(selected.data.content.semester) }}
 				</p>
 			</div>
 			<div class="block">
-				<p class="attrib">Art: {{ selected.data.art }}</p>
-				<p class="attrib">SWS: {{ selected.data.sws }}</p>
+				<p class="attrib">
+					Aktiv:
+					<b>{{ selected.data.content.active ? "Ja" : "Nein" }}</b>
+				</p>
+				<p class="attrib">
+					Turnus:
+					{{ helper.convertTurnus(selected.data.content.rotation) }}
+				</p>
+				<p class="attrib">
+					Veranstaltungsart: {{ selected.data.content.type }}
+				</p>
 			</div>
 			<div class="block">
-				<div
-					class="attrib-container"
-					v-for="(value, key) in selected.content"
-					:key="key"
-				>
-					<p class="attrib">{{ key }}:</p>
-					<div class="box" v-html="value" v-if="value"></div>
+				<p class="attrib">
+					Semester Wochenstunden (SWS):
+					{{
+						selected.data.content.sws
+							? selected.data.content.sws
+							: "Nicht angegeben"
+					}}
+				</p>
+				<p class="attrib" v-if="selected.data.content.target">
+					Zielgruppe: {{ selected.data.content.target }}
+				</p>
+			</div>
+			<People :people="selected.data.people" />
+			<h3><u>Module:</u></h3>
+			<div
+				class="block"
+				v-for="(relation, index) in selected.data.modules"
+				:key="index"
+			>
+				<div class="box hover" :key="index" @click="view(relation)">
+					<p>
+						<b>{{ relation.pivot.title }}</b>
+					</p>
+					<br />
+					<p>Modulcode: {{ relation.modulecode }}</p>
+					<p>Prüfungsnummer: {{ relation.pivot.pnr }}</p>
 				</div>
 			</div>
-			<br />
-			<People :people="selected.people"/>
-			<Exams :exams="selected.exams" @exam="view"/>
 		</div>
 	</div>
 </template>
@@ -43,26 +67,18 @@
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import People from "./Info/People.vue";
-import Exams from './Info/Exams.vue';
-import { request } from "@/scripts/request.js";
+import search from "@/services/SearchService.js";
+import helper from "@/services/HelperService.js";
 
 export default {
-	components: { People, Exams },
+	components: { People },
 	props: {
 		selected: Object,
-		filterActive: Boolean
+		filterActive: Boolean,
 	},
+	emits: ["close", "relation"],
 	setup(props, { emit }) {
 		const router = useRouter();
-		const rq = new request();
-
-		function convertSemester(code) {
-			if (code % 10 == 0) {
-				return "SoSe " + parseInt(code / 10);
-			} else {
-				return "WiSe " + parseInt(code / 10);
-			}
-		}
 
 		onMounted(() => {
 			window.addEventListener("keyup", function (event) {
@@ -98,15 +114,18 @@ export default {
 
 		function toggleAktiv() {
 			// speichern von !props.selected.data.aktiv in der datenbank
-			rq.toggleAktiv(props.selected.data.veranstaltungsnummer, props.selected.data.semester)
+			search.toggleAktiv(
+				props.selected.data.veranstaltungsnummer,
+				props.selected.data.semester
+			);
 		}
 
-		function view(exam) {
-			emit('exam', exam)
+		function view(relation) {
+			emit("relation", relation);
 		}
 
 		return {
-			convertSemester,
+			helper,
 			close,
 			newInstance,
 			editInstance,
@@ -118,11 +137,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'info.scss';
+@import "info.scss";
 .attrib {
-	button{
-		height:1.4em;
-		width:1.8em;
+	button {
+		height: 1.4em;
+		width: 1.8em;
 	}
 }
 </style>

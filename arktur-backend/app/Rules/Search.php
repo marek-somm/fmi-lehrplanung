@@ -4,7 +4,7 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class Username implements Rule {
+class Search implements Rule {
     /**
      * Create a new rule instance.
      *
@@ -22,7 +22,7 @@ class Username implements Rule {
      * @return bool
      */
     public function passes($attribute, $value) {
-        return preg_match('/^[a-z0-9]*$/', $value);
+        return preg_match('/^[\pL\s\d_+\-]*$/ui', $value);
     }
 
     /**
@@ -31,6 +31,6 @@ class Username implements Rule {
      * @return string
      */
     public function message() {
-        return 'Login darf nur aus Zahlen und kleinen Buchstaben bestehen.';
+        return 'The validation error message.';
     }
 }

@@ -1,7 +1,7 @@
 <template>
 	<div class="veranstaltungen--container">
 		<Searchbar
-			@input="updateInput"
+			@input="debounceInput"
 			@toggleFilter="toggleFilter"
 			placeholder="Veranstaltungstitel"
 		/>
@@ -11,16 +11,16 @@
 				:filterActive="data.filterActive"
 				:class="{ show: data.showVeranstaltung }"
 				@close="closeVeranstaltung"
-				@exam="updateModul"
+				@relation="updateModul"
 			/>
 			<InfoModul
 				:selected="data.selectedModul"
 				:filterActive="data.filterActive"
 				:class="{ show: data.showModul }"
 				@close="closeModul"
-				@exam="updateVeranstaltungWithExam"
+				@relation="updateVeranstaltungWithModul"
 			/>
-			<Results
+			<Result
 				@loadMore="loadMore"
 				@select="updateVeranstaltung"
 				:data="veranstaltungen"
@@ -32,26 +32,26 @@
 
 <script>
 import Searchbar from "@/components/Search/Searchbar.vue";
-import Results from "@/components/Search/Results.vue";
+import Result from "@/components/Search/ResultVeranstaltung.vue";
 import InfoVeranstaltung from "@/components/Search/InfoVeranstaltung.vue";
 import InfoModul from "@/components/Search/InfoModul.vue";
 import { reactive } from "vue";
-import { request } from "@/scripts/request.js";
+import search from "@/services/SearchService.js";
+import { debounce } from "debounce";
 
 export default {
 	components: {
 		Searchbar,
-		Results,
+		Result,
 		InfoVeranstaltung,
 		InfoModul,
 	},
 	setup() {
-		const rq = new request();
-
 		const veranstaltungen = reactive({
 			defaultLimit: 20,
 			limit: 20,
 			all: null,
+			count: 0,
 		});
 
 		const data = reactive({
@@ -63,22 +63,19 @@ export default {
 			filterActive: false,
 		});
 
-		async function updateVeranstaltung(value, semester) {
-			console.log(value + ", " + semester);
-			data.selectedVeranstaltung = await rq.getVeranstaltung(
-				value,
-				semester
-			);
+		searchVeranstaltung();
+
+		async function updateVeranstaltung(vnr, semester) {
+			data.selectedVeranstaltung = await search.getEvent(vnr, semester);
 			data.showVeranstaltung = true;
 		}
 
-		async function updateVeranstaltungWithExam(exam) {
-			updateVeranstaltung(exam.Vnr, exam.semester);
+		async function updateVeranstaltungWithModul(modul) {
+			updateVeranstaltung(modul.vnr, modul.semester);
 		}
 
-		async function updateModul(exam) {
-			console.log(exam);
-			data.selectedModul = await rq.getModul(exam.Modulcode);
+		async function updateModul(relation) {
+			data.selectedModul = await search.getModule(relation.modulecode);
 			data.showModul = true;
 		}
 
@@ -103,11 +100,15 @@ export default {
 			}
 		}
 
-		async function searchVeranstaltung(name) {
-			veranstaltungen.all = await rq.searchVeranstaltung(
-				name,
+		async function searchVeranstaltung(value) {
+			veranstaltungen.all = await search.searchEvent(
+				value,
 				veranstaltungen.limit
 			);
+			veranstaltungen.count = 0
+			Object.keys(veranstaltungen.all.data).forEach(semester => {
+				veranstaltungen.count += veranstaltungen.all.data[semester].length
+			});
 		}
 
 		function toggleFilter(value) {
@@ -116,9 +117,9 @@ export default {
 
 		return {
 			data,
-			updateInput,
+			debounceInput: debounce(updateInput, 300),
 			updateVeranstaltung,
-			updateVeranstaltungWithExam,
+			updateVeranstaltungWithModul,
 			updateModul,
 			closeVeranstaltung,
 			closeModul,

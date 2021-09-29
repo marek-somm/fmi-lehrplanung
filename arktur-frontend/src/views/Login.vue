@@ -40,7 +40,7 @@
 import store from "@/store";
 import { reactive } from "vue";
 import { useRouter } from "vue-router";
-import AuthService from "@/scripts/AuthService";
+import auth from "@/services/AuthService";
 
 export default {
 	setup() {
@@ -61,7 +61,7 @@ export default {
 				uid: data.usernameInput,
 				password: data.passwordInput
 			}
-			const answer = await AuthService.login(payload);
+			const answer = await auth.login(payload);
 			console.log(answer)
 			if(answer.data.errors) {
 				data.error = answer.data.errors[Object.keys(answer.data.errors)[0]][0]

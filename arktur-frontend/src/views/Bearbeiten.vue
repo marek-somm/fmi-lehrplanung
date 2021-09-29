@@ -85,7 +85,7 @@
 import { onMounted, reactive, watch, computed } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";
-import { request } from "@/scripts/request.js";
+import search from "@/services/SearchService.js"
 
 export default {
 	setup() {
@@ -112,7 +112,6 @@ export default {
 		}
 		const store = useStore();
 		const level = computed(() => store.state.User.level);
-		const rq = new request();
 		const input = reactive({
 			original: {},
 			});
@@ -139,7 +138,7 @@ export default {
 		});
 
 		async function getVeranstaltung(id, sem) {
-			input.original = await rq.getVeranstaltung(id, sem);
+			input.original = await search.getVeranstaltung(id, sem);
 			// baut für input und return die struktur von original nach
 			// beides bleibt leer, da return bei übernahme überschrieben wird
 			// original = {"d":{"t":"", "n":"",...}, "i":{"z":""}, "p":{"":[{"t":"","n":"", ...}, {...},...]}, "e":{"":[{"t":"","n":"", ...}, {...},...]}}
@@ -207,7 +206,7 @@ export default {
 					}
 				}
 			}
-			var ausgabecode = await rq.editVeranstaltung(out.return, out.alt.veranstaltungsnummer, out.alt.semester)
+			var ausgabecode = await search.editVeranstaltung(out.return, out.alt.veranstaltungsnummer, out.alt.semester)
             console.log(ausgabecode)
 			// Ausgabe gemäß ausgabecode
 			if (ausgabecode.status == 0){

@@ -10,6 +10,7 @@ use App\Rules\Username;
 
 class AuthController extends Controller {
     public function login(Request $request) {
+        # Validation
         $request->validate([
             'uid' => ['required', new Username],
             'password' => ['required']
@@ -18,21 +19,31 @@ class AuthController extends Controller {
             'uid.required' => 'Login ist erforderlich.',
             'password.required' => 'Passwort ist erforderlich.'
         ]);
-        //PRODUCTION $ldap = new LDAP();
-        //PRODUCTION $authObject = $ldap->auth($request->input('name'), $request->input('password'));
-        $authObject = true;
+
+        # LDAP Authentification
+        ## Production
+        $ldap = new LDAP();
+        $authObject = $ldap->auth($request->input('name'), $request->input('password'));
+        ## Local Testing
+        // $authObject = true;
         if ($authObject) {
+            # Find User in Database
             $user = User::where('uid', '=', $request->input('uid'))->first();
             if ($user == null) {
-                $user = User::factory(1)->create()->first();
+                // TODO: create User in Database if not existant
+                $user = User::find(1);
             }
+            # Login user
             Auth::login($user);
+            # return success
             return response([
                 'success' => true,
                 'level' => 1,
                 'uid' => Auth::user()->name
             ], 200);
         }
+
+        # return error
         return response([
             'errors' => [
                 'Anmeldedaten' => ['Login und/oder Passwort sind nicht korrekt.']

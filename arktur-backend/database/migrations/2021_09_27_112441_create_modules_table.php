@@ -16,8 +16,9 @@ class CreateModulesTable extends Migration
         Schema::create('modules', function (Blueprint $table) {
             $table->id();
             $table->string('modulecode');
-            $table->integer('aktiv_from');
-            $table->integer('aktiv_to');
+            $table->integer('active_from');
+            $table->integer('active_to');
+            $table->boolean('active');
             $table->integer('ects');
             $table->integer('presence_time');
             $table->integer('workload');

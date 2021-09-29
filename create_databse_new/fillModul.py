@@ -101,10 +101,13 @@ for elem in data:
 	literatur = str(data[elem]['Literatur']) if "Literatur" in data[elem] else None
 	time_now = getTime()
 
+	print(zusammensetzung)
+	print(modulcode)
+
 	c.execute('''INSERT INTO modules
-		(modulecode,aktiv_from,aktiv_to,ects,presence_time,workload,rotation,title_de,title_en,composition,prior_knowledge,type,content,requirement_creditpoints,requirement_exam,requirement_admission,additional_info,literature,created_at,updated_at)
-		VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',
-		[modulcode,aktivvon,aktivbis,ects,praesenzzeit,workload,turnus,titel,"",zusammensetzung,vorkenntnisse,art,inhalte,vor_lp,vor_pruefung,vor_zulassung,zusatzinfos,literatur,time_now,time_now]
+		(modulecode,active_from,active_to,active,ects,presence_time,workload,rotation,title_de,title_en,composition,prior_knowledge,type,content,requirement_creditpoints,requirement_exam,requirement_admission,additional_info,literature,created_at,updated_at)
+		VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',
+		[modulcode,aktivvon,aktivbis,1,ects,praesenzzeit,workload,turnus,titel,"",zusammensetzung,vorkenntnisse,art,inhalte,vor_lp,vor_pruefung,vor_zulassung,zusatzinfos,literatur,time_now,time_now]
 	)
 
 	# INSERT MODUL_VERANTWORTUNG

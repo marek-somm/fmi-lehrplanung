@@ -11,7 +11,7 @@ import Instanziieren from '@/views/Instanziieren'
 import Bearbeiten from '@/views/Bearbeiten'
 import LaravelDebug from '@/views/LaravelDebug'
 import store from '@/store/index'
-import AuthService from "@/scripts/AuthService";
+import auth from "@/services/AuthService";
 
 const routes = [
 	{
@@ -89,7 +89,7 @@ async function checkSession(to, from) {
 }
 
 async function setSession() {
-	const answer = await AuthService.check()
+	const answer = await auth.check()
 	store.dispatch('User/setLogin', answer.data.success)
 	store.dispatch('User/setLevel', answer.data.level)
 	store.dispatch('User/setUid', answer.data.uid)

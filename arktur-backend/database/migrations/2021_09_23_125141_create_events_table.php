@@ -18,12 +18,12 @@ class CreateEventsTable extends Migration
             $table->integer('vnr');
             $table->integer('semester');
             $table->string('title');
-            $table->boolean('aktiv');
+            $table->boolean('active');
             $table->integer('sws')->nullable();
             $table->string('type');
             $table->string('targets')->nullable();
-            $table->integer('rythm')->nullable();
-            $table->boolean('changed');
+            $table->integer('rotation')->nullable();
+            $table->boolean('changed')->default(true);
             $table->timestamps();
         });
     }

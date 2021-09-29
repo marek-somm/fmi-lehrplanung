@@ -1,51 +1,3 @@
-<template>
-	<div class="results--container" v-if="data.all" :class="{ filter: filterActive }">
-		<div class="category" v-for="(category, key) in data.all.data" :key="key">
-			<h3>&nbsp;{{ key }}&nbsp;</h3>
-			<div
-				class="item"
-				:class="{ deactive: !item.aktiv }"
-				v-for="(item, index) in category"
-				:key="index"
-				@click="select(item.nr, item.semester)"
-			>
-				<a class="text"> {{ item.titel }} [{{ item.nr }}] </a>
-			</div>
-		</div>
-		<button
-			class="load-more"
-			@click="loadMore"
-			v-show="data.all.count == data.limit"
-		>
-			...
-		</button>
-	</div>
-</template>
-
-<script>
-export default {
-	props: {
-		data: Object,
-		filterActive: Boolean
-	},
-	setup(props, { emit }) {
-		function loadMore() {
-			emit('loadMore')
-		}
-
-		function select(nr, semester) {
-			emit('select', nr, semester)
-		}
-
-		return {
-			loadMore,
-			select
-		};
-	},
-};
-</script>
-
-<style lang="scss" scoped>
 .filter {
 	height: calc(100vh - 17.675rem - #{$filterHeight}) !important;
 }
@@ -57,7 +9,7 @@ export default {
 	overflow-y: auto;
 	height: calc(100vh - 17.675rem);
 	padding: 0 0 1rem 0;
-	transition: height .2s ease;
+	transition: height 0.2s ease;
 
 	.category {
 		width: 40%;
@@ -106,5 +58,8 @@ export default {
 		transition: width 0.5s ease;
 		width: calc(100% - 800px) !important;
 	}
+
+	.spacer {
+		margin: 1rem;
+	}
 }
-</style>

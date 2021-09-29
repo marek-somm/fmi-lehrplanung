@@ -35,10 +35,10 @@
 
 <script>
 import { onMounted, reactive } from "vue";
-import { request } from "@/scripts/request.js";
+import search from "@/services/SearchService.js"
+
 export default {
 	setup() {
-		const rq = new request();
 		const input = reactive({
 			data: {},
 			});
@@ -48,7 +48,7 @@ export default {
 		});
 
         async function getVeranstaltungen() {
-            input.data = await rq.getNewVeranstaltungen()
+            input.data = await search.getNewVeranstaltungen()
         }
 
         var conf = false;
@@ -57,7 +57,7 @@ export default {
                 conf = confirm("Wollen Sie die Veranstaltung wirklich als übernommen markieren?\nSie ist dann nicht mehr in dieser Ansicht sichtbar!\n\nDiese Meldung erscheint nur ein einziges mal!")
             }
             if(conf) {
-                await rq.toggleAktiv(vnr, convertSemester(sem), modulcode, pnr)
+                await search.toggleAktiv(vnr, convertSemester(sem), modulcode, pnr)
                 getVeranstaltungen()
             }
 		}

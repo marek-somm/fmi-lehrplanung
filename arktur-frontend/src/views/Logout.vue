@@ -1,11 +1,11 @@
 
 
 <script>
-import AuthService from "@/scripts/AuthService";
+import auth from "@/services/AuthService";
 
 export default {
 	setup() {
-		AuthService.logout();
+		auth.logout();
 	},
 };
 </script>

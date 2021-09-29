@@ -8,7 +8,7 @@
 
 <script>
 import { reactive } from '@vue/reactivity'
-import AuthService from "@/scripts/AuthService";
+import AuthService from "@/services/AuthService";
 
 export default {
 	setup () {

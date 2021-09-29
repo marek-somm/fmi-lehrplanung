@@ -25,11 +25,11 @@ class EventFactory extends Factory
             'vnr' => random_int(10000, 99999),
             'semester' => random_int(20200, 20210),
             'title' => $this->faker->streetName(),
-            'aktiv'=> $this->faker->boolean(),
+            'active'=> $this->faker->boolean(),
             'sws' => $this->faker->randomDigit(),
             'type' => $this->faker->randomElement(['Übung', 'Seminar', 'Vorlesung', 'Tutorium']),
             'targets' => $this->faker->word(),
-            'rythm' => random_int(0,2),
+            'rotation' => random_int(0,2),
             'changed' => random_int(0,1)
         ];
     }

@@ -1,7 +1,7 @@
 <template>
 	<div class="module--container">
 		<Searchbar
-			@input="updateInput"
+			@input="debounceInput"
 			@toggleFilter="toggleFilter"
 			placeholder="Modultitel/Modulcode"
 		/>
@@ -11,16 +11,16 @@
 				:filterActive="data.filterActive"
 				:class="{ show: data.showModul }"
 				@close="closeModul"
-				@exam="updateVeranstaltung"
+				@relation="updateVeranstaltung"
 			/>
 			<InfoVeranstaltung
 				:selected="data.selectedVeranstaltung"
 				:filterActive="data.filterActive"
 				:class="{ show: data.showVeranstaltung }"
 				@close="closeVeranstaltung"
-				@exam="updateModulWithExam"
+				@relation="updateModulWithVeranstaltung"
 			/>
-			<Results
+			<Result
 				@loadMore="loadMore"
 				@select="updateModul"
 				:data="module"
@@ -32,26 +32,26 @@
 
 <script>
 import Searchbar from "@/components/Search/Searchbar.vue";
-import Results from "@/components/Search/Results.vue";
+import Result from "@/components/Search/ResultModul.vue";
 import InfoModul from "@/components/Search/InfoModul.vue";
 import InfoVeranstaltung from "@/components/Search/InfoVeranstaltung.vue";
 import { reactive } from "vue";
-import { request } from "@/scripts/request.js";
+import { debounce } from "debounce";
+import search from "@/services/SearchService.js"
 
 export default {
 	components: {
 		Searchbar,
-		Results,
+		Result,
 		InfoModul,
 		InfoVeranstaltung,
 	},
 	setup() {
-		const rq = new request();
-
 		const module = reactive({
 			defaultLimit: 20,
 			limit: 20,
 			all: null,
+			count: 0,
 		});
 
 		const data = reactive({
@@ -63,21 +63,23 @@ export default {
 			filterActive: false,
 		});
 
+		searchModul()
+
 		async function updateModul(value) {
 			console.log(value);
-			data.selectedModul = await rq.getModul(value);
+			data.selectedModul = await search.getModule(value);
 			data.showModul = true;
 		}
 
-		async function updateModulWithExam(exam) {
-			updateModul(exam.Modulcode);
+		async function updateModulWithVeranstaltung(veranstaltung) {
+			updateModul(veranstaltung.modulecode);
 		}
 
-		async function updateVeranstaltung(exam) {
-			console.log(exam);
-			data.selectedVeranstaltung = await rq.getVeranstaltung(
-				exam.Vnr,
-				exam.semester
+		async function updateVeranstaltung(modul) {
+			console.log(modul);
+			data.selectedVeranstaltung = await search.getEvent(
+				modul.vnr,
+				modul.semester
 			);
 			data.showVeranstaltung = true;
 		}
@@ -104,7 +106,8 @@ export default {
 		}
 
 		async function searchModul(name) {
-			module.all = await rq.searchModul(name, module.limit);
+			module.all = await search.searchModule(name, module.limit);
+			module.count = module.all.data.length;
 		}
 
 		function toggleFilter(value) {
@@ -113,9 +116,9 @@ export default {
 
 		return {
 			data,
-			updateInput,
+			debounceInput: debounce(updateInput, 300),
 			updateModul,
-			updateModulWithExam,
+			updateModulWithVeranstaltung,
 			updateVeranstaltung,
 			closeVeranstaltung,
 			closeModul,

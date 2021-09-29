@@ -35,7 +35,7 @@ for filename in files:
       elem = data[elem]
       veranstaltungsnr = elem['Veranstaltungsnummer']
       art = elem['Veranstaltungsart']
-      rhythmus = elem['Rhythmus'] if 'Rhythmus' in elem else None
+      rhythmus = rythm[elem['Rhythmus']] if 'Rhythmus' in elem else None
 
       semester = filename.replace("Veranstaltungen_", "")
       semester += "1" if semester.__contains__("WiSe") else "0"
@@ -55,7 +55,7 @@ for filename in files:
       time_now = getTime()
 
       c.execute('''INSERT INTO events
-         (vnr,semester,title,aktiv,sws,type,targets,rythm,changed,created_at,updated_at)
+         (vnr,semester,title,active,sws,type,targets,rotation,changed,created_at,updated_at)
          VALUES (?,?,?,?,?,?,?,?,?,?,?)''',
                 [veranstaltungsnr, semester, titel, aktiv, sws,
                  art, zielgruppe, rhythmus, 0, time_now, time_now]

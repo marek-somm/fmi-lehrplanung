@@ -85,7 +85,7 @@
 import { onMounted, reactive, watch, computed } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";
-import { request } from "@/scripts/request.js";
+import search from "@/services/SearchService.js"
 
 export default {
 	setup() {
@@ -112,7 +112,6 @@ export default {
 		}
 		const store = useStore();
 		const level = computed(() => store.state.User.level);
-		const rq = new request();
 		const input = reactive({
 			original: {},
 			});
@@ -139,7 +138,7 @@ export default {
 
 		async function getVeranstaltung(id, sem) {
 			if (Number(id)){ // Veranstaltungsnummer bestehen nur aus Ziffern
-				input.original = await rq.getVeranstaltung(id, sem);
+				input.original = await search.getVeranstaltung(id, sem);
 			}
 			else{ // Modulcode hat Buchstaben
 				input.original = { 
@@ -230,7 +229,7 @@ export default {
 					}
 				}
 			}
-			var ausgabecode = await rq.saveVeranstaltung(out.return)
+			var ausgabecode = await search.saveVeranstaltung(out.return)
 			console.log(ausgabecode)
 			// Ausgabe gemäß ausgabecode
 			if (ausgabecode.status == 0){
