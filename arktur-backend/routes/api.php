@@ -17,17 +17,15 @@ use App\Http\Controllers\SearchController;
 |
 */
 
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout']);
-Route::get('/check', [AuthController::class, 'check']);
-
-Route::middleware('auth:sanctum')->group(function() {
-    Route::get('/test', function() {
-        return response('test', 200);
+Route::group(['middleware' => ['web']], function () {
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::get('/check', [AuthController::class, 'check']);
+    
+    Route::middleware('auth:sanctum')->group(function() {
+        Route::get('/search/event', [SearchController::class, 'searchEvent']);
+        Route::get('/get/event', [SearchController::class, 'getEvent']);
+        Route::get('/search/module', [SearchController::class, 'searchModule']);
+        Route::get('/get/module', [SearchController::class, 'getModule']);
     });
-
-    Route::get('/search/event', [SearchController::class, 'searchEvent']);
-    Route::get('/get/event', [SearchController::class, 'getEvent']);
-    Route::get('/search/module', [SearchController::class, 'searchModule']);
-    Route::get('/get/module', [SearchController::class, 'getModule']);
 });

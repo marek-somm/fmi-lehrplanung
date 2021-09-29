@@ -23,14 +23,22 @@ class AuthController extends Controller {
         # LDAP Authentification
         ## Production
         $ldap = new LDAP();
-        $authObject = $ldap->auth($request->input('name'), $request->input('password'));
+        $authObject = $ldap->auth($request->uid, $request->password);
         ## Local Testing
         // $authObject = true;
         if ($authObject) {
             # Find User in Database
             $user = User::where('uid', '=', $request->input('uid'))->first();
+            $data = $ldap->directoryEntry($request->uid);
             if ($user == null) {
-                // TODO: create User in Database if not existant
+                User::create([
+                    'uid' => $data["uid"],
+                    'email' => $data["mail"],
+                    'forename' => $data['fsufirstname'],
+                    'surname' => $data['fsucompletesurname'],
+                    'salutation' => $data['thuedusalutation'],
+                    'displayname' => $data['displayname']
+                ]);
                 $user = User::find(1);
             }
             # Login user
@@ -39,7 +47,7 @@ class AuthController extends Controller {
             return response([
                 'success' => true,
                 'level' => 1,
-                'uid' => Auth::user()->name
+                'uid' => Auth::user()->name,
             ], 200);
         }
 

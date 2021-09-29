@@ -62,14 +62,12 @@ export default {
 				password: data.passwordInput
 			}
 			const answer = await auth.login(payload);
-			console.log(answer)
 			if(answer.data.errors) {
 				data.error = answer.data.errors[Object.keys(answer.data.errors)[0]][0]
 			} else if (answer.data.success) {
 				store.dispatch('User/setLogin', answer.data.success)
 				store.dispatch('User/setLevel', answer.data.level)
 				store.dispatch('User/setUid', answer.data.uid)
-				console.log(store.state.User)
 				router.push({ name: "Home" });
 			}
 		}

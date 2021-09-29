@@ -18,7 +18,7 @@ const routes = [
 		path: '/',
 		name: 'Home',
 		component: Home,
-		beforeEnter: checkAccess
+		beforeEnter: checkSession
 	},
 	{
 		path: '/login',
@@ -76,10 +76,11 @@ const routes = [
 
 async function checkAccess(to, from, next) {
 	await checkSession(to, from)
-	if(from.name != 'Login')
+	if(to.name == 'Login' || store.state.User.login) {
 		next();
-	else if (!store.state.User.login) next({ name: 'Login' })
-	else next()
+	} else {
+		next({ name: 'Login' })
+	}
 }
 
 async function checkSession(to, from) {

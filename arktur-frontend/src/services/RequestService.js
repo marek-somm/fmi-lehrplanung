@@ -12,8 +12,6 @@ function handleError(error, errorMsg = null) {
 	let status = 404
 	if(error.response) {
 		if (error.response.status === 422 || error.response.status === 401) {
-			console.log("RequestService.handleError()")
-			console.log(error.response)
 			return error.response;
 		} else {
 			status = error.response.status;

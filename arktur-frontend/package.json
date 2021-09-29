@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && node scripts/copyAPI.js",
+    "build": "vue-cli-service build",
     "api": "node scripts/copyAPI.js",
     "lint": "vue-cli-service lint"
   },
