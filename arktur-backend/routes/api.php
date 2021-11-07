@@ -27,5 +27,6 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/get/event', [SearchController::class, 'getEvent']);
         Route::get('/search/module', [SearchController::class, 'searchModule']);
         Route::get('/get/module', [SearchController::class, 'getModule']);
+        Route::get('get/new', [SearchController::class, 'getNewEntries']);
     });
 });

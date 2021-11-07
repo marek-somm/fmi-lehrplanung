@@ -50,7 +50,7 @@ const routes = [
 		beforeEnter: checkAccess
 	},
 	{
-		path: '/instanziieren/:id/:sem',
+		path: '/instanziieren/:vnr?/:sem?',
 		name: 'Instanziieren',
 		component: Instanziieren,
 		beforeEnter: checkAccess

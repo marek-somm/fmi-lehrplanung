@@ -1,13 +1,14 @@
 <template>
 	<div class="searchbar--container">
 		<div class="searchbar-wrapper">
+			<a class="filter-button" @click="createNewEvent">Neu</a>
 			<input
 				class="searchbar"
 				ref="searchbar"
 				v-model="data.input"
 				:placeholder="placeholder"
 			/>
-			<a class="filter-button" @click="toggleFilter" style="display: none;"
+			<a class="filter-button" @click="toggleFilter"
 				>{{ data.filterActive ? "&#x02c4;" : "&#x02c5;" }} Filter</a
 			>
 		</div>
@@ -22,11 +23,13 @@
 
 <script>
 import { onMounted, reactive, ref, watch } from "vue";
+import { useRouter } from 'vue-router';
 export default {
 	props: {
 		placeholder: String,
 	},
 	setup(props, { emit }) {
+		const router = useRouter();
 		const searchbar = new ref(null);
 		const data = reactive({
 			input: "",
@@ -49,10 +52,19 @@ export default {
 			emit("toggleFilter", data.filterActive);
 		}
 
+		function createNewEvent() {
+			router.push({
+				name: 'Instanziieren',
+				params: {
+				},
+			})
+		}
+
 		return {
 			data,
 			searchbar,
 			toggleFilter,
+			createNewEvent,
 		};
 	},
 };
@@ -69,7 +81,7 @@ export default {
 		justify-content: center;
 		align-items: center;
 		margin: 1rem;
-		
+
 		.searchbar {
 			width: 15rem;
 			margin: 0 1rem;

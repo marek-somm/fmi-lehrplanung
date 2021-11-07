@@ -2,9 +2,9 @@ import axios from 'axios';
 
 const authClient = axios.create({
 	//** Local Testing */ 
-	// baseURL: 'http://localhost:8000', 
+	baseURL: 'http://localhost:8000', 
 	//**  Production */ 
-	baseURL: 'https://arktur.fmi.uni-jena.de', 
+	// baseURL: 'https://arktur.fmi.uni-jena.de', 
 	withCredentials: true, // required to handle the CSRF token
 });
 

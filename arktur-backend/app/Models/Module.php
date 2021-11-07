@@ -47,7 +47,7 @@ class Module extends Model {
     ];
 
     public function events() {
-        return $this->belongsToMany(Event::class)->withPivot('pnr', 'description', 'title', 'changed')->using(EventModule::class)->withTimestamps();
+        return $this->belongsToMany(Event::class)->withPivot('pnr', 'description', 'title')->using(EventModule::class)->withTimestamps();
     }
 
     public function users() {

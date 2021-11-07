@@ -3,6 +3,7 @@
 		class="results--container"
 		v-if="data.all && !data.all.data.errors"
 		:class="{ filter: filterActive }"
+		@scroll="scroll"
 	>
 		<div class="spacer"></div>
 		<div
@@ -15,7 +16,7 @@
 				:key="index"
 				@click="select(item.modulecode)"
 			>
-				<a class="text"> {{ item.title_de }} [{{ item.modulecode }}] </a>
+				<a class="text"> {{ item.title_de }} ({{ item.modulecode }}) </a>
 			</div>
 		</div>
 		<button
@@ -29,6 +30,8 @@
 </template>
 
 <script>
+import { debounce } from "debounce";
+
 export default {
 	props: {
 		data: Object,
@@ -43,9 +46,18 @@ export default {
 			emit("select", modulecode);
 		}
 
+		function scroll(data) {
+			let scrollTop = data.target.scrollTop;
+			let scrollTopMax = data.target.scrollTopMax;
+			if (scrollTopMax - (scrollTopMax / props.data.count) * 5 < scrollTop) {
+				loadMore();
+			}
+		}
+
 		return {
 			loadMore,
 			select,
+			scroll: debounce(scroll, 400),
 		};
 	},
 };

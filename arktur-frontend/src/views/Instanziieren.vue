@@ -1,279 +1,125 @@
 <template>
-	<div class="results" v-if="input.original">
-	<form class="veranstaltung_input" @submit.prevent="">
-		<div class="veranstaltung">
-			<h1>Veranstaltung</h1>
-			<div class="Gruppen">
-				<div class="item" v-for="(item, key, index) in input.original.data" :key="index">
-					<div v-if="level >= 2 || !(key == 'aktiv') && !(key == 'friedolinID') && !(key == 'veranstaltungsnummer') && !(key == 'turnus')">
-						<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
-						<input
-							:id=key
-							:name=key
-							:placeholder=item
-							v-model=out.input.data[key]
-						/>
-					</div>
-				</div>
-				<div class="item" v-for="(item, key, index) in input.original.content" :key="index">
-					<label :for=key><strong>{{beschriftung[key]}}:</strong></label>
-					<input
-						:id=key
-						:name=key
-						:placeholder=item
-						v-model=out.input.content[key]
-					/>
-				</div>
-			</div>
+	<div class="new-container">
+		<h3>Veranstaltung</h3>
+		<div>
+			<label>Titel </label>
+			<input />
 		</div>
-		<div class="veranstaltung">
-			<h1>Personen</h1>
-			<div class="Gruppen">
-				<div class="item" v-for="(item, number, index) in input.original.people" :key="index">
-					<div class="item" v-for="(item, number, index) in item" :key="index">
-						<h2>{{number+1}}. Person</h2>
+		<div>
+			<label>SWS </label>
+			<input />
+		</div>
+		<div>
+			<label>Turnus </label>
+			<input>
+		</div>
+		<div>
+			<label>Art </label>
+			<input>
+		</div>
+		<div>
+			<label>Zielgruppe </label>
+			<input>
+		</div>
 
-						<div class="item" v-for="(item, key, index) in item" :key="index">
-							<div v-if="level >= 2 || !(key == 'grad') && !(key == 'friedolinID')">
-								<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
-								<input
-									:id=key+number
-									:name=key+number
-									:placeholder=item
-									v-model='out.input.people[""][number][key]'
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<button class="new button" @click="newInstance('people')">Hinzufügen</button>
-			<button class="new button" @click="removeInstance('people')">Entfernen</button>
+		<h3>Personen</h3>
+		<div>
+			Person A
+			<button>X</button>
 		</div>
-		<div class="veranstaltung">
-			<h1>Prüfungen</h1>
-			<div class="Gruppen">
-				<div class="item" v-for="(item, number, index) in input.original.exams" :key="index">
-					<div class="item" v-for="(item, number, index) in item" :key="index">
-						<h2>{{number+1}}. Prüfung</h2>
-						<div class="item" v-for="(item, key, index) in item" :key="index">
-							<div v-if="level >= 2 || !(key == 'titel') && !(key == 'pnr')">
-								<label :for=key+number><strong>{{beschriftung[key]}}:</strong></label>
-								<input
-									:id=key+number
-									:name=key+number
-									:placeholder=item
-									v-model='out.input.exams[""][number][key]'
-								/>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<button class="new button" @click="newInstance('exams')">Hinzufügen</button>
-			<button class="new button" @click="removeInstance('exams')">Entfernen</button>
+		<div>
+			Person B
+			<button>X</button>
 		</div>
-		<button class="succ button" @click="übernehmen()">Übernehmen</button>
-		<div class="message">
-			{{out.message}}
+		<div>
+			<input>
 		</div>
-	</form>
+
+		<h3>Prüfungen</h3>
+		<div>
+			<label>Titel </label>
+			<input>
+		</div>
+		<div>
+			<label>Prüfungsnummer </label>
+			<input>
+		</div>
+		<div>
+			<label>Modulecode </label>
+			<input>
+		</div>
+		<div>
+			<label>Beschreibung </label>
+			<input>
+		</div>
+		<br>
+		<div>
+			<label>Titel </label>
+			<input>
+		</div>
+		<div>
+			<label>Prüfungsnummer </label>
+			<input>
+		</div>
+		<div>
+			<label>Modulecode </label>
+			<input>
+		</div>
+		<div>
+			<label>Beschreibung </label>
+			<input>
+		</div>
 	</div>
 </template>
 
 <script>
-import { onMounted, reactive, watch, computed } from "vue";
+import { onMounted, reactive } from "vue";
 import { useRoute } from "vue-router";
-import { useStore } from "vuex";
-import search from "@/services/SearchService.js"
+import search from "@/services/SearchService.js";
 
 export default {
 	setup() {
-		const beschriftung = {
-			"data": "Veranstaltung",
-			"titel": "Titel",
-			"veranstaltungsnummer": "Vnr",
-			"semester": "Semester",
-			"aktiv": "Aktiv",
-			"sws": "SWS",
-			"turnus": "Turnus",
-			"art": "Art",
-			"content": "Inhalt",
-			"Zielgruppe":"Zielgruppe",
-			"people": "Personen",
-			"vorname": "Vorname",
-			"nachname": "Nachname",
-			"grad": "Akademischer Grad",
-			"friedolinID": "FriedolinID",
-			"exams": "Prüfungen",
-			"pnr":"Pnr",
-			"Modulcode": "Modulcode",
-			"Beschreibung": "Beschreibung"
-		}
-		const store = useStore();
-		const level = computed(() => store.state.User.level);
-		const input = reactive({
-			original: {},
-			});
-		const out = reactive({
-			input: {},
-			return: {},
-			message: ""
-			});
+		const data = reactive({
 
-        const route = useRoute();
-        const id = route.params.id;
+		})
+
+		const route = useRoute();
+		const vnr = route.params.vnr;
 		const sem = route.params.sem;
-		watch(
-			() => id,
-			() => sem,
-			() => {
-				getVeranstaltung(id, sem);
-			}
-		);
 
 		onMounted(() => {
-			getVeranstaltung(id, sem);
+			getVeranstaltung(vnr, sem);
 		});
 
-		async function getVeranstaltung(id, sem) {
-			if (Number(id)){ // Veranstaltungsnummer bestehen nur aus Ziffern
-				input.original = await search.getVeranstaltung(id, sem);
+		async function getVeranstaltung(vnr, sem) {
+			if(!vnr) {
+				vnr = 0
 			}
-			else{ // Modulcode hat Buchstaben
-				input.original = { 
-					"data": { 
-						"titel": "", 
-						"veranstaltungsnummer": "", 
-						"semester": "", 
-						"friedolinID": "", 
-						"aktiv": "", 
-						"sws": "", 
-						"turnus": "", 
-						"art": "" 
-					}, 
-					"content": { 
-						"Zielgruppe": ""
-					}, 
-					"people": { "": [] }, 
-					"exams": { "": [ 
-						{ "titel": "", "pnr": "", "Modulcode": id, "Beschreibung": "" } 
-					] } }
+			if(!sem) {
+				sem = 0
 			}
-			// baut für input und return die struktur von original nach
-			// beides bleibt leer, da return bei übernahme überschrieben wird
-			// original = {"d":{"t":"", "n":"",...}, "i":{"z":""}, "p":{"":[{"t":"","n":"", ...}, {...},...]}, "e":{"":[{"t":"","n":"", ...}, {...},...]}}
-			for (var key in input.original){
-				out.input[key] = {}
-				out.return[key] = {}
-				for (var key1 in input.original[key]){
-					if (key1 != ""){
-						out.input[key][key1] = ""
-						out.return[key][key1] = ""
-					}
-					else{
-						out.input[key][key1] = []
-						out.return[key][key1] = []
-						for (var i in input.original[key][key1]){
-							out.input[key][key1].push({})
-							out.return[key][key1].push({})
-							for(var j in input.original[key][key1][i]){
-								out.input[key][key1][i][j] = ""
-								out.return[key][key1][i][j] = ""
-							}
-						}
-					}
-				}
-			}
-		}
-
-		async function übernehmen() {
-			// übernimm nicht leere input daten für return
-			var newPerson = false;
-			for (var key in input.original){
-				for (var key1 in input.original[key]){
-					if (key1 != ""){
-						if (out.input[key][key1])
-							out.return[key][key1] = out.input[key][key1]
-						else{if (level.value < 2 && key1 == "friedolinID")
-							out.return[key][key1] = null
-						else{if (level.value < 2 && key1 == "aktiv")
-							out.return[key][key1] = 1
-						else
-							out.return[key][key1] = input.original[key][key1]
-						}}
-					}
-					else{
-						for (var i in input.original[key][key1]){
-							for(var j in input.original[key][key1][i]){
-								if (out.input[key][key1][i][j]){
-									if (level.value < 2 && (j == "vorname" || j == "nachname")){
-										newPerson = true
-									}
-									else{if (level.value < 2 && j == "Modulcode"){
-										out.return[key][key1][i]["pnr"] = null
-										out.return[key][key1][i]["titel"] = null
-									}}
-									out.return[key][key1][i][j] = out.input[key][key1][i][j]
-								}
-								else{if (level.value < 2 && newPerson && j == "friedolinID"){
-									out.return[key][key1][i][j] = null
-									out.return[key][key1][i]["grad"] = null
-									newPerson = false
-								}
-								else
-									out.return[key][key1][i][j] = input.original[key][key1][i][j]
-								}
-							}
-						}
-					}
-				}
-			}
-			var ausgabecode = await search.saveVeranstaltung(out.return)
-			console.log(ausgabecode)
-			// Ausgabe gemäß ausgabecode
-			if (ausgabecode.status == 0){
-				out.message = "Lehrveranstaltung wurde erfolgreich angelegt.";
-			}
-			else{if(ausgabecode.status == 1){
-				out.message = "Fehler: Es existiert bereits eine Lehrveranstaltung mit dieser Veranstaltungsnummer und Semester Kombination.";
-			}else{
-				out.message = "Fehler: Ein unbekannter Fehler ist aufgetreten, bitte melden Sie dies dem Prüfungsamt.";
-			}}
-		}
-		function newInstance(category) {
-			var dict = {}
-			if (category == "people")
-				dict = {"vorname":"", "nachname":"", "grad":"", "friedolinID":""}
-			else if (category == "exams")
-				dict = {"titel":"", "pnr":"", "Modulcode":"", "Beschreibung": "" }
-			input.original[category][""].push(dict)
-			out.input[category][""].push(dict)
-			out.return[category][""].push(dict)
-		}
-		function removeInstance(category) {
-			input.original[category][""].pop()
-			out.input[category][""].pop()
-			out.return[category][""].pop()
+			return await search.getEvent(vnr, sem)
 		}
 
 		return {
-			input,
-			out,
-            id,
-			beschriftung,
-			newInstance,
-			removeInstance,
-			übernehmen,
-			level
+			data,
 		};
-	}
+	},
 };
 </script>
 
 <style lang="scss" scoped>
 // TODO: rechts und unten ist immer noch ein ungewollter abstand
-.results{
+.new-container {
+	text-align: left;
+	margin: 0.5rem;
+
+	div {
+		margin: 0.3rem;
+	}
+}
+
+.results {
 	.veranstaltung_input {
 		padding: 1em 1em;
 		font-family: helvetica, sans-serif;
@@ -308,16 +154,16 @@ export default {
 				background: rgb(201, 201, 201);
 			}
 		}
-		.veranstaltung{
-			width:30%;
+		.veranstaltung {
+			width: 30%;
 			margin-right: 3%;
-			float: left; 
-			.Gruppen{ 
+			float: left;
+			.Gruppen {
 				height: calc(100vh - 28rem);
 				overflow-y: auto;
 				/* Hide scrollbar for IE, Edge and Firefox */
-				-ms-overflow-style: none;  /* IE and Edge */
-				scrollbar-width: none;  /* Firefox */
+				-ms-overflow-style: none; /* IE and Edge */
+				scrollbar-width: none; /* Firefox */
 			}
 			/* Hide scrollbar for Chrome, Safari and Opera */
 			.Gruppen::-webkit-scrollbar {
@@ -333,11 +179,10 @@ export default {
 				width: 44%;
 			}
 		}
-		.veranstaltung:last-child{
+		.veranstaltung:last-child {
 			float: none;
 			margin-right: 0;
 		}
 	}
 }
-
 </style>

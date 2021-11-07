@@ -39,5 +39,9 @@ export default {
 		})
 		let result = await rs.get("search/module", payload);
 		return result
+	},
+
+	async getNewEntries() {
+		return rs.get("get/new")
 	}
 }

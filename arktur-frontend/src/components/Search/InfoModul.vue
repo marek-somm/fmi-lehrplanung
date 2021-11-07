@@ -1,7 +1,7 @@
 <template>
 	<div class="info--container" :class="{ filter: filterActive }">
 		<div class="header" v-if="selected">
-			<h3 class="title">{{ selected.data.content.modulecode }}</h3>
+			<h3 class="title">{{ selected.data.content.title_de }}</h3>
 			<button class="close button" @click="close">X</button>
 		</div>
 		<div class="info-content" v-if="selected">
@@ -9,7 +9,7 @@
 			<div class="block">
 				<p>Titel Deutsch: {{ selected.data.content.title_de }}</p>
 				<p>Titel Englisch: {{ selected.data.content.title_en }}</p>
-				<p>Modulcode: {{ selected.data.content.modulecode }}</p>
+				<p>Modulcode: <b>{{ selected.data.content.modulecode }}</b></p>
 			</div>
 			<div class="block">
 				<p class="attrib">
