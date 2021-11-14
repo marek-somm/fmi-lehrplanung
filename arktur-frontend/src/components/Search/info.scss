@@ -1,0 +1,99 @@
+.info--container {
+	height: calc(100vh - 16.68rem);
+	width: 0;
+	text-align: left;
+	transition: all 0.5s ease, height .2s ease;
+	color: transparent;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+
+	.info-content {
+		overflow: auto;
+		padding: 0 0.7rem 0rem 0.7rem;
+		border-right: 1px gray solid;
+		background: #eee;
+		flex-grow: 1;
+
+		.block {
+			margin-bottom: 1.5rem;
+
+			.title {
+				text-align: center;
+			}
+		
+			.hover {
+				transition: all 0.1s ease;
+		
+				&:hover {
+					cursor: pointer;
+					background-color: rgb(230, 230, 230);
+					transform: scale(1.01);
+				}
+			}
+		}
+	}
+
+	.header {
+		display: flex;
+		justify-content: flex-end;
+		background-color: lightgray;
+		border-right: 1px gray solid;
+		border-bottom: 1px gray solid;
+
+		.title {
+			padding: 0 0.7rem 0 0.7rem;
+			text-align: center;
+			margin: 1rem auto 1rem auto;
+		}
+
+		.button {
+			height: 2rem;
+			width: 2rem;
+			border: none;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.close {
+			background-color: rgb(255, 220, 220);
+
+			&:hover {
+				background-color: rgb(255, 100, 100);
+			}
+		}
+
+		.new {
+			width: 3rem;
+			//background-color: rgb(255, 220, 220);
+
+			&:hover {
+				background-color: rgb(190, 190, 190);
+			}
+		}
+	}
+}
+
+p {
+	margin: 0;
+	margin: 0.2rem 0 0.2rem 0;
+}
+
+.box {
+	border: 1px gray solid;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.show {
+	color: #2c3e50;
+	width: 35%;
+	overflow-y: auto;
+}
+
+.filter {
+	height: calc(100vh - 16.68rem - #{$filterHeight}) !important;
+}

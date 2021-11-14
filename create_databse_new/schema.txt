@@ -1,0 +1,38 @@
+'Hyperlink': string (NULL)
+'Kurztext': string (NULL)
+
+LEHRVERANSTALTUNG
+'Veranstaltungsnummer': int (NC)
+'Veranstaltungsart': string (int)
+'Rhythmus': int (ID)
+
+LEHRVERANSTALTUNG_INFO
+'Semester', int
+'Titel': string
+'FriedolinID': int
+'aktiv': boolean
+('Gruppen': int)
+('Personen': int)
+'SWS': int
+
+LEHRVERANSTALTUNG_PERSONEN
+lehrvID, int
+peronID, int
+rolle, string (verantwortlich/begleitend/organisatorisch)
+
+MODUL_LEHRVERNTALTUNG (prüfungen)
+modulID, int
+lehrvID, int
+
+LEHVERANTALTUNG_RHYTMUS
+ID, int (0,1,2)
+name, string
+
+LEHRVERANSTALTUNG_INHALT
+lehrvID, int
+Kommentar, string
+Literatur, string
+Bemerkung, string
+Zielgruppe, string
+Lerninhalte, string
+Leistungsnachweis, string
