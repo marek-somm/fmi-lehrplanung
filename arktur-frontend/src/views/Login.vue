@@ -149,7 +149,7 @@ export default {
 					font-style: italic;
 					color: #002350;
 
-					&:focus {
+					&:focus, &:hover {
 						outline: 0;
 						border: 1px solid #2285ff;
 					}

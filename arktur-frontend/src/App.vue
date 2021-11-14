@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="container">
 		<Navbar />
 		<router-view />
 	</div>
@@ -26,5 +26,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
+}
+
+.container {
+	display: flex;
+	flex-flow: column;
 }
 </style>

@@ -43,5 +43,12 @@ export default {
 
 	async getNewEntries() {
 		return rs.get("get/new")
+	},
+
+	async searchPerson(value) {
+		const payload = makePayload({
+			name: value
+		})
+		return rs.get("search/person", payload);
 	}
 }

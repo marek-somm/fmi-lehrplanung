@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\Module;
+use App\Models\User;
 use App\Rules\Search;
 use Illuminate\Http\Request;
 
@@ -193,5 +194,18 @@ class SearchController extends Controller {
         }
 
         return response($response, 200);
+    }
+
+    public function searchPerson(Request $request) {
+        $request->validate([
+            'name' => [new Search],
+        ]);
+
+        $persons = User::select('*')
+        ->where('forename', 'LIKE', '%' . $request->name . '%')
+        ->orWhere('surname', 'LIKE', '%' . $request->name . '%')
+        ->get();
+
+        return response($persons, 200);
     }
 }
