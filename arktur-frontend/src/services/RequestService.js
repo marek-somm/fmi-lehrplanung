@@ -1,16 +1,16 @@
 import axios from 'axios';
 
-const authClient = axios.create({
-	//** Local Testing */ 
-	baseURL: 'http://localhost:8000', 
-	//**  Production */ 
-	// baseURL: 'https://arktur.fmi.uni-jena.de', 
+const client = axios.create({
+	//** Local Testing */
+	baseURL: 'http://localhost:8000',
+	//**  Production */
+	// baseURL: 'https://arktur.fmi.uni-jena.de',
 	withCredentials: true, // required to handle the CSRF token
 });
 
 function handleError(error, errorMsg = null) {
-	let status = 404
-	if(error.response) {
+	let status = 404;
+	if (error.response) {
 		if (error.response.status === 422 || error.response.status === 401) {
 			return error.response;
 		} else {
@@ -29,13 +29,13 @@ function handleError(error, errorMsg = null) {
 
 export default {
 	async csrf() {
-		return authClient
+		return client
 			.get('/sanctum/csrf-cookie')
 			.catch((error) => handleError(error));
 	},
 
 	async get(url, payload, errorMsg = null) {
-		return authClient
+		return client
 			.get('/api/' + url, payload)
 			.catch((error) => handleError(error, errorMsg));
 	},
@@ -43,8 +43,14 @@ export default {
 	async post(url, payload, errorMsg = null) {
 		let token = await this.csrf();
 		if (token.error) return token;
-		return authClient
+		return client
 			.post('/api/' + url, payload)
+			.catch((error) => handleError(error, errorMsg));
+	},
+
+	async put(url, payload, errorMsg = null) {
+		client
+			.put('/api/' + url, payload)
 			.catch((error) => handleError(error, errorMsg));
 	},
 };

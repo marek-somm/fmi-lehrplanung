@@ -12,8 +12,10 @@
 			@keydown.down="move(1)"
 			@keydown.up="move(-1)"
 			@keydown.enter="onEnter"
+			@keydown.esc="onEsc"
 			@keydown="prevent"
 		/>
+		<div class="dropdown" v-if="dropdown" @click="focusInput">&#x02c5;</div>
 		<div
 			class="suggestions"
 			v-show="data.suggestions.show"
@@ -49,10 +51,14 @@ export default {
 			default: [],
 		},
 		regex: {
-			default: null
-		}
+			default: null,
+		},
+		dropdown: {
+			type: Boolean,
+			default: false,
+		},
 	},
-	emits: ["focus", "blur", "update:modelValue", "enter", "click"],
+	emits: ["focus", "blur", "update:modelValue", "enter"],
 	setup(props, { emit }) {
 		const data = reactive({
 			input: {
@@ -124,10 +130,15 @@ export default {
 			data.suggestions.show = false;
 		}
 
+		function onEsc() {
+			data.suggestions.show = false;
+			input.value.blur();
+		}
+
 		function onClick(value) {
 			data.suggestions.show = false;
 			emit("update:modelValue", value);
-			emit("click");
+			emit("enter");
 		}
 
 		function onClickAway() {
@@ -161,12 +172,16 @@ export default {
 		}
 
 		function prevent(e) {
-			if(props.regex) {
-				console.log(props.regex)
-				if(!e.key.match(RegExp(props.regex)) ){//&& !e.key.match(/\d/)) {
-					e.preventDefault()
+			if (props.regex) {
+				if (!e.key.match(RegExp(props.regex))) {
+					//&& !e.key.match(/\d/)) {
+					e.preventDefault();
 				}
 			}
+		}
+
+		function focusInput() {
+			input.value.focus();
 		}
 
 		return {
@@ -179,10 +194,12 @@ export default {
 			onInput,
 			onTab,
 			onEnter,
+			onEsc,
 			onClick,
 			onClickAway,
 			move,
-			prevent
+			prevent,
+			focusInput,
 		};
 	},
 };
@@ -204,11 +221,26 @@ export default {
 		color: inherit;
 		font-size: 0.9rem;
 		font-family: inherit;
+		background: inherit;
 
 		&:focus,
 		&:hover {
 			outline: 0;
-			border: 1px solid #2285ff;
+			border-color: #2285ff;
+		}
+	}
+
+	.dropdown {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 2rem;
+		border: 1px solid #8c8c8c;
+		border-left: none;
+
+		&:hover {
+			cursor: pointer;
+			background: rgb(245, 245, 245);
 		}
 	}
 

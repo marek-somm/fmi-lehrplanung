@@ -93,11 +93,12 @@ export default {
 		}
 
 		function newInstance() {
+			console.log(props.selected)
 			router.push({
 				name: "Instanziieren",
 				params: {
-					id: props.selected.data.veranstaltungsnummer,
-					sem: props.selected.data.semester,
+					vnr: props.selected.data.content.vnr,
+					sem: props.selected.data.content.semester,
 				},
 			});
 		}
