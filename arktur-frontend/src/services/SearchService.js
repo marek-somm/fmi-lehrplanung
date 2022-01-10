@@ -55,7 +55,7 @@ export default {
 
 	async getUserEvents(currentSem) {
 		const payload = makePayload({
-			user: store.state.uid,
+			user: store.state.User.uid,
 			currentSem: currentSem
 		})
 		return rs.get("user/events", payload);
