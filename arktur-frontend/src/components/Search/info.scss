@@ -2,7 +2,7 @@
 	height: calc(100vh - 16.68rem);
 	width: 0;
 	text-align: left;
-	transition: all 0.5s ease, height .2s ease;
+	transition: all 0.5s ease, height 0.2s ease;
 	color: transparent;
 	overflow: hidden;
 
@@ -22,10 +22,10 @@
 			.title {
 				text-align: center;
 			}
-		
+
 			.hover {
 				transition: all 0.1s ease;
-		
+
 				&:hover {
 					cursor: pointer;
 					background-color: rgb(230, 230, 230);
@@ -48,30 +48,51 @@
 			margin: 1rem auto 1rem auto;
 		}
 
-		.button {
-			height: 2rem;
-			width: 2rem;
-			border: none;
+		.button-bar {
+			display: grid;
+			grid-gap: 0.2rem;
+			padding: 0;
+			height: max-content;
 
-			&:hover {
-				cursor: pointer;
+			.button {
+				height: 2rem;
+				width: 2rem;
+				border: none;
+				padding: 0.4rem;
+
+				&:hover {
+					cursor: pointer;
+				}
 			}
-		}
 
-		.close {
-			background-color: rgb(255, 220, 220);
+			.close {
+				background-color: rgb(255, 220, 220);
+				grid-column: 2;
+				grid-row: 1;
 
-			&:hover {
-				background-color: rgb(255, 100, 100);
+				&:hover {
+					background-color: rgb(255, 100, 100);
+				}
 			}
-		}
 
-		.new {
-			width: 3rem;
-			//background-color: rgb(255, 220, 220);
+			.new {
+				width: max-content;
+				grid-column: 1;
+				grid-row: 1;
 
-			&:hover {
-				background-color: rgb(190, 190, 190);
+				&:hover {
+					background-color: rgb(190, 190, 190);
+				}
+			}
+
+			.delete {
+				width: 100%;
+				grid-column: 1 / span 2;
+				grid-row: 2;
+
+				&:hover {
+					background-color: rgb(190, 190, 190);
+				}
 			}
 		}
 	}

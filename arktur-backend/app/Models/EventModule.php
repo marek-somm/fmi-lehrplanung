@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class EventModule extends Pivot {
     protected $fillable = [
+        'event_id',
+        'module_id',
         'pnr',
         'description',
         'title',

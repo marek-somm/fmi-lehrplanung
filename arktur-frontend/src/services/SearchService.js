@@ -1,4 +1,5 @@
 import rs from '@/services/RequestService.js'
+import store from '@/store'
 
 function makePayload (params) {
 	return {
@@ -50,5 +51,13 @@ export default {
 			name: value
 		})
 		return rs.get("search/person", payload);
+	},
+
+	async getUserEvents(currentSem) {
+		const payload = makePayload({
+			user: store.state.uid,
+			currentSem: currentSem
+		})
+		return rs.get("user/events", payload);
 	}
 }

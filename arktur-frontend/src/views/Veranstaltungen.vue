@@ -1,5 +1,5 @@
 <template>
-	<div class="veranstaltungen--container">
+	<div class="veranstaltungen-container">
 		<Searchbar
 			@input="debounceInput"
 			@toggleFilter="toggleFilter"
@@ -132,7 +132,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.veranstaltungen--container {
+.veranstaltungen-container {
 	display: flex;
 	flex-direction: column;
 	//padding-bottom: 0.5rem;

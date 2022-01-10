@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\UpdateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,12 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/get/event', [SearchController::class, 'getEvent']);
         Route::get('/search/module', [SearchController::class, 'searchModule']);
         Route::get('/get/module', [SearchController::class, 'getModule']);
-        Route::get('get/new', [SearchController::class, 'getNewEntries']);
-        Route::get('search/person', [SearchController::class, 'searchPerson']);
+        Route::get('/get/new', [SearchController::class, 'getNewEntries']);
+        Route::get('/search/person', [SearchController::class, 'searchPerson']);
+
+        Route::get('/user/events', [SearchController::class, 'getUserEvents']);
+
+        Route::put('/add/event', [UpdateController::class, 'addEvent']);
+        Route::put('/remove/event', [UpdateController::class, 'removeEvent']);
     });
 });

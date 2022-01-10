@@ -2,9 +2,9 @@ import axios from 'axios';
 
 const client = axios.create({
 	//** Local Testing */
-	baseURL: 'http://localhost:8000',
+	// baseURL: 'http://localhost:8000',
 	//**  Production */
-	// baseURL: 'https://arktur.fmi.uni-jena.de',
+	baseURL: 'https://arktur.fmi.uni-jena.de',
 	withCredentials: true, // required to handle the CSRF token
 });
 
@@ -18,6 +18,7 @@ function handleError(error, errorMsg = null) {
 		}
 	}
 	return {
+		status: status,
 		data: {
 			errors: {
 				value: status,
@@ -49,8 +50,14 @@ export default {
 	},
 
 	async put(url, payload, errorMsg = null) {
-		client
+		return client
 			.put('/api/' + url, payload)
+			.catch((error) => handleError(error, errorMsg));
+	},
+
+	async delete(url, payload, errorMsg = null) {
+		return client
+			.delete('/api/' + url, payload)
 			.catch((error) => handleError(error, errorMsg));
 	},
 };

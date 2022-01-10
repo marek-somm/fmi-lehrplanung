@@ -16,11 +16,11 @@ class CreateEventModuleTable extends Migration
         Schema::create('event_module', function (Blueprint $table) {
             $table->id();
             $table->integer('event_id');
-            $table->integer('module_id');
-            $table->integer('pnr');
+            $table->integer('module_id')->nullable();
+            $table->integer('pnr')->nullable();
             $table->string('description')->nullable();
             $table->string('title');
-            $table->boolean('changed');
+            $table->boolean('changed')->default(true);
             $table->timestamps();
         });
     }

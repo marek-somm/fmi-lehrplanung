@@ -45,7 +45,7 @@ import { onBeforeUpdate } from "vue";
 export default {
 	mixins: [VueClickAway],
 	props: {
-		modelValue: String,
+		modelValue: null,
 		placeholder: String,
 		suggestions: {
 			default: [],

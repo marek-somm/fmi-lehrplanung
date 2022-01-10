@@ -1,16 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 // import store from '@/store'
-import Home from '@/views/Home'
-import Login from '@/views/Login'
-import Logout from '@/views/Logout'
-import Veranstaltungen from '@/views/Veranstaltungen'
-import Module from '@/views/Module'
-import Export from '@/views/Export'
-import NotFound from '@/views/NotFound'
-import Instanziieren from '@/views/Instanziieren'
-import Bearbeiten from '@/views/Bearbeiten'
-import LaravelDebug from '@/views/LaravelDebug'
-import store from '@/store/index'
+import Home from '@/views/Home';
+import Login from '@/views/Login';
+import Logout from '@/views/Logout';
+import Veranstaltungen from '@/views/Veranstaltungen';
+import Module from '@/views/Module';
+import Export from '@/views/Export';
+import NotFound from '@/views/NotFound';
+import NewEvent from '@/views/NewEvent';
+import EditEvent from '@/views/EditEvent';
+import Dashboard from '@/views/Dashboard';
+import store from '@/store/index';
 import auth from "@/services/AuthService";
 
 const routes = [
@@ -18,7 +18,7 @@ const routes = [
 		path: '/',
 		name: 'Home',
 		component: Home,
-		beforeEnter: checkSession
+		beforeEnter: [checkSession, redirectHome]
 	},
 	{
 		path: '/login',
@@ -50,21 +50,24 @@ const routes = [
 		beforeEnter: checkAccess
 	},
 	{
-		path: '/instanziieren/:vnr?/:sem?',
-		name: 'Instanziieren',
-		component: Instanziieren,
-		beforeEnter: checkAccess
+		path: '/neu/:vnr?/:sem?',
+		name: 'Neu',
+		component: NewEvent,
+		beforeEnter: checkAccess,
+		props: true
 	},
 	{
-		path: '/bearbeiten/:id/:sem',
+		path: '/bearbeiten/:vnr?/:sem?',
 		name: 'Bearbeiten',
-		component: Bearbeiten,
-		beforeEnter: checkAccess
+		component: EditEvent,
+		beforeEnter: checkAccess,
+		props: true
 	},
 	{
-		path: '/beta',
-		name: 'Beta',
-		component: LaravelDebug,
+		path: '/',
+		name: 'Dashboard',
+		component: Dashboard,
+		beforeEnter: checkAccess
 	},
 	{
 		path: '/:catchAll(.*)',
@@ -72,33 +75,41 @@ const routes = [
 		component: NotFound,
 		redirect: Home,
 	},
-]
+];
+
+async function redirectHome(to, from, next) {
+	if (store.state.User.login) {
+		next({ name: 'Dashboard' });
+	} else {
+		next();
+	}
+}
 
 async function checkAccess(to, from, next) {
-	await checkSession(to, from)
-	if(to.name == 'Login' || store.state.User.login) {
+	await checkSession(to, from);
+	if (to.name == 'Login' || store.state.User.login) {
 		next();
 	} else {
-		next({ name: 'Login' })
+		next({ name: 'Login' });
 	}
 }
 
 async function checkSession(to, from) {
-	if(!from.name) {
-		await setSession()
+	if (!from.name) {
+		await setSession();
 	}
 }
 
 async function setSession() {
-	const answer = await auth.check()
-	store.dispatch('User/setLogin', answer.data.success)
-	store.dispatch('User/setLevel', answer.data.level)
-	store.dispatch('User/setUid', answer.data.uid)
+	const answer = await auth.check();
+	store.dispatch('User/setLogin', answer.data.success);
+	store.dispatch('User/setLevel', answer.data.level);
+	store.dispatch('User/setUid', answer.data.uid);
 }
 
 const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
-})
+});
 
-export default router
+export default router;

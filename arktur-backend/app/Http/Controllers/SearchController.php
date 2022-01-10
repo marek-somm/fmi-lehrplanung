@@ -6,10 +6,11 @@ use App\Models\Event;
 use App\Models\Module;
 use App\Models\User;
 use App\Rules\Search;
+use App\Rules\Username;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller {
-    private function semesterToString($semester) {
+    private function semester_to_string($semester) {
         if ($semester % 10 == 0) {
             return "SoSe " . (int)($semester / 10);
         } else {
@@ -21,7 +22,7 @@ class SearchController extends Controller {
         $result = array();
 
         foreach ($data as $model) {
-            $semester = $this->semesterToString($model[$key]);
+            $semester = $model[$key];
             if (!array_key_exists($semester, $result)) {
                 $result[$semester] = array($model);
             } else {
@@ -32,9 +33,18 @@ class SearchController extends Controller {
         return $result;
     }
 
-    private function inModuleArray($array, $module) {
-        foreach($array as $elem) {
-            if($module['modulecode'] == $elem['modulecode']) {
+    private function in_module_array($module, $array) {
+        foreach ($array as $elem) {
+            if ($module['modulecode'] == $elem['modulecode']) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private function in_event_array($event, $array) {
+        foreach ($array as $elem) {
+            if ($event["vnr"] == $elem["vnr"]) {
                 return true;
             }
         }
@@ -52,14 +62,14 @@ class SearchController extends Controller {
             ->where('semester', $request->semester)
             ->get()
             ->first();
-        
-        if(!$event) {
+
+        if (!$event) {
             return response("Event not found", 404);
         }
 
         $people = Event::find($event->id)
             ->users()
-            ->select('displayname', 'forename', 'surname', 'uid')
+            ->select('displayname', 'forename', 'surname', 'email')
             ->get();
 
         $modules = Event::find($event->id)
@@ -154,12 +164,12 @@ class SearchController extends Controller {
 
         foreach ($changed_events as &$event) {
             $modules = Event::find($event->id)
-            ->modules()
-            ->get()
-            ->toArray();
+                ->modules()
+                ->get()
+                ->toArray();
 
-            foreach($modules as &$module) {
-                if(!$this->inModuleArray($changed_modules, $module)) {
+            foreach ($modules as &$module) {
+                if (!$this->in_module_array($module, $changed_modules)) {
                     array_push($changed_modules, $module);
                 }
             }
@@ -202,10 +212,87 @@ class SearchController extends Controller {
         ]);
 
         $persons = User::select('*')
-        ->where('forename', 'LIKE', '%' . $request->name . '%')
-        ->orWhere('surname', 'LIKE', '%' . $request->name . '%')
-        ->get();
+            ->where('forename', 'LIKE', '%' . $request->name . '%')
+            ->orWhere('surname', 'LIKE', '%' . $request->name . '%')
+            ->get();
 
         return response($persons, 200);
+    }
+
+    public function getUserEvents(Request $request) {
+        $request->validate([
+            'user' => [new Username],
+            'currentSem' => ['string', 'required']
+        ]);
+
+        $events_all = User::where('uid', $request->user)
+            ->firstOrFail()
+            ->events()
+            ->get()
+            ->toArray();
+
+        $events_current = User::where('uid', $request->user)
+            ->firstOrFail()
+            ->events()
+            ->where('semester', $request->currentSem)
+            ->get()
+            ->toArray();
+
+        $events_past = User::where('uid', $request->user)
+            ->firstOrFail()
+            ->events()
+            ->where('semester', '<', $request->currentSem)
+            ->get()
+            ->toArray();
+
+
+        $past = $this->group_by("semester", $events_past);
+        $current = $this->group_by("semester", $events_current);
+        $future = $this->generate_future_events($events_all, $request->currentSem);
+
+        return response(["future" => $future, "current" => $current, "past" => $past], 200);
+    }
+
+    private function generate_future_events($events, $current_semester) {
+        # remove duplicats
+        $filtered_events = [];
+
+        foreach (array_reverse($events) as $event) {
+            if (!$this->in_event_array($event, $filtered_events) && $event["active"] == true && $event["rotation"] > 0) {
+                $event["semester_org"] = $event["semester"];
+                
+                if ($event["rotation"] == 2) {
+                    if ($event["semester"] % 10 == 0) {
+                        $event["semester"] = $current_semester + ($current_semester % 10 == 0 ? 10 : 9);
+                    } else {
+                        $event["semester"] = $current_semester + ($current_semester % 10 == 0 ? 1 : 10);
+                    }
+                    $event["active"] = $this->event_exists($event) ? $event["active"] : false;
+                    $filtered_events[] = $event;
+                } else {
+                    if ($current_semester % 10 == 0) {
+                        $event["semester"] = $current_semester + 1;
+                        $event["active"] = $this->event_exists($event) ? $event["active"] : false;
+                        $filtered_events[] = $event;
+                    } else {
+                        $event["semester"] = $current_semester + 9;
+                        $event["active"] = $this->event_exists($event) ? $event["active"] : false;
+                        $filtered_events[] = $event;
+                    }
+                    $event["semester"] = $current_semester + 10;
+                    $event["active"] = $this->event_exists($event) ? $event["active"] : false;
+                    $filtered_events[] = $event;
+                }
+            }
+        }
+
+        return $this->group_by("semester", $filtered_events);
+    }
+
+    private function event_exists($event) {
+        return Event::where("vnr", $event["vnr"])
+            ->where("semester", $event["semester"])
+            ->get()
+            ->first() != null;
     }
 }

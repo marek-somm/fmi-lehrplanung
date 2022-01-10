@@ -3,9 +3,9 @@ import { UserModule } from "./User";
 
 export default createStore({
   state: {
-    local: false, // TODO REMOVE IN PRODUCTION
-    seclevel: 0, // TODO REMOVE IN PRODUCTION
-    uid: "" // TODO REMOVE IN PRODUCTION 
+    //local: false, // TODO REMOVE IN PRODUCTION
+    //seclevel: 0, // TODO REMOVE IN PRODUCTION
+    //uid: "cb01tmp" // TODO REMOVE IN PRODUCTION 
   },
   // Verändern STATE
   mutations: {},

@@ -3,7 +3,7 @@ export const UserModule = {
 	state: {
 		login: false,
 		level: 0,
-		uid: null,
+		uid: "",
 	},
 	mutations: {
 		SET_LOGIN(state, login) {

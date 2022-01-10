@@ -112,7 +112,7 @@
 							<b>{{ relation.pivot.title }}</b>
 						</p>
 						<br />
-						<p>Vorlesungsnummer: {{ relation.vnr }}</p>
+						<p>Veranstaltungsnummer: {{ relation.vnr }}</p>
 						<p>Prüfungsnummer: {{ relation.pivot.pnr }}</p>
 					</div>
 				</div>

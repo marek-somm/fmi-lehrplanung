@@ -35,9 +35,8 @@
 				>
 			</div>
 			<div class="uid-wrapper" v-if="login">
-				Angemeldet&nbsp;als
+				Angemeldet&nbsp;als&nbsp;
 				<div class="uid">{{ uid }}</div>
-				<Settings/>
 			</div>
 		</div>
 	</div>
@@ -86,7 +85,7 @@ export default {
 		function getPathElements() {
 			var path = route.path;
 			var nodes = path.slice(1).split("/");
-			if (nodes[0] == "instanziieren" || nodes[0] == "bearbeiten")
+			if (nodes[0] == "neu" || nodes[0] == "bearbeiten")
 				nodes = nodes.splice(0, 1);
 			nodes = nodes.map(
 				(node) => node.charAt(0).toUpperCase() + node.slice(1)

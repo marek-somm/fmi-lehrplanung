@@ -6,7 +6,8 @@
 				person.displayname
 					? person.displayname
 					: person.forename + " " + person.surname
-			}} &lt;{{ person.uid }}&gt;
+			}}
+			<span v-if="person.email">(<a :href="'mailto:abc' + person.email">{{ person.email }}</a>)</span>
 		</p>
 	</div>
 	<br />

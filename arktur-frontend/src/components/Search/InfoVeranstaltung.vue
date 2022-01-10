@@ -2,9 +2,11 @@
 	<div class="info--container" :class="{ filter: filterActive }">
 		<div class="header" v-if="selected">
 			<h3 class="title">{{ selected.data.content.title }}</h3>
-			<button class="new button" @click="editInstance">Edit</button>
-			<button class="new button" @click="newInstance">New</button>
-			<button class="close button" @click="close">X</button>
+			<div class="button-bar">
+				<button class="new button" @click="newEvent">Neu</button>
+				<button class="close button" @click="close">X</button>
+				<button class="delete button" @click="editEvent">Ändern</button>
+			</div>
 		</div>
 		<div class="info-content" v-if="selected">
 			<h3><u>Informationen:</u></h3>
@@ -92,10 +94,10 @@ export default {
 			emit("close");
 		}
 
-		function newInstance() {
-			console.log(props.selected)
+		function newEvent() {
+			console.log(props.selected);
 			router.push({
-				name: "Instanziieren",
+				name: "Neu",
 				params: {
 					vnr: props.selected.data.content.vnr,
 					sem: props.selected.data.content.semester,
@@ -103,12 +105,12 @@ export default {
 			});
 		}
 
-		function editInstance() {
+		function editEvent() {
 			router.push({
 				name: "Bearbeiten",
 				params: {
-					id: props.selected.data.veranstaltungsnummer,
-					sem: props.selected.data.semester,
+					vnr: props.selected.data.content.vnr,
+					sem: props.selected.data.content.semester,
 				},
 			});
 		}
@@ -128,8 +130,8 @@ export default {
 		return {
 			helper,
 			close,
-			newInstance,
-			editInstance,
+			newEvent,
+			editEvent,
 			toggleAktiv,
 			view,
 		};

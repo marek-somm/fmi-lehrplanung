@@ -1,7 +1,7 @@
 <template>
 	<div class="searchbar--container">
 		<div class="searchbar-wrapper">
-			<a class="filter-button" @click="createNewEvent">Neu</a>
+			<a v-if="data.route.name == 'Veranstaltungen'" class="filter-button" @click="createNewEvent">Neu</a>
 			<input
 				class="searchbar"
 				ref="searchbar"
@@ -34,6 +34,7 @@ export default {
 		const data = reactive({
 			input: "",
 			filterActive: false,
+			route: router.currentRoute
 		});
 
 		watch(
@@ -54,7 +55,7 @@ export default {
 
 		function createNewEvent() {
 			router.push({
-				name: 'Instanziieren',
+				name: 'Neu',
 				params: {
 				},
 			})
