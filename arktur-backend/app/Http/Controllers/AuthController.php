@@ -30,7 +30,17 @@ class AuthController extends Controller {
             $authObject = $ldap->auth($request->uid, $request->password);
         }
 
-        if ($authObject) { ## Local Testing
+        if($request->input('uid') == "guest") { # Guest user //TODO: create conatiner for guest
+            $user = User::where('uid', '=', "jg01tmp")->first();
+
+            Auth::login($user);
+            # return success
+            return response([
+                'success' => true,
+                'level' => 2,
+                'uid' => Auth::user()->uid,
+            ], 200);
+        } else if ($authObject) {
             # Find User in Database
             if (env('LOCALHOST')) {
                 $user = User::find(1);
@@ -56,7 +66,7 @@ class AuthController extends Controller {
             return response([
                 'success' => true,
                 'level' => 2,
-                'uid' => Auth::user(),
+                'uid' => Auth::user()->uid,
             ], 200);
         }
 

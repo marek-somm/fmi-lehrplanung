@@ -10,7 +10,7 @@
 			v-for="(category, semester) in data.all.data"
 			:key="semester"
 		>
-			<h3>&nbsp;{{ semester }}&nbsp;</h3>
+			<h3>&nbsp;{{ helper.convertSemester(semester) }}&nbsp;</h3>
 			<div
 				class="item"
 				:class="{ deactive: !item.active }"
@@ -33,6 +33,7 @@
 
 <script>
 import { debounce } from "debounce";
+import helper from "@/services/HelperService.js";
 
 export default {
 	props: {
@@ -58,6 +59,7 @@ export default {
 		}
 
 		return {
+			helper,
 			loadMore,
 			select,
 			scroll: debounce(scroll, 400),
