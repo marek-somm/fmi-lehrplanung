@@ -47,7 +47,7 @@ class AuthController extends Controller {
                         'salutation' => $data['thuedusalutation'],
                         'displayname' => $data['displayname']
                     ]);
-                    $user = User::find(1);
+                    $user = User::where('uid', '=', $request->input('uid'))->first();
                 }
             }
             # Login user
