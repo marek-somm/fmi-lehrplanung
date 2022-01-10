@@ -9,7 +9,9 @@
 			<div class="block">
 				<p>Titel Deutsch: {{ selected.data.content.title_de }}</p>
 				<p>Titel Englisch: {{ selected.data.content.title_en }}</p>
-				<p>Modulcode: <b>{{ selected.data.content.modulecode }}</b></p>
+				<p>
+					Modulcode: <b>{{ selected.data.content.modulecode }}</b>
+				</p>
 			</div>
 			<div class="block">
 				<p class="attrib">
@@ -97,10 +99,7 @@
 			</div>
 			<People :people="selected.data.people" />
 			<h3><u>Veranstaltungen:</u></h3>
-			<div
-				v-for="(semester, key) in selected.data.events"
-				:key="key"
-			>
+			<div v-for="(semester, key) in selected.data.events" :key="key">
 				<h4>{{ key }}</h4>
 				<div
 					class="block"
@@ -182,4 +181,25 @@ export default {
 
 <style lang="scss" scoped>
 @import "info.scss";
+
+.button {
+	height: 2rem;
+	width: 2rem;
+	border: none;
+	padding: 0.4rem;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.close {
+	background-color: rgb(255, 220, 220);
+	grid-column: 2;
+	grid-row: 1;
+
+	&:hover {
+		background-color: rgb(255, 100, 100);
+	}
+}
 </style>
