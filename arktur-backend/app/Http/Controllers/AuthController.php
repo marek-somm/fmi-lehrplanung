@@ -56,7 +56,7 @@ class AuthController extends Controller {
             return response([
                 'success' => true,
                 'level' => 2,
-                'uid' => Auth::user()->name,
+                'uid' => Auth::user()->uid,
             ], 200);
         }
 
