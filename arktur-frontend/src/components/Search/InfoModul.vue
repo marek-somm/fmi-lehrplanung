@@ -99,11 +99,11 @@
 			</div>
 			<People :people="selected.data.people" />
 			<h3><u>Veranstaltungen:</u></h3>
-			<div v-for="(semester, key) in selected.data.events" :key="key">
-				<h4>{{ key }}</h4>
+			<div v-for="(semester) in helper.sortObj(selected.data.events)" :key="semester[0]">
+				<h4>{{ helper.convertSemester(semester[0]) }}</h4>
 				<div
 					class="block"
-					v-for="(relation, index) in semester"
+					v-for="(relation, index) in semester[1]"
 					:key="index"
 				>
 					<div class="box hover" :key="index" @click="view(relation)">
@@ -125,6 +125,7 @@
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import People from "./Info/People.vue";
+import helper from "@/services/HelperService.js";
 
 export default {
 	components: { People },
@@ -170,6 +171,7 @@ export default {
 		}
 
 		return {
+			helper,
 			convertSemester,
 			close,
 			newInstance,

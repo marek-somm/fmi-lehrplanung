@@ -7,14 +7,14 @@
 	>
 		<div
 			class="category"
-			v-for="(category, semester) in helper.sortObj(data.all.data)"
+			v-for="(semester) in helper.sortObj(data.all.data)"
 			:key="semester"
 		>
 			<h3>&nbsp;{{ helper.convertSemester(semester[0]) }}&nbsp;</h3>
 			<div
 				class="item"
 				:class="{ deactive: !item.active }"
-				v-for="(item, index) in category[0]"
+				v-for="(item, index) in semester[1]"
 				:key="index"
 				@click="select(item.vnr, item.semester)"
 			>
