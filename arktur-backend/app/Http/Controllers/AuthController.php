@@ -22,50 +22,46 @@ class AuthController extends Controller {
             ]
         );
 
-        # LDAP Authentification
-        if (env('LOCALHOST')) { ## Local Testing
-            $authObject = true;
-        } else { ## Production
-            $ldap = new LDAP();
-            $authObject = $ldap->auth($request->uid, $request->password);
-        }
+        $ldap = new LDAP();
+        $ldap->connect();
+        $authObject = $ldap->auth($request->uid, $request->password);
 
-        if($request->input('uid') == "guest") { # Guest user //TODO: create conatiner for guest
-            $user = User::where('uid', '=', "jg01tmp")->first();
+        if ($request->input('uid') == "guest01" || $request->input('uid') == "guest02") { # Guest user //TODO: create conatiner for guest
+            $user = User::where('uid', $request->input('uid'))->first();
 
             Auth::login($user);
             # return success
             return response([
                 'success' => true,
-                'level' => 2,
+                'level' => Auth::user()->level,
                 'uid' => Auth::user()->uid,
             ], 200);
         } else if ($authObject) {
             # Find User in Database
-            if (env('LOCALHOST')) {
-                $user = User::find(1);
-            } else { ## Production
-                $user = User::where('uid', '=', $request->input('uid'))->first();
-                $data = $ldap->directoryEntry($request->uid);
+            $user = User::where('uid', '=', $request->input('uid'))->first();
+            $data = $ldap->directory_entry($request->uid);
+            $ldap->save_data($request->uid);
 
-                if ($user == null) {
-                    User::create([
-                        'uid' => $data["uid"],
-                        'email' => $data["mail"],
-                        'forename' => $data['fsufirstname'],
-                        'surname' => $data['fsucompletesurname'],
-                        'salutation' => $data['thuedusalutation'],
-                        'displayname' => $data['displayname']
-                    ]);
-                    $user = User::where('uid', '=', $request->input('uid'))->first();
-                }
+            if ($user == null) {
+                User::create([
+                    'uid' => $data["uid"],
+                    'email' => $data["mail"],
+                    'forename' => $data['fsufirstname'],
+                    'surname' => $data['fsucompletesurname'],
+                    'salutation' => $data['thuedusalutation'],
+                    'displayname' => $data['displayname']
+                ]);
+                $user = User::where('uid', '=', $request->input('uid'))->first();
             }
+
+            $ldap->close();
+
             # Login user
             Auth::login($user);
             # return success
             return response([
                 'success' => true,
-                'level' => 2,
+                'level' => Auth::user()->level,
                 'uid' => Auth::user()->uid,
             ], 200);
         }
@@ -91,7 +87,7 @@ class AuthController extends Controller {
             return response([
                 'success' => true,
                 'level' => 2,
-                'uid' => Auth::user()->name
+                'uid' => Auth::user()->uid
             ], 200);
         }
         return response([

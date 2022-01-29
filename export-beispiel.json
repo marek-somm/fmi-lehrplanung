@@ -1,0 +1,172 @@
+[
+	{
+		"module": "FMI-IN0025",
+		"pnr": [
+			{
+				"pnr": 50251,
+				"events": [
+					{
+						"id": 4185,
+						"vnr": 18981,
+						"semester": 20211,
+						"title": "ONLINE im WS 2020/21: Grundlagen informatischer Probleml\u00f6sung - Algorithmische Probleml\u00f6sung",
+						"active": true,
+						"sws": 2,
+						"type": "Vorlesung",
+						"targets": null,
+						"rotation": 2,
+						"changed": true,
+						"pivot": {
+							"module_id": 499,
+							"event_id": 4185,
+							"pnr": 50251,
+							"description": null,
+							"title": "Grundlagen informatischer Probleml\u00f6sung: Vorlesung"
+						}
+					}
+				]
+			},
+			{
+				"pnr": 50252,
+				"events": [
+					{
+						"id": 4184,
+						"vnr": 18982,
+						"semester": 20211,
+						"title": "ONLINE im WS 2020/21: Grundlagen informatischer Probleml\u00f6sung - Grundlagen der Programmierung",
+						"active": true,
+						"sws": 2,
+						"type": "Praktikum",
+						"targets": null,
+						"rotation": 2,
+						"changed": true,
+						"pivot": {
+							"module_id": 499,
+							"event_id": 4184,
+							"pnr": 50252,
+							"description": null,
+							"title": "Grundlagen informatischer Probleml\u00f6sung: Praktikum"
+						}
+					},
+					{
+						"id": 4186,
+						"vnr": 19081,
+						"semester": 20211,
+						"title": "PRAESENZ (PRESENCE) im WS 2020/21: Grundlagen informatischer Probleml\u00f6sung - Grundlagen der Programmierung",
+						"active": true,
+						"sws": 2,
+						"type": "\u00dcbung",
+						"targets": null,
+						"rotation": 2,
+						"changed": true,
+						"pivot": {
+							"module_id": 499,
+							"event_id": 4186,
+							"pnr": 50252,
+							"description": null,
+							"title": "Grundlagen informatischer Probleml\u00f6sung: Praktikum"
+						}
+					},
+					{
+						"id": 4187,
+						"vnr": 76735,
+						"semester": 20211,
+						"title": "ONLINE im WS 2020/21: Grundlagen informatischer Probleml\u00f6sung - Grundlagen der Programmierung",
+						"active": true,
+						"sws": 2,
+						"type": "Vorlesung",
+						"targets": null,
+						"rotation": 2,
+						"changed": true,
+						"pivot": {
+							"module_id": 499,
+							"event_id": 4187,
+							"pnr": 50252,
+							"description": null,
+							"title": "Grundlagen informatischer Probleml\u00f6sung: Praktikum"
+						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"module": "FMI-IN0001",
+		"pnr": [
+			{
+				"module": "FMI-IN0025",
+				"pnr": 50011,
+				"events": [
+					{
+						"id": 4188,
+						"vnr": 23013,
+						"semester": 20220,
+						"title": "ONLINE im SoSe 21: Algorithmen und Datenstrukturen",
+						"active": true,
+						"sws": 4,
+						"type": "Vorlesung",
+						"targets": null,
+						"rotation": 2,
+						"changed": true,
+						"pivot": {
+							"module_id": 476,
+							"event_id": 4188,
+							"pnr": 50011,
+							"description": null,
+							"title": "Algorithmen und Datenstrukturen: Vorlesung"
+						}
+					},
+					{
+						"id": 4189,
+						"vnr": 9745,
+						"semester": 20220,
+						"title": "ONLINE im SoSe 21: Algorithmen und Datenstrukturen",
+						"active": true,
+						"sws": 2,
+						"type": "\u00dcbung",
+						"targets": null,
+						"rotation": 2,
+						"changed": true,
+						"pivot": {
+							"module_id": 476,
+							"event_id": 4189,
+							"pnr": 50011,
+							"description": null,
+							"title": "Algorithmen und Datenstrukturen: \u00dcbung"
+						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"module": "FMI-IN0096",
+		"pnr": [
+			{
+				"module": "FMI-IN0001",
+				"pnr": 50961,
+				"events": [
+					{
+						"id": 4192,
+						"vnr": 10078,
+						"semester": 20220,
+						"title": "ONLINE im SoSe 21: Algorithmische Grundlagen des maschinellen Lernens (Statistische Lerntheorie)",
+						"active": true,
+						"sws": 6,
+						"type": "Vorlesung/\u00dcbung",
+						"targets": null,
+						"rotation": 2,
+						"changed": true,
+						"pivot": {
+							"module_id": 568,
+							"event_id": 4192,
+							"pnr": 50961,
+							"description": null,
+							"title": "Algorithmische Grundlagen des maschinellen Lernens: Vorlesung/\u00dcbung"
+						}
+					}
+				]
+			}
+		]
+	}
+]

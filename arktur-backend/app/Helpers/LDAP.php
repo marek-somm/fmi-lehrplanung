@@ -5,7 +5,7 @@ namespace App\Helpers;
 use Exception;
 
 class LDAP {
-	public $conn, $config, $dn;
+	private $conn, $config, $dn;
 
 	public function __construct() {
 		$this->config = [
@@ -15,8 +15,12 @@ class LDAP {
 			'port' => env('LDAP_PORT', 636)
 		];
 	}
-	public function auth($uname, $pwd) {
+
+	public function connect() {
 		$this->conn = ldap_connect($this->config['host'], $this->config['port']);
+	}
+
+	public function auth($uname, $pwd) {
 		$bindDn = "uid=$uname," . $this->config['base_dn'];
 		ldap_set_option($this->conn, LDAP_OPT_PROTOCOL_VERSION, 3);
 		try{
@@ -27,7 +31,7 @@ class LDAP {
 		}
 	}
 
-	public function directoryEntry($username) {
+	public function directory_entry($username) {
 		$filter = "(objectclass=*)";
 		$columns = ['uid', 'mail', 'fsufirstname', 'fsucompletesurname', 'thuedusalutation', 'displayname'];
 		$result = ldap_read($this->conn, "uid=$username," . $this->config['base_dn'], $filter);
@@ -42,7 +46,25 @@ class LDAP {
 				}
 			}
 		}
-		ldap_close($this->conn);
 		return $data;
+	}
+
+	public function save_data($username) {
+		    //$result = ldap_read($conn, $dn, $filter);
+            //$entries = ldap_get_entries($conn, $result);
+		    //$json = json_encode($entries, JSON_UNESCAPED_UNICODE);
+            //file_put_contents("data/".$uid.".json", $json);
+		$filter = "(objectclass=*)";
+		$result = ldap_read($this->conn, "uid=$username," . $this->config['base_dn'], $filter);
+		if ($result) {
+			$entries = ldap_get_entries($this->conn, $result);
+			$json = json_encode($entries, JSON_UNESCAPED_UNICODE);
+
+			file_put_contents("data/".$username.".json", $json);
+		}
+	}
+
+	public function close() {
+		ldap_close($this->conn);
 	}
 }

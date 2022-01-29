@@ -57,7 +57,7 @@ class SearchController extends Controller {
             'semester' => ['required', 'integer']
         ]);
 
-        $event = Event::select('id', 'active', 'rotation', 'semester', 'sws', 'targets', 'title', 'type', 'vnr')
+        $event = Event::select('id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr')
             ->where('vnr', $request->vnr)
             ->where('semester', $request->semester)
             ->get()
