@@ -5,7 +5,7 @@
 			<div class="button-bar">
 				<button class="new button" @click="newEvent">Neu</button>
 				<button class="close button" @click="close">X</button>
-				<button class="delete button" @click="editEvent">Ändern</button>
+				<button class="delete button" @click="editEvent" v-if="user.level == 2">Ändern</button>
 			</div>
 		</div>
 		<div class="info-content" v-if="selected">
@@ -41,9 +41,6 @@
 							: "Nicht angegeben"
 					}}
 				</p>
-				<p class="attrib" v-if="selected.data.content.target">
-					Zielgruppe: {{ selected.data.content.target }}
-				</p>
 			</div>
 			<People :people="selected.data.people" />
 			<h3><u>Module:</u></h3>
@@ -66,11 +63,12 @@
 </template>
 
 <script>
-import { onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import People from "./Info/People.vue";
 import search from "@/services/SearchService.js";
 import helper from "@/services/HelperService.js";
+import { useStore } from 'vuex';
 
 export default {
 	components: { People },
@@ -81,6 +79,9 @@ export default {
 	emits: ["close", "relation"],
 	setup(props, { emit }) {
 		const router = useRouter();
+		const store = useStore();
+
+		const user = computed(() => store.state.User);
 
 		onMounted(() => {
 			window.addEventListener("keyup", function (event) {
@@ -134,6 +135,7 @@ export default {
 			editEvent,
 			toggleAktiv,
 			view,
+			user
 		};
 	},
 };

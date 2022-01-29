@@ -17,26 +17,26 @@
 			<div class="head-bottom">
 				<router-link
 					class="link"
-					v-if="level > 0"
+					v-if="user.level > 0"
 					:to="{ name: 'Veranstaltungen' }"
 					>Veranstaltungen</router-link
 				>
-				<router-link class="link" v-if="level > 0" :to="{ name: 'Module' }"
+				<router-link class="link" v-if="user.level > 0" :to="{ name: 'Module' }"
 					>Module</router-link
 				>
-				<router-link class="link" v-if="level >= 2" :to="{ name: 'Export' }"
+				<router-link class="link" v-if="user.level >= 2" :to="{ name: 'Export' }"
 					>Export</router-link
 				>
-				<router-link class="link" v-if="!login" :to="{ name: 'Login' }"
+				<router-link class="link" v-if="!user.login" :to="{ name: 'Login' }"
 					>Anmelden</router-link
 				>
-				<router-link class="link" v-if="login" :to="{ name: 'Logout' }"
+				<router-link class="link" v-if="user.login" :to="{ name: 'Logout' }"
 					>Abmelden</router-link
 				>
 			</div>
-			<div class="uid-wrapper" v-if="login">
+			<div class="uid-wrapper" v-if="user.login">
 				Angemeldet&nbsp;als&nbsp;
-				<div class="uid">{{ uid }}</div>
+				<div class="uid">{{ user.uid }}</div>
 			</div>
 		</div>
 	</div>
@@ -77,9 +77,8 @@ export default {
 		const store = useStore();
 		const route = useRoute();
 
-		const login = computed(() => store.state.User.login);
-		const level = computed(() => store.state.User.level);
-		const uid = computed(() => store.state.User.uid);
+		const user = computed(() => store.state.User);
+
 		const path = computed(() => route.path);
 
 		function getPathElements() {
@@ -94,9 +93,7 @@ export default {
 		}
 
 		return {
-			login,
-			level,
-			uid,
+			user,
 			path,
 			getPathElements,
 		};

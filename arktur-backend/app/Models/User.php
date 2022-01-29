@@ -18,7 +18,8 @@ class User extends Authenticatable
         'forename',
         'surname',
         'salutaion',
-        'displayname'
+        'displayname',
+        'level'
     ];
 
     protected $casts = [
