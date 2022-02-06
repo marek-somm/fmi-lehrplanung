@@ -33,7 +33,7 @@ class LDAP {
 
 	public function directory_entry($username) {
 		$filter = "(objectclass=*)";
-		$columns = ['uid', 'mail', 'fsufirstname', 'fsucompletesurname', 'thuedusalutation', 'displayname'];
+		$columns = ['uid', 'mail', 'fsufirstname', 'fsucompletesurname', 'thuedusalutation', 'displayname', 'edupersonaffiliation'];
 		$result = ldap_read($this->conn, "uid=$username," . $this->config['base_dn'], $filter);
 		$data = [];
 		if ($result) {

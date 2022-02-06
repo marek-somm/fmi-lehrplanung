@@ -25,5 +25,4 @@ pnpm-debug.log*
 package-lock.json
 package.json
 create_databse/tempCodeRunnerFile.py
-
-\data
+create_databse_new/data/
