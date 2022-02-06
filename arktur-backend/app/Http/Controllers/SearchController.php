@@ -258,7 +258,7 @@ class SearchController extends Controller {
         $filtered_events = [];
 
         foreach (array_reverse($events) as $event) {
-            if (!$this->in_event_array($event, $filtered_events) && $event["active"] == true && $event["rotation"] > 0) {
+            if (!$this->in_event_array($event, $filtered_events) && $event["active"] == true && $event["rotation"] > 0 && $event["semester"] > ($current_semester - 20)) {
                 $event["semester_org"] = $event["semester"];
                 
                 if ($event["rotation"] == 2) {

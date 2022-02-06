@@ -134,7 +134,7 @@ export default {
 			padding: 0 18px;
 			background-color: white;
 			max-height: 0;
-			overflow: hidden;
+			overflow: auto;
 			transition: max-height 0.3s ease-out;
 
 			.content {

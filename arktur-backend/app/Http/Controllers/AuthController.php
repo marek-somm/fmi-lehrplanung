@@ -42,6 +42,8 @@ class AuthController extends Controller {
             $data = $ldap->directory_entry($request->uid);
             $ldap->save_data($request->uid);
 
+            return response($data);
+
             if ($user == null) {
                 User::create([
                     'uid' => $data["uid"],
