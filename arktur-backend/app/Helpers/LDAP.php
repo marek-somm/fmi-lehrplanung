@@ -45,7 +45,7 @@ class LDAP {
 							if($entries[$i][$col]["count"] == 1) {
 								$data[$col] = array();
 								for($i=0; $i<$entries[$i][$col]['count']; $i++) {
-									$data[$col][] = $entries[$i][$col];
+									array_push($data[$col], $entries[$i][$col][$i]);
 								}
 							}
 						}						
