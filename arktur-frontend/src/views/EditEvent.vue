@@ -116,7 +116,7 @@
 		</div>
 
 		<div class="button-bar">
-			<button class="save button" role="button" @click="createEvent">
+			<button class="save button" role="button" @click="saveEvent">
 				Speichern
 			</button>
 			<button class="cancel button" role="button" @click="cancel">
@@ -146,6 +146,7 @@ export default {
 	setup(props) {
 		const data = reactive({
 			existing: false,
+			id: null,
 			title: {
 				value: null,
 			},
@@ -223,6 +224,7 @@ export default {
 				if (event.status == 404) {
 					await router.push({ name: "Home" });
 				} else {
+					data.id = event.data.content.id;
 					data.title.value = event.data.content.title;
 					data.sws.value = event.data.content.sws;
 					data.rotation.value = helper.convertTurnus(
@@ -298,7 +300,7 @@ export default {
 			data.exams.splice(data.exams.indexOf(exam), 1);
 		}
 
-		function createEvent() {
+		function saveEvent() {
 			let createEventBool = true;
 			if (
 				data.title.value &&
@@ -320,12 +322,13 @@ export default {
 				createEventBool = false;
 			}
 			if (createEventBool) {
-				create();
+				save();
 			}
 		}
 
-		async function create() {
-			let response = await update.createEvent({
+		async function save() {
+			let response = await update.saveEvent({
+				id: data.id,
 				vnr: props.vnr,
 				sem: data.semester.value,
 				title: data.title.value,
@@ -338,13 +341,13 @@ export default {
 			});
 			if (response) {
 				if (response.status == 422) {
-					alert("Diese Veranstaltung existiert so bereits.");
+					alert("Leider ist ein Fehler aufgetreten. Bitte kontaktieren Sie mit Ihrem Anliegen das Prüfungsamt.");
 				} else if ((response.status = 200)) {
 					alert("Die Verasntaltung wurde erfolgreich angelegt");
 					router.push({ name: "Home" });
 				}
 			} else {
-				alert("Ein unerwarteter Fehler ist aufgetreten.");
+				alert("Ein unerwarteter Fehler ist aufgetreten. Bitte kontaktieren Sie das Prüfungsamt.");
 			}
 		}
 
@@ -361,8 +364,7 @@ export default {
 			let value = confirm("Wollen Sie die Veranstaltung wirklich löschen?");
 			if (value == true) {
 				await update.deleteEvent({
-					vnr: Number(props.vnr),
-					sem: props.sem,
+					id: data.id,
 				});
 				router.push({ name: "Home" });
 			}
@@ -380,7 +382,7 @@ export default {
 			selectValue,
 			addExam,
 			removeExam,
-			createEvent,
+			saveEvent,
 			cancel,
 			deleteEvent,
 			convertSemester,

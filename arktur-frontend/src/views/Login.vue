@@ -33,6 +33,7 @@
 					{{ data.error }}
 				</div>
 			</div>
+			{{ data.output }}
 		</div>
 	</div>
 </template>
@@ -50,6 +51,7 @@ export default {
 			usernameInput: "",
 			passwordInput: "",
 			error: null,
+			output: null
 		});
 
 		if (store.state.User.login) {
@@ -69,6 +71,8 @@ export default {
 				store.dispatch('User/setLevel', answer.data.level)
 				store.dispatch('User/setUid', answer.data.uid)
 				router.push({ name: "Home" });
+			} else {
+				data.output = answer.data
 			}
 		}
 

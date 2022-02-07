@@ -34,6 +34,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/user/events', [SearchController::class, 'getUserEvents']);
 
         Route::put('/add/event', [UpdateController::class, 'addEvent']);
+        Route::put('/update/event', [UpdateController::class, 'updateEvent']);
         Route::put('/remove/event', [UpdateController::class, 'removeEvent']);
     });
 });

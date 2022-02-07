@@ -81,38 +81,61 @@ class UpdateController extends Controller {
         return response("success", 200);
     }
 
-    function removeEvent(Request $request) {
+    function updateEvent(Request $request) {
         $request->validate([
+            'id' => ['integer', 'required'],
             'vnr' => ['integer','required'],
-            'sem' => ['integer','required']
+            'sem' => ['integer','required'],
+            'title' => ['string', 'required'],
+            'sws' => ['integer', 'required'],
+            'rotation' => ['integer', 'required'],
+            'type' => ['string', 'required'],
+            'people' => ['array', 'required'],
+            'exams' => ['array', 'required']
         ]);
 
-        $exists = count(Event::where("vnr", $request->vnr)
-            ->where("semester", $request->sem)    
+        $event = Event::where("id", $request->id)
+            ->get()
+            ->first();
+
+        if(!$event) {
+            return response("Element does not exist", 422);
+        }
+
+        EventUser::where("event_id", $request->id)
+            ->delete();
+        
+        EventModule::where("event_id", $request->id)
+            ->delete();
+        
+        Event::where("id", $request->id)
+            ->delete();
+        
+        return $this->addEvent($request);
+    }
+
+    function removeEvent(Request $request) {
+        $request->validate([
+            'id' => ['integer','required']
+        ]);
+
+        $exists = count(Event::where("id", $request->id)
             ->get());
 
         if(!$exists) {
             return response("Element does not exists", 422);
         }
-
-        $event_id = Event::select('id')
-            ->where("vnr", $request->vnr)
-            ->where("semester", $request->sem)
-            ->get()
-            ->first()
-            ->id;
         
-        EventUser::where("event_id", $event_id)
+        EventUser::where("event_id", $request->id)
             ->delete();
         
-        EventModule::where("event_id", $event_id)
+        EventModule::where("event_id", $request->id)
             ->delete();
         
-        Event::where("id", $event_id)
+        Event::where("id", $request->id)
             ->delete();
 
-        $exists = count(Event::where("vnr", $request->vnr)
-            ->where("semester", $request->sem)    
+        $exists = count(Event::where("id", $request->id)
             ->get());
 
         if(!$exists) {
