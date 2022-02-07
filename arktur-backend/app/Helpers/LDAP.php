@@ -41,7 +41,7 @@ class LDAP {
 			if ($entries['count'] > 0) {
 				for ($i = 0; $i < $entries['count']; $i++) {
 					foreach ($columns as $col) {
-						$data[$col] = array_key_exists($col, $entries[$i]) ? $entries[$i][$col][0] : '';
+						$data[$col] = array_key_exists($col, $entries[$i]) ? $entries[$i][$col] : '';
 					}
 				}
 			}
