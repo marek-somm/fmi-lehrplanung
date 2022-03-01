@@ -33,7 +33,6 @@
 					{{ data.error }}
 				</div>
 			</div>
-			{{ data.output }}
 		</div>
 	</div>
 </template>
