@@ -195,8 +195,8 @@ export default {
 				],
 			},
 			semester: {
-				value: 20211,
-				list: [20211, 20220, 20221, 20230, 20231, 20240],
+				value: null,
+				list: null
 			},
 			target: {
 				value: "",
@@ -239,12 +239,13 @@ export default {
 					});
 
 					//semester list
-					let sem1 = helper.addTurnus(sem, event.data.content.rotation);
-					let sem2 = helper.addTurnus(sem1, event.data.content.rotation);
-					let sem3 = helper.addTurnus(sem2, event.data.content.rotation);
-					let sem4 = helper.addTurnus(sem3, event.data.content.rotation);
-					data.semester.list = [sem, sem1, sem2, sem3, sem4];
-					data.semester.value = sem;
+					let currentSem = helper.getCurrentSemester();
+					let sem1 = helper.addTurnus(currentSem, 1);
+					let sem2 = helper.addTurnus(sem1, 1);
+					let sem3 = helper.addTurnus(sem2, 1);
+					let sem4 = helper.addTurnus(sem3, 1);
+					data.semester.list = [sem1, sem2, sem3, sem4];
+					data.semester.value = data.semester.list[0];
 				}
 			}
 		}

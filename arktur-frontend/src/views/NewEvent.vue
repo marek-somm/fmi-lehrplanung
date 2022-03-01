@@ -186,8 +186,8 @@ export default {
 				],
 			},
 			semester: {
-				value: 20211,
-				list: [20211, 20220, 20221, 20230, 20231, 20240],
+				value: null,
+				list: null,
 			},
 			target: {
 				value: "",
@@ -205,6 +205,15 @@ export default {
 
 		onMounted(() => {
 			getPersons();
+
+			let currentSem = helper.getCurrentSemester();
+			let sem1 = helper.addTurnus(currentSem, 1);
+			let sem2 = helper.addTurnus(sem1, 1);
+			let sem3 = helper.addTurnus(sem2, 1);
+			let sem4 = helper.addTurnus(sem3, 1);
+			data.semester.list = [sem1, sem2, sem3, sem4];
+			data.semester.value = data.semester.list[0];
+
 			getVeranstaltung(props.vnr, props.sem);
 		});
 
@@ -224,19 +233,6 @@ export default {
 				event.data.modules.forEach((module) => {
 					addExam(module);
 				});
-
-				//semester list
-				let currentSem = helper.getCurrentSemester();
-				let compensation = 0
-				if(event.data.content.rotation == 2 && sem % 10 != helper.getCurrentSemester() % 10) {
-					compensation = 1
-				}
-				let sem1 = helper.addTurnus(currentSem, event.data.content.rotation - compensation);
-				let sem2 = helper.addTurnus(sem1, event.data.content.rotation);
-				let sem3 = helper.addTurnus(sem2, event.data.content.rotation);
-				let sem4 = helper.addTurnus(sem3, event.data.content.rotation);
-				data.semester.list = [sem1, sem2, sem3, sem4];
-				data.semester.value = sem1
 			}
 		}
 
@@ -330,16 +326,16 @@ export default {
 				people: data.person.list,
 				exams: data.exams,
 			});
-			console.log(response)
-			if(response) {
-				if(response.status == 422) {
+			console.log(response);
+			if (response) {
+				if (response.status == 422) {
 					alert("Diese Veranstaltung existiert so bereits.");
-				} else if(response.status = 200) {
+				} else if ((response.status = 200)) {
 					alert("Die Veranstaltung wurde erfolgreich angelegt");
 					router.push({ name: "Home" });
 				}
 			} else {
-				alert("Ein unerwarteter Fehler ist aufgetreten.")
+				alert("Ein unerwarteter Fehler ist aufgetreten.");
 			}
 		}
 
