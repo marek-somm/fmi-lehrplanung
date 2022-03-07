@@ -118,7 +118,7 @@ class SearchController extends Controller {
 
         $filter = json_decode($request->filter, true);
 
-        if ($filter["inactive"] == False) {
+        if (count($filter) > 0 && $filter["inactive"] == False) {
             $events = Event::select('active', 'semester', 'title', 'vnr')
                 ->where('active', "1")
                 ->where(function ($query) use ($request) {
