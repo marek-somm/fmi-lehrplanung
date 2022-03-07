@@ -3,27 +3,27 @@
 		<h1 class="title">Willkommen bei Arktur!</h1>
 		<h2>Was ist Arktur?</h2>
 		<p class="textbox">
-			Arktur ist ein Planungstool für Lehveranstaltungen an der Fakultät für Mathematik und Informatik. Mit diesem Tool soll es für Lehrende möglich sein, ihre Veranstaltungen ganz einfach im vorraus dem Prüfungsamt zu übermitteln.
+			Arktur ist ein Planungstool für Lehveranstaltungen an der Fakultät für Mathematik und Informatik. Mit diesem Tool können Sie als lehrende Person Ihre Veranstaltungen für die kommenden Semester ganz einfach dem Prüfungsamt mitteilen.
 		</p>
 		<h2>Wie funktioniert Arktur?</h2>
 		<p class="textbox">
 			Für Lehrende gibt es zwei Möglichkeiten Lehrveranstaltungen anzulegen:
 		</p>
 		<p class="textbox">
-			1. Eine neue Lehrveranstaltung anlegen<br>
-			Um eine neue Lehrveranstaltung anzulegen, muss zunächst in der Veranstaltungsübersicht nach einer ähnlichen oder alten Veranstaltung gesucht werden. Nachdem diese Ausgewählt wurde, kann mit dem Button "New" eine Neue Veranstaltung angelegt werden. Die Daten werden dabei automatisch von der alten Vorlesung übernommen wenn diese nicht verändert werden. 
+			1. Basierend auf einer vergangenen Veranstaltung:<br>
+			Wenn Sie bereits eine ähnliche Lehrveranstaltung angeboten haben, können Sie ganz einfach in der Veranstaltungsübersicht nach dieser suchen. Anschließend können Sie in der Veranstaltungsübersicht über den Knopf "Neu" eine Veranstaltung mit bereits ausgefüllten Informationen, basierend auf Ihrer Alten, anlegen.
 		</p>
 		<p class="textbox">
-			2. Eine alte Lehrveranstaltung editieren<br>
-			Um eine alte oder bereits angelegte Lehrveranstaltung zu editieren, wird zunächst in der Veranstaltungsübersicht nach der entsprechenden Veranstaltung gesucht. Nachdem diese Ausgewählt wurde, kann diese dem Button "Edit" editiert werden. Alle Daten die nicht geändert werden bleiben erhalten.
+			2. Eine neue Veranstaltung:<br>
+			Um eine neue Lehrveranstaltung anzulegen, wechseln Sie ganz einfach in die Veranstaltungsübersicht und klciken auf den Knopf "Neu" links neben der Suchleiste. Anschließend können Sie eine vollkommen neue Veranstaltung anlegen. Vergessen Sie nicht sich selbst als Person hinzuzufügen, damit die Veranstaltung anschließend auf Ihrer Startseite angezeigt wird.
 		</p>
-		<h2>Wer kann Arktur verwenden?</h2>
 		<p class="textbox">
-			Arktur ist in erster Linie ein Werkzeug um die Kommunikation zwischen Lehrenden und Prüfungsamt zu erleichtern, daher haben gegenwärtig nur diese beiden Personengruppen Zugriff auf das Arktur System.
+			Auf Ihrer Startseite sehen Sie Ihre eigenen Veranstaltungen, sowohl Vergangene, als auch Kommende. Dort werden Ihnen ebenfalls zukünftige Veranstaltungen vorgeschlagen, basierend auf den vergangenen 4 Semestern. Diese sind ausgegraut und müssen mittles klick erst hinzugefügt werden, bevor diese als Veranstaltung angezeigt wird.<br>
+			Dort können Sie Ihre kommenden Veranstaltungen über den Knopf "Ändern" auf der jeweiligen Veranstaltungsübersicht zu Bearbeiten. Vergangenen und laufende Veranstaltungen lassen sich nur noch vom Prüfungsamt ändern.
 		</p>
 		<h2>Woher kommt Arktur?</h2>
 		<p class="textbox">
-			Arktur wurde im Auftrag der Fakultät von Studierenden im Umfang des Softwareentwicklungsprojektes geschrieben.
+			Arktur ist im Auftrag der Fakultät von Studierenden im Umfang des Softwareentwicklungsprojektes gestartet worden. Anschließend wurde es von Marek Sommerfeld auf einen benutzbaren Stand gebracht.
 		</p>
 	</div>
 </template>
