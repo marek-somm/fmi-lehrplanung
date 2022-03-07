@@ -50,7 +50,7 @@ const routes = [
 		beforeEnter: checkAccess
 	},
 	{
-		path: '/neu/:vnr?/:sem?',
+		path: '/neu/:vnr?/:sem?/:sel?',
 		name: 'Neu',
 		component: NewEvent,
 		beforeEnter: checkAccess,

@@ -1,8 +1,9 @@
 <template>
 	<div class="veranstaltungen-container">
 		<Searchbar
-			@input="debounceInput"
+			@update="debounceInput"
 			@toggleFilter="toggleFilter"
+			@changeFilter="changeFilter"
 			placeholder="Veranstaltungstitel"
 		/>
 		<div class="veranstaltungen-content">
@@ -100,10 +101,11 @@ export default {
 			}
 		}
 
-		async function searchVeranstaltung(value) {
+		async function searchVeranstaltung(value, filter = {inactive: false}) {
 			veranstaltungen.all = await search.searchEvent(
 				value,
-				veranstaltungen.limit
+				veranstaltungen.limit,
+				filter
 			);
 			veranstaltungen.count = 0
 			Object.keys(veranstaltungen.all.data).forEach(semester => {
@@ -113,6 +115,10 @@ export default {
 
 		function toggleFilter(value) {
 			data.filterActive = value;
+		}
+
+		function changeFilter(filter) {
+			searchVeranstaltung(data.input, filter)
 		}
 
 		return {
@@ -126,6 +132,7 @@ export default {
 			veranstaltungen,
 			loadMore,
 			toggleFilter,
+			changeFilter
 		};
 	},
 };

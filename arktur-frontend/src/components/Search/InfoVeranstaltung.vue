@@ -5,7 +5,7 @@
 			<div class="button-bar">
 				<button class="new button" @click="newEvent">Neu</button>
 				<button class="close button" @click="close">X</button>
-				<button class="delete button" @click="editEvent" v-if="user.level == 2">Ändern</button>
+				<button class="delete button" @click="editEvent" v-if="user.level == 2 || isOwnEvent()">Ändern</button>
 			</div>
 		</div>
 		<div class="info-content" v-if="selected">
@@ -128,6 +128,10 @@ export default {
 			emit("relation", relation);
 		}
 
+		function isOwnEvent() {
+			return props.selected.data.content.semester > helper.getCurrentSemester() && props.selected.data.content.own
+		}
+
 		return {
 			helper,
 			close,
@@ -135,7 +139,8 @@ export default {
 			editEvent,
 			toggleAktiv,
 			view,
-			user
+			user,
+			isOwnEvent
 		};
 	},
 };

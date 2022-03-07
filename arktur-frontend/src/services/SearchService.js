@@ -16,10 +16,11 @@ export default {
 		return rs.get("get/event", payload)
 	},
 
-	async searchEvent(value, limit) {
+	async searchEvent(value, limit, filter="") {
 		const payload = makePayload({
 			value: value,
-			limit: limit
+			limit: limit,
+			filter: filter
 		})
 		let result = await rs.get("search/event", payload);
 		return result

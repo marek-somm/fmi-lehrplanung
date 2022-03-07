@@ -76,6 +76,7 @@ export default {
 					params: {
 						vnr: event["vnr"],
 						sem: event["semester_org"],
+						sel: event["semester"]
 					},
 				});
 			} else {

@@ -133,7 +133,8 @@ export default {
 	components: { SearchPanel },
 	props: {
 		vnr: String,
-		sem: String,
+		sem: Number,
+		sel: Number
 	},
 	setup(props) {
 		const data = reactive({
@@ -212,7 +213,8 @@ export default {
 			let sem3 = helper.addTurnus(sem2, 1);
 			let sem4 = helper.addTurnus(sem3, 1);
 			data.semester.list = [sem1, sem2, sem3, sem4];
-			data.semester.value = data.semester.list[0];
+			data.semester.value = props.sel ? props.sel : data.semester.list[0]
+			console.log(props)
 
 			getVeranstaltung(props.vnr, props.sem);
 		});

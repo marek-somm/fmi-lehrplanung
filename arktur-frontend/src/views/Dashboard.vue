@@ -68,6 +68,7 @@ export default {
 			let events = await search.getUserEvents(helper.getCurrentSemester());
 			data.events.data = events.data;
 			data.events.selected = Object.keys(data.events.data["future"]).length
+			console.log(events)
 		}
 
 		async function updateVeranstaltung(vnr, semester) {

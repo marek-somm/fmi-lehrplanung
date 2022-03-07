@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Rules\Search;
 use App\Rules\Username;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SearchController extends Controller {
     private function semester_to_string($semester) {
@@ -31,6 +32,15 @@ class SearchController extends Controller {
         }
 
         return $result;
+    }
+
+    private function in_sub_array($needle, $haystack, $identifier) {
+        foreach ($haystack as $elem) {
+            if ($needle == $elem[$identifier]) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private function in_module_array($module, $array) {
@@ -72,6 +82,19 @@ class SearchController extends Controller {
             ->select('displayname', 'forename', 'surname', 'email')
             ->get();
 
+        $users = Event::find($event->id)
+            ->users()
+            ->select('uid')
+            ->get()
+            ->toArray();
+
+        $user = Auth::user()->uid;
+
+        $event["own"] = false;
+        if ($this->in_sub_array($user, $users, 'uid')) {
+            $event["own"] = true;
+        }
+
         $modules = Event::find($event->id)
             ->modules()
             ->select('modulecode')
@@ -89,15 +112,32 @@ class SearchController extends Controller {
     public function searchEvent(Request $request) {
         $request->validate([
             'value' => [new Search],
-            'limit' => ['integer']
+            'limit' => ['integer'],
+            'filter'
         ]);
 
-        $events = Event::select('active', 'semester', 'title', 'vnr')
-            ->where('title', 'LIKE', '%' . $request->value . '%')
-            ->orWhere('vnr', 'LIKE', '%' . $request->value . '%')
-            ->limit($request->limit)
-            ->orderBy('semester', 'desc')
-            ->get();
+        $filter = json_decode($request->filter, true);
+
+        if ($filter["inactive"] == False) {
+            $events = Event::select('active', 'semester', 'title', 'vnr')
+                ->where('active', "1")
+                ->where(function ($query) use ($request) {
+                    $query->where('title', 'LIKE', '%' . $request->value . '%')
+                        ->orWhere('vnr', 'LIKE', '%' . $request->value . '%');
+                })
+                ->limit($request->limit)
+                ->orderBy('semester', 'desc')
+                ->get();
+        } else {
+            $events = Event::select('active', 'semester', 'title', 'vnr')
+                ->where(function ($query) use ($request) {
+                    $query->where('title', 'LIKE', '%' . $request->value . '%')
+                        ->orWhere('vnr', 'LIKE', '%' . $request->value . '%');
+                })
+                ->limit($request->limit)
+                ->orderBy('semester', 'desc')
+                ->get();
+        }
 
         $response = $this->group_by("semester", $events);
 
@@ -260,7 +300,8 @@ class SearchController extends Controller {
         foreach (array_reverse($events) as $event) {
             if (!$this->in_event_array($event, $filtered_events) && $event["active"] == true && $event["rotation"] > 0 && $event["semester"] > ($current_semester - 20)) {
                 $event["semester_org"] = $event["semester"];
-                
+                $event["own"] = true;
+
                 if ($event["rotation"] == 2) {
                     if ($event["semester"] % 10 == 0) {
                         $event["semester"] = $current_semester + ($current_semester % 10 == 0 ? 10 : 9);

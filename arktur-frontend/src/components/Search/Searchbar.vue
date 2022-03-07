@@ -1,29 +1,47 @@
 <template>
 	<div class="searchbar--container">
 		<div class="searchbar-wrapper">
-			<a v-if="data.route.name == 'Veranstaltungen'" class="filter-button" @click="createNewEvent">Neu</a>
+			<a
+				v-if="data.route.name == 'Veranstaltungen'"
+				class="filter-button"
+				@click="createNewEvent"
+				>Neu</a
+			>
 			<input
 				class="searchbar"
 				ref="searchbar"
 				v-model="data.input"
+				@input="updateModel"
 				:placeholder="placeholder"
 			/>
-			<a class="filter-button" @click="toggleFilter"
-				>{{ data.filterActive ? "&#x02c4;" : "&#x02c5;" }} Filter</a
+			<a
+				class="filter-button"
+				@click="toggleFilter"
+				:class="{ 'filter-active': data.filterActive }"
+				>Filter</a
 			>
 		</div>
 		<div class="filter" :class="{ show: data.filterActive }">
-			<select>
-				<option value="info">Informatik</option>
-				<option value="info">Informatik</option>
-			</select>
+			<div class="filter-item">
+				<label class="label">Studiengang: </label>
+				<select v-model="filter.study">
+					<option :value="null">Alle</option>
+					<option value="info">Informatik</option>
+					<option value="mathe">Mathematik</option>
+					<option value="bioinfo">Bioinformatik</option>
+				</select>
+			</div>
+			<div class="filter-item">
+				<label class="label">Zeige Inaktive: </label>
+				<input type="checkbox" v-model="filter.inactive">
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import { onMounted, reactive, ref, watch } from "vue";
-import { useRouter } from 'vue-router';
+import { onMounted, reactive, ref, watchEffect } from "vue";
+import { useRouter } from "vue-router";
 export default {
 	props: {
 		placeholder: String,
@@ -34,19 +52,25 @@ export default {
 		const data = reactive({
 			input: "",
 			filterActive: false,
-			route: router.currentRoute
+			route: router.currentRoute,
+		});
+		const filter = reactive({
+			study: null,
+			inactive: false,
 		});
 
-		watch(
-			() => data.input,
-			() => {
-				emit("input", data.input);
-			}
-		);
+		watchEffect(() => {
+			console.log("change")
+			emit("changeFilter", filter)
+		})
 
 		onMounted(() => {
 			searchbar.value.focus();
 		});
+
+		function updateModel() {
+			emit("update", data.input);
+		}
 
 		function toggleFilter() {
 			data.filterActive = !data.filterActive;
@@ -55,17 +79,19 @@ export default {
 
 		function createNewEvent() {
 			router.push({
-				name: 'Neu',
-				params: {
-				},
-			})
+				name: "Neu",
+				params: {},
+			});
 		}
+
 
 		return {
 			data,
+			filter,
 			searchbar,
 			toggleFilter,
 			createNewEvent,
+			updateModel,
 		};
 	},
 };
@@ -92,20 +118,41 @@ export default {
 
 		.filter-button {
 			color: white;
-			background: grayscale($color: #00000025);
+			background-color: grayscale($color: #00000025);
 			padding: 0.3rem;
+
+			&.filter-active {
+				background-color: grayscale($color: #00000055);
+			}
 
 			&:hover {
 				cursor: pointer;
-				background: grayscale($color: #00000060);
+				background-color: grayscale($color: #00000060);
 			}
 		}
 	}
 
 	.filter {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+
 		height: 0px;
 		overflow: hidden;
 		transition: all 0.2s ease;
+
+		width: max-content;
+		margin: auto;
+
+		.filter-item {
+			height: max-content;
+			margin: 0.5rem 0;
+
+			.label {
+				color: white;
+			}
+		}
 	}
 
 	.show {

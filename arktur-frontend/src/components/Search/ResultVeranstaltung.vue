@@ -13,7 +13,9 @@
 			<h3>&nbsp;{{ helper.convertSemester(semester[0]) }}&nbsp;</h3>
 			<div
 				class="item"
-				:class="{ deactive: !item.active }"
+				:class="{
+					deactive: !item.active,
+				}"
 				v-for="(item, index) in semester[1]"
 				:key="index"
 				@click="select(item.vnr, item.semester)"
@@ -50,7 +52,6 @@ export default {
 		}
 
 		function scroll(data) {
-			console.log('scroll')
 			let scrollTop = data.target.scrollTop;
 			let scrollTopMax = data.target.scrollTopMax;
 			if (scrollTopMax - (scrollTopMax / props.data.count) * 5 < scrollTop) {
