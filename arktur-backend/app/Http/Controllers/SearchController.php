@@ -179,7 +179,8 @@ class SearchController extends Controller {
     public function searchModule(Request $request) {
         $request->validate([
             'value' => [new Search],
-            'limit' => ['integer']
+            'limit' => ['integer'],
+            'filter'
         ]);
 
         $modules = Module::select('active', 'title_de', 'title_en', 'modulecode')
