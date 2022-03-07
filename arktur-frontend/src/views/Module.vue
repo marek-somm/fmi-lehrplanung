@@ -1,8 +1,9 @@
 <template>
 	<div class="module--container">
 		<Searchbar
-			@input="debounceInput"
+			@update="debounceInput"
 			@toggleFilter="toggleFilter"
+			@changeFilter="changeFilter"
 			placeholder="Modultitel/Modulcode"
 		/>
 		<div class="module-content">
