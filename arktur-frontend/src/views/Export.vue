@@ -151,6 +151,9 @@ export default {
 
 <style lang="scss" scoped>
 .export--container {
+	height: calc(100vh - 13rem);
+	overflow: auto;
+
 	.grid {
 		display: grid;
 		grid-template-columns: auto auto auto auto auto auto;

@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UpdateController;
 
@@ -25,7 +26,7 @@ Route::group(['middleware' => ['web']], function () {
     
     Route::middleware('auth:sanctum')->group(function() {
         Route::get('/search/event', [SearchController::class, 'searchEvent']);
-        Route::get('/get/event', [SearchController::class, 'getEvent']);
+        Route::get('/get/event', [EventController::class, 'getEvent']);
         Route::get('/search/module', [SearchController::class, 'searchModule']);
         Route::get('/get/module', [SearchController::class, 'getModule']);
         Route::get('/get/new', [SearchController::class, 'getNewEntries']);

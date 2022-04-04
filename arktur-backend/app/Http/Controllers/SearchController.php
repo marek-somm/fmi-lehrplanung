@@ -11,19 +11,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class SearchController extends Controller {
-    private function semester_to_string($semester) {
-        if ($semester % 10 == 0) {
-            return "SoSe " . (int)($semester / 10);
-        } else {
-            return "WiSe " . (int)($semester / 10);
-        };
-    }
 
-    private function group_by($key, $data) {
+    private function group_by_semester($data) {
         $result = array();
 
         foreach ($data as $model) {
-            $semester = $model[$key];
+            $semester = $model["semester"];
             if (!array_key_exists($semester, $result)) {
                 $result[$semester] = array($model);
             } else {
@@ -32,15 +25,6 @@ class SearchController extends Controller {
         }
 
         return $result;
-    }
-
-    private function in_sub_array($needle, $haystack, $identifier) {
-        foreach ($haystack as $elem) {
-            if ($needle == $elem[$identifier]) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private function in_module_array($module, $array) {
@@ -61,53 +45,6 @@ class SearchController extends Controller {
         return false;
     }
 
-    public function getEvent(Request $request) {
-        $request->validate([
-            'vnr' => ['required', 'integer'],
-            'semester' => ['required', 'integer']
-        ]);
-
-        $event = Event::select('id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr')
-            ->where('vnr', $request->vnr)
-            ->where('semester', $request->semester)
-            ->get()
-            ->first();
-
-        if (!$event) {
-            return response("Event not found", 404);
-        }
-
-        $people = Event::find($event->id)
-            ->users()
-            ->select('displayname', 'forename', 'surname', 'email')
-            ->get();
-
-        $users = Event::find($event->id)
-            ->users()
-            ->select('uid')
-            ->get()
-            ->toArray();
-
-        $user = Auth::user()->uid;
-
-        $event["own"] = false;
-        if ($this->in_sub_array($user, $users, 'uid')) {
-            $event["own"] = true;
-        }
-
-        $modules = Event::find($event->id)
-            ->modules()
-            ->select('modulecode')
-            ->get();
-
-        $response = [
-            'content' => $event,
-            'people' => $people,
-            'modules' => $modules
-        ];
-
-        return response($response, 200);
-    }
 
     public function searchEvent(Request $request) {
         $request->validate([
@@ -139,7 +76,7 @@ class SearchController extends Controller {
                 ->get();
         }
 
-        $response = $this->group_by("semester", $events);
+        $response = $this->group_by_semester($events);
 
         return response($response, 200);
     }
@@ -165,7 +102,7 @@ class SearchController extends Controller {
             ->orderBy('semester', 'desc')
             ->get();
 
-        $events = $this->group_by("semester", $events);
+        $events = $this->group_by_semester($events);
 
         $response = [
             'content' => $module,
@@ -287,8 +224,8 @@ class SearchController extends Controller {
             ->toArray();
 
 
-        $past = $this->group_by("semester", $events_past);
-        $current = $this->group_by("semester", $events_current);
+        $past = $this->group_by_semester($events_past);
+        $current = $this->group_by_semester($events_current);
         $future = $this->generate_future_events($events_all, $request->currentSem);
 
         return response(["future" => $future, "current" => $current, "past" => $past], 200);
@@ -328,7 +265,7 @@ class SearchController extends Controller {
             }
         }
 
-        return $this->group_by("semester", $filtered_events);
+        return $this->group_by_semester($filtered_events);
     }
 
     private function event_exists($event) {
