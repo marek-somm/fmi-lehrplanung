@@ -53,7 +53,7 @@ class EventController extends Controller {
 
         $modules = Event::find($event->id)
             ->modules()
-            ->select('modulecode')
+            ->select('code as modulecode')
             ->get();
 
         $response = [

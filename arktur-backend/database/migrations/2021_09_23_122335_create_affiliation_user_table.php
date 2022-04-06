@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Affiliation;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,8 +17,8 @@ class CreateAffiliationUserTable extends Migration
     {
         Schema::create('affiliation_user', function (Blueprint $table) {
             $table->id();
-            $table->integer('affiliation_id');
-            $table->integer('user_id');
+            $table->foreignIdFor(Affiliation::class);
+            $table->foreignIdFor(User::class);
             $table->timestamps();
         });
     }

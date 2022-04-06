@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Organization;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,8 +17,8 @@ class CreateOrganizationUserTable extends Migration
     {
         Schema::create('organization_user', function (Blueprint $table) {
             $table->id();
-            $table->integer('organization_id');
-            $table->integer('user_id');
+            $table->foreignIdFor(Organization::class);
+            $table->foreignIdFor(User::class);
             $table->timestamps();
         });
     }

@@ -1,12 +1,12 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Module;
-use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModuleUserTable extends Migration
+class CreateCategoryModuleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,10 +15,10 @@ class CreateModuleUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('module_user', function (Blueprint $table) {
+        Schema::create('category_module', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(Category::class);
             $table->foreignIdFor(Module::class);
-            $table->foreignIdFor(User::class);
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateModuleUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('module_user');
+        Schema::dropIfExists('category_module');
     }
 }

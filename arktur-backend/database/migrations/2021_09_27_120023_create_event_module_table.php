@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Event;
+use App\Models\Module;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,8 +17,8 @@ class CreateEventModuleTable extends Migration
     {
         Schema::create('event_module', function (Blueprint $table) {
             $table->id();
-            $table->integer('event_id');
-            $table->integer('module_id')->nullable();
+            $table->foreignIdFor(Event::class);
+            $table->foreignIdFor(Module::class)->nullable();
             $table->integer('pnr')->nullable();
             $table->string('description')->nullable();
             $table->string('title');

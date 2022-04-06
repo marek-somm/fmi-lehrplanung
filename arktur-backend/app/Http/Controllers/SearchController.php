@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Degree;
 use App\Models\Event;
+use App\Models\FieldOfStudy;
 use App\Models\Module;
+use App\Models\Subject;
 use App\Models\User;
 use App\Rules\Search;
 use App\Rules\Username;
@@ -29,7 +33,7 @@ class SearchController extends Controller {
 
     private function in_module_array($module, $array) {
         foreach ($array as $elem) {
-            if ($module['modulecode'] == $elem['modulecode']) {
+            if ($module['code'] == $elem['code']) {
                 return true;
             }
         }
@@ -86,10 +90,46 @@ class SearchController extends Controller {
             'modulecode' => ['required', 'regex:/^[\w\d\-]*$/'],
         ]);
 
-        $module = Module::select('id', 'modulecode', 'title_de', 'title_en', 'active', 'rotation', 'composition', 'ects', 'presence_time', 'workload', 'type', 'prior_knowledge', 'content', 'required_creditpoints', 'requirement_exam', 'requirement_admission', 'additional_info', 'literature')
-            ->where('modulecode', $request->modulecode)
-            ->get()
-            ->first();
+        $module = Module::select('id', 'code as modulecode', 'title_de', 'title_en', 'active', 'rotation', 'composition', 'ects', 'presence_time', 'workload', 'type', 'prior_knowledge', 'content', 'required_creditpoints', 'requirement_exam', 'requirement_admission', 'additional_info', 'literature')
+            ->where('code', $request->modulecode)
+            ->get()->first();
+
+        $module_categories = Module::where('code', $request->modulecode)
+            ->get()->first()
+            ->categories()
+            ->select('field_of_study_id', 'parent_id', 'name', 'obligational')
+            ->get();
+
+        $module_extra = [];
+        foreach($module_categories as $module_category) {
+            $field_of_study = FieldOfStudy::select('degree_id', 'subject_id', 'po_version', 'name', 'name_short')
+                ->where('id', $module_category["field_of_study_id"])
+                ->get()->first();
+
+            $field_of_study = Subject::select('name', 'name_short')
+                ->where('id', $field_of_study["subject_id"])
+                ->get()->first()->name;
+
+            $parent = Category::select('name', 'parent_id')
+                ->where('id', $module_category["parent_id"])
+                ->get()->first();
+
+            $module_category["field_of_study"] = $field_of_study;
+            if($parent != null) {
+                while($parent->parent_id != null) {
+                    $parent = Category::select('name', 'parent_id')
+                        ->where('id', $parent["parent_id"])
+                        ->get()->first();
+                }
+                $module_category["parent"] = $parent->name;
+            }
+
+            unset($module_category["pivot"]);
+            unset($module_category["field_of_study_id"]);
+            unset($module_category["parent_id"]);
+
+            array_push($module_extra, $module_category);
+        }
 
         $people = Module::find($module->id)
             ->users()
@@ -106,6 +146,7 @@ class SearchController extends Controller {
 
         $response = [
             'content' => $module,
+            'extra' => $module_extra,
             'people' => $people,
             'events' => $events
         ];
@@ -120,10 +161,10 @@ class SearchController extends Controller {
             'filter'
         ]);
 
-        $modules = Module::select('active', 'title_de', 'title_en', 'modulecode')
+        $modules = Module::select('active', 'title_de', 'title_en', 'code as modulecode')
             ->where('title_de', 'LIKE', '%' . $request->value . '%')
             ->orWhere('title_en', 'LIKE', '%' . $request->value . '%')
-            ->orWhere('modulecode', 'LIKE', '%' . $request->value . '%')
+            ->orWhere('code', 'LIKE', '%' . $request->value . '%')
             ->limit($request->limit)
             ->get();
 
@@ -175,7 +216,7 @@ class SearchController extends Controller {
             }
 
             $item = [];
-            $item['module'] = $module['modulecode'];
+            $item['module'] = $module['code'];
             $item['pnr'] = $pnrObj;
 
             array_push($response, $item);

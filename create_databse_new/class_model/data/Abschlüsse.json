@@ -1,0 +1,44 @@
+[
+	{
+	  "id": "1",
+	  "Name": "Erste Staatsprüfung für das Lehramt an Regelschulen",
+	  "Name_Mittel": "Lehramt Regelschule",
+	  "Name_Kurz": "LR"
+	},
+	{
+	  "id": "2",
+	  "Name": "Erste Staatsprüfung für das Lehramt an Gymnasien",
+	  "Name_Mittel": "Lehramt Gymnasium",
+	  "Name_Kurz": "LG"
+	},
+	{
+	  "id": "3",
+	  "Name": "Lehramt Regelschule JM Erweiterungsprüfung",
+	  "Name_Mittel": "Lehramt Regelschule (Erweiterungsfach)",
+	  "Name_Kurz": "LRE"
+	},
+	{
+	  "id": "4",
+	  "Name": "Lehramt Gymnasium JM Erweiterungsprüfung",
+	  "Name_Mittel": "Lehramt Gymnasium (Erweiterungsfach)",
+	  "Name_Kurz": "LGE"
+	},
+	{
+	  "id": "5",
+	  "Name": "Bachelor of Arts",
+	  "Name_Mittel": "BA (Ergänzungsfach)",
+	  "Name_Kurz": "BE"
+	},
+	{
+	  "id": "6",
+	  "Name": "Bachelor of Science",
+	  "Name_Mittel": "BSc",
+	  "Name_Kurz": "B"
+	},
+	{
+	  "id": "7",
+	  "Name": "Master of Science",
+	  "Name_Mittel": "MSc",
+	  "Name_Kurz": "M"
+	}
+ ]

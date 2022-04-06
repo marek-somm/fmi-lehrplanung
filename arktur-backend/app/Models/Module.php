@@ -53,4 +53,8 @@ class Module extends Model {
     public function users() {
         return $this->belongsToMany(User::class)->using(ModuleUser::class)->withTimestamps();
     }
+
+    public function categories() {
+        return $this->belongsToMany(Category::class);
+    }
 }

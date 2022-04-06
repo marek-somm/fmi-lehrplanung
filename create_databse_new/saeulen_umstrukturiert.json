@@ -1,0 +1,3636 @@
+[
+	{
+		"Name": "Lehramt Regelschule Informatik",
+		"id": "1",
+		"Studiengang": "1",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Erziehungswissenschaft / Bildungswissenschaften",
+				"id": "2",
+				"Studiengang": "1",
+				"Pflicht": "0",
+				"Kontonr": "4000",
+				"Kinder": []
+			},
+			{
+				"Name": "Fachdidaktik",
+				"id": "3",
+				"Studiengang": "1",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "4",
+				"Studiengang": "1",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "5",
+				"Studiengang": "1",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "6",
+				"Studiengang": "1",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": [
+					{
+						"Name": "Wahlvertiefungsfach",
+						"id": "7",
+						"Studiengang": "1",
+						"Pflicht": "0",
+						"Kontonr": "2510",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Regelschule Informatik",
+		"id": "8",
+		"Studiengang": "2",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Erziehungswissenschaft / Bildungswissenschaften",
+				"id": "9",
+				"Studiengang": "2",
+				"Pflicht": "0",
+				"Kontonr": "4000",
+				"Kinder": []
+			},
+			{
+				"Name": "Fachdidaktik",
+				"id": "10",
+				"Studiengang": "2",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "11",
+				"Studiengang": "2",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "12",
+				"Studiengang": "2",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "13",
+				"Studiengang": "2",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": [
+					{
+						"Name": "Wahlvertiefungsfach 1",
+						"id": "14",
+						"Studiengang": "2",
+						"Pflicht": "0",
+						"Kontonr": "2510",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlvertiefungsfach 2",
+						"id": "15",
+						"Studiengang": "2",
+						"Pflicht": "0",
+						"Kontonr": "2520",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Regelschule Mathematik",
+		"id": "16",
+		"Studiengang": "3",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Erziehungswissenschaft / Bildungswissenschaften",
+				"id": "17",
+				"Studiengang": "3",
+				"Pflicht": "0",
+				"Kontonr": "4000",
+				"Kinder": []
+			},
+			{
+				"Name": "Fachdidaktik",
+				"id": "18",
+				"Studiengang": "3",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "19",
+				"Studiengang": "3",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "20",
+				"Studiengang": "3",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "21",
+				"Studiengang": "3",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Gymnasium Informatik",
+		"id": "22",
+		"Studiengang": "4",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Erziehungswissenschaft / Bildungswissenschaften",
+				"id": "23",
+				"Studiengang": "4",
+				"Pflicht": "0",
+				"Kontonr": "4000",
+				"Kinder": []
+			},
+			{
+				"Name": "Fachdidaktik",
+				"id": "24",
+				"Studiengang": "4",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "25",
+				"Studiengang": "4",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "26",
+				"Studiengang": "4",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "27",
+				"Studiengang": "4",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Gymnasium Informatik",
+		"id": "28",
+		"Studiengang": "5",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Erziehungswissenschaft / Bildungswissenschaften",
+				"id": "29",
+				"Studiengang": "5",
+				"Pflicht": "0",
+				"Kontonr": "4000",
+				"Kinder": []
+			},
+			{
+				"Name": "Fachdidaktik",
+				"id": "30",
+				"Studiengang": "5",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "31",
+				"Studiengang": "5",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "32",
+				"Studiengang": "5",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "33",
+				"Studiengang": "5",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": [
+					{
+						"Name": "Wahlvertiefungsfach 1",
+						"id": "34",
+						"Studiengang": "5",
+						"Pflicht": "0",
+						"Kontonr": "2510",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlvertiefungsfach 2",
+						"id": "35",
+						"Studiengang": "5",
+						"Pflicht": "0",
+						"Kontonr": "2520",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlvertiefungsfach 3",
+						"id": "36",
+						"Studiengang": "5",
+						"Pflicht": "0",
+						"Kontonr": "2530",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Gymnasium Mathematik",
+		"id": "37",
+		"Studiengang": "6",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Erziehungswissenschaft / Bildungswissenschaften",
+				"id": "38",
+				"Studiengang": "6",
+				"Pflicht": "0",
+				"Kontonr": "4000",
+				"Kinder": []
+			},
+			{
+				"Name": "Fachdidaktik",
+				"id": "39",
+				"Studiengang": "6",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "40",
+				"Studiengang": "6",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "41",
+				"Studiengang": "6",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "42",
+				"Studiengang": "6",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Gymnasium Mathematik",
+		"id": "43",
+		"Studiengang": "7",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Erziehungswissenschaft / Bildungswissenschaften",
+				"id": "44",
+				"Studiengang": "7",
+				"Pflicht": "0",
+				"Kontonr": "4000",
+				"Kinder": []
+			},
+			{
+				"Name": "Fachdidaktik",
+				"id": "45",
+				"Studiengang": "7",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "46",
+				"Studiengang": "7",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "47",
+				"Studiengang": "7",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "48",
+				"Studiengang": "7",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": [
+					{
+						"Name": "Wahlpflichtbereich Algebra/Zahlentheorie",
+						"id": "49",
+						"Studiengang": "7",
+						"Pflicht": "0",
+						"Kontonr": "2510",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Analysis",
+						"id": "50",
+						"Studiengang": "7",
+						"Pflicht": "0",
+						"Kontonr": "2520",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Diskrete Mathematik und Informatik",
+						"id": "51",
+						"Studiengang": "7",
+						"Pflicht": "0",
+						"Kontonr": "2530",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Geometrie",
+						"id": "52",
+						"Studiengang": "7",
+						"Pflicht": "0",
+						"Kontonr": "2540",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Grundlagen und Geschichte der Mathematik",
+						"id": "53",
+						"Studiengang": "7",
+						"Pflicht": "0",
+						"Kontonr": "2550",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Praktische Mathematik",
+						"id": "54",
+						"Studiengang": "7",
+						"Pflicht": "0",
+						"Kontonr": "2560",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Stochastik",
+						"id": "55",
+						"Studiengang": "7",
+						"Pflicht": "0",
+						"Kontonr": "2570",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Regelschule Informatik (Erweiterungspr�fung)",
+		"id": "56",
+		"Studiengang": "8",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Fachdidaktik",
+				"id": "57",
+				"Studiengang": "8",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "58",
+				"Studiengang": "8",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "59",
+				"Studiengang": "8",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Regelschule Informatik (Erweiterungspr�fung)",
+		"id": "60",
+		"Studiengang": "9",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Fachdidaktik",
+				"id": "61",
+				"Studiengang": "9",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "62",
+				"Studiengang": "9",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "63",
+				"Studiengang": "9",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "64",
+				"Studiengang": "9",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": [
+					{
+						"Name": "Wahlvertiefungsfach",
+						"id": "65",
+						"Studiengang": "9",
+						"Pflicht": "0",
+						"Kontonr": "2510",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Regelschule Mathematik (Erweiterungspr�fung)",
+		"id": "66",
+		"Studiengang": "10",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Fachdidaktik",
+				"id": "67",
+				"Studiengang": "10",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "68",
+				"Studiengang": "10",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "69",
+				"Studiengang": "10",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "70",
+				"Studiengang": "10",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Gymnasium Informatik (Erweiterungspr�fung)",
+		"id": "71",
+		"Studiengang": "11",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Fachdidaktik",
+				"id": "72",
+				"Studiengang": "11",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "73",
+				"Studiengang": "11",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "74",
+				"Studiengang": "11",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "75",
+				"Studiengang": "11",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Gymnasium Informatik (Erweiterungspr�fung)",
+		"id": "76",
+		"Studiengang": "12",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Fachdidaktik",
+				"id": "77",
+				"Studiengang": "12",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "78",
+				"Studiengang": "12",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "79",
+				"Studiengang": "12",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich",
+				"id": "80",
+				"Studiengang": "12",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Lehramt Gymnasium Mathematik (Erweiterungspr�fung)",
+		"id": "81",
+		"Studiengang": "13",
+		"Pflicht": "0",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Fachdidaktik",
+				"id": "82",
+				"Studiengang": "13",
+				"Pflicht": "1",
+				"Kontonr": "3000",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich",
+				"id": "83",
+				"Studiengang": "13",
+				"Pflicht": "1",
+				"Kontonr": "2000",
+				"Kinder": []
+			},
+			{
+				"Name": "Vorbereitungsmodule",
+				"id": "84",
+				"Studiengang": "13",
+				"Pflicht": "1",
+				"Kontonr": "6000",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Erg�nzungsfach Informatik",
+		"id": "85",
+		"Studiengang": "14",
+		"Pflicht": "1",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtkonto EF",
+				"id": "86",
+				"Studiengang": "14",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Erg�nzungsfach Mathematik",
+		"id": "87",
+		"Studiengang": "15",
+		"Pflicht": "1",
+		"Kontonr": "10",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtkonto EF",
+				"id": "88",
+				"Studiengang": "15",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "89",
+		"Studiengang": "16",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "Konto Pflichtmodule",
+		"id": "90",
+		"Studiengang": "16",
+		"Pflicht": "1",
+		"Kontonr": "2100",
+		"Kinder": []
+	},
+	{
+		"Name": "Konto Wahlpflichtmodule",
+		"id": "91",
+		"Studiengang": "16",
+		"Pflicht": "0",
+		"Kontonr": "2200",
+		"Kinder": []
+	},
+	{
+		"Name": "Konto A: Module zur Vermittlung von informatischen Fach- und Methodenkompetenzen",
+		"id": "92",
+		"Studiengang": "16",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "Konto A: Seminar [SEM]",
+				"id": "93",
+				"Studiengang": "16",
+				"Pflicht": "0",
+				"Kontonr": "3300",
+				"Kinder": []
+			},
+			{
+				"Name": "Konto A: Pflichtmodule",
+				"id": "94",
+				"Studiengang": "16",
+				"Pflicht": "1",
+				"Kontonr": "3100",
+				"Kinder": []
+			},
+			{
+				"Name": "Konto A: Wahlpflichtmodule",
+				"id": "95",
+				"Studiengang": "16",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": [
+					{
+						"Name": "Konto A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+						"id": "96",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "3210",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Parallele und eingebettete Systeme [PAR]",
+						"id": "97",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "3230",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+						"id": "98",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "3220",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+						"id": "99",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "3240",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Konto B: Module zur Vermittlung von mathematischen und naturwissenschaftlich-technischen Grundlagen",
+		"id": "100",
+		"Studiengang": "16",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "Konto B: Pflichtmodule",
+				"id": "101",
+				"Studiengang": "16",
+				"Pflicht": "1",
+				"Kontonr": "4100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Konto C: Module zur Vermittlung von fach�bergreifenden Grundlagen und �berfachlichen Schl�sselkompetenzen",
+		"id": "102",
+		"Studiengang": "16",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "Konto C: Wahlpflichtmodule allgemeine Schl�sselqualifikationen [ASQ]",
+				"id": "103",
+				"Studiengang": "16",
+				"Pflicht": "0",
+				"Kontonr": "5020",
+				"Kinder": [
+					{
+						"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+						"id": "104",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Konto C: Wahlpflichtmodule Nebenfach [NF]",
+				"id": "105",
+				"Studiengang": "16",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": [
+					{
+						"Name": "C: NF Computational Neuroscience",
+						"id": "106",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "5800",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+						"id": "107",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "5100",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Mathematik",
+						"id": "108",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "5700",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF �kologie",
+						"id": "109",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "5500",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Philosophie",
+						"id": "110",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "5600",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Physik",
+						"id": "111",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "5200",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Psychologie",
+						"id": "112",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "5300",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Wirtschaftswissenschaften",
+						"id": "113",
+						"Studiengang": "16",
+						"Pflicht": "0",
+						"Kontonr": "5400",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "114",
+		"Studiengang": "17",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Pflichtmodule",
+		"id": "115",
+		"Studiengang": "17",
+		"Pflicht": "1",
+		"Kontonr": "2100",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Wahlpflichtmodule",
+		"id": "116",
+		"Studiengang": "17",
+		"Pflicht": "0",
+		"Kontonr": "2200",
+		"Kinder": []
+	},
+	{
+		"Name": "Konto A: Module zur Vermittlung von informatischen Fach- und Methodenkompetenzen",
+		"id": "117",
+		"Studiengang": "17",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "Konto A: Pflichtmodule",
+				"id": "118",
+				"Studiengang": "17",
+				"Pflicht": "1",
+				"Kontonr": "3100",
+				"Kinder": []
+			},
+			{
+				"Name": "Konto A: Wahlpflichtmodule",
+				"id": "119",
+				"Studiengang": "17",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": [
+					{
+						"Name": "Konto A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+						"id": "120",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "3210",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Paralleles Rechnen [PAR]",
+						"id": "121",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "3230",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Seminar [SEM]",
+						"id": "122",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "3290",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+						"id": "123",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "3220",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+						"id": "124",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "3240",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Konto B: Module zur Vermittlung von mathematischen und naturwissenschaftlich-technischen Grundlagen",
+		"id": "125",
+		"Studiengang": "17",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "Konto B: Pflichtmodule",
+				"id": "126",
+				"Studiengang": "17",
+				"Pflicht": "1",
+				"Kontonr": "4100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Konto C: �bergreifende Inhalte",
+		"id": "127",
+		"Studiengang": "17",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "Konto C: Wahlpflichtmodule allgemeine Schl�sselqualifikationen [ASQ]",
+				"id": "128",
+				"Studiengang": "17",
+				"Pflicht": "0",
+				"Kontonr": "5020",
+				"Kinder": []
+			},
+			{
+				"Name": "Konto C: Wahlpflichtmodule Nebenfach [NF]",
+				"id": "129",
+				"Studiengang": "17",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": [
+					{
+						"Name": "C: NF Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+						"id": "130",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "5100",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Mathematik",
+						"id": "131",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "5700",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Medical Data Science",
+						"id": "132",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "6000",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF �kologie",
+						"id": "133",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "5500",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Philosophie",
+						"id": "134",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "5600",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Physik",
+						"id": "135",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "5200",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Psychologie",
+						"id": "136",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "5300",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Soziologie",
+						"id": "137",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "5900",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Wirtschaftswissenschaften",
+						"id": "138",
+						"Studiengang": "17",
+						"Pflicht": "0",
+						"Kontonr": "5400",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Konto C: Wahlpflichtmodule Seminar",
+				"id": "139",
+				"Studiengang": "17",
+				"Pflicht": "0",
+				"Kontonr": "5040",
+				"Kinder": []
+			},
+			{
+				"Name": "Konto C: Wahlpflichtmodule Mathematik/Informatik",
+				"id": "140",
+				"Studiengang": "17",
+				"Pflicht": "0",
+				"Kontonr": "5030",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "141",
+		"Studiengang": "18",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Pflichtmodule",
+		"id": "142",
+		"Studiengang": "18",
+		"Pflicht": "1",
+		"Kontonr": "2100",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Wahlpflichtmodule",
+		"id": "143",
+		"Studiengang": "18",
+		"Pflicht": "0",
+		"Kontonr": "2200",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflichtmodule Grundlagen der Mathematik",
+		"id": "144",
+		"Studiengang": "18",
+		"Pflicht": "1",
+		"Kontonr": "3100",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflichtmodule Angew. Mathematik/Stochastik",
+		"id": "145",
+		"Studiengang": "18",
+		"Pflicht": "1",
+		"Kontonr": "3200",
+		"Kinder": []
+	},
+	{
+		"Name": "Wahlpflichtmodule Mathematik Erweiterungen",
+		"id": "146",
+		"Studiengang": "18",
+		"Pflicht": "0",
+		"Kontonr": "4100",
+		"Kinder": [
+			{
+				"Name": "WP-Module Mathematik Erweiterung: Angewandte Mathematik/Stochastik",
+				"id": "147",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4120",
+				"Kinder": []
+			},
+			{
+				"Name": "WP-Module Mathematik Erweiterung: Reine Mathematik",
+				"id": "148",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4110",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Wahlpflichtmodule Mathematik Vertiefungen",
+		"id": "149",
+		"Studiengang": "18",
+		"Pflicht": "0",
+		"Kontonr": "4200",
+		"Kinder": [
+			{
+				"Name": "WP-Module Mathematik Vertiefung: Algebra",
+				"id": "150",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4210",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Algorithmik",
+				"id": "151",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4270",
+				"Kinder": []
+			},
+			{
+				"Name": "WP-Module Mathematik Vertiefung: Analysis",
+				"id": "152",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4220",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Geometrie",
+				"id": "153",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4230",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Num. Mathematik/Wiss. Rechnen",
+				"id": "154",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4240",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Optimierung",
+				"id": "155",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4250",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Stochastik",
+				"id": "156",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "4260",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Wahlpflicht Nebenfach u. ASQ",
+		"id": "157",
+		"Studiengang": "18",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtmodule Allgemeine Schl�sselqualifikationen (ASQ)",
+				"id": "158",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "5020",
+				"Kinder": [
+					{
+						"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+						"id": "159",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Wahlpflicht Nebenfach",
+				"id": "160",
+				"Studiengang": "18",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": [
+					{
+						"Name": "NF Informatik",
+						"id": "161",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "5700",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+						"id": "162",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "5100",
+						"Kinder": []
+					},
+					{
+						"Name": "NF �kologie",
+						"id": "163",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "5500",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Philosophie",
+						"id": "164",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "5600",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Physik",
+						"id": "165",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "5200",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Psychologie",
+						"id": "166",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "5300",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Soziologie",
+						"id": "167",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "5900",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Wirtschaftswissenschaften",
+						"id": "168",
+						"Studiengang": "18",
+						"Pflicht": "0",
+						"Kontonr": "5400",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "169",
+		"Studiengang": "19",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Pflichtmodule",
+		"id": "170",
+		"Studiengang": "19",
+		"Pflicht": "1",
+		"Kontonr": "2100",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Wahlpflichtmodule",
+		"id": "171",
+		"Studiengang": "19",
+		"Pflicht": "0",
+		"Kontonr": "2200",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflichtbereich Mathematik",
+		"id": "172",
+		"Studiengang": "19",
+		"Pflicht": "1",
+		"Kontonr": "3100",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflichtbereich Proseminar",
+		"id": "173",
+		"Studiengang": "19",
+		"Pflicht": "1",
+		"Kontonr": "3200",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflichtbereich Programmierung",
+		"id": "174",
+		"Studiengang": "19",
+		"Pflicht": "1",
+		"Kontonr": "3300",
+		"Kinder": []
+	},
+	{
+		"Name": "Wahlpflichtmodule Mathematik Erweiterungen",
+		"id": "175",
+		"Studiengang": "19",
+		"Pflicht": "0",
+		"Kontonr": "4100",
+		"Kinder": [
+			{
+				"Name": "WP-Module Mathematik Erweiterung: Angewandte Mathematik/Stochastik",
+				"id": "176",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4120",
+				"Kinder": []
+			},
+			{
+				"Name": "WP-Module Mathematik Erweiterung: Reine Mathematik",
+				"id": "177",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4110",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Wahlpflichtmodule Mathematik Vertiefungen",
+		"id": "178",
+		"Studiengang": "19",
+		"Pflicht": "0",
+		"Kontonr": "4200",
+		"Kinder": [
+			{
+				"Name": "WP-Module Mathematik Vertiefung: Algebra",
+				"id": "179",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4210",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Algorithmik",
+				"id": "180",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4270",
+				"Kinder": []
+			},
+			{
+				"Name": "WP-Module Mathematik Vertiefung: Analysis",
+				"id": "181",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4220",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Geometrie",
+				"id": "182",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4230",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Num. Mathematik/Wiss. Rechnen",
+				"id": "183",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4240",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Optimierung",
+				"id": "184",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4250",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Mathematik Vertiefung: Stochastik",
+				"id": "185",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "4260",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Wahlpflicht Nebenfach u. ASQ",
+		"id": "186",
+		"Studiengang": "19",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtmodule Allgemeine Schl�sselqualifikationen (ASQ)",
+				"id": "187",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "5020",
+				"Kinder": [
+					{
+						"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+						"id": "188",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Wahlpflicht Nebenfach",
+				"id": "189",
+				"Studiengang": "19",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": [
+					{
+						"Name": "NF Informatik",
+						"id": "190",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5700",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+						"id": "191",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5100",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Medical Data Science",
+						"id": "192",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5800",
+						"Kinder": []
+					},
+					{
+						"Name": "NF �kologie",
+						"id": "193",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5500",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Philosophie",
+						"id": "194",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5600",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Physik",
+						"id": "195",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5200",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Psychologie",
+						"id": "196",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5300",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Soziologie",
+						"id": "197",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5900",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Wirtschaftswissenschaften",
+						"id": "198",
+						"Studiengang": "19",
+						"Pflicht": "0",
+						"Kontonr": "5400",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Zusatzmodule/Sonderkonto",
+		"id": "199",
+		"Studiengang": "19",
+		"Pflicht": "0",
+		"Kontonr": "6990",
+		"Kinder": []
+	},
+	{
+		"Name": "Leistungspunkte Pflichtmodule",
+		"id": "200",
+		"Studiengang": "20",
+		"Pflicht": "1",
+		"Kontonr": "2100",
+		"Kinder": []
+	},
+	{
+		"Name": "Leistungspunkte Wahlpflichtmodule",
+		"id": "201",
+		"Studiengang": "20",
+		"Pflicht": "0",
+		"Kontonr": "2200",
+		"Kinder": []
+	},
+	{
+		"Name": "Konto A1: Bioinformatik und Informatik",
+		"id": "202",
+		"Studiengang": "20",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "A1: Bioinformatik - Pflichtmodule",
+				"id": "203",
+				"Studiengang": "20",
+				"Pflicht": "1",
+				"Kontonr": "3100",
+				"Kinder": []
+			},
+			{
+				"Name": "A1: Wahlpflichtbereich 1 (Bioinformatik)",
+				"id": "204",
+				"Studiengang": "20",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": []
+			},
+			{
+				"Name": "A1: Informatik - Pflichtmodule",
+				"id": "205",
+				"Studiengang": "20",
+				"Pflicht": "1",
+				"Kontonr": "3300",
+				"Kinder": []
+			},
+			{
+				"Name": "A1: Wahlpflichtbereich 2 (Informatik)",
+				"id": "206",
+				"Studiengang": "20",
+				"Pflicht": "0",
+				"Kontonr": "3400",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Konto A2: Biologie",
+		"id": "207",
+		"Studiengang": "20",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "A2: Biologie - Pflichtmodule",
+				"id": "208",
+				"Studiengang": "20",
+				"Pflicht": "1",
+				"Kontonr": "4100",
+				"Kinder": []
+			},
+			{
+				"Name": "A2: Wahlpflichtbereich 3 (Biologie)",
+				"id": "209",
+				"Studiengang": "20",
+				"Pflicht": "0",
+				"Kontonr": "4200",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Konto B: mathematische, naturwissenschaftliche und technische Grundlagen",
+		"id": "210",
+		"Studiengang": "20",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "B: mathematische, naturwissenschaftliche und technische Grundlagen - Pflichtmodule",
+				"id": "211",
+				"Studiengang": "20",
+				"Pflicht": "1",
+				"Kontonr": "5100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Konto C: Module Fach�bergreifende Inhalte und �berfachliche Schl�sselkompetenzen",
+		"id": "212",
+		"Studiengang": "20",
+		"Pflicht": "0",
+		"Kontonr": "6000",
+		"Kinder": []
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "213",
+		"Studiengang": "21",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Pflichtmodule",
+		"id": "214",
+		"Studiengang": "21",
+		"Pflicht": "1",
+		"Kontonr": "2100",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Wahlpflichtmodule",
+		"id": "215",
+		"Studiengang": "21",
+		"Pflicht": "0",
+		"Kontonr": "2200",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflichtmodule Mathematik und Informatik",
+		"id": "216",
+		"Studiengang": "21",
+		"Pflicht": "1",
+		"Kontonr": "3100",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflicht- u. Wahlpflichtmodule Wirtschaftswissenschaften",
+		"id": "217",
+		"Studiengang": "21",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "PF-Module Wirtschaftswissenschaften",
+				"id": "218",
+				"Studiengang": "21",
+				"Pflicht": "0",
+				"Kontonr": "4100",
+				"Kinder": []
+			},
+			{
+				"Name": "WP-Module (Basismodule) Wirtschaftswissenschaften",
+				"id": "219",
+				"Studiengang": "21",
+				"Pflicht": "0",
+				"Kontonr": "4200",
+				"Kinder": []
+			},
+			{
+				"Name": "WP-Module (Vertiefungsmodule) Wirtschaftswissenschaften",
+				"id": "220",
+				"Studiengang": "21",
+				"Pflicht": "0",
+				"Kontonr": "4300",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Allgemeiner WP-Bereich",
+		"id": "221",
+		"Studiengang": "21",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "WP Mathematik/Informatik/ Wirtschaftswissenschaften",
+				"id": "222",
+				"Studiengang": "21",
+				"Pflicht": "0",
+				"Kontonr": "5200",
+				"Kinder": []
+			},
+			{
+				"Name": "WP Optimierung/Wissenschaftliches Rechnen",
+				"id": "223",
+				"Studiengang": "21",
+				"Pflicht": "0",
+				"Kontonr": "5100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "224",
+		"Studiengang": "22",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflichtbereiche",
+		"id": "225",
+		"Studiengang": "22",
+		"Pflicht": "1",
+		"Kontonr": "1000",
+		"Kinder": [
+			{
+				"Name": "Pflichtbereich Informatik",
+				"id": "226",
+				"Studiengang": "22",
+				"Pflicht": "1",
+				"Kontonr": "1200",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich Mathematik",
+				"id": "227",
+				"Studiengang": "22",
+				"Pflicht": "1",
+				"Kontonr": "1100",
+				"Kinder": []
+			},
+			{
+				"Name": "Pflichtbereich zum Studienprofil",
+				"id": "228",
+				"Studiengang": "22",
+				"Pflicht": "1",
+				"Kontonr": "1300",
+				"Kinder": [
+					{
+						"Name": "Pflichtbereich Studienprofil Business Optimization",
+						"id": "229",
+						"Studiengang": "22",
+						"Pflicht": "1",
+						"Kontonr": "1320",
+						"Kinder": []
+					},
+					{
+						"Name": "Pflichtbereich Regelprofil",
+						"id": "230",
+						"Studiengang": "22",
+						"Pflicht": "1",
+						"Kontonr": "1310",
+						"Kinder": []
+					},
+					{
+						"Name": "Pflichtbereich Studienprofil Stochastics and Financial Engineering",
+						"id": "231",
+						"Studiengang": "22",
+						"Pflicht": "1",
+						"Kontonr": "1330",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Wahlpflichtbereiche",
+		"id": "232",
+		"Studiengang": "22",
+		"Pflicht": "0",
+		"Kontonr": "2000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtbereich Praktikum und ASQ",
+				"id": "233",
+				"Studiengang": "22",
+				"Pflicht": "0",
+				"Kontonr": "3000",
+				"Kinder": [
+					{
+						"Name": "Allgemeine Schl�sselqualifikationen",
+						"id": "234",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "3200",
+						"Kinder": []
+					},
+					{
+						"Name": "Praktikum",
+						"id": "235",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "3100",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Business Optimization",
+				"id": "236",
+				"Studiengang": "22",
+				"Pflicht": "0",
+				"Kontonr": "2400",
+				"Kinder": [
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Business Optimization: Basismodule",
+						"id": "237",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2410",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Business Optimization: Seminar",
+						"id": "238",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2430",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Business Optimization: Vertiefungsmodule",
+						"id": "239",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2420",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Regelprofil",
+				"id": "240",
+				"Studiengang": "22",
+				"Pflicht": "0",
+				"Kontonr": "2300",
+				"Kinder": [
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Regelprofil: Basismodule",
+						"id": "241",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2310",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Regelprofil: Seminar",
+						"id": "242",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2330",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Regelprofil: Vertiefungsmodule",
+						"id": "243",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2320",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Stochastics and Financial Engineering",
+				"id": "244",
+				"Studiengang": "22",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": [
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Stochastics and Financial Engineering: Basismodule",
+						"id": "245",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2510",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Stochastics and Financial Engineering: Seminar",
+						"id": "246",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2530",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Wirtschaftswissenschaften - Studienprofil Stochastics and Financial Engineering: Vertiefungsmodule",
+						"id": "247",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2520",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Wahlpflichtbereich Informatik",
+				"id": "248",
+				"Studiengang": "22",
+				"Pflicht": "0",
+				"Kontonr": "2200",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtbereich Mathematik",
+				"id": "249",
+				"Studiengang": "22",
+				"Pflicht": "0",
+				"Kontonr": "2100",
+				"Kinder": [
+					{
+						"Name": "Wahlpflichtbereich Mathematik - allgemein",
+						"id": "250",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2110",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Mathematik - Bereich Optimierung",
+						"id": "251",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2120",
+						"Kinder": []
+					},
+					{
+						"Name": "Wahlpflichtbereich Mathematik - Bereich Stochastik",
+						"id": "252",
+						"Studiengang": "22",
+						"Pflicht": "0",
+						"Kontonr": "2130",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Zusatzmodule/Sonderkonto",
+		"id": "253",
+		"Studiengang": "22",
+		"Pflicht": "0",
+		"Kontonr": "6990",
+		"Kinder": []
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "254",
+		"Studiengang": "23",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Pflichtmodule",
+		"id": "255",
+		"Studiengang": "23",
+		"Pflicht": "1",
+		"Kontonr": "2100",
+		"Kinder": []
+	},
+	{
+		"Name": "LP-Konto Wahlpflichtmodule",
+		"id": "256",
+		"Studiengang": "23",
+		"Pflicht": "0",
+		"Kontonr": "2200",
+		"Kinder": []
+	},
+	{
+		"Name": "Konto A: Module zur Vermittlung von informatischen Fach- und Methodenkompetenzen",
+		"id": "257",
+		"Studiengang": "23",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "Konto A: Pflichtmodule",
+				"id": "258",
+				"Studiengang": "23",
+				"Pflicht": "1",
+				"Kontonr": "3100",
+				"Kinder": []
+			},
+			{
+				"Name": "Konto A: Wahlpflichtmodule",
+				"id": "259",
+				"Studiengang": "23",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": [
+					{
+						"Name": "Konto A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+						"id": "260",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "3210",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Paralleles Rechnen [PAR]",
+						"id": "261",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "3230",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Seminar [SEM]",
+						"id": "262",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "3290",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+						"id": "263",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "3220",
+						"Kinder": []
+					},
+					{
+						"Name": "Konto A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+						"id": "264",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "3240",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Konto B: Module zur Vermittlung von mathematischen und naturwissenschaftlich-technischen Grundlagen",
+		"id": "265",
+		"Studiengang": "23",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "Konto B: Pflichtmodule",
+				"id": "266",
+				"Studiengang": "23",
+				"Pflicht": "1",
+				"Kontonr": "4100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Konto C: Berufsfeldorientierte Qualifikationen",
+		"id": "267",
+		"Studiengang": "23",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "Konto C: Module Anwendungsfach (AF)",
+				"id": "268",
+				"Studiengang": "23",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": [
+					{
+						"Name": "C: Anwendungsfach Geographie",
+						"id": "269",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "5600",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Anwendungsfach Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+						"id": "270",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "5100",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Anwendungsfach Medical Data Science",
+						"id": "271",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "5800",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Anwendungsfach Physik",
+						"id": "272",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "5200",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Anwendungsfach Psychologie",
+						"id": "273",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "5300",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Anwendungsfach Soziologie",
+						"id": "274",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "5700",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Anwendungsfach Wirtschaftswissenschaften",
+						"id": "275",
+						"Studiengang": "23",
+						"Pflicht": "0",
+						"Kontonr": "5400",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Konto D: �bergreifende Inhalte",
+		"id": "276",
+		"Studiengang": "23",
+		"Pflicht": "0",
+		"Kontonr": "6000",
+		"Kinder": [
+			{
+				"Name": "D: ASQ-Module aus dem Angebot der FMI",
+				"id": "277",
+				"Studiengang": "23",
+				"Pflicht": "0",
+				"Kontonr": "6100",
+				"Kinder": []
+			},
+			{
+				"Name": "D: ASQ-Module (Seminare) aus dem Angebot der FMI",
+				"id": "278",
+				"Studiengang": "23",
+				"Pflicht": "0",
+				"Kontonr": "6200",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "279",
+		"Studiengang": "24",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "A: Informatik",
+		"id": "280",
+		"Studiengang": "24",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "A: Vertiefung",
+				"id": "281",
+				"Studiengang": "24",
+				"Pflicht": "0",
+				"Kontonr": "3500",
+				"Kinder": [
+					{
+						"Name": "A: Vertiefung Algorithmik (ALG)",
+						"id": "282",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3510",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung Digitale Bildverarbeitung (DBV)",
+						"id": "283",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3520",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung K�nstliche Intelligenz und Mustererkennung (KIME)",
+						"id": "284",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3540",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung Entwicklung und Management komplexer Softwaresysteme (KSS)",
+						"id": "285",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3530",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung Rechnerarithmetik (RAR)",
+						"id": "286",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3550",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung Technische Informatik (TI)",
+						"id": "287",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3560",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "A: Wahlpflichtmodule Informatik",
+				"id": "288",
+				"Studiengang": "24",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": [
+					{
+						"Name": "A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+						"id": "289",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3210",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Wahlpflichtmodule Parallele und eingebettete Systeme [PAR]",
+						"id": "290",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3230",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+						"id": "291",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3220",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+						"id": "292",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "3240",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "B: Mathematik",
+		"id": "293",
+		"Studiengang": "24",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "B: Wahlpflichtmodule Mathematik",
+				"id": "294",
+				"Studiengang": "24",
+				"Pflicht": "0",
+				"Kontonr": "4100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "C: Fach�bergreifenden Grundlagen und �berfachlichen Schl�sselkompetenzen",
+		"id": "295",
+		"Studiengang": "24",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "C: Pflichtmodul Projektarbeit",
+				"id": "296",
+				"Studiengang": "24",
+				"Pflicht": "1",
+				"Kontonr": "5005",
+				"Kinder": []
+			},
+			{
+				"Name": "C: Wahlpflichtmodule allgemeine Schl�sselqualifikationen [ASQ]",
+				"id": "297",
+				"Studiengang": "24",
+				"Pflicht": "0",
+				"Kontonr": "5020",
+				"Kinder": [
+					{
+						"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+						"id": "298",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "C: Wahlpflichtmodule Nebenfach [NF]",
+				"id": "299",
+				"Studiengang": "24",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": [
+					{
+						"Name": "C: Nebenfach Computational Neuroscience",
+						"id": "300",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "5800",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+						"id": "301",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "5100",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Mathematik",
+						"id": "302",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "5700",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach �kologie",
+						"id": "303",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "5500",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Philosophie",
+						"id": "304",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "5600",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Physik",
+						"id": "305",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "5200",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Psychologie",
+						"id": "306",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "5300",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Wirtschaftswissenschaften",
+						"id": "307",
+						"Studiengang": "24",
+						"Pflicht": "0",
+						"Kontonr": "5400",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "C: Nebenfach �kologie - Siko",
+		"id": "308",
+		"Studiengang": "24",
+		"Pflicht": "0",
+		"Kontonr": "5501",
+		"Kinder": []
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "309",
+		"Studiengang": "25",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "A: Informatik",
+		"id": "310",
+		"Studiengang": "25",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "A: Vertiefung",
+				"id": "311",
+				"Studiengang": "25",
+				"Pflicht": "0",
+				"Kontonr": "3500",
+				"Kinder": [
+					{
+						"Name": "A: Vertiefung Algorithmik (ALG)",
+						"id": "312",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3510",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung Digitale Bildverarbeitung (DBV)",
+						"id": "313",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3520",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung K�nstliche Intelligenz und Mustererkennung (KIME)",
+						"id": "314",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3540",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung Entwicklung und Management komplexer Softwaresysteme (KSS)",
+						"id": "315",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3530",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung Rechnerarithmetik (RAR)",
+						"id": "316",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3550",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Vertiefung Technische Informatik (TI)",
+						"id": "317",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3560",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "A: Wahlpflichtmodule Informatik",
+				"id": "318",
+				"Studiengang": "25",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": [
+					{
+						"Name": "A: Wahlpflichtmodule Intelligente informationsverarbeitende Systeme [INT]",
+						"id": "319",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3210",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Wahlpflichtmodule Parallele und eingebettete Systeme [PAR]",
+						"id": "320",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3230",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Wahlpflichtmodule Informations- und Softwaresysteme [SWS]",
+						"id": "321",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3220",
+						"Kinder": []
+					},
+					{
+						"Name": "A: Wahlpflichtmodule Theoretische Informatik/Algorithmik [TIA]",
+						"id": "322",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "3240",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "B: Mathematik",
+		"id": "323",
+		"Studiengang": "25",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "B: Wahlpflichtmodule Mathematik",
+				"id": "324",
+				"Studiengang": "25",
+				"Pflicht": "0",
+				"Kontonr": "4100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "C: �bergreifende Inhalte",
+		"id": "325",
+		"Studiengang": "25",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "C: Pflichtmodul Projektarbeit",
+				"id": "326",
+				"Studiengang": "25",
+				"Pflicht": "1",
+				"Kontonr": "5005",
+				"Kinder": []
+			},
+			{
+				"Name": "C: Wahlpflichtmodule allgemeine Schl�sselqualifikationen [ASQ]",
+				"id": "327",
+				"Studiengang": "25",
+				"Pflicht": "0",
+				"Kontonr": "5020",
+				"Kinder": []
+			},
+			{
+				"Name": "C: Wahlpflichtmodule Nebenfach [NF]",
+				"id": "328",
+				"Studiengang": "25",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": [
+					{
+						"Name": "C: Nebenfach Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+						"id": "329",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "5100",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Mathematik",
+						"id": "330",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "5700",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach �kologie",
+						"id": "331",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "5500",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Philosophie",
+						"id": "332",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "5600",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Physik",
+						"id": "333",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "5200",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Psychologie",
+						"id": "334",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "5300",
+						"Kinder": []
+					},
+					{
+						"Name": "C: Nebenfach Wirtschaftswissenschaften",
+						"id": "335",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "5400",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Medical Data Science",
+						"id": "336",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "6000",
+						"Kinder": []
+					},
+					{
+						"Name": "C: NF Soziologie",
+						"id": "337",
+						"Studiengang": "25",
+						"Pflicht": "0",
+						"Kontonr": "5900",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "C: Wahlpflichtmodule Mathematik/Informatik",
+				"id": "338",
+				"Studiengang": "25",
+				"Pflicht": "0",
+				"Kontonr": "5030",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "339",
+		"Studiengang": "26",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "Mathematik",
+		"id": "340",
+		"Studiengang": "26",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "Angewandte Mathematik",
+				"id": "341",
+				"Studiengang": "26",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": []
+			},
+			{
+				"Name": "Reine Mathematik",
+				"id": "342",
+				"Studiengang": "26",
+				"Pflicht": "0",
+				"Kontonr": "3100",
+				"Kinder": []
+			},
+			{
+				"Name": "Vertiefung",
+				"id": "343",
+				"Studiengang": "26",
+				"Pflicht": "0",
+				"Kontonr": "4000",
+				"Kinder": [
+					{
+						"Name": "Vertiefung Algebra",
+						"id": "344",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "4100",
+						"Kinder": []
+					},
+					{
+						"Name": "Vertiefung Algorithmik (Theoretische Informatik)",
+						"id": "345",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "4700",
+						"Kinder": []
+					},
+					{
+						"Name": "Vertiefung Analysis",
+						"id": "346",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "4200",
+						"Kinder": []
+					},
+					{
+						"Name": "Vertiefung Geometrie",
+						"id": "347",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "4300",
+						"Kinder": []
+					},
+					{
+						"Name": "Vertiefung Num. Mathematik/ Wiss. Rechnen",
+						"id": "348",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "4400",
+						"Kinder": []
+					},
+					{
+						"Name": "Vertiefung Optimierung",
+						"id": "349",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "4500",
+						"Kinder": []
+					},
+					{
+						"Name": "Vertiefung Stochastik",
+						"id": "350",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "4600",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Nebenfach u. ASQ",
+		"id": "351",
+		"Studiengang": "26",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtmodule Nebenfach [NF]",
+				"id": "352",
+				"Studiengang": "26",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": [
+					{
+						"Name": "Nebenfach Informatik",
+						"id": "353",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "5700",
+						"Kinder": []
+					},
+					{
+						"Name": "NF Computerlinguistik/ Sprachtechnologie",
+						"id": "354",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "5100",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Medical Data Science",
+						"id": "355",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach �kologie",
+						"id": "356",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "5500",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Philosophie",
+						"id": "357",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "5600",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Physik",
+						"id": "358",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "5200",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Psychologie",
+						"id": "359",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "5300",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Soziologie",
+						"id": "360",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "5900",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Fremdsprache",
+						"id": "361",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "6000",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Wirtschaftswissenschaften",
+						"id": "362",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "5400",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Wahlpflichtmodule allgemeine Schl�sselqualifikationen [ASQ]",
+				"id": "363",
+				"Studiengang": "26",
+				"Pflicht": "0",
+				"Kontonr": "5020",
+				"Kinder": [
+					{
+						"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+						"id": "364",
+						"Studiengang": "26",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "365",
+		"Studiengang": "27",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "Mathematik",
+		"id": "366",
+		"Studiengang": "27",
+		"Pflicht": "0",
+		"Kontonr": "1000",
+		"Kinder": [
+			{
+				"Name": "Angewandte Mathematik",
+				"id": "367",
+				"Studiengang": "27",
+				"Pflicht": "0",
+				"Kontonr": "1200",
+				"Kinder": []
+			},
+			{
+				"Name": "Reine Mathematik",
+				"id": "368",
+				"Studiengang": "27",
+				"Pflicht": "0",
+				"Kontonr": "1100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Nebenfach und ASQ und German",
+		"id": "369",
+		"Studiengang": "27",
+		"Pflicht": "0",
+		"Kontonr": "2000",
+		"Kinder": [
+			{
+				"Name": "Allgemeine Schl�sselqualifikationen",
+				"id": "370",
+				"Studiengang": "27",
+				"Pflicht": "0",
+				"Kontonr": "2100",
+				"Kinder": [
+					{
+						"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+						"id": "371",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "German",
+				"id": "372",
+				"Studiengang": "27",
+				"Pflicht": "0",
+				"Kontonr": "2200",
+				"Kinder": []
+			},
+			{
+				"Name": "Nebenfach",
+				"id": "373",
+				"Studiengang": "27",
+				"Pflicht": "0",
+				"Kontonr": "2300",
+				"Kinder": [
+					{
+						"Name": "Nebenfach Informatik",
+						"id": "374",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3200",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Linguistik mit Schwerpunkt Computerlinguistik/Sprachtechnologie",
+						"id": "375",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3100",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Medical Data Science",
+						"id": "376",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3800",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach �kologie",
+						"id": "377",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3300",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Philosophie",
+						"id": "378",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3400",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Physik",
+						"id": "379",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3500",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Psychologie",
+						"id": "380",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3600",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Soziologie",
+						"id": "381",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3900",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Fremdsprache",
+						"id": "382",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "4000",
+						"Kinder": []
+					},
+					{
+						"Name": "Nebenfach Wirtschaftswissenschaften",
+						"id": "383",
+						"Studiengang": "27",
+						"Pflicht": "0",
+						"Kontonr": "3700",
+						"Kinder": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "384",
+		"Studiengang": "28",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "Pflichtbereich",
+		"id": "385",
+		"Studiengang": "28",
+		"Pflicht": "1",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "Computational Informatics",
+				"id": "386",
+				"Studiengang": "28",
+				"Pflicht": "1",
+				"Kontonr": "3200",
+				"Kinder": []
+			},
+			{
+				"Name": "Data Sciences",
+				"id": "387",
+				"Studiengang": "28",
+				"Pflicht": "1",
+				"Kontonr": "3300",
+				"Kinder": []
+			},
+			{
+				"Name": "Scientific Computing",
+				"id": "388",
+				"Studiengang": "28",
+				"Pflicht": "1",
+				"Kontonr": "3100",
+				"Kinder": []
+			},
+			{
+				"Name": "Seminar",
+				"id": "389",
+				"Studiengang": "28",
+				"Pflicht": "1",
+				"Kontonr": "3400",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Wahlpflichtbereich",
+		"id": "390",
+		"Studiengang": "28",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtmodule",
+				"id": "391",
+				"Studiengang": "28",
+				"Pflicht": "0",
+				"Kontonr": "4100",
+				"Kinder": []
+			},
+			{
+				"Name": "WP-Nivellierungsmodule",
+				"id": "392",
+				"Studiengang": "28",
+				"Pflicht": "0",
+				"Kontonr": "4200",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Nivellierungsmodule",
+		"id": "393",
+		"Studiengang": "28",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": []
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "394",
+		"Studiengang": "29",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "Bereich Bioinformatik",
+		"id": "395",
+		"Studiengang": "29",
+		"Pflicht": "0",
+		"Kontonr": "1000",
+		"Kinder": [
+			{
+				"Name": "Pflichtmodule Bioinformatik",
+				"id": "396",
+				"Studiengang": "29",
+				"Pflicht": "1",
+				"Kontonr": "1100",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Bioinformatik",
+				"id": "397",
+				"Studiengang": "29",
+				"Pflicht": "0",
+				"Kontonr": "1200",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Bereich Biologie",
+		"id": "398",
+		"Studiengang": "29",
+		"Pflicht": "0",
+		"Kontonr": "2000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtmodule Biologie",
+				"id": "399",
+				"Studiengang": "29",
+				"Pflicht": "0",
+				"Kontonr": "2100",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichtmodule Molekularbiologie",
+				"id": "400",
+				"Studiengang": "29",
+				"Pflicht": "0",
+				"Kontonr": "2200",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Bereich Informatik",
+		"id": "401",
+		"Studiengang": "29",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichbereich bioinformatisch relevante Informatik",
+				"id": "402",
+				"Studiengang": "29",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": []
+			},
+			{
+				"Name": "Wahlpflichbereich Informatik",
+				"id": "403",
+				"Studiengang": "29",
+				"Pflicht": "0",
+				"Kontonr": "3100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Bereich Mathematik",
+		"id": "404",
+		"Studiengang": "29",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtmodule Mathematik",
+				"id": "405",
+				"Studiengang": "29",
+				"Pflicht": "0",
+				"Kontonr": "4100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Bereich Schl�sselkompetenzen",
+		"id": "406",
+		"Studiengang": "29",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "ASQ der FMI",
+				"id": "407",
+				"Studiengang": "29",
+				"Pflicht": "0",
+				"Kontonr": "5100",
+				"Kinder": []
+			},
+			{
+				"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+				"id": "408",
+				"Studiengang": "29",
+				"Pflicht": "0",
+				"Kontonr": "6100",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "409",
+		"Studiengang": "30",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "Mathematik",
+		"id": "410",
+		"Studiengang": "30",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "Wahlpflichtbereich Optimierung/Stochatik",
+				"id": "411",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "3100",
+				"Kinder": [
+					{
+						"Name": "Optimierung",
+						"id": "412",
+						"Studiengang": "30",
+						"Pflicht": "0",
+						"Kontonr": "3110",
+						"Kinder": []
+					},
+					{
+						"Name": "Stochastik",
+						"id": "413",
+						"Studiengang": "30",
+						"Pflicht": "0",
+						"Kontonr": "3120",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Wahlpflichtbereich sonstige Mathematik",
+				"id": "414",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Wirtschaftswissenschaften",
+		"id": "415",
+		"Studiengang": "30",
+		"Pflicht": "0",
+		"Kontonr": "4000",
+		"Kinder": [
+			{
+				"Name": "Schwerpunkt Financial Risk",
+				"id": "416",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "4100",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Management Science",
+				"id": "417",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "4200",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Accounting, Taxation and Capital Markets",
+				"id": "418",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "4300",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Marketing Management",
+				"id": "419",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "4400",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Innovation and Change",
+				"id": "420",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "4500",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Economics and Strategy",
+				"id": "421",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "4600",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "WP Informatik und ASQ",
+		"id": "422",
+		"Studiengang": "30",
+		"Pflicht": "0",
+		"Kontonr": "5000",
+		"Kinder": [
+			{
+				"Name": "allgemeine Schl�sselqualifikationen (ASQ)",
+				"id": "423",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "5020",
+				"Kinder": [
+					{
+						"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+						"id": "424",
+						"Studiengang": "30",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "Informatik",
+				"id": "425",
+				"Studiengang": "30",
+				"Pflicht": "0",
+				"Kontonr": "5010",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Leistungspunktekonto",
+		"id": "426",
+		"Studiengang": "31",
+		"Pflicht": "0",
+		"Kontonr": "900",
+		"Kinder": []
+	},
+	{
+		"Name": "Mathematik",
+		"id": "427",
+		"Studiengang": "31",
+		"Pflicht": "0",
+		"Kontonr": "1000",
+		"Kinder": [
+			{
+				"Name": "Optimierung",
+				"id": "428",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "1100",
+				"Kinder": []
+			},
+			{
+				"Name": "Sonstige Mathematik",
+				"id": "429",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "1300",
+				"Kinder": []
+			},
+			{
+				"Name": "Stochastik",
+				"id": "430",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "1200",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Wirtschaftswissenschaften",
+		"id": "431",
+		"Studiengang": "31",
+		"Pflicht": "0",
+		"Kontonr": "2000",
+		"Kinder": [
+			{
+				"Name": "Schwerpunkt Financial Risk",
+				"id": "432",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "2100",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Management Science",
+				"id": "433",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "2200",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Accounting, Taxation and Capital Markets",
+				"id": "434",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "2300",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Marketing Management",
+				"id": "435",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "2400",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Innovation and Change",
+				"id": "436",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "2500",
+				"Kinder": []
+			},
+			{
+				"Name": "Schwerpunkt Economics and Strategy",
+				"id": "437",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "2600",
+				"Kinder": []
+			}
+		]
+	},
+	{
+		"Name": "Informatik, ASQ, German",
+		"id": "438",
+		"Studiengang": "31",
+		"Pflicht": "0",
+		"Kontonr": "3000",
+		"Kinder": [
+			{
+				"Name": "ASQ",
+				"id": "439",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "3200",
+				"Kinder": [
+					{
+						"Name": "Katalog Allgemeine SQ der Philosophischen Fakult�t",
+						"id": "440",
+						"Studiengang": "31",
+						"Pflicht": "0",
+						"Kontonr": "6100",
+						"Kinder": []
+					}
+				]
+			},
+			{
+				"Name": "German",
+				"id": "441",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "3300",
+				"Kinder": []
+			},
+			{
+				"Name": "Informatik",
+				"id": "442",
+				"Studiengang": "31",
+				"Pflicht": "0",
+				"Kontonr": "3100",
+				"Kinder": []
+			}
+		]
+	}
+]

@@ -21,7 +21,6 @@ class CreateEventsTable extends Migration
             $table->boolean('active');
             $table->integer('sws')->nullable();
             $table->string('type');
-            $table->string('targets')->nullable();
             $table->integer('rotation')->nullable();
             $table->boolean('changed')->default(true);
             $table->timestamps();

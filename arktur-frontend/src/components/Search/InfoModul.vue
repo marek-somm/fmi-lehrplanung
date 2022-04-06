@@ -97,9 +97,19 @@
 					<div class="box" v-html="selected.data.content.literature"></div>
 				</div>
 			</div>
+			<h3><u>Studiengänge:</u></h3>
+			<div class="block" v-for="studiengang in selected.data.extra">
+				<p><b>{{ studiengang.field_of_study }}</b>	</p>
+				<p>{{ studiengang.parent }}</p>
+				<p class="small">{{ studiengang.name }}</p>
+				<p class="small">Pflicht: {{ studiengang.obligational ? "ja" : "nein" }}</p>
+			</div>
 			<People :people="selected.data.people" />
 			<h3><u>Veranstaltungen:</u></h3>
-			<div v-for="(semester) in helper.sortObj(selected.data.events)" :key="semester[0]">
+			<div
+				v-for="semester in helper.sortObj(selected.data.events)"
+				:key="semester[0]"
+			>
 				<h4>{{ helper.convertSemester(semester[0]) }}</h4>
 				<div
 					class="block"
@@ -203,5 +213,10 @@ export default {
 	&:hover {
 		background-color: rgb(255, 100, 100);
 	}
+}
+
+.small {
+	font-style: italic;
+	font-size: 0.8rem
 }
 </style>

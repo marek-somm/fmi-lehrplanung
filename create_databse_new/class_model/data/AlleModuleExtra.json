@@ -1,0 +1,5610 @@
+[
+	{
+	  "id": "1",
+	  "Modulcode": "FMI-BI0001",
+	  "Prüfungsnummer": "52211",
+	  "LP": "6",
+	  "Modultitel_de": "3D-Strukturen biologischer Makromoleküle",
+	  "Modultitel_en": "3D Structures of Biological Makromolecules"
+	},
+	{
+	  "id": "2",
+	  "Modulcode": "FMI-BI0002",
+	  "Prüfungsnummer": "52221",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithmische Phylogenetik",
+	  "Modultitel_en": "Algorithmic Phylogenetics"
+	},
+	{
+	  "id": "3",
+	  "Modulcode": "FMI-BI0003",
+	  "Prüfungsnummer": "52231",
+	  "LP": "12",
+	  "Modultitel_de": "Einführung in die Bioinformatik I",
+	  "Modultitel_en": "Introduction to Bioinformatics I"
+	},
+	{
+	  "id": "4",
+	  "Modulcode": "FMI-BI0004",
+	  "Prüfungsnummer": "52241",
+	  "LP": "9",
+	  "Modultitel_de": "Einführung in die Bioinformatik II",
+	  "Modultitel_en": "Introduction to Bioinformatics II"
+	},
+	{
+	  "id": "5",
+	  "Modulcode": "FMI-BI0005",
+	  "Prüfungsnummer": "52251",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Systembiologie",
+	  "Modultitel_en": "Fundamentals of Systems Biology"
+	},
+	{
+	  "id": "6",
+	  "Modulcode": "FMI-BI0006",
+	  "Prüfungsnummer": "52261",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematische Biologie I",
+	  "Modultitel_en": "Mathematical Biology I"
+	},
+	{
+	  "id": "7",
+	  "Modulcode": "FMI-BI0007",
+	  "Prüfungsnummer": "52271",
+	  "LP": "6",
+	  "Modultitel_de": "Projekt Data Mining und Sequenzanalyse",
+	  "Modultitel_en": "Project Data Mining and Sequence Analysis"
+	},
+	{
+	  "id": "8",
+	  "Modulcode": "FMI-BI0008",
+	  "Prüfungsnummer": "52281",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithmische Massenspektrometrie",
+	  "Modultitel_en": "Computational mass spectrometry"
+	},
+	{
+	  "id": "9",
+	  "Modulcode": "FMI-BI0009",
+	  "Prüfungsnummer": "52291",
+	  "LP": "6",
+	  "Modultitel_de": "Sequenzanalyse",
+	  "Modultitel_en": "Sequence Analysis"
+	},
+	{
+	  "id": "10",
+	  "Modulcode": "FMI-BI0011",
+	  "Prüfungsnummer": "52311",
+	  "LP": "6",
+	  "Modultitel_de": "Bioinformatische Methoden in der Genomforschung",
+	  "Modultitel_en": "Computational Genomics"
+	},
+	{
+	  "id": "11",
+	  "Modulcode": "FMI-BI0012",
+	  "Prüfungsnummer": "52321",
+	  "LP": "3",
+	  "Modultitel_de": "Analyse der Genexpression",
+	  "Modultitel_en": "Gene Expression Analysis"
+	},
+	{
+	  "id": "12",
+	  "Modulcode": "FMI-BI0013",
+	  "Prüfungsnummer": "52331",
+	  "LP": "1",
+	  "Modultitel_de": "Beruf und Karriere für Bioinformatiker",
+	  "Modultitel_en": "Job and career for Bioinformaticians"
+	},
+	{
+	  "id": "13",
+	  "Modulcode": "FMI-BI0014",
+	  "Prüfungsnummer": "52341",
+	  "LP": "6",
+	  "Modultitel_de": "Biosystemanalyse",
+	  "Modultitel_en": "Bio-systems Analysis"
+	},
+	{
+	  "id": "14",
+	  "Modulcode": "FMI-BI0015",
+	  "Prüfungsnummer": "52351",
+	  "LP": "7",
+	  "Modultitel_de": "Metabolische und regulatorische Netzwerke",
+	  "Modultitel_en": "Metabolic and regulatory networks"
+	},
+	{
+	  "id": "15",
+	  "Modulcode": "FMI-BI0016",
+	  "Prüfungsnummer": "52361",
+	  "LP": "3",
+	  "Modultitel_de": "Elektronische Fachinformationen für Bioinformatiker",
+	  "Modultitel_en": "Electronic Professional Information for Bioinformaticians"
+	},
+	{
+	  "id": "16",
+	  "Modulcode": "FMI-BI0017",
+	  "Prüfungsnummer": "52371",
+	  "LP": "6",
+	  "Modultitel_de": "Logik lebender Systeme",
+	  "Modultitel_en": "Logic of living systems"
+	},
+	{
+	  "id": "17",
+	  "Modulcode": "FMI-BI0018",
+	  "Prüfungsnummer": "52381",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematische Biologie II",
+	  "Modultitel_en": "Mathematical Biology II"
+	},
+	{
+	  "id": "18",
+	  "Modulcode": "FMI-BI0019",
+	  "Prüfungsnummer": "52391",
+	  "LP": "6",
+	  "Modultitel_de": "Optimalitätsprinzipien in der Evolution",
+	  "Modultitel_en": "Optimality principles in evolution"
+	},
+	{
+	  "id": "19",
+	  "Modulcode": "FMI-BI0020",
+	  "Prüfungsnummer": "52401",
+	  "LP": "6",
+	  "Modultitel_de": "Projektmodul",
+	  "Modultitel_en": "Project modul"
+	},
+	{
+	  "id": "20",
+	  "Modulcode": "FMI-BI0021",
+	  "Prüfungsnummer": "52411",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Bioinformatik 1",
+	  "Modultitel_en": "Seminar Bioinformatics 1"
+	},
+	{
+	  "id": "21",
+	  "Modulcode": "FMI-BI0022",
+	  "Prüfungsnummer": "52421",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Bioinformatik 2",
+	  "Modultitel_en": "Seminar Bioinformatics 2"
+	},
+	{
+	  "id": "22",
+	  "Modulcode": "FMI-BI0023",
+	  "Prüfungsnummer": "52431",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Bioinformatik 3",
+	  "Modultitel_en": "Seminar Bioinformatics 3"
+	},
+	{
+	  "id": "23",
+	  "Modulcode": "FMI-BI0024",
+	  "Prüfungsnummer": "52441",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Bioinformatik 4",
+	  "Modultitel_en": "Seminar Bioinformatics 4"
+	},
+	{
+	  "id": "24",
+	  "Modulcode": "FMI-BI0025",
+	  "Prüfungsnummer": "52451",
+	  "LP": "6",
+	  "Modultitel_de": "Evolutionäre Algorithmen",
+	  "Modultitel_en": "Evolutionary  Algorithms"
+	},
+	{
+	  "id": "25",
+	  "Modulcode": "FMI-BI0026",
+	  "Prüfungsnummer": "52461",
+	  "LP": "4",
+	  "Modultitel_de": "Einführung in die Genetik",
+	  "Modultitel_en": "Introduction to Genetics"
+	},
+	{
+	  "id": "26",
+	  "Modulcode": "FMI-BI0027",
+	  "Prüfungsnummer": "52471",
+	  "LP": "6",
+	  "Modultitel_de": "Biochemie",
+	  "Modultitel_en": "Biochemistry"
+	},
+	{
+	  "id": "27",
+	  "Modulcode": "FMI-BI0028",
+	  "Prüfungsnummer": "52481",
+	  "LP": "3",
+	  "Modultitel_de": "Grundlagen biomolekularer Strukturen",
+	  "Modultitel_en": "Introduction to biomolecular structures"
+	},
+	{
+	  "id": "28",
+	  "Modulcode": "FMI-BI0029",
+	  "Prüfungsnummer": "52491",
+	  "LP": "3",
+	  "Modultitel_de": "Genregulation und Entwicklung I",
+	  "Modultitel_en": "Gene regulation and Development I"
+	},
+	{
+	  "id": "29",
+	  "Modulcode": "FMI-BI0030",
+	  "Prüfungsnummer": "52501",
+	  "LP": "3",
+	  "Modultitel_de": "Molekulare Evolution",
+	  "Modultitel_en": "Molecular evolution"
+	},
+	{
+	  "id": "30",
+	  "Modulcode": "FMI-BI0031",
+	  "Prüfungsnummer": "52511",
+	  "LP": "8",
+	  "Modultitel_de": "Molekularbiologisches Praktikum",
+	  "Modultitel_en": "Practical course molecular biology"
+	},
+	{
+	  "id": "31",
+	  "Modulcode": "FMI-BI0032",
+	  "Prüfungsnummer": "52521",
+	  "LP": "3",
+	  "Modultitel_de": "Genregulation und Entwicklung II",
+	  "Modultitel_en": "Gene regulation and Development II"
+	},
+	{
+	  "id": "32",
+	  "Modulcode": "FMI-BI0033",
+	  "Prüfungsnummer": "52531",
+	  "LP": "3",
+	  "Modultitel_de": "Zelluläre Sensorik",
+	  "Modultitel_en": "Cellular Sensors"
+	},
+	{
+	  "id": "33",
+	  "Modulcode": "FMI-BI0034",
+	  "Prüfungsnummer": "52541",
+	  "LP": "4",
+	  "Modultitel_de": "Molekulare Medizin",
+	  "Modultitel_en": "Molecular Medicine"
+	},
+	{
+	  "id": "34",
+	  "Modulcode": "FMI-BI0035",
+	  "Prüfungsnummer": "52551",
+	  "LP": "4",
+	  "Modultitel_de": "Allgemeine Ökologie",
+	  "Modultitel_en": "General Ecology"
+	},
+	{
+	  "id": "35",
+	  "Modulcode": "FMI-BI0036",
+	  "Prüfungsnummer": "52561",
+	  "LP": "6",
+	  "Modultitel_de": "Phylogenie eukaryontischer Mikroorganismen",
+	  "Modultitel_en": "Phylogeny of eukaryotic microorganisms"
+	},
+	{
+	  "id": "36",
+	  "Modulcode": "FMI-BI0037",
+	  "Prüfungsnummer": "52571",
+	  "LP": "4",
+	  "Modultitel_de": "Molekulargenetik",
+	  "Modultitel_en": "Molecular genetics"
+	},
+	{
+	  "id": "37",
+	  "Modulcode": "FMI-BI0038",
+	  "Prüfungsnummer": "52581",
+	  "LP": "5",
+	  "Modultitel_de": "Molekulare Zellbiologie",
+	  "Modultitel_en": "Molecular cell biology"
+	},
+	{
+	  "id": "38",
+	  "Modulcode": "FMI-BI0039",
+	  "Prüfungsnummer": "52591",
+	  "LP": "6",
+	  "Modultitel_de": "Molekulare Mechanismen biologischer Uhren",
+	  "Modultitel_en": "Molecular mechanisms of biological clocks"
+	},
+	{
+	  "id": "39",
+	  "Modulcode": "FMI-BI0040",
+	  "Prüfungsnummer": "52601",
+	  "LP": "6",
+	  "Modultitel_de": "Organismische Biologie",
+	  "Modultitel_en": "Organismic biology"
+	},
+	{
+	  "id": "40",
+	  "Modulcode": "FMI-BI0041",
+	  "Prüfungsnummer": "52611",
+	  "LP": "4",
+	  "Modultitel_de": "Populationsgenetik und -genomik",
+	  "Modultitel_en": "Population Genetics and Genomics"
+	},
+	{
+	  "id": "41",
+	  "Modulcode": "FMI-BI0042",
+	  "Prüfungsnummer": "52621",
+	  "LP": "3",
+	  "Modultitel_de": "Grundlagen der Zellbiologie",
+	  "Modultitel_en": "Introduction to Cell Biology"
+	},
+	{
+	  "id": "42",
+	  "Modulcode": "FMI-BI0043",
+	  "Prüfungsnummer": "52631",
+	  "LP": "3",
+	  "Modultitel_de": "Methoden der Hochdurchsatzsequenzierung -theoretischer Teil",
+	  "Modultitel_en": "High Throughput Sequencing Methods"
+	},
+	{
+	  "id": "43",
+	  "Modulcode": "FMI-BI0044",
+	  "Prüfungsnummer": "52641",
+	  "LP": "6",
+	  "Modultitel_de": "Systembiologie der Immunologie",
+	  "Modultitel_en": "Systems Biology of Immunolgy"
+	},
+	{
+	  "id": "44",
+	  "Modulcode": "FMI-BI0045",
+	  "Prüfungsnummer": "52651",
+	  "LP": "3",
+	  "Modultitel_de": "Biologische Netze und Graphalgorithmen",
+	  "Modultitel_en": "Biological networks and graph algorithms"
+	},
+	{
+	  "id": "45",
+	  "Modulcode": "FMI-BI0046",
+	  "Prüfungsnummer": "52661",
+	  "LP": "3",
+	  "Modultitel_de": "RNA Bioinformatik (theoretischer Teil)",
+	  "Modultitel_en": "RNA Bioinformatics (theoretical chapter)"
+	},
+	{
+	  "id": "46",
+	  "Modulcode": "FMI-BI0047",
+	  "Prüfungsnummer": "52671",
+	  "LP": "4",
+	  "Modultitel_de": "RNA Bioinformatik Praktikum",
+	  "Modultitel_en": "RNA Bioinformatics - Practical Course"
+	},
+	{
+	  "id": "47",
+	  "Modulcode": "FMI-BI0048",
+	  "Prüfungsnummer": "52681",
+	  "LP": "4",
+	  "Modultitel_de": "Skriptsprachen und Anwendungen (ASQ)",
+	  "Modultitel_en": "Scripting languages and their applications"
+	},
+	{
+	  "id": "48",
+	  "Modulcode": "FMI-BI0049",
+	  "Prüfungsnummer": "52691",
+	  "LP": "4",
+	  "Modultitel_de": "Methoden der Hochdurchsatzsequenzierung - Praktikum",
+	  "Modultitel_en": "High Throughput Sequencing Methods - Practical Course"
+	},
+	{
+	  "id": "49",
+	  "Modulcode": "FMI-BI0050",
+	  "Prüfungsnummer": "52701",
+	  "LP": "3",
+	  "Modultitel_de": "Molekulare Algorithmen",
+	  "Modultitel_en": "Molecular Algorithm"
+	},
+	{
+	  "id": "50",
+	  "Modulcode": "FMI-BI0051",
+	  "Prüfungsnummer": "52711",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematische Modellbildung und Simulation",
+	  "Modultitel_en": "Mathematical Modeling and Simulation"
+	},
+	{
+	  "id": "51",
+	  "Modulcode": "FMI-BI0052",
+	  "Prüfungsnummer": "52721",
+	  "LP": "10",
+	  "Modultitel_de": "Angewandte Systembiologie am Beispiel biologischer Uhren",
+	  "Modultitel_en": "Applied systems biology taking biological clocks as example"
+	},
+	{
+	  "id": "52",
+	  "Modulcode": "FMI-BI0053",
+	  "Prüfungsnummer": "52731",
+	  "LP": "6",
+	  "Modultitel_de": "Bildbasierte Systembiologie",
+	  "Modultitel_en": "Image-based Systems Biology"
+	},
+	{
+	  "id": "53",
+	  "Modulcode": "FMI-BI0054",
+	  "Prüfungsnummer": "52741",
+	  "LP": "3",
+	  "Modultitel_de": "Viren Bioinformatik",
+	  "Modultitel_en": "Viral Bioinformatics"
+	},
+	{
+	  "id": "54",
+	  "Modulcode": "FMI-BI0055",
+	  "Prüfungsnummer": "52751",
+	  "LP": "3",
+	  "Modultitel_de": "Proseminar Bioinformatik LS Böcker",
+	  "Modultitel_en": "Proseminar Bioinformatics"
+	},
+	{
+	  "id": "55",
+	  "Modulcode": "FMI-BI0056",
+	  "Prüfungsnummer": "52761",
+	  "LP": "3",
+	  "Modultitel_de": "Proseminar Bioinformatik LS Schuster",
+	  "Modultitel_en": "Proseminar Bioinformatics"
+	},
+	{
+	  "id": "56",
+	  "Modulcode": "FMI-BI0057",
+	  "Prüfungsnummer": "52771",
+	  "LP": "4",
+	  "Modultitel_de": "LaTeX Grundlagen für Naturwissenschaftler und Informatiker",
+	  "Modultitel_en": "Introduction to LaTeX for scientists"
+	},
+	{
+	  "id": "57",
+	  "Modulcode": "FMI-BI0058",
+	  "Prüfungsnummer": "52781",
+	  "LP": "4",
+	  "Modultitel_de": "Skriptsprachen in der Bioinformatik (ASQ)",
+	  "Modultitel_en": "Scripting languages in applied bioinformatics"
+	},
+	{
+	  "id": "58",
+	  "Modulcode": "FMI-BI0059",
+	  "Prüfungsnummer": "52791",
+	  "LP": "4",
+	  "Modultitel_de": "Grundlegende bioinformatische Anwendungen",
+	  "Modultitel_en": "Basic Bioinformatical Applications"
+	},
+	{
+	  "id": "59",
+	  "Modulcode": "FMI-IN0001",
+	  "Prüfungsnummer": "50011",
+	  "LP": "9",
+	  "Modultitel_de": "Algorithmen und Datenstrukturen",
+	  "Modultitel_en": "Algorithms and Data Structures"
+	},
+	{
+	  "id": "60",
+	  "Modulcode": "FMI-IN0002",
+	  "Prüfungsnummer": "50021",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Algorithmik",
+	  "Modultitel_en": "Foundations of Algorithmics"
+	},
+	{
+	  "id": "61",
+	  "Modulcode": "FMI-IN0003",
+	  "Prüfungsnummer": "50031",
+	  "LP": "9",
+	  "Modultitel_de": "Formale Sprachen - 9 LP",
+	  "Modultitel_en": "Formal Languages - 9 CP"
+	},
+	{
+	  "id": "62",
+	  "Modulcode": "FMI-IN0004",
+	  "Prüfungsnummer": "50041",
+	  "LP": "6",
+	  "Modultitel_de": "Ausgewählte Kapitel der Begründungsverwaltung",
+	  "Modultitel_en": "Reason-Maintenance"
+	},
+	{
+	  "id": "63",
+	  "Modulcode": "FMI-IN0005",
+	  "Prüfungsnummer": "50051",
+	  "LP": "9",
+	  "Modultitel_de": "Automaten und Berechenbarkeit",
+	  "Modultitel_en": "Automata and Computability"
+	},
+	{
+	  "id": "64",
+	  "Modulcode": "FMI-IN0006",
+	  "Prüfungsnummer": "50061",
+	  "LP": "6",
+	  "Modultitel_de": "Berechenbarkeit und Komplexität",
+	  "Modultitel_en": "Computability and Complexity"
+	},
+	{
+	  "id": "65",
+	  "Modulcode": "FMI-IN0007",
+	  "Prüfungsnummer": "50071",
+	  "LP": "6",
+	  "Modultitel_de": "Cluster und Grid Computing",
+	  "Modultitel_en": "Cluster und Grid Computing"
+	},
+	{
+	  "id": "66",
+	  "Modulcode": "FMI-IN0008",
+	  "Prüfungsnummer": "50081",
+	  "LP": "6",
+	  "Modultitel_de": "Datenbanksysteme I",
+	  "Modultitel_en": "Database Systems I"
+	},
+	{
+	  "id": "67",
+	  "Modulcode": "FMI-IN0009",
+	  "Prüfungsnummer": "50091",
+	  "LP": "6",
+	  "Modultitel_de": "Datenbanksysteme II",
+	  "Modultitel_en": "Database Systems II"
+	},
+	{
+	  "id": "68",
+	  "Modulcode": "FMI-IN0010",
+	  "Prüfungsnummer": "50101",
+	  "LP": "3",
+	  "Modultitel_de": "Datenbanksysteme Projekt",
+	  "Modultitel_en": "Database Systems Project"
+	},
+	{
+	  "id": "69",
+	  "Modulcode": "FMI-IN0011",
+	  "Prüfungsnummer": "50111",
+	  "LP": "3",
+	  "Modultitel_de": "Datenbanksysteme Spezialisierung",
+	  "Modultitel_en": "Database Systems Specialization"
+	},
+	{
+	  "id": "70",
+	  "Modulcode": "FMI-IN0013",
+	  "Prüfungsnummer": "50131",
+	  "LP": "6",
+	  "Modultitel_de": "Diskrete Strukturen I",
+	  "Modultitel_en": "Discrete Structures I"
+	},
+	{
+	  "id": "71",
+	  "Modulcode": "FMI-IN0014",
+	  "Prüfungsnummer": "50141",
+	  "LP": "6",
+	  "Modultitel_de": "Diskrete Strukturen II",
+	  "Modultitel_en": "Discrete Structures II"
+	},
+	{
+	  "id": "72",
+	  "Modulcode": "FMI-IN0015",
+	  "Prüfungsnummer": "50151",
+	  "LP": "3",
+	  "Modultitel_de": "Diskrete Strukturen in der Bildverarbeitung",
+	  "Modultitel_en": "Discrete structures in image processing"
+	},
+	{
+	  "id": "73",
+	  "Modulcode": "FMI-IN0016",
+	  "Prüfungsnummer": "50161",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in die Bildinformatik",
+	  "Modultitel_en": "Introduction to Visual Computing"
+	},
+	{
+	  "id": "74",
+	  "Modulcode": "FMI-IN0017",
+	  "Prüfungsnummer": "50171",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in die Künstliche Intelligenz",
+	  "Modultitel_en": "Introduction to Artificial Intelligence"
+	},
+	{
+	  "id": "75",
+	  "Modulcode": "FMI-IN0018",
+	  "Prüfungsnummer": "50181",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in die Theorie künstlicher Neuronaler Netze",
+	  "Modultitel_en": "Introduction to Artificial Neural Networks"
+	},
+	{
+	  "id": "76",
+	  "Modulcode": "FMI-IN0019",
+	  "Prüfungsnummer": "50191",
+	  "LP": "6",
+	  "Modultitel_de": "Automaten und Sprachen",
+	  "Modultitel_en": "Automata and Languages"
+	},
+	{
+	  "id": "77",
+	  "Modulcode": "FMI-IN0020",
+	  "Prüfungsnummer": "50201",
+	  "LP": "6",
+	  "Modultitel_de": "Gerätetreiber",
+	  "Modultitel_en": "Device Drivers"
+	},
+	{
+	  "id": "78",
+	  "Modulcode": "FMI-IN0021",
+	  "Prüfungsnummer": "50211",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Informations- und Softwaresysteme",
+	  "Modultitel_en": "Foundations of Information- and Softwaresystems"
+	},
+	{
+	  "id": "79",
+	  "Modulcode": "FMI-IN0022",
+	  "Prüfungsnummer": "50221",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Technischen Informatik",
+	  "Modultitel_en": "Principles of computer hardware"
+	},
+	{
+	  "id": "80",
+	  "Modulcode": "FMI-IN0023",
+	  "Prüfungsnummer": "50231",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen und Techniken der Constraint-Programmierung",
+	  "Modultitel_en": "Theory and Practice of Constraint Programming"
+	},
+	{
+	  "id": "81",
+	  "Modulcode": "FMI-IN0024",
+	  "Prüfungsnummer": "50241",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen und Techniken des automatischen Planens",
+	  "Modultitel_en": "Theory and Practice of Automated Planning"
+	},
+	{
+	  "id": "82",
+	  "Modulcode": "FMI-IN0025",
+	  "Prüfungsnummer": "50251",
+	  "LP": "9",
+	  "Modultitel_de": "Grundlagen informatischer Problemlösung",
+	  "Modultitel_en": "Foundations of Computational Problem Solving"
+	},
+	{
+	  "id": "83",
+	  "Modulcode": "FMI-IN0026",
+	  "Prüfungsnummer": "50261",
+	  "LP": "3",
+	  "Modultitel_de": "Informatik und Gesellschaft (ASQ)",
+	  "Modultitel_en": "Informatics and Society"
+	},
+	{
+	  "id": "84",
+	  "Modulcode": "FMI-IN0027",
+	  "Prüfungsnummer": "50271",
+	  "LP": "6",
+	  "Modultitel_de": "Ingenieurmäßige Softwareentwicklung",
+	  "Modultitel_en": "Softwareengineering"
+	},
+	{
+	  "id": "85",
+	  "Modulcode": "FMI-IN0028",
+	  "Prüfungsnummer": "50281",
+	  "LP": "6",
+	  "Modultitel_de": "Komplexitätstheorie - 6 LP",
+	  "Modultitel_en": "Computational Complexity - 6 CP"
+	},
+	{
+	  "id": "86",
+	  "Modulcode": "FMI-IN0029",
+	  "Prüfungsnummer": "50291",
+	  "LP": "6",
+	  "Modultitel_de": "Formale Sprachen - 6 LP",
+	  "Modultitel_en": "Formal Languages - 6 CP"
+	},
+	{
+	  "id": "87",
+	  "Modulcode": "FMI-IN0030",
+	  "Prüfungsnummer": "50301",
+	  "LP": "6",
+	  "Modultitel_de": "Kryptologie",
+	  "Modultitel_en": "Cryptology"
+	},
+	{
+	  "id": "88",
+	  "Modulcode": "FMI-IN0031",
+	  "Prüfungsnummer": "50311",
+	  "LP": "3",
+	  "Modultitel_de": "Komplexitätstheorie - 3 LP",
+	  "Modultitel_en": "Computational Complexity"
+	},
+	{
+	  "id": "89",
+	  "Modulcode": "FMI-IN0032",
+	  "Prüfungsnummer": "50321",
+	  "LP": "3",
+	  "Modultitel_de": "Literaturarbeit und Präsentation (ASQ)",
+	  "Modultitel_en": "Literature research and presentation"
+	},
+	{
+	  "id": "90",
+	  "Modulcode": "FMI-IN0033",
+	  "Prüfungsnummer": "50331",
+	  "LP": "6",
+	  "Modultitel_de": "Logiksysteme",
+	  "Modultitel_en": "Logical Systems"
+	},
+	{
+	  "id": "91",
+	  "Modulcode": "FMI-IN0034",
+	  "Prüfungsnummer": "50341",
+	  "LP": "6",
+	  "Modultitel_de": "Maschinelles Lernen und Datamining",
+	  "Modultitel_en": "Machine Learning and Datamining"
+	},
+	{
+	  "id": "92",
+	  "Modulcode": "FMI-IN0035",
+	  "Prüfungsnummer": "50351",
+	  "LP": "6",
+	  "Modultitel_de": "Modelle für die symbolische Informationsverarbeitung mit LISP und Prolog",
+	  "Modultitel_en": "Symbol processing with LISP and Prolog"
+	},
+	{
+	  "id": "93",
+	  "Modulcode": "FMI-IN0036",
+	  "Prüfungsnummer": "50361",
+	  "LP": "6",
+	  "Modultitel_de": "Mustererkennung",
+	  "Modultitel_en": "Pattern Recognition"
+	},
+	{
+	  "id": "94",
+	  "Modulcode": "FMI-IN0037",
+	  "Prüfungsnummer": "50371",
+	  "LP": "6",
+	  "Modultitel_de": "Parallele und Eingebettete Systeme",
+	  "Modultitel_en": "Parallel and Embedded Systems"
+	},
+	{
+	  "id": "95",
+	  "Modulcode": "FMI-IN0038",
+	  "Prüfungsnummer": "50381",
+	  "LP": "3",
+	  "Modultitel_de": "Phänomene der Rechnerarithmetik",
+	  "Modultitel_en": "Experiences in Computer Arithmetic"
+	},
+	{
+	  "id": "96",
+	  "Modulcode": "FMI-IN0039",
+	  "Prüfungsnummer": "50391",
+	  "LP": "3",
+	  "Modultitel_de": "Experimentelle Hardware-Projekte",
+	  "Modultitel_en": "Experimental Hardware Projects"
+	},
+	{
+	  "id": "97",
+	  "Modulcode": "FMI-IN0041",
+	  "Prüfungsnummer": "50411",
+	  "LP": "6",
+	  "Modultitel_de": "Objektorientierte Programmierung",
+	  "Modultitel_en": "Objectoriented Programming"
+	},
+	{
+	  "id": "98",
+	  "Modulcode": "FMI-IN0042",
+	  "Prüfungsnummer": "50421",
+	  "LP": "6",
+	  "Modultitel_de": "Praktische Programmierübung",
+	  "Modultitel_en": "Practical Course Programming"
+	},
+	{
+	  "id": "99",
+	  "Modulcode": "FMI-IN0043",
+	  "Prüfungsnummer": "50431",
+	  "LP": "3",
+	  "Modultitel_de": "Praktische Übungen zur Praktischen Informatik",
+	  "Modultitel_en": "Labs for Computer Science"
+	},
+	{
+	  "id": "100",
+	  "Modulcode": "FMI-IN0044",
+	  "Prüfungsnummer": "50441",
+	  "LP": "6",
+	  "Modultitel_de": "Projekt Intelligente Systeme",
+	  "Modultitel_en": "Project Intelligent Systems"
+	},
+	{
+	  "id": "101",
+	  "Modulcode": "FMI-IN0045",
+	  "Prüfungsnummer": "50451",
+	  "LP": "3",
+	  "Modultitel_de": "Projektmanagement (ASQ)",
+	  "Modultitel_en": "Project Management"
+	},
+	{
+	  "id": "102",
+	  "Modulcode": "FMI-IN0046",
+	  "Prüfungsnummer": "50461",
+	  "LP": "6",
+	  "Modultitel_de": "Rechnersehen I",
+	  "Modultitel_en": "Computer Vision I"
+	},
+	{
+	  "id": "103",
+	  "Modulcode": "FMI-IN0047",
+	  "Prüfungsnummer": "50471",
+	  "LP": "6",
+	  "Modultitel_de": "Rechnerstrukturen",
+	  "Modultitel_en": "Computer architecture"
+	},
+	{
+	  "id": "104",
+	  "Modulcode": "FMI-IN0048",
+	  "Prüfungsnummer": "50481",
+	  "LP": "6",
+	  "Modultitel_de": "Rechnersehen II",
+	  "Modultitel_en": "Computer Vision II"
+	},
+	{
+	  "id": "105",
+	  "Modulcode": "FMI-IN0049",
+	  "Prüfungsnummer": "50491",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Rechnersehen",
+	  "Modultitel_en": "Seminar Computer Vision"
+	},
+	{
+	  "id": "106",
+	  "Modulcode": "FMI-IN0050",
+	  "Prüfungsnummer": "50501",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Theoretische Informatik/Algorithmik",
+	  "Modultitel_en": "Seminar Algorithmics"
+	},
+	{
+	  "id": "107",
+	  "Modulcode": "FMI-IN0051",
+	  "Prüfungsnummer": "50511",
+	  "LP": "9",
+	  "Modultitel_de": "Softwareentwicklungsprojekt I",
+	  "Modultitel_en": "Project in applied Softwaredevelopment"
+	},
+	{
+	  "id": "108",
+	  "Modulcode": "FMI-IN0052",
+	  "Prüfungsnummer": "50521",
+	  "LP": "3",
+	  "Modultitel_de": "Softwaretechnik Spezialisierung I",
+	  "Modultitel_en": "Softwareengineering Specialization I"
+	},
+	{
+	  "id": "109",
+	  "Modulcode": "FMI-IN0053",
+	  "Prüfungsnummer": "50531",
+	  "LP": "6",
+	  "Modultitel_de": "Softwaretechnik Spezialisierung II",
+	  "Modultitel_en": "Softwareengineering Specialization II"
+	},
+	{
+	  "id": "110",
+	  "Modulcode": "FMI-IN0054",
+	  "Prüfungsnummer": "50541",
+	  "LP": "3",
+	  "Modultitel_de": "Spezielle Musteranalysesysteme",
+	  "Modultitel_en": "Pattern Analysis Systems"
+	},
+	{
+	  "id": "111",
+	  "Modulcode": "FMI-IN0055",
+	  "Prüfungsnummer": "50551",
+	  "LP": "3",
+	  "Modultitel_de": "Systemsoftware",
+	  "Modultitel_en": "System Software"
+	},
+	{
+	  "id": "112",
+	  "Modulcode": "FMI-IN0056",
+	  "Prüfungsnummer": "50561",
+	  "LP": "6",
+	  "Modultitel_de": "Stochastische Grammatikmodelle",
+	  "Modultitel_en": "Stochastic Grammars"
+	},
+	{
+	  "id": "113",
+	  "Modulcode": "FMI-IN0057",
+	  "Prüfungsnummer": "50571",
+	  "LP": "3",
+	  "Modultitel_de": "TCP/IP",
+	  "Modultitel_en": "TCP/IP"
+	},
+	{
+	  "id": "114",
+	  "Modulcode": "FMI-IN0058",
+	  "Prüfungsnummer": "50581",
+	  "LP": "3",
+	  "Modultitel_de": "Verteilte Systeme Spezialisierung I",
+	  "Modultitel_en": "Distributed Systems Specialization I"
+	},
+	{
+	  "id": "115",
+	  "Modulcode": "FMI-IN0059",
+	  "Prüfungsnummer": "50591",
+	  "LP": "6",
+	  "Modultitel_de": "Verteilte Systeme Spezialisierung II",
+	  "Modultitel_en": "Distributed Systems Specialization II"
+	},
+	{
+	  "id": "116",
+	  "Modulcode": "FMI-IN0060",
+	  "Prüfungsnummer": "50601",
+	  "LP": "6",
+	  "Modultitel_de": "Verteilte Systeme",
+	  "Modultitel_en": "Distributed Systems and Web Development"
+	},
+	{
+	  "id": "117",
+	  "Modulcode": "FMI-IN0061",
+	  "Prüfungsnummer": "50611",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in den VLSI-Entwurf",
+	  "Modultitel_en": "VLSI-Design"
+	},
+	{
+	  "id": "118",
+	  "Modulcode": "FMI-IN0062",
+	  "Prüfungsnummer": "50621",
+	  "LP": "3",
+	  "Modultitel_de": "Bewegungsberechnung aus Bildfolgen",
+	  "Modultitel_en": "Motion Computation from Image Sequences"
+	},
+	{
+	  "id": "119",
+	  "Modulcode": "FMI-IN0063",
+	  "Prüfungsnummer": "50631",
+	  "LP": "3",
+	  "Modultitel_de": "Einführung in die medizinische Bildverarbeitung",
+	  "Modultitel_en": "Introduction to Medical Image Processing"
+	},
+	{
+	  "id": "120",
+	  "Modulcode": "FMI-IN0064",
+	  "Prüfungsnummer": "50641",
+	  "LP": "3",
+	  "Modultitel_de": "Mengenlehre als Fundament für Mathematik und Informatik - 3 LP",
+	  "Modultitel_en": "Set Theory as the Foundations for Mathematics and Informatics - 3 CP"
+	},
+	{
+	  "id": "121",
+	  "Modulcode": "FMI-IN0065",
+	  "Prüfungsnummer": "50651",
+	  "LP": "9",
+	  "Modultitel_de": "Softwareentwicklungsprojekt II",
+	  "Modultitel_en": "Project in Applied Softwaredevelopment II"
+	},
+	{
+	  "id": "122",
+	  "Modulcode": "FMI-IN0066",
+	  "Prüfungsnummer": "50661",
+	  "LP": "3",
+	  "Modultitel_de": "Mobile Agenten",
+	  "Modultitel_en": "Mobile Agents"
+	},
+	{
+	  "id": "123",
+	  "Modulcode": "FMI-IN0067",
+	  "Prüfungsnummer": "50671",
+	  "LP": "3",
+	  "Modultitel_de": "Mobiler Code",
+	  "Modultitel_en": "Mobile Code"
+	},
+	{
+	  "id": "124",
+	  "Modulcode": "FMI-IN0068",
+	  "Prüfungsnummer": "50681",
+	  "LP": "3",
+	  "Modultitel_de": "Programmierung Mobiler Endgeräte",
+	  "Modultitel_en": "Software development for Mobile Devices"
+	},
+	{
+	  "id": "125",
+	  "Modulcode": "FMI-IN0069",
+	  "Prüfungsnummer": "50692",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Entwicklung und Management komplexer Softwaresysteme",
+	  "Modultitel_en": "Seminar Design and Management of Complex Software Systems"
+	},
+	{
+	  "id": "126",
+	  "Modulcode": "FMI-IN0070",
+	  "Prüfungsnummer": "50701",
+	  "LP": "9",
+	  "Modultitel_de": "Grundlagen der Modellierung und Programmierung",
+	  "Modultitel_en": "Foundations of Modelling and Programming"
+	},
+	{
+	  "id": "127",
+	  "Modulcode": "FMI-IN0071",
+	  "Prüfungsnummer": "50711",
+	  "LP": "3",
+	  "Modultitel_de": "Deklarative Programmierung",
+	  "Modultitel_en": "Declarative Programming"
+	},
+	{
+	  "id": "128",
+	  "Modulcode": "FMI-IN0072",
+	  "Prüfungsnummer": "50721",
+	  "LP": "3",
+	  "Modultitel_de": "Datenbankadministration",
+	  "Modultitel_en": "Database Administration"
+	},
+	{
+	  "id": "129",
+	  "Modulcode": "FMI-IN0073",
+	  "Prüfungsnummer": "50731",
+	  "LP": "3",
+	  "Modultitel_de": "Datenbanksystemimplementierung",
+	  "Modultitel_en": "Database System Implementation"
+	},
+	{
+	  "id": "130",
+	  "Modulcode": "FMI-IN0074",
+	  "Prüfungsnummer": "50741",
+	  "LP": "3",
+	  "Modultitel_de": "Fehlertolerante Systeme",
+	  "Modultitel_en": "Fault Tolerant Systems"
+	},
+	{
+	  "id": "131",
+	  "Modulcode": "FMI-IN0075",
+	  "Prüfungsnummer": "50751",
+	  "LP": "5",
+	  "Modultitel_de": "Objektorientierte Programmierung",
+	  "Modultitel_en": "Object-oriented Programming"
+	},
+	{
+	  "id": "132",
+	  "Modulcode": "FMI-IN0076",
+	  "Prüfungsnummer": "50761",
+	  "LP": "4",
+	  "Modultitel_de": "Deklarative Programmierung",
+	  "Modultitel_en": "Declarative Programming"
+	},
+	{
+	  "id": "133",
+	  "Modulcode": "FMI-IN0077",
+	  "Prüfungsnummer": "50771",
+	  "LP": "3",
+	  "Modultitel_de": "Architekturen lose gekoppelter Systeme",
+	  "Modultitel_en": "Architectures of loosely coupled systems"
+	},
+	{
+	  "id": "134",
+	  "Modulcode": "FMI-IN0078",
+	  "Prüfungsnummer": "50781",
+	  "LP": "3",
+	  "Modultitel_de": "Informationssysteme in mobilen und drahtlosen Umgebungen",
+	  "Modultitel_en": "Information systems in mobile and wireless environments"
+	},
+	{
+	  "id": "135",
+	  "Modulcode": "FMI-IN0079",
+	  "Prüfungsnummer": "50791",
+	  "LP": "3",
+	  "Modultitel_de": "Semantische Datenintegration",
+	  "Modultitel_en": "Semantic Data Integration"
+	},
+	{
+	  "id": "136",
+	  "Modulcode": "FMI-IN0080",
+	  "Prüfungsnummer": "50801",
+	  "LP": "3",
+	  "Modultitel_de": "Semantische Prozessintegration",
+	  "Modultitel_en": "Semantic ProcessIntegration"
+	},
+	{
+	  "id": "137",
+	  "Modulcode": "FMI-IN0081",
+	  "Prüfungsnummer": "50811",
+	  "LP": "3",
+	  "Modultitel_de": "Algorithmische Logik",
+	  "Modultitel_en": "Algorithmic Logic"
+	},
+	{
+	  "id": "138",
+	  "Modulcode": "FMI-IN0082",
+	  "Prüfungsnummer": "50821",
+	  "LP": "6",
+	  "Modultitel_de": "Logik und Beweisbarkeit",
+	  "Modultitel_en": "Logic and Provability"
+	},
+	{
+	  "id": "139",
+	  "Modulcode": "FMI-IN0083",
+	  "Prüfungsnummer": "50831",
+	  "LP": "6",
+	  "Modultitel_de": "Signalorientierte Bildverarbeitung",
+	  "Modultitel_en": "Signal Oriented Image Processing"
+	},
+	{
+	  "id": "140",
+	  "Modulcode": "FMI-IN0084",
+	  "Prüfungsnummer": "50841",
+	  "LP": "6",
+	  "Modultitel_de": "Zustandsschätzung und Aktionsauswahl",
+	  "Modultitel_en": "State Estimation and Action Selection"
+	},
+	{
+	  "id": "141",
+	  "Modulcode": "FMI-IN0085",
+	  "Prüfungsnummer": "50851",
+	  "LP": "3",
+	  "Modultitel_de": "Spezielle Probleme im Rechnersehen",
+	  "Modultitel_en": "Recent Advances in Computer Vision"
+	},
+	{
+	  "id": "142",
+	  "Modulcode": "FMI-IN0086",
+	  "Prüfungsnummer": "50861",
+	  "LP": "3",
+	  "Modultitel_de": "Werkzeuge der Mustererkennung und des Maschinellen Lernens",
+	  "Modultitel_en": "Tools for Pattern Recognition and Machine Learning"
+	},
+	{
+	  "id": "143",
+	  "Modulcode": "FMI-IN0087",
+	  "Prüfungsnummer": "50871",
+	  "LP": "3",
+	  "Modultitel_de": "Mikroprozessor-Architekturen",
+	  "Modultitel_en": "Architectures of microprocessors"
+	},
+	{
+	  "id": "144",
+	  "Modulcode": "FMI-IN0088",
+	  "Prüfungsnummer": "50881",
+	  "LP": "6",
+	  "Modultitel_de": "Digitale Schaltungstechnik",
+	  "Modultitel_en": "Digital Circuit Technology"
+	},
+	{
+	  "id": "145",
+	  "Modulcode": "FMI-IN0089",
+	  "Prüfungsnummer": "50891",
+	  "LP": "6",
+	  "Modultitel_de": "Digitale Signalverarbeitung",
+	  "Modultitel_en": "Digital Signal Processing"
+	},
+	{
+	  "id": "146",
+	  "Modulcode": "FMI-IN0090",
+	  "Prüfungsnummer": "50901",
+	  "LP": "6",
+	  "Modultitel_de": "Eingebettete Systeme und Robotik",
+	  "Modultitel_en": "Embedded Systems und Robotics"
+	},
+	{
+	  "id": "147",
+	  "Modulcode": "FMI-IN0092",
+	  "Prüfungsnummer": "50921",
+	  "LP": "3",
+	  "Modultitel_de": "Programmierung paralleler Rechnersysteme",
+	  "Modultitel_en": "Programming of parallel computing systems"
+	},
+	{
+	  "id": "148",
+	  "Modulcode": "FMI-IN0093",
+	  "Prüfungsnummer": "50931",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Technische Informatik",
+	  "Modultitel_en": "Seminar Computer Engineering"
+	},
+	{
+	  "id": "149",
+	  "Modulcode": "FMI-IN0094",
+	  "Prüfungsnummer": "50941",
+	  "LP": "3",
+	  "Modultitel_de": "Diskrete Strukturen III",
+	  "Modultitel_en": "Discrete Structures III"
+	},
+	{
+	  "id": "150",
+	  "Modulcode": "FMI-IN0095",
+	  "Prüfungsnummer": "50951",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithmische Geometrie I",
+	  "Modultitel_en": "Computational Geometry I"
+	},
+	{
+	  "id": "151",
+	  "Modulcode": "FMI-IN0096",
+	  "Prüfungsnummer": "50961",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithmische Grundlagen des maschinellen Lernens",
+	  "Modultitel_en": "Algorithmic Foundations of Machine Learning"
+	},
+	{
+	  "id": "152",
+	  "Modulcode": "FMI-IN0097",
+	  "Prüfungsnummer": "50971",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithmische Graphtheorie",
+	  "Modultitel_en": "Algorithmic Graph Theory"
+	},
+	{
+	  "id": "153",
+	  "Modulcode": "FMI-IN0098",
+	  "Prüfungsnummer": "50981",
+	  "LP": "6",
+	  "Modultitel_de": "Parametrisierte Algorithmik",
+	  "Modultitel_en": "Parameterized Algorithmics"
+	},
+	{
+	  "id": "154",
+	  "Modulcode": "FMI-IN0099",
+	  "Prüfungsnummer": "50991",
+	  "LP": "6",
+	  "Modultitel_de": "Approximative Methoden in der Geometrie",
+	  "Modultitel_en": "Approximation Methods in Geometry"
+	},
+	{
+	  "id": "155",
+	  "Modulcode": "FMI-IN0100",
+	  "Prüfungsnummer": "51001",
+	  "LP": "6",
+	  "Modultitel_de": "Approximationsalgorithmen",
+	  "Modultitel_en": "Approximation Algorithms"
+	},
+	{
+	  "id": "156",
+	  "Modulcode": "FMI-IN0101",
+	  "Prüfungsnummer": "51011",
+	  "LP": "6",
+	  "Modultitel_de": "Konvexe Optimierung",
+	  "Modultitel_en": "Convex Optimization"
+	},
+	{
+	  "id": "157",
+	  "Modulcode": "FMI-IN0102",
+	  "Prüfungsnummer": "51021",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithm Engineering Lab",
+	  "Modultitel_en": "Algorithm Engineering Lab"
+	},
+	{
+	  "id": "158",
+	  "Modulcode": "FMI-IN0103",
+	  "Prüfungsnummer": "51031",
+	  "LP": "6",
+	  "Modultitel_de": "Randomisierte Algorithmen",
+	  "Modultitel_en": "Randomized Algorithms"
+	},
+	{
+	  "id": "159",
+	  "Modulcode": "FMI-IN0104",
+	  "Prüfungsnummer": "51041",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Algorithmik",
+	  "Modultitel_en": "Seminar Algorithmics"
+	},
+	{
+	  "id": "160",
+	  "Modulcode": "FMI-IN0105",
+	  "Prüfungsnummer": "51051",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Rechnerarchitektur",
+	  "Modultitel_en": "Computer Architecture Seminar"
+	},
+	{
+	  "id": "161",
+	  "Modulcode": "FMI-IN0106",
+	  "Prüfungsnummer": "51061",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Rechnerarithmetik",
+	  "Modultitel_en": "Foundations of Computer Arithmetic"
+	},
+	{
+	  "id": "162",
+	  "Modulcode": "FMI-IN0107",
+	  "Prüfungsnummer": "51071",
+	  "LP": "6",
+	  "Modultitel_de": "Intervallarithmetik",
+	  "Modultitel_en": "Foundations of Computer Arithmetic"
+	},
+	{
+	  "id": "163",
+	  "Modulcode": "FMI-IN0108",
+	  "Prüfungsnummer": "51081",
+	  "LP": "6",
+	  "Modultitel_de": "Rechnerarithmetische Schaltungen",
+	  "Modultitel_en": "Computer Arithmetic Design"
+	},
+	{
+	  "id": "164",
+	  "Modulcode": "FMI-IN0109",
+	  "Prüfungsnummer": "51091",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Rechnerarithmetik",
+	  "Modultitel_en": "Advanced Computer Arithmetic"
+	},
+	{
+	  "id": "165",
+	  "Modulcode": "FMI-IN0110",
+	  "Prüfungsnummer": "51101",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Fortgeschrittene Methoden im Rechnersehen",
+	  "Modultitel_en": "Seminar Advanced Methods in Computer Vision"
+	},
+	{
+	  "id": "166",
+	  "Modulcode": "FMI-IN0111",
+	  "Prüfungsnummer": "51111",
+	  "LP": "9",
+	  "Modultitel_de": "Anwendungspraktikum 3-D Rechnersehen",
+	  "Modultitel_en": "Practical 3-D Computer Vision"
+	},
+	{
+	  "id": "167",
+	  "Modulcode": "FMI-IN0112",
+	  "Prüfungsnummer": "51121",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Mensch und Maschine",
+	  "Modultitel_en": "Seminar Human and Machine"
+	},
+	{
+	  "id": "168",
+	  "Modulcode": "FMI-IN0113",
+	  "Prüfungsnummer": "51131",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Software- und Informationssysteme",
+	  "Modultitel_en": "Seminar Software and Information Systems"
+	},
+	{
+	  "id": "169",
+	  "Modulcode": "FMI-IN0114",
+	  "Prüfungsnummer": "51141",
+	  "LP": "3",
+	  "Modultitel_de": "Programmieren in C++",
+	  "Modultitel_en": "Programming in C++"
+	},
+	{
+	  "id": "170",
+	  "Modulcode": "FMI-IN0117",
+	  "Prüfungsnummer": "51171",
+	  "LP": "6",
+	  "Modultitel_de": "Projekt VLSI-Entwurf",
+	  "Modultitel_en": "VLSI Design Project"
+	},
+	{
+	  "id": "171",
+	  "Modulcode": "FMI-IN0118",
+	  "Prüfungsnummer": "51181",
+	  "LP": "9",
+	  "Modultitel_de": "Deklarative und objektorientierte Programmierung",
+	  "Modultitel_en": "Declarative and objectoriented Programming"
+	},
+	{
+	  "id": "172",
+	  "Modulcode": "FMI-IN0119",
+	  "Prüfungsnummer": "51191",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithm Engineering",
+	  "Modultitel_en": "Algorithm Engineering"
+	},
+	{
+	  "id": "173",
+	  "Modulcode": "FMI-IN0121",
+	  "Prüfungsnummer": "51211",
+	  "LP": "6",
+	  "Modultitel_de": "IT-Sicherheit",
+	  "Modultitel_en": "IT Security"
+	},
+	{
+	  "id": "174",
+	  "Modulcode": "FMI-IN0122",
+	  "Prüfungsnummer": "51221",
+	  "LP": "6",
+	  "Modultitel_de": "Petrinetze",
+	  "Modultitel_en": "Petri nets"
+	},
+	{
+	  "id": "175",
+	  "Modulcode": "FMI-IN0123",
+	  "Prüfungsnummer": "51231",
+	  "LP": "6",
+	  "Modultitel_de": "Kommunikationssysteme",
+	  "Modultitel_en": "Communications Systems"
+	},
+	{
+	  "id": "176",
+	  "Modulcode": "FMI-IN0125",
+	  "Prüfungsnummer": "51251",
+	  "LP": "3",
+	  "Modultitel_de": "Automatisches Differenzieren",
+	  "Modultitel_en": "Automatic Differentiation"
+	},
+	{
+	  "id": "177",
+	  "Modulcode": "FMI-IN0126",
+	  "Prüfungsnummer": "51261",
+	  "LP": "6",
+	  "Modultitel_de": "Hochleistungsrechnen",
+	  "Modultitel_en": "High-Performance Computing"
+	},
+	{
+	  "id": "178",
+	  "Modulcode": "FMI-IN0127",
+	  "Prüfungsnummer": "51271",
+	  "LP": "6",
+	  "Modultitel_de": "Grenzen Algorithmischen Lernens",
+	  "Modultitel_en": "Limits of Computation Learning"
+	},
+	{
+	  "id": "179",
+	  "Modulcode": "FMI-IN0128",
+	  "Prüfungsnummer": "51281",
+	  "LP": "6",
+	  "Modultitel_de": "Höhere Algorithmik",
+	  "Modultitel_en": "Advanced Algorithmics"
+	},
+	{
+	  "id": "180",
+	  "Modulcode": "FMI-IN0129",
+	  "Prüfungsnummer": "51291",
+	  "LP": "6",
+	  "Modultitel_de": "Parallele Algorithmen",
+	  "Modultitel_en": "Parallel Algorithms"
+	},
+	{
+	  "id": "181",
+	  "Modulcode": "FMI-IN0130",
+	  "Prüfungsnummer": "51301",
+	  "LP": "6",
+	  "Modultitel_de": "Berechenbarkeitstheorie",
+	  "Modultitel_en": "Computability Theory"
+	},
+	{
+	  "id": "182",
+	  "Modulcode": "FMI-IN0131",
+	  "Prüfungsnummer": "65311",
+	  "LP": "3",
+	  "Modultitel_de": "(Semantische) Daten- und Prozessintegration",
+	  "Modultitel_en": "(Semantic) Data and Process Integration"
+	},
+	{
+	  "id": "183",
+	  "Modulcode": "FMI-IN0132",
+	  "Prüfungsnummer": "65321",
+	  "LP": "3",
+	  "Modultitel_de": "Ausgewählte Optimierungsalgorithmen",
+	  "Modultitel_en": "Selected Algorithms For Optimization"
+	},
+	{
+	  "id": "184",
+	  "Modulcode": "FMI-IN0133",
+	  "Prüfungsnummer": "65331",
+	  "LP": "6",
+	  "Modultitel_de": "Lernen Formaler Sprachen",
+	  "Modultitel_en": "Learning Formal Languages"
+	},
+	{
+	  "id": "185",
+	  "Modulcode": "FMI-IN0134",
+	  "Prüfungsnummer": "65341",
+	  "LP": "3",
+	  "Modultitel_de": "Visuelle Objekterkennung",
+	  "Modultitel_en": "Visual object recognition"
+	},
+	{
+	  "id": "186",
+	  "Modulcode": "FMI-IN0135",
+	  "Prüfungsnummer": "65351",
+	  "LP": "3",
+	  "Modultitel_de": "Graphische Modelle",
+	  "Modultitel_en": "Graphical Models"
+	},
+	{
+	  "id": "187",
+	  "Modulcode": "FMI-IN0136",
+	  "Prüfungsnummer": "65361",
+	  "LP": "6",
+	  "Modultitel_de": "Parallel Computing I",
+	  "Modultitel_en": "Parallel Computing I"
+	},
+	{
+	  "id": "188",
+	  "Modulcode": "FMI-IN0137",
+	  "Prüfungsnummer": "65371",
+	  "LP": "6",
+	  "Modultitel_de": "Parallel Computing II",
+	  "Modultitel_en": "Parallel Computing II"
+	},
+	{
+	  "id": "189",
+	  "Modulcode": "FMI-IN0138",
+	  "Prüfungsnummer": "65381",
+	  "LP": "6",
+	  "Modultitel_de": "Visualisierung - 6 LP",
+	  "Modultitel_en": "Vizualisation - 6 BP"
+	},
+	{
+	  "id": "190",
+	  "Modulcode": "FMI-IN0139",
+	  "Prüfungsnummer": "65391",
+	  "LP": "3",
+	  "Modultitel_de": "Elemente der rechen- und datengetriebenen Wissenschaften",
+	  "Modultitel_en": "Elements of Computational and Data Science"
+	},
+	{
+	  "id": "191",
+	  "Modulcode": "FMI-IN0140",
+	  "Prüfungsnummer": "65401",
+	  "LP": "6",
+	  "Modultitel_de": "Management of Scientific Data",
+	  "Modultitel_en": "Management of Scientific Data"
+	},
+	{
+	  "id": "192",
+	  "Modulcode": "FMI-IN0141",
+	  "Prüfungsnummer": "65411",
+	  "LP": "6",
+	  "Modultitel_de": "Big Data",
+	  "Modultitel_en": "Big Data"
+	},
+	{
+	  "id": "193",
+	  "Modulcode": "FMI-IN0142",
+	  "Prüfungsnummer": "65421",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Computational and Data Science",
+	  "Modultitel_en": "Seminar Computational and Data Science"
+	},
+	{
+	  "id": "194",
+	  "Modulcode": "FMI-IN0143",
+	  "Prüfungsnummer": "65431",
+	  "LP": "3",
+	  "Modultitel_de": "Visualisierung - 3 LP",
+	  "Modultitel_en": "Vizualisation - 3 BP"
+	},
+	{
+	  "id": "195",
+	  "Modulcode": "FMI-IN0144",
+	  "Prüfungsnummer": "65441",
+	  "LP": "3",
+	  "Modultitel_de": "Fortgeschrittenes Programmierpraktikum",
+	  "Modultitel_en": "Advanced Labs for Computer Science"
+	},
+	{
+	  "id": "196",
+	  "Modulcode": "FMI-IN0145",
+	  "Prüfungsnummer": "65451",
+	  "LP": "3",
+	  "Modultitel_de": "Ausgewählte Konzepte der Kryptografie",
+	  "Modultitel_en": "Selected Topics of Cryptography"
+	},
+	{
+	  "id": "197",
+	  "Modulcode": "FMI-IN0146",
+	  "Prüfungsnummer": "65461",
+	  "LP": "3",
+	  "Modultitel_de": "Stochastische Grammatikmodelle - 3 LP",
+	  "Modultitel_en": "Stochastic Grammars"
+	},
+	{
+	  "id": "198",
+	  "Modulcode": "FMI-IN0147",
+	  "Prüfungsnummer": "65471",
+	  "LP": "3",
+	  "Modultitel_de": "Informationstheorie",
+	  "Modultitel_en": "Information Theory"
+	},
+	{
+	  "id": "199",
+	  "Modulcode": "FMI-IN0148",
+	  "Prüfungsnummer": "65481",
+	  "LP": "3",
+	  "Modultitel_de": "Multicore Algorithms Lab",
+	  "Modultitel_en": "Multicore Algorithms Lab"
+	},
+	{
+	  "id": "200",
+	  "Modulcode": "FMI-IN0149",
+	  "Prüfungsnummer": "65491",
+	  "LP": "3",
+	  "Modultitel_de": "Fortgeschrittene Visuelle Objekterkennung",
+	  "Modultitel_en": "Advanced Visual Object Recognition"
+	},
+	{
+	  "id": "201",
+	  "Modulcode": "FMI-IN0150",
+	  "Prüfungsnummer": "65501",
+	  "LP": "9",
+	  "Modultitel_de": "Graphische Modelle - 9 LP",
+	  "Modultitel_en": "Graphical Models"
+	},
+	{
+	  "id": "202",
+	  "Modulcode": "FMI-IN0151",
+	  "Prüfungsnummer": "65511",
+	  "LP": "3",
+	  "Modultitel_de": "Graphische Modelle (Lab)",
+	  "Modultitel_en": "Graphical Models (Lab)"
+	},
+	{
+	  "id": "203",
+	  "Modulcode": "FMI-IN0152",
+	  "Prüfungsnummer": "65521",
+	  "LP": "3",
+	  "Modultitel_de": "Thinking Parallel",
+	  "Modultitel_en": "Thinking Parallel"
+	},
+	{
+	  "id": "204",
+	  "Modulcode": "FMI-IN0153",
+	  "Prüfungsnummer": "65531",
+	  "LP": "3",
+	  "Modultitel_de": "Thinking Parallel in Practice",
+	  "Modultitel_en": "Thinking Parallel in Practice"
+	},
+	{
+	  "id": "205",
+	  "Modulcode": "FMI-IN0154",
+	  "Prüfungsnummer": "65541",
+	  "LP": "6",
+	  "Modultitel_de": "Lesen, diskutieren und schreiben",
+	  "Modultitel_en": "Reading Course"
+	},
+	{
+	  "id": "206",
+	  "Modulcode": "FMI-IN0155",
+	  "Prüfungsnummer": "65551",
+	  "LP": "3",
+	  "Modultitel_de": "Lesen, diskutieren und schreiben - 3 LP",
+	  "Modultitel_en": "Reading Course"
+	},
+	{
+	  "id": "207",
+	  "Modulcode": "FMI-IN0156",
+	  "Prüfungsnummer": "65561",
+	  "LP": "3",
+	  "Modultitel_de": "Einführung in tiefe Lernverfahren",
+	  "Modultitel_en": "Introductory Course on Deep Learning"
+	},
+	{
+	  "id": "208",
+	  "Modulcode": "FMI-IN0157",
+	  "Prüfungsnummer": "65571",
+	  "LP": "3",
+	  "Modultitel_de": "Statistische Lerntheorie (Lab)",
+	  "Modultitel_en": "Statistical Learning Theory (Lab)"
+	},
+	{
+	  "id": "209",
+	  "Modulcode": "FMI-IN0158",
+	  "Prüfungsnummer": "65581",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithmisches Beweisen",
+	  "Modultitel_en": "Proof Complexity and Solving"
+	},
+	{
+	  "id": "210",
+	  "Modulcode": "FMI-IN0159",
+	  "Prüfungsnummer": "65591",
+	  "LP": "4",
+	  "Modultitel_de": "Algorithmisches Beweisen LAB",
+	  "Modultitel_en": "Proof Complexity and Solving LAB"
+	},
+	{
+	  "id": "211",
+	  "Modulcode": "FMI-IN0160",
+	  "Prüfungsnummer": "65601",
+	  "LP": "4",
+	  "Modultitel_de": "Kompexitätstheorie LAB",
+	  "Modultitel_en": "Computational Complexity LAB"
+	},
+	{
+	  "id": "212",
+	  "Modulcode": "FMI-IN0162",
+	  "Prüfungsnummer": "65621",
+	  "LP": "4",
+	  "Modultitel_de": "Kryptologie LAB",
+	  "Modultitel_en": "Cryptology LAB"
+	},
+	{
+	  "id": "213",
+	  "Modulcode": "FMI-IN0163",
+	  "Prüfungsnummer": "65631",
+	  "LP": "6",
+	  "Modultitel_de": "Projekt – Paralleles Rechnen",
+	  "Modultitel_en": "Project – Parallel Computing"
+	},
+	{
+	  "id": "214",
+	  "Modulcode": "FMI-IN0165",
+	  "Prüfungsnummer": "65651",
+	  "LP": "6",
+	  "Modultitel_de": "Medizinische Visualisierung",
+	  "Modultitel_en": "Medical Visualization"
+	},
+	{
+	  "id": "215",
+	  "Modulcode": "FMI-IN0166",
+	  "Prüfungsnummer": "65661",
+	  "LP": "6",
+	  "Modultitel_de": "Computergrafik",
+	  "Modultitel_en": "Computer Graphics"
+	},
+	{
+	  "id": "216",
+	  "Modulcode": "FMI-IN0167",
+	  "Prüfungsnummer": "65671",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithmen und Datenstrukturen II",
+	  "Modultitel_en": "Algorithms and Data Structures II"
+	},
+	{
+	  "id": "217",
+	  "Modulcode": "FMI-IN0200",
+	  "Prüfungsnummer": "65001",
+	  "LP": "3",
+	  "Modultitel_de": "Objektorientierte Programmierung mit C++ (ASQ)",
+	  "Modultitel_en": "Object Oriented Programming with C++"
+	},
+	{
+	  "id": "218",
+	  "Modulcode": "FMI-IN0201",
+	  "Prüfungsnummer": "65011",
+	  "LP": "3",
+	  "Modultitel_de": "Datenstrukturen und Algorithmen mit D (ASQ)",
+	  "Modultitel_en": "Data Structures and Algorithms with D"
+	},
+	{
+	  "id": "219",
+	  "Modulcode": "FMI-IN0202",
+	  "Prüfungsnummer": "64821",
+	  "LP": "3",
+	  "Modultitel_de": "Elementarmathematik mit Python (ASQ)",
+	  "Modultitel_en": "Elementary mathematics with Python"
+	},
+	{
+	  "id": "220",
+	  "Modulcode": "FMI-IN0203",
+	  "Prüfungsnummer": "64831",
+	  "LP": "3",
+	  "Modultitel_de": "Algorithmen-Training für Programmierwettbewerbe (ASQ)",
+	  "Modultitel_en": "Algorithm Training for Programming Contests"
+	},
+	{
+	  "id": "221",
+	  "Modulcode": "FMI-IN0204",
+	  "Prüfungsnummer": "64841",
+	  "LP": "3",
+	  "Modultitel_de": "Wettbewerbs- und Technologieanalyse (ASQ)",
+	  "Modultitel_en": "Competititve Intelligence and Technology Analysis"
+	},
+	{
+	  "id": "222",
+	  "Modulcode": "FMI-IN0205",
+	  "Prüfungsnummer": "64851",
+	  "LP": "3",
+	  "Modultitel_de": "Unternehmensgründungsseminar (ASQ)",
+	  "Modultitel_en": "Start-up Seminar"
+	},
+	{
+	  "id": "223",
+	  "Modulcode": "FMI-IN0206",
+	  "Prüfungsnummer": "64861",
+	  "LP": "3",
+	  "Modultitel_de": "Begleitseminar zu einer Veranstaltung der Informatik (ASQ)",
+	  "Modultitel_en": "Companion Seminar for Computer Science Events"
+	},
+	{
+	  "id": "224",
+	  "Modulcode": "FMI-IN0207",
+	  "Prüfungsnummer": "64871",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in die Quanten-Informationstheorie (ASQ)",
+	  "Modultitel_en": "Introduction to Quantum Information Theory"
+	},
+	{
+	  "id": "225",
+	  "Modulcode": "FMI-IN0208",
+	  "Prüfungsnummer": "64881",
+	  "LP": "6",
+	  "Modultitel_de": "Netzwerkanalyse mit R (ASQ)",
+	  "Modultitel_en": "Network Analysis with R"
+	},
+	{
+	  "id": "226",
+	  "Modulcode": "FMI-IN0209",
+	  "Prüfungsnummer": "64891",
+	  "LP": "3",
+	  "Modultitel_de": "Funktionale und objektorientierte Programmierung in R (ASQ)",
+	  "Modultitel_en": "Funktional and Object-Oriented Programming in R"
+	},
+	{
+	  "id": "227",
+	  "Modulcode": "FMI-IN0210",
+	  "Prüfungsnummer": "64901",
+	  "LP": "3",
+	  "Modultitel_de": "Interkulturelle Zusammenarbeit (ASQ)",
+	  "Modultitel_en": "Working in Intercultural Settings"
+	},
+	{
+	  "id": "228",
+	  "Modulcode": "FMI-IN0211",
+	  "Prüfungsnummer": "64911",
+	  "LP": "3",
+	  "Modultitel_de": "Lehren von Informatik - Lernen von Informatik",
+	  "Modultitel_en": "Teaching and Learning of Computer Science"
+	},
+	{
+	  "id": "229",
+	  "Modulcode": "FMI-IN0212",
+	  "Prüfungsnummer": "64921",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Prozessmodellierung und des Prozessmanagements",
+	  "Modultitel_en": "Introduction to Business Process Modeling and Management"
+	},
+	{
+	  "id": "230",
+	  "Modulcode": "FMI-IN0301",
+	  "Prüfungsnummer": "67011",
+	  "LP": "6",
+	  "Modultitel_de": "Mikroprozessortechnik - EAH-F1",
+	  "Modultitel_en": "Microprocessor Technology"
+	},
+	{
+	  "id": "231",
+	  "Modulcode": "FMI-IN0302",
+	  "Prüfungsnummer": "67021",
+	  "LP": "6",
+	  "Modultitel_de": "Mikrorechnerentwurf - EAH-F2",
+	  "Modultitel_en": "Design of Microcomputer"
+	},
+	{
+	  "id": "232",
+	  "Modulcode": "FMI-IN0303",
+	  "Prüfungsnummer": "67031",
+	  "LP": "6",
+	  "Modultitel_de": "Echtzeitbetriebssysteme - EAH-F3",
+	  "Modultitel_en": "Real-time Operating Systems"
+	},
+	{
+	  "id": "233",
+	  "Modulcode": "FMI-IN0311",
+	  "Prüfungsnummer": "67111",
+	  "LP": "6",
+	  "Modultitel_de": "Technisches Englisch - EAH-A1",
+	  "Modultitel_en": "Technical English"
+	},
+	{
+	  "id": "234",
+	  "Modulcode": "FMI-IN0312",
+	  "Prüfungsnummer": "67121",
+	  "LP": "3",
+	  "Modultitel_de": "English for Specific Purposes - EAH-A2",
+	  "Modultitel_en": "English for Specific Purposes"
+	},
+	{
+	  "id": "235",
+	  "Modulcode": "FMI-IN0313",
+	  "Prüfungsnummer": "67131",
+	  "LP": "3",
+	  "Modultitel_de": "Business and Technical English - EAH-A3",
+	  "Modultitel_en": "Business and Technical English"
+	},
+	{
+	  "id": "236",
+	  "Modulcode": "FMI-IN0314",
+	  "Prüfungsnummer": "67141",
+	  "LP": "3",
+	  "Modultitel_de": "IT-Recht - EAH-A4",
+	  "Modultitel_en": "IT Law"
+	},
+	{
+	  "id": "237",
+	  "Modulcode": "FMI-IN0901",
+	  "Prüfungsnummer": "7000",
+	  "LP": "12",
+	  "Modultitel_de": "Bachelorarbeit",
+	  "Modultitel_en": "Bachelor thesis"
+	},
+	{
+	  "id": "238",
+	  "Modulcode": "FMI-IN0902",
+	  "Prüfungsnummer": "7000",
+	  "LP": "30",
+	  "Modultitel_de": "Masterarbeit Informatik",
+	  "Modultitel_en": "Master thesis"
+	},
+	{
+	  "id": "239",
+	  "Modulcode": "FMI-IN0903",
+	  "Prüfungsnummer": "-1",
+	  "LP": "18",
+	  "Modultitel_de": "Praktikum",
+	  "Modultitel_en": "Praktikum"
+	},
+	{
+	  "id": "240",
+	  "Modulcode": "FMI-IN0904",
+	  "Prüfungsnummer": "65141",
+	  "LP": "6",
+	  "Modultitel_de": "Projektarbeit",
+	  "Modultitel_en": "Projekt Work"
+	},
+	{
+	  "id": "241",
+	  "Modulcode": "FMI-IN1001",
+	  "Prüfungsnummer": "51311",
+	  "LP": "5",
+	  "Modultitel_de": "Algorithmische Grundlagen - 5 LP",
+	  "Modultitel_en": "Algorithms Basics"
+	},
+	{
+	  "id": "242",
+	  "Modulcode": "FMI-IN1002",
+	  "Prüfungsnummer": "51321",
+	  "LP": "5",
+	  "Modultitel_de": "Datenbanken und Informationssysteme",
+	  "Modultitel_en": "Data Bases and Information Systems"
+	},
+	{
+	  "id": "243",
+	  "Modulcode": "FMI-IN1003",
+	  "Prüfungsnummer": "51331",
+	  "LP": "5",
+	  "Modultitel_de": "Diskrete Modellierung",
+	  "Modultitel_en": "Discrete Modelling"
+	},
+	{
+	  "id": "244",
+	  "Modulcode": "FMI-IN1004",
+	  "Prüfungsnummer": "51341",
+	  "LP": "5",
+	  "Modultitel_de": "Intelligente Systeme",
+	  "Modultitel_en": "Intelligent Systems"
+	},
+	{
+	  "id": "245",
+	  "Modulcode": "FMI-IN1005",
+	  "Prüfungsnummer": "51351",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematische und logische Grundlagen",
+	  "Modultitel_en": "Mathematical and Logical Basics"
+	},
+	{
+	  "id": "246",
+	  "Modulcode": "FMI-IN1006",
+	  "Prüfungsnummer": "51361",
+	  "LP": "5",
+	  "Modultitel_de": "Rechnernetze und Internettechnologie",
+	  "Modultitel_en": "Computer Networks and Internet Technology"
+	},
+	{
+	  "id": "247",
+	  "Modulcode": "FMI-IN1007",
+	  "Prüfungsnummer": "51371",
+	  "LP": "5",
+	  "Modultitel_de": "Software- und Systementwicklung",
+	  "Modultitel_en": "Software and System Development"
+	},
+	{
+	  "id": "248",
+	  "Modulcode": "FMI-IN1008",
+	  "Prüfungsnummer": "51381",
+	  "LP": "6",
+	  "Modultitel_de": "Strukturiertes Programmieren - 6 LP",
+	  "Modultitel_en": "Structural Programming - 6 CP"
+	},
+	{
+	  "id": "249",
+	  "Modulcode": "FMI-IN1009",
+	  "Prüfungsnummer": "65041",
+	  "LP": "9",
+	  "Modultitel_de": "Strukturiertes Programmieren - 9 LP",
+	  "Modultitel_en": "Structural Programming - 9 CP"
+	},
+	{
+	  "id": "250",
+	  "Modulcode": "FMI-IN1010",
+	  "Prüfungsnummer": "51391",
+	  "LP": "6",
+	  "Modultitel_de": "Diskrete Mathematik und Informatik",
+	  "Modultitel_en": "Discrete Mathematics and Computer Sciences"
+	},
+	{
+	  "id": "251",
+	  "Modulcode": "FMI-IN1011",
+	  "Prüfungsnummer": "51401",
+	  "LP": "3",
+	  "Modultitel_de": "Geschichte der Informatik (ASQ)",
+	  "Modultitel_en": "History of Informatics"
+	},
+	{
+	  "id": "252",
+	  "Modulcode": "FMI-IN1015",
+	  "Prüfungsnummer": "65151",
+	  "LP": "5",
+	  "Modultitel_de": "Grundlagen des Programmierens mit Python (Teil 1) (ASQ)",
+	  "Modultitel_en": "Grundlagen des Programmierens mit Python (Teil 1) (ASQ)"
+	},
+	{
+	  "id": "253",
+	  "Modulcode": "FMI-IN1016",
+	  "Prüfungsnummer": "65161",
+	  "LP": "5",
+	  "Modultitel_de": "Grundlagen des Programmierens mit Python (Teil 2) (ASQ)",
+	  "Modultitel_en": "Grundlagen des Programmierens mit Python (Teil 2) (ASQ)"
+	},
+	{
+	  "id": "254",
+	  "Modulcode": "FMI-IN2000",
+	  "Prüfungsnummer": "51431",
+	  "LP": "6",
+	  "Modultitel_de": "Datenbanken und Informationssysteme",
+	  "Modultitel_en": "Database and Information Systems"
+	},
+	{
+	  "id": "255",
+	  "Modulcode": "FMI-IN3003",
+	  "Prüfungsnummer": "51461",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar",
+	  "Modultitel_en": "Seminar"
+	},
+	{
+	  "id": "256",
+	  "Modulcode": "FMI-IN3004",
+	  "Prüfungsnummer": "51471",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematik für Informatik-Lehrer",
+	  "Modultitel_en": "Mathematics for School-Teachers"
+	},
+	{
+	  "id": "257",
+	  "Modulcode": "FMI-IN3005",
+	  "Prüfungsnummer": "51501",
+	  "LP": "7",
+	  "Modultitel_de": "Projektarbeit - 7 LP",
+	  "Modultitel_en": "Projektarbeit"
+	},
+	{
+	  "id": "258",
+	  "Modulcode": "FMI-IN3006",
+	  "Prüfungsnummer": "51491",
+	  "LP": "6",
+	  "Modultitel_de": "Praktische Mathematik und Modellierung: Optimierung",
+	  "Modultitel_en": "Optimization"
+	},
+	{
+	  "id": "259",
+	  "Modulcode": "FMI-IN3007",
+	  "Prüfungsnummer": "51541",
+	  "LP": "5",
+	  "Modultitel_de": "Projektarbeit - 5 LP",
+	  "Modultitel_en": "Projektarbeit"
+	},
+	{
+	  "id": "260",
+	  "Modulcode": "FMI-IN3008",
+	  "Prüfungsnummer": "51481",
+	  "LP": "6",
+	  "Modultitel_de": "Software- und Systementwicklung",
+	  "Modultitel_en": "Software and System Development"
+	},
+	{
+	  "id": "261",
+	  "Modulcode": "FMI-IN3009",
+	  "Prüfungsnummer": "65051",
+	  "LP": "4",
+	  "Modultitel_de": "Projektarbeit - 4 LP",
+	  "Modultitel_en": "Project work"
+	},
+	{
+	  "id": "262",
+	  "Modulcode": "FMI-IN3011",
+	  "Prüfungsnummer": "65121",
+	  "LP": "6",
+	  "Modultitel_de": "Informatik und Gesellschaft",
+	  "Modultitel_en": "Informatics and Society"
+	},
+	{
+	  "id": "263",
+	  "Modulcode": "FMI-IN3012",
+	  "Prüfungsnummer": "65131",
+	  "LP": "6",
+	  "Modultitel_de": "Softwareentwicklungsprojekt für Lehramt Informatik",
+	  "Modultitel_en": "Project in applied software development"
+	},
+	{
+	  "id": "264",
+	  "Modulcode": "FMI-IN3131",
+	  "Prüfungsnummer": "352011",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik I - 3 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science I - 3 CP"
+	},
+	{
+	  "id": "265",
+	  "Modulcode": "FMI-IN3132",
+	  "Prüfungsnummer": "352021",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik II - 3 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science II - 3 CP"
+	},
+	{
+	  "id": "266",
+	  "Modulcode": "FMI-IN3161",
+	  "Prüfungsnummer": "352111",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik I - 6 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science I - 6 CP"
+	},
+	{
+	  "id": "267",
+	  "Modulcode": "FMI-IN3162",
+	  "Prüfungsnummer": "352121",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik II - 6 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science II - 6 CP"
+	},
+	{
+	  "id": "268",
+	  "Modulcode": "FMI-IN3163",
+	  "Prüfungsnummer": "352131",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik III - 6 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science III - 6 CP"
+	},
+	{
+	  "id": "269",
+	  "Modulcode": "FMI-IN3164",
+	  "Prüfungsnummer": "352141",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik IV - 6 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science IV - 6 CP"
+	},
+	{
+	  "id": "270",
+	  "Modulcode": "FMI-IN3191",
+	  "Prüfungsnummer": "352211",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik I - 9 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science I - 9 CP"
+	},
+	{
+	  "id": "271",
+	  "Modulcode": "FMI-IN3192",
+	  "Prüfungsnummer": "352221",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik II - 9 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science II - 9 CP"
+	},
+	{
+	  "id": "272",
+	  "Modulcode": "FMI-IN3193",
+	  "Prüfungsnummer": "352231",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Algorithmik/Theoretische Informatik III - 9 LP",
+	  "Modultitel_en": "Master Module Theoretical Computer Science III - 9 CP"
+	},
+	{
+	  "id": "273",
+	  "Modulcode": "FMI-IN4001",
+	  "Prüfungsnummer": "51511",
+	  "LP": "6",
+	  "Modultitel_de": "Didaktik der Informatik A",
+	  "Modultitel_en": "Didactics for Informatics A"
+	},
+	{
+	  "id": "274",
+	  "Modulcode": "FMI-IN4002",
+	  "Prüfungsnummer": "51521",
+	  "LP": "5",
+	  "Modultitel_de": "Didaktik der Informatik C",
+	  "Modultitel_en": "Didactics for Informatics C"
+	},
+	{
+	  "id": "275",
+	  "Modulcode": "FMI-IN4004",
+	  "Prüfungsnummer": "65061",
+	  "LP": "6",
+	  "Modultitel_de": "Didaktik der Informatik A - RS",
+	  "Modultitel_en": "Didactics for Informatics A"
+	},
+	{
+	  "id": "276",
+	  "Modulcode": "FMI-IN4005",
+	  "Prüfungsnummer": "65071",
+	  "LP": "5",
+	  "Modultitel_de": "Didaktik der Informatik C - RS",
+	  "Modultitel_en": "Didactics for Informatics C"
+	},
+	{
+	  "id": "277",
+	  "Modulcode": "FMI-IN5001",
+	  "Prüfungsnummer": "51531",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 1 - schriftliche Prüfung",
+	  "Modultitel_en": "Exam preparation module 1- written exam"
+	},
+	{
+	  "id": "278",
+	  "Modulcode": "FMI-IN5002",
+	  "Prüfungsnummer": "51441",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 2 - mündliche Prüfung",
+	  "Modultitel_en": "Exam preparation module 2 - oral exam"
+	},
+	{
+	  "id": "279",
+	  "Modulcode": "FMI-IN5003",
+	  "Prüfungsnummer": "51551",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 3 (Didaktik der Informatik B)",
+	  "Modultitel_en": "Exam preparation module 3 (Didactics for Informatics B)"
+	},
+	{
+	  "id": "280",
+	  "Modulcode": "FMI-IN5004",
+	  "Prüfungsnummer": "7000",
+	  "LP": "20",
+	  "Modultitel_de": "Wissenschaftliche Hausarbeit Informatik",
+	  "Modultitel_en": "Written Thesis Informatics"
+	},
+	{
+	  "id": "281",
+	  "Modulcode": "FMI-IN5011",
+	  "Prüfungsnummer": "65081",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 1 - schriftliche Prüfung",
+	  "Modultitel_en": "Exam preparation module 1- written exam"
+	},
+	{
+	  "id": "282",
+	  "Modulcode": "FMI-IN5012",
+	  "Prüfungsnummer": "65091",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 2 - mündliche Prüfung",
+	  "Modultitel_en": "Exam preparation module 2 - oral exam"
+	},
+	{
+	  "id": "283",
+	  "Modulcode": "FMI-IN5013",
+	  "Prüfungsnummer": "65111",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 3 (Didaktik der Informatik B)",
+	  "Modultitel_en": "Exam preparation module 3 (Didactics for Informatics B)"
+	},
+	{
+	  "id": "284",
+	  "Modulcode": "FMI-IN5014",
+	  "Prüfungsnummer": "7000",
+	  "LP": "20",
+	  "Modultitel_de": "Wissenschaftliche Hausarbeit Informatik",
+	  "Modultitel_en": "Written Thesis Informatics"
+	},
+	{
+	  "id": "285",
+	  "Modulcode": "FMI-MA0007",
+	  "Prüfungsnummer": "53071",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in die Wahrscheinlichkeitstheorie",
+	  "Modultitel_en": "Introduction to Probability Theory"
+	},
+	{
+	  "id": "286",
+	  "Modulcode": "FMI-MA0017",
+	  "Prüfungsnummer": "53171",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Analysis",
+	  "Modultitel_en": "Basic Calculus"
+	},
+	{
+	  "id": "287",
+	  "Modulcode": "FMI-MA0022",
+	  "Prüfungsnummer": "53221",
+	  "LP": "6",
+	  "Modultitel_de": "Lineare Algebra",
+	  "Modultitel_en": "Linear Algebra"
+	},
+	{
+	  "id": "288",
+	  "Modulcode": "FMI-MA0028",
+	  "Prüfungsnummer": "53281",
+	  "LP": "3",
+	  "Modultitel_de": "Numerische Mathematik - 3 LP",
+	  "Modultitel_en": "Numerical Mathematics - 3 CP"
+	},
+	{
+	  "id": "289",
+	  "Modulcode": "FMI-MA0029",
+	  "Prüfungsnummer": "53291",
+	  "LP": "6",
+	  "Modultitel_de": "Numerische Mathematik - 6 LP",
+	  "Modultitel_en": "Numerical Analysis - 6 CP"
+	},
+	{
+	  "id": "290",
+	  "Modulcode": "FMI-MA0101",
+	  "Prüfungsnummer": "54011",
+	  "LP": "9",
+	  "Modultitel_de": "Algebra 1",
+	  "Modultitel_en": "Algebra 1"
+	},
+	{
+	  "id": "291",
+	  "Modulcode": "FMI-MA0102",
+	  "Prüfungsnummer": "54021",
+	  "LP": "9",
+	  "Modultitel_de": "Algebra 2",
+	  "Modultitel_en": "Algebra 2"
+	},
+	{
+	  "id": "292",
+	  "Modulcode": "FMI-MA0103",
+	  "Prüfungsnummer": "54031",
+	  "LP": "9",
+	  "Modultitel_de": "Algebraische Zahlentheorie - 9 LP",
+	  "Modultitel_en": "Algebraic Number Theory - 9 CP"
+	},
+	{
+	  "id": "293",
+	  "Modulcode": "FMI-MA0104",
+	  "Prüfungsnummer": "54041",
+	  "LP": "9",
+	  "Modultitel_de": "Codierungstheorie- 9 LP",
+	  "Modultitel_en": "Coding Theory with Exercises - 9 CP"
+	},
+	{
+	  "id": "294",
+	  "Modulcode": "FMI-MA0105",
+	  "Prüfungsnummer": "54051",
+	  "LP": "9",
+	  "Modultitel_de": "Computeralgebra - 9 LP",
+	  "Modultitel_en": "Computer Algebra - 9 CP"
+	},
+	{
+	  "id": "295",
+	  "Modulcode": "FMI-MA0106",
+	  "Prüfungsnummer": "54061",
+	  "LP": "9",
+	  "Modultitel_de": "Gruppentheorie - 9 LP",
+	  "Modultitel_en": "Group Theory"
+	},
+	{
+	  "id": "296",
+	  "Modulcode": "FMI-MA0107",
+	  "Prüfungsnummer": "54071",
+	  "LP": "9",
+	  "Modultitel_de": "Lie-Algebren - 9 LP",
+	  "Modultitel_en": "Lie Algebras - 9 CP"
+	},
+	{
+	  "id": "297",
+	  "Modulcode": "FMI-MA0108",
+	  "Prüfungsnummer": "54081",
+	  "LP": "9",
+	  "Modultitel_de": "Lie-Gruppen - 9 LP",
+	  "Modultitel_en": "Lie Groups - 9 CP"
+	},
+	{
+	  "id": "298",
+	  "Modulcode": "FMI-MA0109",
+	  "Prüfungsnummer": "54091",
+	  "LP": "9",
+	  "Modultitel_de": "Topologie 1 - 9 LP",
+	  "Modultitel_en": "Topology 1"
+	},
+	{
+	  "id": "299",
+	  "Modulcode": "FMI-MA0110",
+	  "Prüfungsnummer": "54101",
+	  "LP": "9",
+	  "Modultitel_de": "Algebraische Kombinatorik - 9 LP",
+	  "Modultitel_en": "Algebraic Combinatorics - 9 CP"
+	},
+	{
+	  "id": "300",
+	  "Modulcode": "FMI-MA0111",
+	  "Prüfungsnummer": "54111",
+	  "LP": "9",
+	  "Modultitel_de": "Algebraische Topologie",
+	  "Modultitel_en": "Algebraic Topology"
+	},
+	{
+	  "id": "301",
+	  "Modulcode": "FMI-MA0112",
+	  "Prüfungsnummer": "54121",
+	  "LP": "6",
+	  "Modultitel_de": "Kombinatorik",
+	  "Modultitel_en": "Combinatorics"
+	},
+	{
+	  "id": "302",
+	  "Modulcode": "FMI-MA0113",
+	  "Prüfungsnummer": "54131",
+	  "LP": "6",
+	  "Modultitel_de": "Knoten und niedrigdimensionale Mannigfaltigkeiten",
+	  "Modultitel_en": "Knots and low-dimensional Manifolds"
+	},
+	{
+	  "id": "303",
+	  "Modulcode": "FMI-MA0142",
+	  "Prüfungsnummer": "54421",
+	  "LP": "6",
+	  "Modultitel_de": "Elementare Zahlentheorie",
+	  "Modultitel_en": "Elementary Number Theory"
+	},
+	{
+	  "id": "304",
+	  "Modulcode": "FMI-MA0143",
+	  "Prüfungsnummer": "54431",
+	  "LP": "6",
+	  "Modultitel_de": "Algebraische Zahlentheorie - 6 LP",
+	  "Modultitel_en": "Algebraic Number Theory - 6 CP"
+	},
+	{
+	  "id": "305",
+	  "Modulcode": "FMI-MA0144",
+	  "Prüfungsnummer": "54441",
+	  "LP": "6",
+	  "Modultitel_de": "Codierungstheorie - 6 LP",
+	  "Modultitel_en": "Coding Theory"
+	},
+	{
+	  "id": "306",
+	  "Modulcode": "FMI-MA0145",
+	  "Prüfungsnummer": "54451",
+	  "LP": "6",
+	  "Modultitel_de": "Computeralgebra - 6 LP",
+	  "Modultitel_en": "Computer Algebra - 6 CP"
+	},
+	{
+	  "id": "307",
+	  "Modulcode": "FMI-MA0147",
+	  "Prüfungsnummer": "54471",
+	  "LP": "6",
+	  "Modultitel_de": "Lie-Algebren - 6 LP",
+	  "Modultitel_en": "Lie Algebras - 6 CP"
+	},
+	{
+	  "id": "308",
+	  "Modulcode": "FMI-MA0148",
+	  "Prüfungsnummer": "54481",
+	  "LP": "6",
+	  "Modultitel_de": "Lie-Gruppen - 6 LP",
+	  "Modultitel_en": "Lie Groups - 6 CP"
+	},
+	{
+	  "id": "309",
+	  "Modulcode": "FMI-MA0149",
+	  "Prüfungsnummer": "54491",
+	  "LP": "6",
+	  "Modultitel_de": "Topologie",
+	  "Modultitel_en": "Topology I"
+	},
+	{
+	  "id": "310",
+	  "Modulcode": "FMI-MA0150",
+	  "Prüfungsnummer": "54501",
+	  "LP": "6",
+	  "Modultitel_de": "Algebraische Kombinatorik - 6 LP",
+	  "Modultitel_en": "Algebraic Combinatorics - 6 CP"
+	},
+	{
+	  "id": "311",
+	  "Modulcode": "FMI-MA0181",
+	  "Prüfungsnummer": "54811",
+	  "LP": "3",
+	  "Modultitel_de": "Proseminar Algebra",
+	  "Modultitel_en": "Proseminar Algebra"
+	},
+	{
+	  "id": "312",
+	  "Modulcode": "FMI-MA0182",
+	  "Prüfungsnummer": "54821",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Algebra - Bachelor",
+	  "Modultitel_en": "Seminar Algebra (Bachelor)"
+	},
+	{
+	  "id": "313",
+	  "Modulcode": "FMI-MA0201",
+	  "Prüfungsnummer": "55011",
+	  "LP": "9",
+	  "Modultitel_de": "Analysis 1",
+	  "Modultitel_en": "Analysis I"
+	},
+	{
+	  "id": "314",
+	  "Modulcode": "FMI-MA0202",
+	  "Prüfungsnummer": "55021",
+	  "LP": "9",
+	  "Modultitel_de": "Analysis 2",
+	  "Modultitel_en": "Analysis II"
+	},
+	{
+	  "id": "315",
+	  "Modulcode": "FMI-MA0203",
+	  "Prüfungsnummer": "55031",
+	  "LP": "9",
+	  "Modultitel_de": "Analysis 3",
+	  "Modultitel_en": "Analysis 3"
+	},
+	{
+	  "id": "316",
+	  "Modulcode": "FMI-MA0204",
+	  "Prüfungsnummer": "55041",
+	  "LP": "9",
+	  "Modultitel_de": "Approximationstheorie 1 - 9 LP",
+	  "Modultitel_en": "Approximation Theory 1"
+	},
+	{
+	  "id": "317",
+	  "Modulcode": "FMI-MA0205",
+	  "Prüfungsnummer": "55051",
+	  "LP": "9",
+	  "Modultitel_de": "Entropiemethoden und Anwendungen",
+	  "Modultitel_en": "Entropy Methods and its Applications"
+	},
+	{
+	  "id": "318",
+	  "Modulcode": "FMI-MA0206",
+	  "Prüfungsnummer": "55061",
+	  "LP": "9",
+	  "Modultitel_de": "Geometrische Funktionalanalysis",
+	  "Modultitel_en": "Geometric Functional Analysis"
+	},
+	{
+	  "id": "319",
+	  "Modulcode": "FMI-MA0207",
+	  "Prüfungsnummer": "55071",
+	  "LP": "9",
+	  "Modultitel_de": "Höhere Analysis 1",
+	  "Modultitel_en": "Higher Analysis I"
+	},
+	{
+	  "id": "320",
+	  "Modulcode": "FMI-MA0208",
+	  "Prüfungsnummer": "55081",
+	  "LP": "6",
+	  "Modultitel_de": "Approximationstheorie 1 - 6 LP",
+	  "Modultitel_en": "Approximation Theory 1 - 6 LP"
+	},
+	{
+	  "id": "321",
+	  "Modulcode": "FMI-MA0241",
+	  "Prüfungsnummer": "55411",
+	  "LP": "9",
+	  "Modultitel_de": "Stabilität dynamischer Systeme 1 - 9 LP",
+	  "Modultitel_en": "Stability of Dynamical Systems 1"
+	},
+	{
+	  "id": "322",
+	  "Modulcode": "FMI-MA0242",
+	  "Prüfungsnummer": "55421",
+	  "LP": "6",
+	  "Modultitel_de": "Fourieranalysis 1",
+	  "Modultitel_en": "Fourier Analysis 1"
+	},
+	{
+	  "id": "323",
+	  "Modulcode": "FMI-MA0243",
+	  "Prüfungsnummer": "55431",
+	  "LP": "6",
+	  "Modultitel_de": "Funktionentheorie 1",
+	  "Modultitel_en": "Complex Analysis 1"
+	},
+	{
+	  "id": "324",
+	  "Modulcode": "FMI-MA0244",
+	  "Prüfungsnummer": "55441",
+	  "LP": "6",
+	  "Modultitel_de": "Gewöhnliche Differentialgleichungen",
+	  "Modultitel_en": "Ordinary Differential Equations"
+	},
+	{
+	  "id": "325",
+	  "Modulcode": "FMI-MA0261",
+	  "Prüfungsnummer": "55611",
+	  "LP": "6",
+	  "Modultitel_de": "Stabilität dynamischer Systeme 1 - 6 LP",
+	  "Modultitel_en": "Stability of Dynamical Systems 1"
+	},
+	{
+	  "id": "326",
+	  "Modulcode": "FMI-MA0262",
+	  "Prüfungsnummer": "55621",
+	  "LP": "6",
+	  "Modultitel_de": "Ergodentheorie und dynamische Systeme - Eine Einführung",
+	  "Modultitel_en": "Introduction to Ergodic Theory and Dynamical Systems"
+	},
+	{
+	  "id": "327",
+	  "Modulcode": "FMI-MA0270",
+	  "Prüfungsnummer": "55701",
+	  "LP": "6",
+	  "Modultitel_de": "Diskrete Schrödingeroperatoren",
+	  "Modultitel_en": "Discrete Schrödingeroperators"
+	},
+	{
+	  "id": "328",
+	  "Modulcode": "FMI-MA0281",
+	  "Prüfungsnummer": "55811",
+	  "LP": "3",
+	  "Modultitel_de": "Proseminar Analysis",
+	  "Modultitel_en": "Proseminar Analysis"
+	},
+	{
+	  "id": "329",
+	  "Modulcode": "FMI-MA0282",
+	  "Prüfungsnummer": "55821",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Analysis - Bachelor",
+	  "Modultitel_en": "Seminar Analysis Bachelor"
+	},
+	{
+	  "id": "330",
+	  "Modulcode": "FMI-MA0288",
+	  "Prüfungsnummer": "55881",
+	  "LP": "3",
+	  "Modultitel_de": "Wavelets - 3 LP",
+	  "Modultitel_en": "Wavelets"
+	},
+	{
+	  "id": "331",
+	  "Modulcode": "FMI-MA0289",
+	  "Prüfungsnummer": "55891",
+	  "LP": "3",
+	  "Modultitel_de": "Distributionen",
+	  "Modultitel_en": "Distributions"
+	},
+	{
+	  "id": "332",
+	  "Modulcode": "FMI-MA0291",
+	  "Prüfungsnummer": "55911",
+	  "LP": "3",
+	  "Modultitel_de": "Sturm-Liouvillesche Eigenwertprobleme",
+	  "Modultitel_en": "Sturm-Liouville Eigenvalue Problems"
+	},
+	{
+	  "id": "333",
+	  "Modulcode": "FMI-MA0301",
+	  "Prüfungsnummer": "56011",
+	  "LP": "9",
+	  "Modultitel_de": "Algebra/Geometrie 1",
+	  "Modultitel_en": "Algebra/Geometry I"
+	},
+	{
+	  "id": "334",
+	  "Modulcode": "FMI-MA0302",
+	  "Prüfungsnummer": "56021",
+	  "LP": "9",
+	  "Modultitel_de": "Algebra/Geometrie 2",
+	  "Modultitel_en": "Algebra/Geometry 2"
+	},
+	{
+	  "id": "335",
+	  "Modulcode": "FMI-MA0402",
+	  "Prüfungsnummer": "57021",
+	  "LP": "9",
+	  "Modultitel_de": "Fraktale Geometrie - 9 LP",
+	  "Modultitel_en": "Fractal Geometry - 9 CP"
+	},
+	{
+	  "id": "336",
+	  "Modulcode": "FMI-MA0403",
+	  "Prüfungsnummer": "57031",
+	  "LP": "9",
+	  "Modultitel_de": "Geometrische Integrationstheorie - 9 LP",
+	  "Modultitel_en": "Geometric Integration Theory - 9 CP"
+	},
+	{
+	  "id": "337",
+	  "Modulcode": "FMI-MA0404",
+	  "Prüfungsnummer": "57041",
+	  "LP": "9",
+	  "Modultitel_de": "Konvexe und metrische Geometrie - 9 LP",
+	  "Modultitel_en": "Convec and Metric Geometry - 9 CP"
+	},
+	{
+	  "id": "338",
+	  "Modulcode": "FMI-MA0405",
+	  "Prüfungsnummer": "57051",
+	  "LP": "9",
+	  "Modultitel_de": "Mathematische Methoden der klassischen Mechanik - 9 LP",
+	  "Modultitel_en": "Mathematical Methods of classical Mechanics - 9 CP"
+	},
+	{
+	  "id": "339",
+	  "Modulcode": "FMI-MA0406",
+	  "Prüfungsnummer": "57061",
+	  "LP": "9",
+	  "Modultitel_de": "Klassische Differentialgeometrie - 9 LP",
+	  "Modultitel_en": "Classical Differential Geometry - 9 CP"
+	},
+	{
+	  "id": "340",
+	  "Modulcode": "FMI-MA0407",
+	  "Prüfungsnummer": "57071",
+	  "LP": "6",
+	  "Modultitel_de": "Clifford - Algebren",
+	  "Modultitel_en": "Clifford - Algebras"
+	},
+	{
+	  "id": "341",
+	  "Modulcode": "FMI-MA0408",
+	  "Prüfungsnummer": "57081",
+	  "LP": "6",
+	  "Modultitel_de": "Analysis auf Mannigfaltigkeiten - 6 LP",
+	  "Modultitel_en": "Analysis on Manifolds - 6 CP"
+	},
+	{
+	  "id": "342",
+	  "Modulcode": "FMI-MA0409",
+	  "Prüfungsnummer": "57091",
+	  "LP": "9",
+	  "Modultitel_de": "Analysis auf Mannigfaltigkeiten - 9 LP",
+	  "Modultitel_en": "Analysis on Manifolds - 9 CP"
+	},
+	{
+	  "id": "343",
+	  "Modulcode": "FMI-MA0442",
+	  "Prüfungsnummer": "57421",
+	  "LP": "6",
+	  "Modultitel_de": "Fraktale Geometrie - 6 LP",
+	  "Modultitel_en": "Fractal Geometry - 6 CP"
+	},
+	{
+	  "id": "344",
+	  "Modulcode": "FMI-MA0443",
+	  "Prüfungsnummer": "57431",
+	  "LP": "6",
+	  "Modultitel_de": "Geometrische Integrationstheorie - 6 LP",
+	  "Modultitel_en": "Geometric Integration Theory"
+	},
+	{
+	  "id": "345",
+	  "Modulcode": "FMI-MA0444",
+	  "Prüfungsnummer": "57441",
+	  "LP": "6",
+	  "Modultitel_de": "Konvexe und metrische Geometrie - 6 LP",
+	  "Modultitel_en": "Convex and Metric Geometry"
+	},
+	{
+	  "id": "346",
+	  "Modulcode": "FMI-MA0445",
+	  "Prüfungsnummer": "57451",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematische Methoden der klassischen Mechanik - 6 LP",
+	  "Modultitel_en": "Mathematical methods of classical mechanics  - 6 CP"
+	},
+	{
+	  "id": "347",
+	  "Modulcode": "FMI-MA0446",
+	  "Prüfungsnummer": "57461",
+	  "LP": "6",
+	  "Modultitel_de": "Klassische Differentialgeometrie - 6 LP",
+	  "Modultitel_en": "Classical differential geometry"
+	},
+	{
+	  "id": "348",
+	  "Modulcode": "FMI-MA0447",
+	  "Prüfungsnummer": "57471",
+	  "LP": "3",
+	  "Modultitel_de": "Polyedergeometrie",
+	  "Modultitel_en": "Polytopes"
+	},
+	{
+	  "id": "349",
+	  "Modulcode": "FMI-MA0448",
+	  "Prüfungsnummer": "57481",
+	  "LP": "3",
+	  "Modultitel_de": "Angewandte Probleme von Algebra und Geometrie - 3 LP",
+	  "Modultitel_en": "Applied Problems in Algebra and Geometry - 3 CP"
+	},
+	{
+	  "id": "350",
+	  "Modulcode": "FMI-MA0449",
+	  "Prüfungsnummer": "57491",
+	  "LP": "6",
+	  "Modultitel_de": "Angewandte Probleme von Algebra und Geometrie - 6 LP",
+	  "Modultitel_en": "Applied Problems in Algebra and Geometry - 6 CP"
+	},
+	{
+	  "id": "351",
+	  "Modulcode": "FMI-MA0450",
+	  "Prüfungsnummer": "57501",
+	  "LP": "6",
+	  "Modultitel_de": "Integraltheorie",
+	  "Modultitel_en": "Integral Theory"
+	},
+	{
+	  "id": "352",
+	  "Modulcode": "FMI-MA0481",
+	  "Prüfungsnummer": "57811",
+	  "LP": "3",
+	  "Modultitel_de": "Proseminar Geometrie",
+	  "Modultitel_en": "Proseminar Geometry"
+	},
+	{
+	  "id": "353",
+	  "Modulcode": "FMI-MA0482",
+	  "Prüfungsnummer": "57821",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Geometrie - Bachelor",
+	  "Modultitel_en": "Seminar Geometry Bachelor"
+	},
+	{
+	  "id": "354",
+	  "Modulcode": "FMI-MA0500",
+	  "Prüfungsnummer": "58001",
+	  "LP": "9",
+	  "Modultitel_de": "Einführung in die Numerische Mathematik und das Wissenschaftliche Rechnen",
+	  "Modultitel_en": "Introduction to Numerical Analysis and Scientific Computing"
+	},
+	{
+	  "id": "355",
+	  "Modulcode": "FMI-MA0501",
+	  "Prüfungsnummer": "58011",
+	  "LP": "3",
+	  "Modultitel_de": "Verfahren der Numerischen Mathematik und des Wissenschaftlichen Rechnens im Einsatz",
+	  "Modultitel_en": "Methods of Numerical Analysis and Scientific Computing in Practise"
+	},
+	{
+	  "id": "356",
+	  "Modulcode": "FMI-MA0510",
+	  "Prüfungsnummer": "58101",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Wissenschaftliches Rechnen -Bachelor",
+	  "Modultitel_en": "Seminar Scientific Computing Bachelor"
+	},
+	{
+	  "id": "357",
+	  "Modulcode": "FMI-MA0520",
+	  "Prüfungsnummer": "58201",
+	  "LP": "9",
+	  "Modultitel_de": "Numerik von Randwertproblemen - 9 LP",
+	  "Modultitel_en": "Numerical Methods of Boundary Value Problems - 9 CP"
+	},
+	{
+	  "id": "358",
+	  "Modulcode": "FMI-MA0521",
+	  "Prüfungsnummer": "58211",
+	  "LP": "6",
+	  "Modultitel_de": "Numerik von Randwertproblemen - 6 LP",
+	  "Modultitel_en": "Numerical Methods of Boundary Value Problems - 6 CP"
+	},
+	{
+	  "id": "359",
+	  "Modulcode": "FMI-MA0530",
+	  "Prüfungsnummer": "58301",
+	  "LP": "6",
+	  "Modultitel_de": "Weiterführende Techniken des Wissenschaftlichen Rechnens",
+	  "Modultitel_en": "Advanced techniques for scientific computing"
+	},
+	{
+	  "id": "360",
+	  "Modulcode": "FMI-MA0531",
+	  "Prüfungsnummer": "58311",
+	  "LP": "6",
+	  "Modultitel_de": "Numerik gewöhnlicher Differentialgleichungen 1",
+	  "Modultitel_en": "Numerical methods for Ordinary Differential Equations 1"
+	},
+	{
+	  "id": "361",
+	  "Modulcode": "FMI-MA0550",
+	  "Prüfungsnummer": "58501",
+	  "LP": "9",
+	  "Modultitel_de": "Monte-Carlo Methoden - 9 LP",
+	  "Modultitel_en": "Monte-Carlo Methods - 9 BP"
+	},
+	{
+	  "id": "362",
+	  "Modulcode": "FMI-MA0551",
+	  "Prüfungsnummer": "58511",
+	  "LP": "6",
+	  "Modultitel_de": "Monte-Carlo Methoden - 6 LP",
+	  "Modultitel_en": "Monte-Carlo Methods - 6 BP"
+	},
+	{
+	  "id": "363",
+	  "Modulcode": "FMI-MA0552",
+	  "Prüfungsnummer": "58521",
+	  "LP": "3",
+	  "Modultitel_de": "Proseminar Numerische Mathematik",
+	  "Modultitel_en": "Proseminar Numerical Analysis"
+	},
+	{
+	  "id": "364",
+	  "Modulcode": "FMI-MA0553",
+	  "Prüfungsnummer": "58531",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Numerische Mathematik - Bachelor",
+	  "Modultitel_en": "Seminar Numerical Analysis Bachelor"
+	},
+	{
+	  "id": "365",
+	  "Modulcode": "FMI-MA0570",
+	  "Prüfungsnummer": "58701",
+	  "LP": "6",
+	  "Modultitel_de": "Wissenschaftliches Rechnen und Modellbildung",
+	  "Modultitel_en": "Scientific Computing and Modeling"
+	},
+	{
+	  "id": "366",
+	  "Modulcode": "FMI-MA0571",
+	  "Prüfungsnummer": "58711",
+	  "LP": "9",
+	  "Modultitel_de": "Parallele Algorithmen und lineare Gleichungssyseme – 9 LP",
+	  "Modultitel_en": "Parallel Algorithms and Linear Equation Systems - 9 CP"
+	},
+	{
+	  "id": "367",
+	  "Modulcode": "FMI-MA0572",
+	  "Prüfungsnummer": "58721",
+	  "LP": "9",
+	  "Modultitel_de": "Hyperbolische Erhaltungssätze und Wellengleichungen",
+	  "Modultitel_en": "Hyperbolic Laws of Conversation and Wave Equations"
+	},
+	{
+	  "id": "368",
+	  "Modulcode": "FMI-MA0573",
+	  "Prüfungsnummer": "58731",
+	  "LP": "9",
+	  "Modultitel_de": "Randelementmethoden und schnelle Summationsverfahren",
+	  "Modultitel_en": "Boundary Element Procedure and fast Summation Methods"
+	},
+	{
+	  "id": "369",
+	  "Modulcode": "FMI-MA0574",
+	  "Prüfungsnummer": "58741",
+	  "LP": "6",
+	  "Modultitel_de": "Parallele Algorithmen und lineare Gleichungssyseme – 6 LP",
+	  "Modultitel_en": "Parallel Algorithms and Linear Equation Systems - 6 CP"
+	},
+	{
+	  "id": "370",
+	  "Modulcode": "FMI-MA0601",
+	  "Prüfungsnummer": "59011",
+	  "LP": "9",
+	  "Modultitel_de": "Lineare Optimierung",
+	  "Modultitel_en": "Linear Optimization"
+	},
+	{
+	  "id": "371",
+	  "Modulcode": "FMI-MA0602",
+	  "Prüfungsnummer": "59021",
+	  "LP": "9",
+	  "Modultitel_de": "Diskrete Optimierung",
+	  "Modultitel_en": "Discrete Optimization"
+	},
+	{
+	  "id": "372",
+	  "Modulcode": "FMI-MA0605",
+	  "Prüfungsnummer": "59051",
+	  "LP": "9",
+	  "Modultitel_de": "Kontinuierliche Optimierung",
+	  "Modultitel_en": "Continuous Optimization"
+	},
+	{
+	  "id": "373",
+	  "Modulcode": "FMI-MA0642",
+	  "Prüfungsnummer": "59421",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in die diskrete Optimierung",
+	  "Modultitel_en": "Introduction to Discrete Optimization"
+	},
+	{
+	  "id": "374",
+	  "Modulcode": "FMI-MA0644",
+	  "Prüfungsnummer": "59441",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in die kontinuierliche Optimierung",
+	  "Modultitel_en": "Introduction to Continous Optimization"
+	},
+	{
+	  "id": "375",
+	  "Modulcode": "FMI-MA0681",
+	  "Prüfungsnummer": "59811",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Optimierung - Bachelor",
+	  "Modultitel_en": "Seminar Optimization"
+	},
+	{
+	  "id": "376",
+	  "Modulcode": "FMI-MA0691",
+	  "Prüfungsnummer": "59911",
+	  "LP": "3",
+	  "Modultitel_de": "Praktische Optimierung",
+	  "Modultitel_en": "Practical Optimization"
+	},
+	{
+	  "id": "377",
+	  "Modulcode": "FMI-MA0701",
+	  "Prüfungsnummer": "60011",
+	  "LP": "9",
+	  "Modultitel_de": "Stochastik 1 (Einführung in die Wahrscheinlichkeitstheorie und Statistik)",
+	  "Modultitel_en": "Stochastics I (Introduction to Probability Theory and Statistics)"
+	},
+	{
+	  "id": "378",
+	  "Modulcode": "FMI-MA0702",
+	  "Prüfungsnummer": "60021",
+	  "LP": "9",
+	  "Modultitel_de": "Stochastik 2",
+	  "Modultitel_en": "Stochastics II"
+	},
+	{
+	  "id": "379",
+	  "Modulcode": "FMI-MA0703",
+	  "Prüfungsnummer": "60031",
+	  "LP": "9",
+	  "Modultitel_de": "Stochastische Prozesse 1 - 9 LP",
+	  "Modultitel_en": "Stochastical Processes 1"
+	},
+	{
+	  "id": "380",
+	  "Modulcode": "FMI-MA0704",
+	  "Prüfungsnummer": "60041",
+	  "LP": "6",
+	  "Modultitel_de": "Finanzmathematik 1 - 6 LP",
+	  "Modultitel_en": "Financial Mathematics 1 – 6 CP"
+	},
+	{
+	  "id": "381",
+	  "Modulcode": "FMI-MA0705",
+	  "Prüfungsnummer": "60051",
+	  "LP": "9",
+	  "Modultitel_de": "Ökonometrie",
+	  "Modultitel_en": "Econometrics"
+	},
+	{
+	  "id": "382",
+	  "Modulcode": "FMI-MA0706",
+	  "Prüfungsnummer": "60061",
+	  "LP": "3",
+	  "Modultitel_de": "Praktische Finanzmathematik 1",
+	  "Modultitel_en": "Practical Financial Engineering I"
+	},
+	{
+	  "id": "383",
+	  "Modulcode": "FMI-MA0707",
+	  "Prüfungsnummer": "60071",
+	  "LP": "3",
+	  "Modultitel_de": "Einführung in die Versicherungsmathematik",
+	  "Modultitel_en": "Insurance Mathematics"
+	},
+	{
+	  "id": "384",
+	  "Modulcode": "FMI-MA0708",
+	  "Prüfungsnummer": "60081",
+	  "LP": "6",
+	  "Modultitel_de": "Verfahren der Versicherungs- und Finanzmathematik",
+	  "Modultitel_en": "Methods of Insurance and Financial Mathematics"
+	},
+	{
+	  "id": "385",
+	  "Modulcode": "FMI-MA0710",
+	  "Prüfungsnummer": "60101",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in Wahrscheinlichkeitstheorie und Mathematische Statistik",
+	  "Modultitel_en": "Introduction into Probability Theory and Mathematical Statistics"
+	},
+	{
+	  "id": "386",
+	  "Modulcode": "FMI-MA0711",
+	  "Prüfungsnummer": "60111",
+	  "LP": "6",
+	  "Modultitel_de": "Maßtheorie",
+	  "Modultitel_en": "Measure Theory"
+	},
+	{
+	  "id": "387",
+	  "Modulcode": "FMI-MA0712",
+	  "Prüfungsnummer": "60121",
+	  "LP": "6",
+	  "Modultitel_de": "Stochastik",
+	  "Modultitel_en": "Stochastics"
+	},
+	{
+	  "id": "388",
+	  "Modulcode": "FMI-MA0741",
+	  "Prüfungsnummer": "60411",
+	  "LP": "6",
+	  "Modultitel_de": "Statistische Verfahren",
+	  "Modultitel_en": "Statistical Methods"
+	},
+	{
+	  "id": "389",
+	  "Modulcode": "FMI-MA0781",
+	  "Prüfungsnummer": "60811",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Statistik - Bachelor",
+	  "Modultitel_en": "Seminar Statistics Bachelor"
+	},
+	{
+	  "id": "390",
+	  "Modulcode": "FMI-MA0782",
+	  "Prüfungsnummer": "60821",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Wahrscheinlichkeitstheorie - Bachelor",
+	  "Modultitel_en": "Seminar Probabilty Theory Bachelor"
+	},
+	{
+	  "id": "391",
+	  "Modulcode": "FMI-MA0791",
+	  "Prüfungsnummer": "60911",
+	  "LP": "3",
+	  "Modultitel_de": "Proseminar Stochastik",
+	  "Modultitel_en": "Proseminar Stochastics"
+	},
+	{
+	  "id": "392",
+	  "Modulcode": "FMI-MA0900",
+	  "Prüfungsnummer": "61901",
+	  "LP": "6",
+	  "Modultitel_de": "Externes Praktikum",
+	  "Modultitel_en": "Externing Practical Training"
+	},
+	{
+	  "id": "393",
+	  "Modulcode": "FMI-MA0901",
+	  "Prüfungsnummer": "61911",
+	  "LP": "3",
+	  "Modultitel_de": "Zahlengefühl und Strukturgefühl - 3 LP",
+	  "Modultitel_en": "Feeling for Numbers and Structures - 3 CP"
+	},
+	{
+	  "id": "394",
+	  "Modulcode": "FMI-MA0902",
+	  "Prüfungsnummer": "62611",
+	  "LP": "6",
+	  "Modultitel_de": "Zahlengefühl und Strukturgefühl - 6LP",
+	  "Modultitel_en": "Feeling for Numbers and Structures - 6 CP"
+	},
+	{
+	  "id": "395",
+	  "Modulcode": "FMI-MA0904",
+	  "Prüfungsnummer": "61941",
+	  "LP": "3",
+	  "Modultitel_de": "Wirtschaftskompetenz A (ASQ)",
+	  "Modultitel_en": "Business Skills A"
+	},
+	{
+	  "id": "396",
+	  "Modulcode": "FMI-MA0905",
+	  "Prüfungsnummer": "61951",
+	  "LP": "3",
+	  "Modultitel_de": "Wirtschaftskompetenz B (ASQ)",
+	  "Modultitel_en": "Business Skills B"
+	},
+	{
+	  "id": "397",
+	  "Modulcode": "FMI-MA0910",
+	  "Prüfungsnummer": "62021",
+	  "LP": "3",
+	  "Modultitel_de": "Externes Praktikum - 3 LP",
+	  "Modultitel_en": "Externing Practical Training - 3 CP"
+	},
+	{
+	  "id": "398",
+	  "Modulcode": "FMI-MA0911",
+	  "Prüfungsnummer": "62031",
+	  "LP": "6",
+	  "Modultitel_de": "Externes Praktikum - 6 LP",
+	  "Modultitel_en": "Externing Practical Training - 6 CP"
+	},
+	{
+	  "id": "399",
+	  "Modulcode": "FMI-MA0912",
+	  "Prüfungsnummer": "62041",
+	  "LP": "9",
+	  "Modultitel_de": "Externes Praktikum - 9 LP",
+	  "Modultitel_en": "Externing Practical Training - 9 CP"
+	},
+	{
+	  "id": "400",
+	  "Modulcode": "FMI-MA0999",
+	  "Prüfungsnummer": "7000",
+	  "LP": "12",
+	  "Modultitel_de": "Bachelorarbeit",
+	  "Modultitel_en": "Bachelor thesis"
+	},
+	{
+	  "id": "401",
+	  "Modulcode": "FMI-MA1101",
+	  "Prüfungsnummer": "62011",
+	  "LP": "6",
+	  "Modultitel_de": "Algorithmische Algebra",
+	  "Modultitel_en": "Algorithmic Algebra"
+	},
+	{
+	  "id": "402",
+	  "Modulcode": "FMI-MA1102",
+	  "Prüfungsnummer": "324021",
+	  "LP": "6",
+	  "Modultitel_de": "Quadratische Formen",
+	  "Modultitel_en": "Quadratic Forms"
+	},
+	{
+	  "id": "403",
+	  "Modulcode": "FMI-MA1103",
+	  "Prüfungsnummer": "324031",
+	  "LP": "6",
+	  "Modultitel_de": "Primzahltests und Faktorisierungsalgorithmen",
+	  "Modultitel_en": "Primality tests and algorithms for factorization"
+	},
+	{
+	  "id": "404",
+	  "Modulcode": "FMI-MA1104",
+	  "Prüfungsnummer": "324041",
+	  "LP": "6",
+	  "Modultitel_de": "Lie-Gruppen und Lie-Algebren",
+	  "Modultitel_en": "Lie groups and Lie algebras"
+	},
+	{
+	  "id": "405",
+	  "Modulcode": "FMI-MA1105",
+	  "Prüfungsnummer": "324051",
+	  "LP": "6",
+	  "Modultitel_de": "Komplexe Multiplikation",
+	  "Modultitel_en": "Complex Multiplication"
+	},
+	{
+	  "id": "406",
+	  "Modulcode": "FMI-MA1106",
+	  "Prüfungsnummer": "324061",
+	  "LP": "6",
+	  "Modultitel_de": "Algebraische Gruppen",
+	  "Modultitel_en": "Algebraic Groups"
+	},
+	{
+	  "id": "407",
+	  "Modulcode": "FMI-MA1107",
+	  "Prüfungsnummer": "324071",
+	  "LP": "9",
+	  "Modultitel_de": "Homologische Algebra - 9 LP",
+	  "Modultitel_en": "Homological Algebra - 9 CP"
+	},
+	{
+	  "id": "408",
+	  "Modulcode": "FMI-MA1108",
+	  "Prüfungsnummer": "324081",
+	  "LP": "9",
+	  "Modultitel_de": "Ringtheorie - 9 LP",
+	  "Modultitel_en": "Ring Theory - 9 CP"
+	},
+	{
+	  "id": "409",
+	  "Modulcode": "FMI-MA1109",
+	  "Prüfungsnummer": "324091",
+	  "LP": "9",
+	  "Modultitel_de": "Darstellungstheorie - 9 LP",
+	  "Modultitel_en": "Representation Theory"
+	},
+	{
+	  "id": "410",
+	  "Modulcode": "FMI-MA1148",
+	  "Prüfungsnummer": "324481",
+	  "LP": "6",
+	  "Modultitel_de": "Ringtheorie - 6 LP",
+	  "Modultitel_en": "Ring Theory - 6 CP"
+	},
+	{
+	  "id": "411",
+	  "Modulcode": "FMI-MA1182",
+	  "Prüfungsnummer": "324821",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Algebra",
+	  "Modultitel_en": "Seminar Algebra"
+	},
+	{
+	  "id": "412",
+	  "Modulcode": "FMI-MA1183",
+	  "Prüfungsnummer": "324831",
+	  "LP": "6",
+	  "Modultitel_de": "Algebraische Geometrie",
+	  "Modultitel_en": "Algebraic Geometry"
+	},
+	{
+	  "id": "413",
+	  "Modulcode": "FMI-MA1184",
+	  "Prüfungsnummer": "324841",
+	  "LP": "6",
+	  "Modultitel_de": "Analytische Zahlentheorie",
+	  "Modultitel_en": "Analytic Number Theory"
+	},
+	{
+	  "id": "414",
+	  "Modulcode": "FMI-MA1185",
+	  "Prüfungsnummer": "324851",
+	  "LP": "6",
+	  "Modultitel_de": "Darstellungstheorie",
+	  "Modultitel_en": "Representation Theory"
+	},
+	{
+	  "id": "415",
+	  "Modulcode": "FMI-MA1186",
+	  "Prüfungsnummer": "324861",
+	  "LP": "6",
+	  "Modultitel_de": "Elliptische Kurven",
+	  "Modultitel_en": "Elliptic Curves"
+	},
+	{
+	  "id": "416",
+	  "Modulcode": "FMI-MA1187",
+	  "Prüfungsnummer": "324871",
+	  "LP": "6",
+	  "Modultitel_de": "Homologische Algebra",
+	  "Modultitel_en": "Homological Algebra"
+	},
+	{
+	  "id": "417",
+	  "Modulcode": "FMI-MA1188",
+	  "Prüfungsnummer": "324881",
+	  "LP": "6",
+	  "Modultitel_de": "Kommutative Algebra",
+	  "Modultitel_en": "Commutative Algebra"
+	},
+	{
+	  "id": "418",
+	  "Modulcode": "FMI-MA1189",
+	  "Prüfungsnummer": "324891",
+	  "LP": "6",
+	  "Modultitel_de": "Klassenkörpertheorie",
+	  "Modultitel_en": "Class Field Theory"
+	},
+	{
+	  "id": "419",
+	  "Modulcode": "FMI-MA1190",
+	  "Prüfungsnummer": "324901",
+	  "LP": "6",
+	  "Modultitel_de": "Modulformen",
+	  "Modultitel_en": "Modular Forms"
+	},
+	{
+	  "id": "420",
+	  "Modulcode": "FMI-MA1191",
+	  "Prüfungsnummer": "324911",
+	  "LP": "6",
+	  "Modultitel_de": "Riemannsche Flächen",
+	  "Modultitel_en": "Riemann Surfaces"
+	},
+	{
+	  "id": "421",
+	  "Modulcode": "FMI-MA1193",
+	  "Prüfungsnummer": "324931",
+	  "LP": "6",
+	  "Modultitel_de": "Spezielle Kapitel der Algebra",
+	  "Modultitel_en": "Current Topics in Algebra"
+	},
+	{
+	  "id": "422",
+	  "Modulcode": "FMI-MA1194",
+	  "Prüfungsnummer": "324941",
+	  "LP": "6",
+	  "Modultitel_de": "Algebraische Topologie 2",
+	  "Modultitel_en": "Algebraic Topology 2"
+	},
+	{
+	  "id": "423",
+	  "Modulcode": "FMI-MA1195",
+	  "Prüfungsnummer": "324951",
+	  "LP": "6",
+	  "Modultitel_de": "Permutationsgruppen",
+	  "Modultitel_en": "Permutation Groups"
+	},
+	{
+	  "id": "424",
+	  "Modulcode": "FMI-MA1201",
+	  "Prüfungsnummer": "325011",
+	  "LP": "6",
+	  "Modultitel_de": "Elliptische Differentialoperatoren - 6 LP",
+	  "Modultitel_en": "Elliptic Differential Operators - 6 CP"
+	},
+	{
+	  "id": "425",
+	  "Modulcode": "FMI-MA1202",
+	  "Prüfungsnummer": "325021",
+	  "LP": "9",
+	  "Modultitel_de": "Elliptische Differentialoperatoren - 9 LP",
+	  "Modultitel_en": "Elliptic Differential Operators - 9 CP"
+	},
+	{
+	  "id": "426",
+	  "Modulcode": "FMI-MA1203",
+	  "Prüfungsnummer": "325031",
+	  "LP": "6",
+	  "Modultitel_de": "Fourieranalysis 2",
+	  "Modultitel_en": "Fourier Analysis 2"
+	},
+	{
+	  "id": "427",
+	  "Modulcode": "FMI-MA1204",
+	  "Prüfungsnummer": "325041",
+	  "LP": "6",
+	  "Modultitel_de": "Funktionenräume",
+	  "Modultitel_en": "Function Spaces"
+	},
+	{
+	  "id": "428",
+	  "Modulcode": "FMI-MA1205",
+	  "Prüfungsnummer": "325051",
+	  "LP": "9",
+	  "Modultitel_de": "Approximationstheorie 2 - 9 LP",
+	  "Modultitel_en": "Approximation Theory 2"
+	},
+	{
+	  "id": "429",
+	  "Modulcode": "FMI-MA1207",
+	  "Prüfungsnummer": "325071",
+	  "LP": "6",
+	  "Modultitel_de": "Struktur hochdimensionaler normierter Räume",
+	  "Modultitel_en": "Structure of High-Dimensional Normed Spaces"
+	},
+	{
+	  "id": "430",
+	  "Modulcode": "FMI-MA1208",
+	  "Prüfungsnummer": "325081",
+	  "LP": "9",
+	  "Modultitel_de": "Wavelets - 9 LP",
+	  "Modultitel_en": "Wavelets - 9 CP"
+	},
+	{
+	  "id": "431",
+	  "Modulcode": "FMI-MA1209",
+	  "Prüfungsnummer": "325091",
+	  "LP": "3",
+	  "Modultitel_de": "Interpolationstheorie - 3 LP",
+	  "Modultitel_en": "Interpolation Theory"
+	},
+	{
+	  "id": "432",
+	  "Modulcode": "FMI-MA1210",
+	  "Prüfungsnummer": "325101",
+	  "LP": "6",
+	  "Modultitel_de": "Interpolationstheorie - 6 LP",
+	  "Modultitel_en": "Interpolation Theory"
+	},
+	{
+	  "id": "433",
+	  "Modulcode": "FMI-MA1212",
+	  "Prüfungsnummer": "325121",
+	  "LP": "9",
+	  "Modultitel_de": "Höhere Analysis 2",
+	  "Modultitel_en": "Higher Analysis 2"
+	},
+	{
+	  "id": "434",
+	  "Modulcode": "FMI-MA1213",
+	  "Prüfungsnummer": "325131",
+	  "LP": "6",
+	  "Modultitel_de": "Moderne Methoden der Analysis - 6 LP",
+	  "Modultitel_en": "Modern Methods in Analysis"
+	},
+	{
+	  "id": "435",
+	  "Modulcode": "FMI-MA1214",
+	  "Prüfungsnummer": "325141",
+	  "LP": "6",
+	  "Modultitel_de": "Pseudodifferentialoperatoren",
+	  "Modultitel_en": "Pseudo Differential Operators"
+	},
+	{
+	  "id": "436",
+	  "Modulcode": "FMI-MA1215",
+	  "Prüfungsnummer": "325151",
+	  "LP": "9",
+	  "Modultitel_de": "Sobolevräume",
+	  "Modultitel_en": "Sobolev Spaces"
+	},
+	{
+	  "id": "437",
+	  "Modulcode": "FMI-MA1216",
+	  "Prüfungsnummer": "325161",
+	  "LP": "6",
+	  "Modultitel_de": "Spektraltheorie - 6 LP",
+	  "Modultitel_en": "Spectral Theory"
+	},
+	{
+	  "id": "438",
+	  "Modulcode": "FMI-MA1217",
+	  "Prüfungsnummer": "325171",
+	  "LP": "6",
+	  "Modultitel_de": "Distributionen - 6 LP",
+	  "Modultitel_en": "Distributions - 6 BP"
+	},
+	{
+	  "id": "439",
+	  "Modulcode": "FMI-MA1218",
+	  "Prüfungsnummer": "325181",
+	  "LP": "3",
+	  "Modultitel_de": "Spektraltheorie - 3 LP",
+	  "Modultitel_en": "Spectral Theory"
+	},
+	{
+	  "id": "440",
+	  "Modulcode": "FMI-MA1220",
+	  "Prüfungsnummer": "325201",
+	  "LP": "6",
+	  "Modultitel_de": "Approximationstheorie 2 - 6 LP",
+	  "Modultitel_en": "Approximation Theory 2"
+	},
+	{
+	  "id": "441",
+	  "Modulcode": "FMI-MA1221",
+	  "Prüfungsnummer": "325211",
+	  "LP": "9",
+	  "Modultitel_de": "Distributionen - 9 LP",
+	  "Modultitel_en": "Distributions - 9 CP"
+	},
+	{
+	  "id": "442",
+	  "Modulcode": "FMI-MA1222",
+	  "Prüfungsnummer": "325221",
+	  "LP": "3",
+	  "Modultitel_de": "Moderne Methoden der Analysis - 3 LP",
+	  "Modultitel_en": "Modern Methods in Analysis - 3 CP"
+	},
+	{
+	  "id": "443",
+	  "Modulcode": "FMI-MA1223",
+	  "Prüfungsnummer": "325231",
+	  "LP": "9",
+	  "Modultitel_de": "Moderne Methoden der Approximationstheorie",
+	  "Modultitel_en": "Modern Methods of Approximation Theory"
+	},
+	{
+	  "id": "444",
+	  "Modulcode": "FMI-MA1224",
+	  "Prüfungsnummer": "325241",
+	  "LP": "3",
+	  "Modultitel_de": "Elliptische Differentialoperatoren 2",
+	  "Modultitel_en": "Elliptic Differential Operators 2"
+	},
+	{
+	  "id": "445",
+	  "Modulcode": "FMI-MA1225",
+	  "Prüfungsnummer": "325251",
+	  "LP": "9",
+	  "Modultitel_de": "Spektraltheorie - 9 LP",
+	  "Modultitel_en": "Spectral Theory"
+	},
+	{
+	  "id": "446",
+	  "Modulcode": "FMI-MA1227",
+	  "Prüfungsnummer": "325271",
+	  "LP": "9",
+	  "Modultitel_de": "Dynamische Systeme",
+	  "Modultitel_en": "Dynamical Systems"
+	},
+	{
+	  "id": "447",
+	  "Modulcode": "FMI-MA1241",
+	  "Prüfungsnummer": "325411",
+	  "LP": "6",
+	  "Modultitel_de": "Nichtlineare Analysis und Anwendungen",
+	  "Modultitel_en": "Pseudo Differential Operators"
+	},
+	{
+	  "id": "448",
+	  "Modulcode": "FMI-MA1242",
+	  "Prüfungsnummer": "325421",
+	  "LP": "9",
+	  "Modultitel_de": "Ergodentheorie - 9 LP",
+	  "Modultitel_en": "Ergodic Theory"
+	},
+	{
+	  "id": "449",
+	  "Modulcode": "FMI-MA1261",
+	  "Prüfungsnummer": "325611",
+	  "LP": "6",
+	  "Modultitel_de": "Stabilität dynamischer Systeme 2 - 6 LP",
+	  "Modultitel_en": "Stability of Dynamical Systems 2 - 6 CP"
+	},
+	{
+	  "id": "450",
+	  "Modulcode": "FMI-MA1262",
+	  "Prüfungsnummer": "325621",
+	  "LP": "6",
+	  "Modultitel_de": "Hyperbolische Dynamische Systeme",
+	  "Modultitel_en": "Hyperbolic Dynamics"
+	},
+	{
+	  "id": "451",
+	  "Modulcode": "FMI-MA1263",
+	  "Prüfungsnummer": "325631",
+	  "LP": "6",
+	  "Modultitel_de": "Unendlich Dimensionale Dynamische Systeme",
+	  "Modultitel_en": "Infinite Dimensional Dynamical Systems"
+	},
+	{
+	  "id": "452",
+	  "Modulcode": "FMI-MA1264",
+	  "Prüfungsnummer": "325641",
+	  "LP": "6",
+	  "Modultitel_de": "Topologie und Dynamik auf Flächen",
+	  "Modultitel_en": "Topology and Dynamics on Surfaces"
+	},
+	{
+	  "id": "453",
+	  "Modulcode": "FMI-MA1270",
+	  "Prüfungsnummer": "325701",
+	  "LP": "6",
+	  "Modultitel_de": "Anwendungen von Operatortheorie",
+	  "Modultitel_en": "Applications of operator theory"
+	},
+	{
+	  "id": "454",
+	  "Modulcode": "FMI-MA1271",
+	  "Prüfungsnummer": "325711",
+	  "LP": "3",
+	  "Modultitel_de": "Aperiodische Ordnung - 3 LP",
+	  "Modultitel_en": "Aperiodic Order - 3 CP"
+	},
+	{
+	  "id": "455",
+	  "Modulcode": "FMI-MA1272",
+	  "Prüfungsnummer": "325721",
+	  "LP": "6",
+	  "Modultitel_de": "C*- Algebren",
+	  "Modultitel_en": "C*-Algebras"
+	},
+	{
+	  "id": "456",
+	  "Modulcode": "FMI-MA1273",
+	  "Prüfungsnummer": "325731",
+	  "LP": "3",
+	  "Modultitel_de": "Dirichlet Formen",
+	  "Modultitel_en": "Dirichlet Forms"
+	},
+	{
+	  "id": "457",
+	  "Modulcode": "FMI-MA1274",
+	  "Prüfungsnummer": "325741",
+	  "LP": "6",
+	  "Modultitel_de": "Ergodentheorie - 6 LP",
+	  "Modultitel_en": "Ergodic theory"
+	},
+	{
+	  "id": "458",
+	  "Modulcode": "FMI-MA1275",
+	  "Prüfungsnummer": "325751",
+	  "LP": "6",
+	  "Modultitel_de": "Harmonische Analysis",
+	  "Modultitel_en": "Harmonic Analysis"
+	},
+	{
+	  "id": "459",
+	  "Modulcode": "FMI-MA1276",
+	  "Prüfungsnummer": "325761",
+	  "LP": "6",
+	  "Modultitel_de": "Aperiodische Ordnung - 6 LP",
+	  "Modultitel_en": "Aperiodic Order - 6 CP"
+	},
+	{
+	  "id": "460",
+	  "Modulcode": "FMI-MA1277",
+	  "Prüfungsnummer": "325771",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematische Methoden der Quantenmechanik - 6 LP",
+	  "Modultitel_en": "Mathematical Methods of Quantum Mechanics"
+	},
+	{
+	  "id": "461",
+	  "Modulcode": "FMI-MA1278",
+	  "Prüfungsnummer": "325781",
+	  "LP": "3",
+	  "Modultitel_de": "Mathematische Methoden der Quantenmechanik - 3 LP",
+	  "Modultitel_en": "Mathematical Methods of Quantum Mechanics - 3 BP"
+	},
+	{
+	  "id": "462",
+	  "Modulcode": "FMI-MA1281",
+	  "Prüfungsnummer": "325811",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Analysis",
+	  "Modultitel_en": "Seminar Analysis"
+	},
+	{
+	  "id": "463",
+	  "Modulcode": "FMI-MA1401",
+	  "Prüfungsnummer": "327011",
+	  "LP": "9",
+	  "Modultitel_de": "Differentialgeometrie - 9 LP",
+	  "Modultitel_en": "Differential geometry - 9 CP"
+	},
+	{
+	  "id": "464",
+	  "Modulcode": "FMI-MA1403",
+	  "Prüfungsnummer": "327031",
+	  "LP": "6",
+	  "Modultitel_de": "Fraktale stochastische Prozesse - 6 LP",
+	  "Modultitel_en": "Fractal Stochastic Processes - 6 CP"
+	},
+	{
+	  "id": "465",
+	  "Modulcode": "FMI-MA1409",
+	  "Prüfungsnummer": "327091",
+	  "LP": "3",
+	  "Modultitel_de": "Aktuelle Entwicklungen in der Geometrie",
+	  "Modultitel_en": "Current developments in Geometry"
+	},
+	{
+	  "id": "466",
+	  "Modulcode": "FMI-MA1410",
+	  "Prüfungsnummer": "327101",
+	  "LP": "6",
+	  "Modultitel_de": "Spezielle Kapitel der Geometrie - 6 LP",
+	  "Modultitel_en": "Current Topics in Geometry - 6 LP"
+	},
+	{
+	  "id": "467",
+	  "Modulcode": "FMI-MA1420",
+	  "Prüfungsnummer": "327201",
+	  "LP": "6",
+	  "Modultitel_de": "Geometrische Zerlegungen",
+	  "Modultitel_en": "Geometric Decompositions"
+	},
+	{
+	  "id": "468",
+	  "Modulcode": "FMI-MA1441",
+	  "Prüfungsnummer": "327411",
+	  "LP": "6",
+	  "Modultitel_de": "Differentialgeometrie - 6 LP",
+	  "Modultitel_en": "Differential geometry"
+	},
+	{
+	  "id": "469",
+	  "Modulcode": "FMI-MA1443",
+	  "Prüfungsnummer": "327431",
+	  "LP": "3",
+	  "Modultitel_de": "Fraktale stochastische Prozesse - 3 LP",
+	  "Modultitel_en": "Fractal Stochastic Processes - 3 CP"
+	},
+	{
+	  "id": "470",
+	  "Modulcode": "FMI-MA1450",
+	  "Prüfungsnummer": "327501",
+	  "LP": "6",
+	  "Modultitel_de": "Dynamische Systeme und Fraktale",
+	  "Modultitel_en": "Dynamical Systems and Fractals"
+	},
+	{
+	  "id": "471",
+	  "Modulcode": "FMI-MA1451",
+	  "Prüfungsnummer": "327511",
+	  "LP": "6",
+	  "Modultitel_de": "Topologie und Mannigfaltigkeiten - 6 LP",
+	  "Modultitel_en": "Topology and Manifolds - 6 CP"
+	},
+	{
+	  "id": "472",
+	  "Modulcode": "FMI-MA1452",
+	  "Prüfungsnummer": "327521",
+	  "LP": "9",
+	  "Modultitel_de": "Topologie und Mannigfaltigkeiten - 9 LP",
+	  "Modultitel_en": "Topology and Manifolds - 9 CP"
+	},
+	{
+	  "id": "473",
+	  "Modulcode": "FMI-MA1482",
+	  "Prüfungsnummer": "327821",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Geometrie",
+	  "Modultitel_en": "Seminar Geometry"
+	},
+	{
+	  "id": "474",
+	  "Modulcode": "FMI-MA1510",
+	  "Prüfungsnummer": "328101",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Wissenschaftliches Rechnen",
+	  "Modultitel_en": "Semianr Scientific Computing"
+	},
+	{
+	  "id": "475",
+	  "Modulcode": "FMI-MA1520",
+	  "Prüfungsnummer": "328201",
+	  "LP": "9",
+	  "Modultitel_de": "Finite Elemente für partielle Differentialgleichungen - 9 LP",
+	  "Modultitel_en": "Finite Elements for Partial Differential Equations - 9 CP"
+	},
+	{
+	  "id": "476",
+	  "Modulcode": "FMI-MA1521",
+	  "Prüfungsnummer": "328211",
+	  "LP": "6",
+	  "Modultitel_de": "Finite Elemente für partielle Differentialgleichungen - 6 LP",
+	  "Modultitel_en": "Finite Elements for Partial Differential Equations - 6 CP"
+	},
+	{
+	  "id": "477",
+	  "Modulcode": "FMI-MA1530",
+	  "Prüfungsnummer": "62051",
+	  "LP": "9",
+	  "Modultitel_de": "Matrizen-Numerik - 9 LP",
+	  "Modultitel_en": "Matrix Computations"
+	},
+	{
+	  "id": "478",
+	  "Modulcode": "FMI-MA1531",
+	  "Prüfungsnummer": "328311",
+	  "LP": "6",
+	  "Modultitel_de": "Numerik gewöhnlicher Differentialgleichungen 2",
+	  "Modultitel_en": "Numerical methods for Ordinary Differential Equations 2"
+	},
+	{
+	  "id": "479",
+	  "Modulcode": "FMI-MA1532",
+	  "Prüfungsnummer": "328321",
+	  "LP": "6",
+	  "Modultitel_de": "Numerik gewöhnlicher Differentialgleichungen 3",
+	  "Modultitel_en": "Numerical methods for Ordinary Differential Equations 3"
+	},
+	{
+	  "id": "480",
+	  "Modulcode": "FMI-MA1533",
+	  "Prüfungsnummer": "62701",
+	  "LP": "6",
+	  "Modultitel_de": "Matrizen-Numerik - 6 LP",
+	  "Modultitel_en": "Matrix Computations"
+	},
+	{
+	  "id": "481",
+	  "Modulcode": "FMI-MA1534",
+	  "Prüfungsnummer": "328341",
+	  "LP": "6",
+	  "Modultitel_de": "Wissenschaftliches Rechnen I",
+	  "Modultitel_en": "Scientific Computing I"
+	},
+	{
+	  "id": "482",
+	  "Modulcode": "FMI-MA1535",
+	  "Prüfungsnummer": "328351",
+	  "LP": "6",
+	  "Modultitel_de": "Wissenschaftliches Rechnen II",
+	  "Modultitel_en": "Scientific Computing II"
+	},
+	{
+	  "id": "483",
+	  "Modulcode": "FMI-MA1550",
+	  "Prüfungsnummer": "328501",
+	  "LP": "6",
+	  "Modultitel_de": "Komplexität stetiger Probleme",
+	  "Modultitel_en": "Complexity of Continuous Problems"
+	},
+	{
+	  "id": "484",
+	  "Modulcode": "FMI-MA1551",
+	  "Prüfungsnummer": "328511",
+	  "LP": "6",
+	  "Modultitel_de": "Moderne Methoden der Numerischen Mathematik",
+	  "Modultitel_en": "Modern Methods in Computational Mathematics"
+	},
+	{
+	  "id": "485",
+	  "Modulcode": "FMI-MA1552",
+	  "Prüfungsnummer": "328521",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Numerische Mathematik",
+	  "Modultitel_en": "Seminar on Computational Mathematics"
+	},
+	{
+	  "id": "486",
+	  "Modulcode": "FMI-MA1553",
+	  "Prüfungsnummer": "328531",
+	  "LP": "6",
+	  "Modultitel_de": "Quasi-Monte-Carlo-Methoden und Diskrepanz",
+	  "Modultitel_en": "Quasi-Monte-Carlo-Methods and Discrepancy"
+	},
+	{
+	  "id": "487",
+	  "Modulcode": "FMI-MA1554",
+	  "Prüfungsnummer": "328541",
+	  "LP": "9",
+	  "Modultitel_de": "Komplexität stetiger Probleme - 9 LP",
+	  "Modultitel_en": "Complexity of Continuous Problems - 9 CP"
+	},
+	{
+	  "id": "488",
+	  "Modulcode": "FMI-MA1570",
+	  "Prüfungsnummer": "328701",
+	  "LP": "9",
+	  "Modultitel_de": "Computational Finance",
+	  "Modultitel_en": "Computational Finance"
+	},
+	{
+	  "id": "489",
+	  "Modulcode": "FMI-MA1571",
+	  "Prüfungsnummer": "328711",
+	  "LP": "6",
+	  "Modultitel_de": "Moleküldynamik",
+	  "Modultitel_en": "Molecular Dynamics"
+	},
+	{
+	  "id": "490",
+	  "Modulcode": "FMI-MA1574",
+	  "Prüfungsnummer": "328741",
+	  "LP": "3",
+	  "Modultitel_de": "Markovketten Monte-Carlo Methoden auf allgemeinen Zustandsräumen",
+	  "Modultitel_en": "Markov chain Monte Carlo Methods on general state spaces"
+	},
+	{
+	  "id": "491",
+	  "Modulcode": "FMI-MA1575",
+	  "Prüfungsnummer": "328751",
+	  "LP": "6",
+	  "Modultitel_de": "Markovketten Monte-Carlo Methoden",
+	  "Modultitel_en": "Markov chain Monte Carlo Methods"
+	},
+	{
+	  "id": "492",
+	  "Modulcode": "FMI-MA1601",
+	  "Prüfungsnummer": "329011",
+	  "LP": "9",
+	  "Modultitel_de": "Diskrete und Experimentelle Optimierung A",
+	  "Modultitel_en": "Discrete and Experimental Optimization A"
+	},
+	{
+	  "id": "493",
+	  "Modulcode": "FMI-MA1602",
+	  "Prüfungsnummer": "329021",
+	  "LP": "6",
+	  "Modultitel_de": "Diskrete und Experimentelle Optimierung B - 6 LP",
+	  "Modultitel_en": "Discrete and Experimental Optimization B - 6 BP"
+	},
+	{
+	  "id": "494",
+	  "Modulcode": "FMI-MA1603",
+	  "Prüfungsnummer": "329031",
+	  "LP": "5",
+	  "Modultitel_de": "Numerische Verfahren der nichtlinearen Optimierung",
+	  "Modultitel_en": "Numerical methods of nonlinear optimization"
+	},
+	{
+	  "id": "495",
+	  "Modulcode": "FMI-MA1604",
+	  "Prüfungsnummer": "329041",
+	  "LP": "2",
+	  "Modultitel_de": "Anwendung Numerischer Verfahren der nichtlinearen Optimierung",
+	  "Modultitel_en": "Applications of nonlinear optimization"
+	},
+	{
+	  "id": "496",
+	  "Modulcode": "FMI-MA1605",
+	  "Prüfungsnummer": "329051",
+	  "LP": "6",
+	  "Modultitel_de": "Optimale Steuerung",
+	  "Modultitel_en": "Optimal control"
+	},
+	{
+	  "id": "497",
+	  "Modulcode": "FMI-MA1606",
+	  "Prüfungsnummer": "329061",
+	  "LP": "3",
+	  "Modultitel_de": "Anwendungen Optimaler Steuerung",
+	  "Modultitel_en": "Applications of optimal control"
+	},
+	{
+	  "id": "498",
+	  "Modulcode": "FMI-MA1607",
+	  "Prüfungsnummer": "329071",
+	  "LP": "5",
+	  "Modultitel_de": "Numerische Verfahren der nichtglatten Optimierung",
+	  "Modultitel_en": "Numerical methods of nonsmooth optimization"
+	},
+	{
+	  "id": "499",
+	  "Modulcode": "FMI-MA1608",
+	  "Prüfungsnummer": "329081",
+	  "LP": "2",
+	  "Modultitel_de": "Anwendung Numerischer Verfahren der nichtglatten Optimierung",
+	  "Modultitel_en": "Applications of nonsmooth optimization"
+	},
+	{
+	  "id": "500",
+	  "Modulcode": "FMI-MA1609",
+	  "Prüfungsnummer": "329091",
+	  "LP": "6",
+	  "Modultitel_de": "Numerische Verfahren der nichtlinearen Optimierung",
+	  "Modultitel_en": "Numerical methods of nonlinear Optimization"
+	},
+	{
+	  "id": "501",
+	  "Modulcode": "FMI-MA1610",
+	  "Prüfungsnummer": "329101",
+	  "LP": "9",
+	  "Modultitel_de": "Diskrete und Experimentelle Optimierung B - 9 LP",
+	  "Modultitel_en": "Discrete and Experimental Optimization B"
+	},
+	{
+	  "id": "502",
+	  "Modulcode": "FMI-MA1611",
+	  "Prüfungsnummer": "329111",
+	  "LP": "4",
+	  "Modultitel_de": "Mathematische Modelle für Optimierungsprobleme - 4 LP",
+	  "Modultitel_en": "Mathematical models for Optimization Problems"
+	},
+	{
+	  "id": "503",
+	  "Modulcode": "FMI-MA1612",
+	  "Prüfungsnummer": "329121",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematische Modelle für Optimierungsprobleme - 6 LP",
+	  "Modultitel_en": "Mathematical models for Optimization Problems"
+	},
+	{
+	  "id": "504",
+	  "Modulcode": "FMI-MA1613",
+	  "Prüfungsnummer": "329131",
+	  "LP": "6",
+	  "Modultitel_de": "Vektoroptimierung",
+	  "Modultitel_en": "Vector Optimization"
+	},
+	{
+	  "id": "505",
+	  "Modulcode": "FMI-MA1614",
+	  "Prüfungsnummer": "329141",
+	  "LP": "3",
+	  "Modultitel_de": "Semidefinite Optimierung",
+	  "Modultitel_en": "Semidefinite Programming"
+	},
+	{
+	  "id": "506",
+	  "Modulcode": "FMI-MA1615",
+	  "Prüfungsnummer": "329151",
+	  "LP": "6",
+	  "Modultitel_de": "Konvexe Analysis und nichtglatte Optimierung",
+	  "Modultitel_en": "Convex Analysis and Nonsmooth Optimization"
+	},
+	{
+	  "id": "507",
+	  "Modulcode": "FMI-MA1681",
+	  "Prüfungsnummer": "329811",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Optimierung",
+	  "Modultitel_en": "Seminar Optimization"
+	},
+	{
+	  "id": "508",
+	  "Modulcode": "FMI-MA1682",
+	  "Prüfungsnummer": "329821",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Diskrete Optimierung",
+	  "Modultitel_en": "Seminar Discrete Optimization"
+	},
+	{
+	  "id": "509",
+	  "Modulcode": "FMI-MA1683",
+	  "Prüfungsnummer": "329831",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Nichtlineare Optimierung",
+	  "Modultitel_en": "Seminar Nonlinear Optimization"
+	},
+	{
+	  "id": "510",
+	  "Modulcode": "FMI-MA1684",
+	  "Prüfungsnummer": "329841",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Kontinuierliche Optimierung",
+	  "Modultitel_en": "Seminar Continous Optimization"
+	},
+	{
+	  "id": "511",
+	  "Modulcode": "FMI-MA1701",
+	  "Prüfungsnummer": "330011",
+	  "LP": "9",
+	  "Modultitel_de": "Mathematische Statistik",
+	  "Modultitel_en": "Mathematical Statistics"
+	},
+	{
+	  "id": "512",
+	  "Modulcode": "FMI-MA1702",
+	  "Prüfungsnummer": "330021",
+	  "LP": "6",
+	  "Modultitel_de": "Stochastische Prozesse 2",
+	  "Modultitel_en": "Stochastic Processes 2"
+	},
+	{
+	  "id": "513",
+	  "Modulcode": "FMI-MA1703",
+	  "Prüfungsnummer": "330031",
+	  "LP": "6",
+	  "Modultitel_de": "Finanzmathematik 2 - 6 LP",
+	  "Modultitel_en": "Mathematics of Finance 2 - 6 CP"
+	},
+	{
+	  "id": "514",
+	  "Modulcode": "FMI-MA1704",
+	  "Prüfungsnummer": "330041",
+	  "LP": "6",
+	  "Modultitel_de": "Stochastische Analysis - 6 LP",
+	  "Modultitel_en": "Stochastic Analysis - 6 CP"
+	},
+	{
+	  "id": "515",
+	  "Modulcode": "FMI-MA1705",
+	  "Prüfungsnummer": "330051",
+	  "LP": "6",
+	  "Modultitel_de": "Zeitreihenanalyse - 6 LP",
+	  "Modultitel_en": "Time series analysis"
+	},
+	{
+	  "id": "516",
+	  "Modulcode": "FMI-MA1706",
+	  "Prüfungsnummer": "330061",
+	  "LP": "3",
+	  "Modultitel_de": "Nichtparametrische Kurvenschätzung",
+	  "Modultitel_en": "Nonparametric curve estimation"
+	},
+	{
+	  "id": "517",
+	  "Modulcode": "FMI-MA1707",
+	  "Prüfungsnummer": "330071",
+	  "LP": "6",
+	  "Modultitel_de": "Stochastische Geometrie",
+	  "Modultitel_en": "Stochastic Geometry"
+	},
+	{
+	  "id": "518",
+	  "Modulcode": "FMI-MA1708",
+	  "Prüfungsnummer": "330081",
+	  "LP": "6",
+	  "Modultitel_de": "Zufällige Punktprozesse",
+	  "Modultitel_en": "Point Processes"
+	},
+	{
+	  "id": "519",
+	  "Modulcode": "FMI-MA1709",
+	  "Prüfungsnummer": "330091",
+	  "LP": "3",
+	  "Modultitel_de": "Prognoseverfahren",
+	  "Modultitel_en": "Prediction Theory"
+	},
+	{
+	  "id": "520",
+	  "Modulcode": "FMI-MA1710",
+	  "Prüfungsnummer": "330101",
+	  "LP": "3",
+	  "Modultitel_de": "Projekt Multivariate Statistik",
+	  "Modultitel_en": "Project Multivariate Statistics"
+	},
+	{
+	  "id": "521",
+	  "Modulcode": "FMI-MA1711",
+	  "Prüfungsnummer": "330111",
+	  "LP": "3",
+	  "Modultitel_de": "Zeitreihenanalyse - 3 LP",
+	  "Modultitel_en": "Time series analysis"
+	},
+	{
+	  "id": "522",
+	  "Modulcode": "FMI-MA1712",
+	  "Prüfungsnummer": "330121",
+	  "LP": "3",
+	  "Modultitel_de": "Semimartingale 1",
+	  "Modultitel_en": "Semimartingales 1"
+	},
+	{
+	  "id": "523",
+	  "Modulcode": "FMI-MA1713",
+	  "Prüfungsnummer": "330131",
+	  "LP": "6",
+	  "Modultitel_de": "Stochastische Prozesse 1",
+	  "Modultitel_en": "Stochastic Processes 1"
+	},
+	{
+	  "id": "524",
+	  "Modulcode": "FMI-MA1714",
+	  "Prüfungsnummer": "330141",
+	  "LP": "3",
+	  "Modultitel_de": "Bootstrap-Verfahren",
+	  "Modultitel_en": "Bootstrap procedures"
+	},
+	{
+	  "id": "525",
+	  "Modulcode": "FMI-MA1715",
+	  "Prüfungsnummer": "330151",
+	  "LP": "6",
+	  "Modultitel_de": "Semimartingale 2 - 6 LP",
+	  "Modultitel_en": "Semimartingales 2 - 6 CP"
+	},
+	{
+	  "id": "526",
+	  "Modulcode": "FMI-MA1716",
+	  "Prüfungsnummer": "330161",
+	  "LP": "3",
+	  "Modultitel_de": "Semimartingale 2 - 6 LP",
+	  "Modultitel_en": "Semimartingales 2 - 3 CP"
+	},
+	{
+	  "id": "527",
+	  "Modulcode": "FMI-MA1717",
+	  "Prüfungsnummer": "330171",
+	  "LP": "3",
+	  "Modultitel_de": "Lévy-Prozesse",
+	  "Modultitel_en": "Lévy-Processes"
+	},
+	{
+	  "id": "528",
+	  "Modulcode": "FMI-MA1718",
+	  "Prüfungsnummer": "330181",
+	  "LP": "6",
+	  "Modultitel_de": "Dynamik von Differentialgleichungen",
+	  "Modultitel_en": "Dynamics of differential equations"
+	},
+	{
+	  "id": "529",
+	  "Modulcode": "FMI-MA1719",
+	  "Prüfungsnummer": "330191",
+	  "LP": "3",
+	  "Modultitel_de": "Partielle Differentialgleichungen",
+	  "Modultitel_en": "Partial differential equations"
+	},
+	{
+	  "id": "530",
+	  "Modulcode": "FMI-MA1720",
+	  "Prüfungsnummer": "330201",
+	  "LP": "3",
+	  "Modultitel_de": "Topologie und Maß",
+	  "Modultitel_en": "Topology and Measure"
+	},
+	{
+	  "id": "531",
+	  "Modulcode": "FMI-MA1721",
+	  "Prüfungsnummer": "330211",
+	  "LP": "3",
+	  "Modultitel_de": "Zufällige Reihen",
+	  "Modultitel_en": "Random Series"
+	},
+	{
+	  "id": "532",
+	  "Modulcode": "FMI-MA1722",
+	  "Prüfungsnummer": "330221",
+	  "LP": "6",
+	  "Modultitel_de": "Stochastische Differentialgleichungen",
+	  "Modultitel_en": "Stochastic differential equations"
+	},
+	{
+	  "id": "533",
+	  "Modulcode": "FMI-MA1723",
+	  "Prüfungsnummer": "330231",
+	  "LP": "3",
+	  "Modultitel_de": "Stochastische Partielle Differentialgleichungen",
+	  "Modultitel_en": "Stochastic Partial Differential Equations"
+	},
+	{
+	  "id": "534",
+	  "Modulcode": "FMI-MA1724",
+	  "Prüfungsnummer": "330241",
+	  "LP": "3",
+	  "Modultitel_de": "Lineare und Nichtlineare Differentialgleichungen",
+	  "Modultitel_en": "Linear and Nonlinear Partial Differential Equations"
+	},
+	{
+	  "id": "535",
+	  "Modulcode": "FMI-MA1725",
+	  "Prüfungsnummer": "330251",
+	  "LP": "3",
+	  "Modultitel_de": "Stochastische Kontrolltheorie - 3 LP",
+	  "Modultitel_en": "Stochastic control - 3 CP"
+	},
+	{
+	  "id": "536",
+	  "Modulcode": "FMI-MA1726",
+	  "Prüfungsnummer": "330261",
+	  "LP": "6",
+	  "Modultitel_de": "Stochastische Kontrolltheorie - 6 LP",
+	  "Modultitel_en": "Stochastic control - 6 CP"
+	},
+	{
+	  "id": "537",
+	  "Modulcode": "FMI-MA1727",
+	  "Prüfungsnummer": "330271",
+	  "LP": "9",
+	  "Modultitel_de": "Finanzmathematik 2 - 9 LP",
+	  "Modultitel_en": "Mathematics of Finance 2 -9 CP"
+	},
+	{
+	  "id": "538",
+	  "Modulcode": "FMI-MA1728",
+	  "Prüfungsnummer": "330281",
+	  "LP": "3",
+	  "Modultitel_de": "Numerik stochastischer Differentialgleichungen",
+	  "Modultitel_en": "Numerical Solution of Stochastic Differential Equations"
+	},
+	{
+	  "id": "539",
+	  "Modulcode": "FMI-MA1729",
+	  "Prüfungsnummer": "330291",
+	  "LP": "6",
+	  "Modultitel_de": "Moderne Kapitel der Stochastik",
+	  "Modultitel_en": "Modern topics in stochastics"
+	},
+	{
+	  "id": "540",
+	  "Modulcode": "FMI-MA1730",
+	  "Prüfungsnummer": "330301",
+	  "LP": "3",
+	  "Modultitel_de": "Zufällige Dynamische Systeme",
+	  "Modultitel_en": "Random Dynamical Systems"
+	},
+	{
+	  "id": "541",
+	  "Modulcode": "FMI-MA1731",
+	  "Prüfungsnummer": "330311",
+	  "LP": "3",
+	  "Modultitel_de": "Theorie der Rauen Pfade",
+	  "Modultitel_en": "Rough Path Theory"
+	},
+	{
+	  "id": "542",
+	  "Modulcode": "FMI-MA1732",
+	  "Prüfungsnummer": "330321",
+	  "LP": "3",
+	  "Modultitel_de": "Stochastische Rückwärts-Differentialgleichungen",
+	  "Modultitel_en": "Backward Stochastic Differential Equations"
+	},
+	{
+	  "id": "543",
+	  "Modulcode": "FMI-MA1733",
+	  "Prüfungsnummer": "330331",
+	  "LP": "3",
+	  "Modultitel_de": "Stochastische Optimierung",
+	  "Modultitel_en": "Stochastic Optimization"
+	},
+	{
+	  "id": "544",
+	  "Modulcode": "FMI-MA1734",
+	  "Prüfungsnummer": "330341",
+	  "LP": "6",
+	  "Modultitel_de": "Lévy-Prozesse - 6 LP",
+	  "Modultitel_en": "Lévy-Processes"
+	},
+	{
+	  "id": "545",
+	  "Modulcode": "FMI-MA1735",
+	  "Prüfungsnummer": "330351",
+	  "LP": "9",
+	  "Modultitel_de": "Stochastische Prozesse 2 - 9 LP",
+	  "Modultitel_en": "Stochastic Processes 2"
+	},
+	{
+	  "id": "546",
+	  "Modulcode": "FMI-MA1736",
+	  "Prüfungsnummer": "330361",
+	  "LP": "2",
+	  "Modultitel_de": "Stochastische Methoden mit Python",
+	  "Modultitel_en": "Stochastic Methods with Python"
+	},
+	{
+	  "id": "547",
+	  "Modulcode": "FMI-MA1737",
+	  "Prüfungsnummer": "330371",
+	  "LP": "6",
+	  "Modultitel_de": "Zufällige Flüsse",
+	  "Modultitel_en": "Random Flows"
+	},
+	{
+	  "id": "548",
+	  "Modulcode": "FMI-MA1738",
+	  "Prüfungsnummer": "330381",
+	  "LP": "6",
+	  "Modultitel_de": "Finanzmathematik",
+	  "Modultitel_en": "Financial Mathematics"
+	},
+	{
+	  "id": "549",
+	  "Modulcode": "FMI-MA1739",
+	  "Prüfungsnummer": "330391",
+	  "LP": "9",
+	  "Modultitel_de": "Stochastische Analysis - 9 LP",
+	  "Modultitel_en": "Stochastic Analysis - 9 CP"
+	},
+	{
+	  "id": "550",
+	  "Modulcode": "FMI-MA1740",
+	  "Prüfungsnummer": "330401",
+	  "LP": "3",
+	  "Modultitel_de": "Lévy-Prozesse und Stochastische Differentialgleichungen",
+	  "Modultitel_en": "Lévy Processes and Lévy-driven Stochastic Differential Equations"
+	},
+	{
+	  "id": "551",
+	  "Modulcode": "FMI-MA1781",
+	  "Prüfungsnummer": "330811",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Mathematische Statistik",
+	  "Modultitel_en": "Seminar Mathematical Statistics"
+	},
+	{
+	  "id": "552",
+	  "Modulcode": "FMI-MA1782",
+	  "Prüfungsnummer": "330821",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar Wahrscheinlichkeitstheorie",
+	  "Modultitel_en": "Seminar Probability Theory"
+	},
+	{
+	  "id": "553",
+	  "Modulcode": "FMI-MA1999",
+	  "Prüfungsnummer": "7000",
+	  "LP": "30",
+	  "Modultitel_de": "Masterarbeit Mathematik",
+	  "Modultitel_en": "Master thesis"
+	},
+	{
+	  "id": "554",
+	  "Modulcode": "FMI-MA3001",
+	  "Prüfungsnummer": "62081",
+	  "LP": "6",
+	  "Modultitel_de": "Algebra und Zahlentheorie für Lehrerstudenten 1",
+	  "Modultitel_en": "Algebra and Number Theory 1 for Student Teachers"
+	},
+	{
+	  "id": "555",
+	  "Modulcode": "FMI-MA3002",
+	  "Prüfungsnummer": "62091",
+	  "LP": "6",
+	  "Modultitel_de": "Algebra und Zahlentheorie für Lehrerstudenten 2",
+	  "Modultitel_en": "Algebra and Number Theory 2 for Student Teachers"
+	},
+	{
+	  "id": "556",
+	  "Modulcode": "FMI-MA3003",
+	  "Prüfungsnummer": "62101",
+	  "LP": "6",
+	  "Modultitel_de": "Wahrscheinlichkeitstheorie und Statistik für RS-Lehrer",
+	  "Modultitel_en": "Probability Theory and Statistics for Ordinary School Teaching"
+	},
+	{
+	  "id": "557",
+	  "Modulcode": "FMI-MA3004",
+	  "Prüfungsnummer": "62111",
+	  "LP": "7",
+	  "Modultitel_de": "Geometrie für Lehramtsstudierende",
+	  "Modultitel_en": "Geometry"
+	},
+	{
+	  "id": "558",
+	  "Modulcode": "FMI-MA3005",
+	  "Prüfungsnummer": "62121",
+	  "LP": "6",
+	  "Modultitel_de": "Praktische Mathematik und Modellierung: Wissenschaftliches Rechnen",
+	  "Modultitel_en": "Scientific Computing"
+	},
+	{
+	  "id": "559",
+	  "Modulcode": "FMI-MA3006",
+	  "Prüfungsnummer": "62131",
+	  "LP": "6",
+	  "Modultitel_de": "Praktische Mathematik und Modellierung: Optimierung",
+	  "Modultitel_en": "Optimization"
+	},
+	{
+	  "id": "560",
+	  "Modulcode": "FMI-MA3007",
+	  "Prüfungsnummer": "62141",
+	  "LP": "6",
+	  "Modultitel_de": "Elementare Methoden der Numerischen Mathematik",
+	  "Modultitel_en": "Elementary Methods of Numerics"
+	},
+	{
+	  "id": "561",
+	  "Modulcode": "FMI-MA3008",
+	  "Prüfungsnummer": "62151",
+	  "LP": "6",
+	  "Modultitel_de": "Geometrie für Lehrerstudenten",
+	  "Modultitel_en": "Geometry for Student Teachers"
+	},
+	{
+	  "id": "562",
+	  "Modulcode": "FMI-MA3009",
+	  "Prüfungsnummer": "62161",
+	  "LP": "6",
+	  "Modultitel_de": "Analysis 1",
+	  "Modultitel_en": "Analysis 1"
+	},
+	{
+	  "id": "563",
+	  "Modulcode": "FMI-MA3010",
+	  "Prüfungsnummer": "62171",
+	  "LP": "9",
+	  "Modultitel_de": "Analysis 2",
+	  "Modultitel_en": "Analysis 2"
+	},
+	{
+	  "id": "564",
+	  "Modulcode": "FMI-MA3011",
+	  "Prüfungsnummer": "62181",
+	  "LP": "6",
+	  "Modultitel_de": "Analysis 3",
+	  "Modultitel_en": "Analysis 3"
+	},
+	{
+	  "id": "565",
+	  "Modulcode": "FMI-MA3014",
+	  "Prüfungsnummer": "62201",
+	  "LP": "7",
+	  "Modultitel_de": "Elemente der Mathematik",
+	  "Modultitel_en": "Elements of Mathematics"
+	},
+	{
+	  "id": "566",
+	  "Modulcode": "FMI-MA3015",
+	  "Prüfungsnummer": "62211",
+	  "LP": "7",
+	  "Modultitel_de": "Elementare Geometrie",
+	  "Modultitel_en": "Elementary Geometry"
+	},
+	{
+	  "id": "567",
+	  "Modulcode": "FMI-MA3016",
+	  "Prüfungsnummer": "62221",
+	  "LP": "7",
+	  "Modultitel_de": "Analysis 1",
+	  "Modultitel_en": "Analysis 1"
+	},
+	{
+	  "id": "568",
+	  "Modulcode": "FMI-MA3017",
+	  "Prüfungsnummer": "62231",
+	  "LP": "7",
+	  "Modultitel_de": "Analysis 2",
+	  "Modultitel_en": "Analysis 2"
+	},
+	{
+	  "id": "569",
+	  "Modulcode": "FMI-MA3018",
+	  "Prüfungsnummer": "62241",
+	  "LP": "7",
+	  "Modultitel_de": "Lineare Algebra",
+	  "Modultitel_en": "Linear Algebra"
+	},
+	{
+	  "id": "570",
+	  "Modulcode": "FMI-MA3019",
+	  "Prüfungsnummer": "62251",
+	  "LP": "7",
+	  "Modultitel_de": "Elementare Algebra",
+	  "Modultitel_en": "Elementary Algebra"
+	},
+	{
+	  "id": "571",
+	  "Modulcode": "FMI-MA3020",
+	  "Prüfungsnummer": "62261",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar 1 (Proseminar)",
+	  "Modultitel_en": "Seminar 1"
+	},
+	{
+	  "id": "572",
+	  "Modulcode": "FMI-MA3021",
+	  "Prüfungsnummer": "62271",
+	  "LP": "4",
+	  "Modultitel_de": "Seminar 2",
+	  "Modultitel_en": "Seminar 2"
+	},
+	{
+	  "id": "573",
+	  "Modulcode": "FMI-MA3022",
+	  "Prüfungsnummer": "62281",
+	  "LP": "7",
+	  "Modultitel_de": "Stochastik für Regelschullehrer",
+	  "Modultitel_en": "Stochastics"
+	},
+	{
+	  "id": "574",
+	  "Modulcode": "FMI-MA3023",
+	  "Prüfungsnummer": "62291",
+	  "LP": "9",
+	  "Modultitel_de": "Lineare Algebra und Analytische Geometrie 1",
+	  "Modultitel_en": "Linear Algebra and Analytic Geometry 1"
+	},
+	{
+	  "id": "575",
+	  "Modulcode": "FMI-MA3024",
+	  "Prüfungsnummer": "62301",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Mathematik",
+	  "Modultitel_en": "Foundations of Mathematics"
+	},
+	{
+	  "id": "576",
+	  "Modulcode": "FMI-MA3025",
+	  "Prüfungsnummer": "62311",
+	  "LP": "6",
+	  "Modultitel_de": "Mathematische Methoden der klassischen Mechanik",
+	  "Modultitel_en": "Mathematical Methods of Classical Mechanics"
+	},
+	{
+	  "id": "577",
+	  "Modulcode": "FMI-MA3027",
+	  "Prüfungsnummer": "62321",
+	  "LP": "6",
+	  "Modultitel_de": "Wahrscheinlichkeitstheorie und Statistik für Lehrerstudenten",
+	  "Modultitel_en": "Probability and Statistics for Student Teachers"
+	},
+	{
+	  "id": "578",
+	  "Modulcode": "FMI-MA3029",
+	  "Prüfungsnummer": "62331",
+	  "LP": "9",
+	  "Modultitel_de": "Elementare Wahrscheinlichkeitstheorie und Statistik",
+	  "Modultitel_en": "Elementary Probability Theory and Statistics"
+	},
+	{
+	  "id": "579",
+	  "Modulcode": "FMI-MA3030",
+	  "Prüfungsnummer": "62341",
+	  "LP": "6",
+	  "Modultitel_de": "Lineare Algebra und Analytische Geometrie 2",
+	  "Modultitel_en": "Linear Algebra and Analytical Geometry 2"
+	},
+	{
+	  "id": "580",
+	  "Modulcode": "FMI-MA3035",
+	  "Prüfungsnummer": "62351",
+	  "LP": "3",
+	  "Modultitel_de": "Seminar 1 (Proseminar)",
+	  "Modultitel_en": "Seminar 1"
+	},
+	{
+	  "id": "581",
+	  "Modulcode": "FMI-MA3036",
+	  "Prüfungsnummer": "62361",
+	  "LP": "4",
+	  "Modultitel_de": "Seminar 2",
+	  "Modultitel_en": "Seminar 2"
+	},
+	{
+	  "id": "582",
+	  "Modulcode": "FMI-MA3037",
+	  "Prüfungsnummer": "62371",
+	  "LP": "6",
+	  "Modultitel_de": "Funktionentheorie 2",
+	  "Modultitel_en": "Complex Analysis 2"
+	},
+	{
+	  "id": "583",
+	  "Modulcode": "FMI-MA3038",
+	  "Prüfungsnummer": "62381",
+	  "LP": "6",
+	  "Modultitel_de": "Konvexe und metrische Geometrie",
+	  "Modultitel_en": "Convex and Metric Geometry"
+	},
+	{
+	  "id": "584",
+	  "Modulcode": "FMI-MA3040",
+	  "Prüfungsnummer": "62391",
+	  "LP": "6",
+	  "Modultitel_de": "Klassische Differentialgeometrie",
+	  "Modultitel_en": "Classical Differential Geometry"
+	},
+	{
+	  "id": "585",
+	  "Modulcode": "FMI-MA3044",
+	  "Prüfungsnummer": "62401",
+	  "LP": "6",
+	  "Modultitel_de": "Fraktale Geometrie und Stochastik",
+	  "Modultitel_en": "Fractal Geometry and Stochastics"
+	},
+	{
+	  "id": "586",
+	  "Modulcode": "FMI-MA3045",
+	  "Prüfungsnummer": "62521",
+	  "LP": "6",
+	  "Modultitel_de": "Konvexität, Polyeder und Anwendungen",
+	  "Modultitel_en": "Convexity, Polytopes and Applications"
+	},
+	{
+	  "id": "587",
+	  "Modulcode": "FMI-MA3046",
+	  "Prüfungsnummer": "62671",
+	  "LP": "6",
+	  "Modultitel_de": "Topologie für Lehrer",
+	  "Modultitel_en": "Topology for Trainee Teachers"
+	},
+	{
+	  "id": "588",
+	  "Modulcode": "FMI-MA3047",
+	  "Prüfungsnummer": "62681",
+	  "LP": "6",
+	  "Modultitel_de": "Einführung in die Hilbertraum Methoden",
+	  "Modultitel_en": "Introduction to Hilbert space methods"
+	},
+	{
+	  "id": "589",
+	  "Modulcode": "FMI-MA3048",
+	  "Prüfungsnummer": "62691",
+	  "LP": "6",
+	  "Modultitel_de": "Analysis 3",
+	  "Modultitel_en": "Analysis 3"
+	},
+	{
+	  "id": "590",
+	  "Modulcode": "FMI-MA3049",
+	  "Prüfungsnummer": "62721",
+	  "LP": "6",
+	  "Modultitel_de": "Elementare Zahlentheorie für Lehramtsstudierende",
+	  "Modultitel_en": "Elementary Number Theory for Trainee Teachers"
+	},
+	{
+	  "id": "591",
+	  "Modulcode": "FMI-MA3050",
+	  "Prüfungsnummer": "62731",
+	  "LP": "6",
+	  "Modultitel_de": "Algebra für Lehramtsstudierende",
+	  "Modultitel_en": "Algebra for Trainee Teachers"
+	},
+	{
+	  "id": "592",
+	  "Modulcode": "FMI-MA3051",
+	  "Prüfungsnummer": "62741",
+	  "LP": "6",
+	  "Modultitel_de": "Kombinatorik für Lehramtsstudierende",
+	  "Modultitel_en": "Combinatorics for Trainee Teachers"
+	},
+	{
+	  "id": "593",
+	  "Modulcode": "FMI-MA3052",
+	  "Prüfungsnummer": "62751",
+	  "LP": "9",
+	  "Modultitel_de": "Fortgeschrittene Analysis für Lehramtsstudierende",
+	  "Modultitel_en": "Advanced Analysis for Trainee Teachers"
+	},
+	{
+	  "id": "594",
+	  "Modulcode": "FMI-MA3053",
+	  "Prüfungsnummer": "62761",
+	  "LP": "6",
+	  "Modultitel_de": "Algebra/Zahlentheorie für Lehramtsstudierende",
+	  "Modultitel_en": "Algebra/Number Theory for Trainee Teachers"
+	},
+	{
+	  "id": "595",
+	  "Modulcode": "FMI-MA3054",
+	  "Prüfungsnummer": "62771",
+	  "LP": "6",
+	  "Modultitel_de": "Grundlagen der Mathematik (Geschichte der Mathematik)",
+	  "Modultitel_en": "Foundations of Mathematics (History of Mathematics)"
+	},
+	{
+	  "id": "596",
+	  "Modulcode": "FMI-MA3131",
+	  "Prüfungsnummer": "331011",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Algebra/Zahlentheorie I - 3 LP",
+	  "Modultitel_en": "Master Module Algebra /Number Theory I - 3 CP"
+	},
+	{
+	  "id": "597",
+	  "Modulcode": "FMI-MA3132",
+	  "Prüfungsnummer": "331021",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Algebra/Zahlentheorie II - 3 LP",
+	  "Modultitel_en": "Master Module Algebra /Number Theory II - 3 CP"
+	},
+	{
+	  "id": "598",
+	  "Modulcode": "FMI-MA3161",
+	  "Prüfungsnummer": "331111",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Algebra/Zahlentheorie I - 6 LP",
+	  "Modultitel_en": "Master Module Algebra /Number Theory I - 6 CP"
+	},
+	{
+	  "id": "599",
+	  "Modulcode": "FMI-MA3162",
+	  "Prüfungsnummer": "331121",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Algebra/Zahlentheorie II - 6 LP",
+	  "Modultitel_en": "Master Module Algebra /Number Theory II - 6 CP"
+	},
+	{
+	  "id": "600",
+	  "Modulcode": "FMI-MA3163",
+	  "Prüfungsnummer": "331131",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Algebra/Zahlentheorie III - 6 LP",
+	  "Modultitel_en": "Master Module Algebra /Number Theory III - 6 CP"
+	},
+	{
+	  "id": "601",
+	  "Modulcode": "FMI-MA3164",
+	  "Prüfungsnummer": "331141",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Algebra/Zahlentheorie IV - 6 LP",
+	  "Modultitel_en": "Master Module Algebra /Number Theory IV - 6 CP"
+	},
+	{
+	  "id": "602",
+	  "Modulcode": "FMI-MA3191",
+	  "Prüfungsnummer": "331211",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Algebra/Zahlentheorie I - 9 LP",
+	  "Modultitel_en": "Master Module Algebra /Number Theory I - 9 CP"
+	},
+	{
+	  "id": "603",
+	  "Modulcode": "FMI-MA3192",
+	  "Prüfungsnummer": "331221",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Algebra/Zahlentheorie II - 9 LP",
+	  "Modultitel_en": "Master Module Algebra /Number Theory II - 9 CP"
+	},
+	{
+	  "id": "604",
+	  "Modulcode": "FMI-MA3231",
+	  "Prüfungsnummer": "331311",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Analysis I - 3 LP",
+	  "Modultitel_en": "Master Module Analysis I - 3 CP"
+	},
+	{
+	  "id": "605",
+	  "Modulcode": "FMI-MA3232",
+	  "Prüfungsnummer": "331321",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Analysis II - 3 LP",
+	  "Modultitel_en": "Master Module Analysis II - 3 CP"
+	},
+	{
+	  "id": "606",
+	  "Modulcode": "FMI-MA3261",
+	  "Prüfungsnummer": "331411",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Analysis I - 6 LP",
+	  "Modultitel_en": "Master Module Analysis I - 6 CP"
+	},
+	{
+	  "id": "607",
+	  "Modulcode": "FMI-MA3262",
+	  "Prüfungsnummer": "331421",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Analysis II - 6 LP",
+	  "Modultitel_en": "Master Module Analysis II - 6 CP"
+	},
+	{
+	  "id": "608",
+	  "Modulcode": "FMI-MA3263",
+	  "Prüfungsnummer": "331431",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Analysis III - 6 LP",
+	  "Modultitel_en": "Master Module Analysis III - 6 CP"
+	},
+	{
+	  "id": "609",
+	  "Modulcode": "FMI-MA3264",
+	  "Prüfungsnummer": "331441",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Analysis IV - 6 LP",
+	  "Modultitel_en": "Master Module Analysis IV - 6 CP"
+	},
+	{
+	  "id": "610",
+	  "Modulcode": "FMI-MA3291",
+	  "Prüfungsnummer": "331511",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Analysis I - 9 LP",
+	  "Modultitel_en": "Master Module Analysis I - 9 CP"
+	},
+	{
+	  "id": "611",
+	  "Modulcode": "FMI-MA3292",
+	  "Prüfungsnummer": "331521",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Analysis II - 9 LP",
+	  "Modultitel_en": "Master Module Analysis II - 9 CP"
+	},
+	{
+	  "id": "612",
+	  "Modulcode": "FMI-MA3293",
+	  "Prüfungsnummer": "331531",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Analysis III - 9 LP",
+	  "Modultitel_en": "Master Module Analysis III - 9 CP"
+	},
+	{
+	  "id": "613",
+	  "Modulcode": "FMI-MA3331",
+	  "Prüfungsnummer": "331611",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Geometrie I - 3 LP",
+	  "Modultitel_en": "Master Module Geometry I - 3 CP"
+	},
+	{
+	  "id": "614",
+	  "Modulcode": "FMI-MA3332",
+	  "Prüfungsnummer": "331621",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Geometrie II - 3 LP",
+	  "Modultitel_en": "Master Module Geometry II - 3 CP"
+	},
+	{
+	  "id": "615",
+	  "Modulcode": "FMI-MA3361",
+	  "Prüfungsnummer": "331711",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Geometrie I - 6 LP",
+	  "Modultitel_en": "Master Module Geometry I - 6 CP"
+	},
+	{
+	  "id": "616",
+	  "Modulcode": "FMI-MA3362",
+	  "Prüfungsnummer": "331721",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Geometrie II - 6 LP",
+	  "Modultitel_en": "Master Module Geometry II - 6 CP"
+	},
+	{
+	  "id": "617",
+	  "Modulcode": "FMI-MA3363",
+	  "Prüfungsnummer": "331731",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Geometrie III - 6 LP",
+	  "Modultitel_en": "Master Module Geometry III - 6 CP"
+	},
+	{
+	  "id": "618",
+	  "Modulcode": "FMI-MA3364",
+	  "Prüfungsnummer": "331741",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Geometrie IV - 6 LP",
+	  "Modultitel_en": "Master Module Geometry IV - 6 CP"
+	},
+	{
+	  "id": "619",
+	  "Modulcode": "FMI-MA3391",
+	  "Prüfungsnummer": "331811",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Geometrie I - 9 LP",
+	  "Modultitel_en": "Master Module Geometry I - 9 CP"
+	},
+	{
+	  "id": "620",
+	  "Modulcode": "FMI-MA3392",
+	  "Prüfungsnummer": "331821",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Geometrie II - 9 LP",
+	  "Modultitel_en": "Master Module Geometry II - 9 CP"
+	},
+	{
+	  "id": "621",
+	  "Modulcode": "FMI-MA3431",
+	  "Prüfungsnummer": "331911",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Numerische Mathematik/Wissenschaftliches Rechnen I - 3 LP",
+	  "Modultitel_en": "Master Module Numerical Analysis / Scientific Computing I - 3 CP"
+	},
+	{
+	  "id": "622",
+	  "Modulcode": "FMI-MA3432",
+	  "Prüfungsnummer": "331921",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Numerische Mathematik/Wissenschaftliches Rechnen II - 3 LP",
+	  "Modultitel_en": "Master Module Numerical Analysis / Scientific Computing II - 3 CP"
+	},
+	{
+	  "id": "623",
+	  "Modulcode": "FMI-MA3461",
+	  "Prüfungsnummer": "332011",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Numerische Mathematik/Wissenschaftliches Rechnen I - 6 LP",
+	  "Modultitel_en": "Master Module Numerical Analysis / Scientific Computing I - 6 CP"
+	},
+	{
+	  "id": "624",
+	  "Modulcode": "FMI-MA3462",
+	  "Prüfungsnummer": "332021",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Numerische Mathematik/Wissenschaftliches Rechnen II - 6 LP",
+	  "Modultitel_en": "Master Module Numerical Analysis / Scientific Computing II - 6 CP"
+	},
+	{
+	  "id": "625",
+	  "Modulcode": "FMI-MA3463",
+	  "Prüfungsnummer": "332031",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Numerische Mathematik/Wissenschaftliches Rechnen III - 6 LP",
+	  "Modultitel_en": "Master Module Numerical Analysis / Scientific Computing III - 6 CP"
+	},
+	{
+	  "id": "626",
+	  "Modulcode": "FMI-MA3464",
+	  "Prüfungsnummer": "332041",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Numerische Mathematik/Wissenschaftliches Rechnen IV - 6 LP",
+	  "Modultitel_en": "Master Module Numerical Analysis / Scientific Computing IV - 6 CP"
+	},
+	{
+	  "id": "627",
+	  "Modulcode": "FMI-MA3491",
+	  "Prüfungsnummer": "332111",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Numerische Mathematik/Wissenschaftliches Rechnen I - 9 LP",
+	  "Modultitel_en": "Master Module Numerical Analysis / Scientific Computing I - 9 CP"
+	},
+	{
+	  "id": "628",
+	  "Modulcode": "FMI-MA3492",
+	  "Prüfungsnummer": "332121",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Numerische Mathematik/Wissenschaftliches Rechnen II - 9 LP",
+	  "Modultitel_en": "Master Module Numerical Analysis / Scientific Computing II - 9 CP"
+	},
+	{
+	  "id": "629",
+	  "Modulcode": "FMI-MA3531",
+	  "Prüfungsnummer": "332211",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Optimierung I - 3 LP",
+	  "Modultitel_en": "Master Module Optimization I - 3 CP"
+	},
+	{
+	  "id": "630",
+	  "Modulcode": "FMI-MA3532",
+	  "Prüfungsnummer": "332221",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Optimierung II - 3 LP",
+	  "Modultitel_en": "Master Module Optimization II - 3 CP"
+	},
+	{
+	  "id": "631",
+	  "Modulcode": "FMI-MA3561",
+	  "Prüfungsnummer": "332311",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Optimierung I - 6 LP",
+	  "Modultitel_en": "Master Module Optimization I - 6 CP"
+	},
+	{
+	  "id": "632",
+	  "Modulcode": "FMI-MA3562",
+	  "Prüfungsnummer": "332321",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Optimierung II - 6 LP",
+	  "Modultitel_en": "Master Module Optimization II - 6 CP"
+	},
+	{
+	  "id": "633",
+	  "Modulcode": "FMI-MA3563",
+	  "Prüfungsnummer": "332331",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Optimierung III - 6 LP",
+	  "Modultitel_en": "Master Module Optimization III - 6 CP"
+	},
+	{
+	  "id": "634",
+	  "Modulcode": "FMI-MA3564",
+	  "Prüfungsnummer": "332341",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Optimierung IV - 6 LP",
+	  "Modultitel_en": "Master Module Optimization IV - 6 CP"
+	},
+	{
+	  "id": "635",
+	  "Modulcode": "FMI-MA3591",
+	  "Prüfungsnummer": "332411",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Optimierung I - 9 LP",
+	  "Modultitel_en": "Master Module Optimization I - 9 CP"
+	},
+	{
+	  "id": "636",
+	  "Modulcode": "FMI-MA3592",
+	  "Prüfungsnummer": "332421",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Optimierung II - 9 LP",
+	  "Modultitel_en": "Master Module Optimization II - 9 CP"
+	},
+	{
+	  "id": "637",
+	  "Modulcode": "FMI-MA3631",
+	  "Prüfungsnummer": "332511",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Stochastik I - 3 LP",
+	  "Modultitel_en": "Master Module Stochastics I - 3 CP"
+	},
+	{
+	  "id": "638",
+	  "Modulcode": "FMI-MA3632",
+	  "Prüfungsnummer": "332521",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Stochastik II - 3 LP",
+	  "Modultitel_en": "Master Module Stochastics II - 3 CP"
+	},
+	{
+	  "id": "639",
+	  "Modulcode": "FMI-MA3661",
+	  "Prüfungsnummer": "332611",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Stochastik I - 6 LP",
+	  "Modultitel_en": "Master Module Stochastics I - 6 CP"
+	},
+	{
+	  "id": "640",
+	  "Modulcode": "FMI-MA3662",
+	  "Prüfungsnummer": "332621",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Stochastik II - 6 LP",
+	  "Modultitel_en": "Master Module Stochastics II - 6 CP"
+	},
+	{
+	  "id": "641",
+	  "Modulcode": "FMI-MA3663",
+	  "Prüfungsnummer": "332631",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Stochastik III - 6 LP",
+	  "Modultitel_en": "Master Module Stochastics III - 6 CP"
+	},
+	{
+	  "id": "642",
+	  "Modulcode": "FMI-MA3664",
+	  "Prüfungsnummer": "332641",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Stochastik IV - 6 LP",
+	  "Modultitel_en": "Master Module Stochastics IV - 6 CP"
+	},
+	{
+	  "id": "643",
+	  "Modulcode": "FMI-MA3691",
+	  "Prüfungsnummer": "332711",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Stochastik I - 9 LP",
+	  "Modultitel_en": "Master Module Stochastics I - 9 CP"
+	},
+	{
+	  "id": "644",
+	  "Modulcode": "FMI-MA3692",
+	  "Prüfungsnummer": "332721",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Stochastik II - 9 LP",
+	  "Modultitel_en": "Master Module Stochastics II - 9 CP"
+	},
+	{
+	  "id": "645",
+	  "Modulcode": "FMI-MA3693",
+	  "Prüfungsnummer": "332731",
+	  "LP": "9",
+	  "Modultitel_de": "Mastermodul Stochastik III - 9 LP",
+	  "Modultitel_en": "Master Module Stochastics III - 9 CP"
+	},
+	{
+	  "id": "646",
+	  "Modulcode": "FMI-MA3801",
+	  "Prüfungsnummer": "323011",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Seminar 1",
+	  "Modultitel_en": "Master Module Seminar I"
+	},
+	{
+	  "id": "647",
+	  "Modulcode": "FMI-MA3802",
+	  "Prüfungsnummer": "323021",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Seminar 2",
+	  "Modultitel_en": "Master Module Seminar II"
+	},
+	{
+	  "id": "648",
+	  "Modulcode": "FMI-MA3803",
+	  "Prüfungsnummer": "323031",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Seminar 1 Optimierung",
+	  "Modultitel_en": "Master Module Seminar I Optimization"
+	},
+	{
+	  "id": "649",
+	  "Modulcode": "FMI-MA3804",
+	  "Prüfungsnummer": "323041",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Seminar 2 Optimierung",
+	  "Modultitel_en": "Master Module Seminar II Optimization"
+	},
+	{
+	  "id": "650",
+	  "Modulcode": "FMI-MA3805",
+	  "Prüfungsnummer": "323051",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Seminar 1 Stochastik",
+	  "Modultitel_en": "Master Module Seminar I Stochastics"
+	},
+	{
+	  "id": "651",
+	  "Modulcode": "FMI-MA3806",
+	  "Prüfungsnummer": "323061",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Seminar 2 Stochastik",
+	  "Modultitel_en": "Master Module Seminar II Stochastics"
+	},
+	{
+	  "id": "652",
+	  "Modulcode": "FMI-MA3807",
+	  "Prüfungsnummer": "323071",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Seminar 1 Sonstige Mathematik",
+	  "Modultitel_en": "Master Module Seminar I Miscellaneous Mathematics"
+	},
+	{
+	  "id": "653",
+	  "Modulcode": "FMI-MA3808",
+	  "Prüfungsnummer": "323081",
+	  "LP": "3",
+	  "Modultitel_de": "Mastermodul Seminar 2 Sonstige Mathematik",
+	  "Modultitel_en": "Master Module Seminar II Miscellaneous Mathematics"
+	},
+	{
+	  "id": "654",
+	  "Modulcode": "FMI-MA3811",
+	  "Prüfungsnummer": "323091",
+	  "LP": "6",
+	  "Modultitel_de": "Mastermodul Projekt",
+	  "Modultitel_en": "Master Module Project"
+	},
+	{
+	  "id": "655",
+	  "Modulcode": "FMI-MA3999",
+	  "Prüfungsnummer": "7000",
+	  "LP": "30",
+	  "Modultitel_de": "Masterarbeit Wirtschaftsmathematik",
+	  "Modultitel_en": "Master Module Master thesis"
+	},
+	{
+	  "id": "656",
+	  "Modulcode": "FMI-MA4001",
+	  "Prüfungsnummer": "62412",
+	  "LP": "5",
+	  "Modultitel_de": "Didaktik der Mathematik A-RS",
+	  "Modultitel_en": "Mathematics Education A"
+	},
+	{
+	  "id": "657",
+	  "Modulcode": "FMI-MA4002",
+	  "Prüfungsnummer": "62421",
+	  "LP": "5",
+	  "Modultitel_de": "Didaktik der Mathematik C (Begleitseminar im Praxissemester)",
+	  "Modultitel_en": "Mathematics Education C (additional seminar to \"Praxissemester\")"
+	},
+	{
+	  "id": "658",
+	  "Modulcode": "FMI-MA4003",
+	  "Prüfungsnummer": "62432",
+	  "LP": "6",
+	  "Modultitel_de": "Didaktik der Mathematik A-Gy",
+	  "Modultitel_en": "Mathematics Education A"
+	},
+	{
+	  "id": "659",
+	  "Modulcode": "FMI-MA4004",
+	  "Prüfungsnummer": "62441",
+	  "LP": "5",
+	  "Modultitel_de": "Didaktik der Mathematik C (Begleitseminar im Praxissemester)",
+	  "Modultitel_en": "Mathematics Education C (additional seminar to \"Praxissemester\")"
+	},
+	{
+	  "id": "660",
+	  "Modulcode": "FMI-MA5001",
+	  "Prüfungsnummer": "62451",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 1, schriftliche Prüfung",
+	  "Modultitel_en": "Exam preparation module  1, written exam"
+	},
+	{
+	  "id": "661",
+	  "Modulcode": "FMI-MA5002",
+	  "Prüfungsnummer": "62621",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 2, mündliche Prüfung",
+	  "Modultitel_en": "Exam preparation module  2, oral exam"
+	},
+	{
+	  "id": "662",
+	  "Modulcode": "FMI-MA5003",
+	  "Prüfungsnummer": "62471",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 3 (Didaktik der Mathematik B)",
+	  "Modultitel_en": "Exam preparation module  3 (Didactics of Mathematics)"
+	},
+	{
+	  "id": "663",
+	  "Modulcode": "FMI-MA5004",
+	  "Prüfungsnummer": "7000",
+	  "LP": "20",
+	  "Modultitel_de": "Wissenschaftliche Hausarbeit Mathematik",
+	  "Modultitel_en": "Written Thesis Mathematics"
+	},
+	{
+	  "id": "664",
+	  "Modulcode": "FMI-MA5005",
+	  "Prüfungsnummer": "62481",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 1, schriftliche Prüfung",
+	  "Modultitel_en": "Exam preparation module  1, written exam"
+	},
+	{
+	  "id": "665",
+	  "Modulcode": "FMI-MA5006",
+	  "Prüfungsnummer": "62651",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 2, mündliche Prüfung",
+	  "Modultitel_en": "Exam preparation module  2, oral exam"
+	},
+	{
+	  "id": "666",
+	  "Modulcode": "FMI-MA5007",
+	  "Prüfungsnummer": "62501",
+	  "LP": "5",
+	  "Modultitel_de": "Vorbereitungsmodul 3 (Didaktik der Mathematik B)",
+	  "Modultitel_en": "Exam preparation module  3 (Didactics of Mathematics)"
+	},
+	{
+	  "id": "667",
+	  "Modulcode": "FMI-MA5008",
+	  "Prüfungsnummer": "7000",
+	  "LP": "20",
+	  "Modultitel_de": "Wissenschaftliche Hausarbeit Mathematik",
+	  "Modultitel_en": "Written Thesis Mathematics"
+	},
+	{
+	  "id": "668",
+	  "Modulcode": "FMI-MA5501",
+	  "Prüfungsnummer": "62541",
+	  "LP": "6",
+	  "Modultitel_de": "Ergänzungsmodul Numerik/Wissenschaftliches Rechnen - 6 LP",
+	  "Modultitel_en": "Additional Module Numerical Analysis/Scientific Computing - 6 CP"
+	},
+	{
+	  "id": "669",
+	  "Modulcode": "FMI-MA5502",
+	  "Prüfungsnummer": "62571",
+	  "LP": "6",
+	  "Modultitel_de": "Ergänzungsmodul Numerik/Wissenschaftliches Rechnen - 3 LP",
+	  "Modultitel_en": "Additional Module Numerical Analysis/Scientific Computing - 3 CP"
+	},
+	{
+	  "id": "670",
+	  "Modulcode": "FMI-MA5702",
+	  "Prüfungsnummer": "62561",
+	  "LP": "3",
+	  "Modultitel_de": "Ergänzungsmodul Stochastik",
+	  "Modultitel_en": "Additional Module Stochastics"
+	},
+	{
+	  "id": "671",
+	  "Modulcode": "FMI-MA6001",
+	  "Prüfungsnummer": "62531",
+	  "LP": "3",
+	  "Modultitel_de": "Praktikum Matlab",
+	  "Modultitel_en": " "
+	},
+	{
+	  "id": "672",
+	  "Modulcode": "FMI-SPR001",
+	  "Prüfungsnummer": "69011",
+	  "LP": "3",
+	  "Modultitel_de": "Allgemeiner Sprachkurs BSc - 3 LP",
+	  "Modultitel_en": "General Language Course"
+	},
+	{
+	  "id": "673",
+	  "Modulcode": "FMI-SPR002",
+	  "Prüfungsnummer": "69021",
+	  "LP": "5",
+	  "Modultitel_de": "Allgemeiner Sprachkurs BSc - 5 LP",
+	  "Modultitel_en": "General Language Course"
+	},
+	{
+	  "id": "674",
+	  "Modulcode": "FMI-SPR011",
+	  "Prüfungsnummer": "69111",
+	  "LP": "3",
+	  "Modultitel_de": "Allgemeiner Sprachkurs MSc - 3 LP",
+	  "Modultitel_en": "General Language Course"
+	},
+	{
+	  "id": "675",
+	  "Modulcode": "FMI-SPR012",
+	  "Prüfungsnummer": "69121",
+	  "LP": "5",
+	  "Modultitel_de": "Allgemeiner Sprachkurs MSc - 5 LP",
+	  "Modultitel_en": "General Language Course"
+	},
+	{
+	  "id": "676",
+	  "Modulcode": "FMI-SPR013",
+	  "Prüfungsnummer": "332971",
+	  "LP": "5",
+	  "Modultitel_de": "Sprachkurs 1 - Nebenfach Fremdsprache",
+	  "Modultitel_en": "Language Course 1"
+	},
+	{
+	  "id": "677",
+	  "Modulcode": "FMI-SPR014",
+	  "Prüfungsnummer": "332981",
+	  "LP": "5",
+	  "Modultitel_de": "Sprachkurs 2 - Nebenfach Fremdsprache",
+	  "Modultitel_en": "Language Course 2"
+	},
+	{
+	  "id": "678",
+	  "Modulcode": "FMI-SPR015",
+	  "Prüfungsnummer": "332991",
+	  "LP": "5",
+	  "Modultitel_de": "Sprachkurs 3 - Nebenfach Fremdsprache",
+	  "Modultitel_en": "Language Course 3"
+	},
+	{
+	  "id": "679",
+	  "Modulcode": "FMI-SPR051",
+	  "Prüfungsnummer": "332911",
+	  "LP": "5",
+	  "Modultitel_de": "Sprachkurs Deutsch als Fremdsprache (DaF) A1.1",
+	  "Modultitel_en": "Language Course German as Foreign Language A1.1"
+	},
+	{
+	  "id": "680",
+	  "Modulcode": "FMI-SPR052",
+	  "Prüfungsnummer": "332921",
+	  "LP": "5",
+	  "Modultitel_de": "Sprachkurs Deutsch als Fremdsprache (DaF) A1.2",
+	  "Modultitel_en": "Language Course German as Foreign Language A1.2"
+	},
+	{
+	  "id": "681",
+	  "Modulcode": "FMI-SPR053",
+	  "Prüfungsnummer": "332931",
+	  "LP": "5",
+	  "Modultitel_de": "Sprachkurs Deutsch als Fremdsprache (DaF) A2.1",
+	  "Modultitel_en": "Language Course German as Foreign Language A2.1"
+	},
+	{
+	  "id": "682",
+	  "Modulcode": "FMI-SPR054",
+	  "Prüfungsnummer": "332941",
+	  "LP": "5",
+	  "Modultitel_de": "Sprachkurs Deutsch als Fremdsprache (DaF) A2.2",
+	  "Modultitel_en": "Language Course German as Foreign Language A2.2"
+	},
+	{
+	  "id": "683",
+	  "Modulcode": "FMI-SPR055",
+	  "Prüfungsnummer": "332951",
+	  "LP": "3",
+	  "Modultitel_de": "Sprachkurs Deutsch als Fremdsprache (DaF) Ergänzung",
+	  "Modultitel_en": "Language Course German as Foreign Language - Additional Course"
+	},
+	{
+	  "id": "684",
+	  "Modulcode": "FMI-SPR056",
+	  "Prüfungsnummer": "332961",
+	  "LP": "1",
+	  "Modultitel_de": "Sprachkurs Deutsch als Fremdsprache (DaF) Tutorium",
+	  "Modultitel_en": "Language Course German as Foreign Language - Tutorium"
+	},
+	{
+	  "id": "685",
+	  "Modulcode": "FMI-SQ0101",
+	  "Prüfungsnummer": "69211",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Programmiersprachen I - 3 LP",
+	  "Modultitel_en": "ASQ Module Programming languages I - 3 CP"
+	},
+	{
+	  "id": "686",
+	  "Modulcode": "FMI-SQ0102",
+	  "Prüfungsnummer": "69221",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Programmiersprachen II - 3 LP",
+	  "Modultitel_en": "ASQ Module Programming languages II - 3 CP"
+	},
+	{
+	  "id": "687",
+	  "Modulcode": "FMI-SQ0105",
+	  "Prüfungsnummer": "69231",
+	  "LP": "6",
+	  "Modultitel_de": "ASQ-Modul Programmiersprachen I - 6 LP",
+	  "Modultitel_en": "ASQ Module Programming languages I - 6 CP"
+	},
+	{
+	  "id": "688",
+	  "Modulcode": "FMI-SQ0106",
+	  "Prüfungsnummer": "69241",
+	  "LP": "6",
+	  "Modultitel_de": "ASQ-Modul Programmiersprachen II - 6 LP",
+	  "Modultitel_en": "ASQ Module Programming languages II - 6 CP"
+	},
+	{
+	  "id": "689",
+	  "Modulcode": "FMI-SQ0111",
+	  "Prüfungsnummer": "69251",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Programmierung I - 3 LP",
+	  "Modultitel_en": "ASQ Module Programming I - 3 CP"
+	},
+	{
+	  "id": "690",
+	  "Modulcode": "FMI-SQ0112",
+	  "Prüfungsnummer": "69261",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Programmierung II - 3 LP",
+	  "Modultitel_en": "ASQ Module Programming II - 3 CP"
+	},
+	{
+	  "id": "691",
+	  "Modulcode": "FMI-SQ0115",
+	  "Prüfungsnummer": "69271",
+	  "LP": "6",
+	  "Modultitel_de": "ASQ-Modul Programmierung I - 6 LP",
+	  "Modultitel_en": "ASQ Module Programming I - 6 CP"
+	},
+	{
+	  "id": "692",
+	  "Modulcode": "FMI-SQ0116",
+	  "Prüfungsnummer": "69281",
+	  "LP": "6",
+	  "Modultitel_de": "ASQ-Modul Programmierung II - 6 LP",
+	  "Modultitel_en": "ASQ Module Programming II - 6 CP"
+	},
+	{
+	  "id": "693",
+	  "Modulcode": "FMI-SQ0121",
+	  "Prüfungsnummer": "69291",
+	  "LP": "4",
+	  "Modultitel_de": "ASQ-Modul Skriptsprachen I - 4 LP",
+	  "Modultitel_en": "ASQ Module Scripting Languages I - 4 CP"
+	},
+	{
+	  "id": "694",
+	  "Modulcode": "FMI-SQ0122",
+	  "Prüfungsnummer": "69301",
+	  "LP": "4",
+	  "Modultitel_de": "ASQ-Modul Skriptsprachen II - 4 LP",
+	  "Modultitel_en": "ASQ Module Scripting Languages II - 4 CP"
+	},
+	{
+	  "id": "695",
+	  "Modulcode": "FMI-SQ0125",
+	  "Prüfungsnummer": "69311",
+	  "LP": "4",
+	  "Modultitel_de": "ASQ-Modul LaTeX Grundlagen für Naturwissenschaftler und Informatiker - 4 LP",
+	  "Modultitel_en": "ASQ Module Introduction to LaTeX for Scientists"
+	},
+	{
+	  "id": "696",
+	  "Modulcode": "FMI-SQ0201",
+	  "Prüfungsnummer": "69321",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Wirtschaftskompetenz I - 3 LP",
+	  "Modultitel_en": "ASQ Module Business Skills I - 3 CP"
+	},
+	{
+	  "id": "697",
+	  "Modulcode": "FMI-SQ0202",
+	  "Prüfungsnummer": "69331",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Wirtschaftskompetenz II - 3 LP",
+	  "Modultitel_en": "ASQ Module Business Skills II - 3 CP"
+	},
+	{
+	  "id": "698",
+	  "Modulcode": "FMI-SQ0211",
+	  "Prüfungsnummer": "69341",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Projektmanagement",
+	  "Modultitel_en": "ASQ Module Project Management"
+	},
+	{
+	  "id": "699",
+	  "Modulcode": "FMI-SQ0301",
+	  "Prüfungsnummer": "323131",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Zahlengefühl und Strukturgefühl - 3 LP",
+	  "Modultitel_en": "ASQ Module Number Feeling and Structure Feeling - 3 CP"
+	},
+	{
+	  "id": "700",
+	  "Modulcode": "FMI-SQ0302",
+	  "Prüfungsnummer": "323141",
+	  "LP": "6",
+	  "Modultitel_de": "ASQ-Modul Zahlengefühl und Strukturgefühl - 6 LP",
+	  "Modultitel_en": "ASQ Module Number Feeling and Structure Feeling - 6 CP"
+	},
+	{
+	  "id": "701",
+	  "Modulcode": "FMI-SQ0501",
+	  "Prüfungsnummer": "69351",
+	  "LP": "3",
+	  "Modultitel_de": "ASQ-Modul Informatik und Gesellschaft",
+	  "Modultitel_en": "ASQ Module Informatics and Society"
+	}
+ ]
