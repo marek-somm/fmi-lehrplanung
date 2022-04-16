@@ -4,7 +4,7 @@ const client = axios.create({
 	//** Local Testing */
 	// baseURL: 'http://localhost:8000',
 	//**  Production */
-	baseURL: 'https://arktur.fmi.uni-jena.de',
+	baseURL: 'https://lehre.fmi.uni-jena.de',
 	withCredentials: true, // required to handle the CSRF token
 });
 
