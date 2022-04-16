@@ -28,3 +28,6 @@ create_databse/tempCodeRunnerFile.py
 create_databse_new/data/
 
 data-storage/
+apache-sites/
+arktur-backend/.env
+arktur-frontend/src/services/RequestService.js

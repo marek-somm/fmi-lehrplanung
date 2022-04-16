@@ -43,7 +43,6 @@ class AuthController extends Controller {
             $ldap->save_data($request->uid);
             $ldap->close();
 
-
             $roles = $data["edupersonaffiliation"];
             if (!is_array($roles)) {
                 $roles = [$roles];
@@ -70,10 +69,32 @@ class AuthController extends Controller {
                     'level' => Auth::user()->level,
                     'uid' => Auth::user()->uid,
                 ], 200);
+            } else if (in_array("Student", $roles)) {    # User is Student
+                if ($user == null) {
+                    User::create([
+                        'uid' => $data["uid"],
+                        'email' => $data["mail"],
+                        'forename' => $data['fsufirstname'],
+                        'surname' => $data['fsucompletesurname'],
+                        'salutation' => $data['thuedusalutation'],
+                        'displayname' => $data['displayname'],
+                        'level' => 0
+                    ]);
+                    $user = User::where('uid', '=', $request->input('uid'))->first();
+
+                    # Login user
+                    Auth::login($user);
+                    # return success
+                    return response([
+                        'success' => true,
+                        'level' => Auth::user()->level,
+                        'uid' => Auth::user()->uid,
+                    ], 200);
+                }
             } else {    # User is not allowed to login
                 return response([
                     'success' => false,
-                    'errors'=> [
+                    'errors' => [
                         'Berechtigung' => ['Sie besitzen nicht über ausreichende Rechte um auf diese Resource zuzugreifen. Bitte Kontaktieren Sie den Seiten-Admin.']
                     ]
                 ], 401);
@@ -100,7 +121,7 @@ class AuthController extends Controller {
         if (Auth::check()) {
             return response([
                 'success' => true,
-                'level' => 2,
+                'level' => Auth::user()->level,
                 'uid' => Auth::user()->uid
             ], 200);
         }
