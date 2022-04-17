@@ -26,7 +26,7 @@ class AuthController extends Controller {
         $ldap->connect();
         $authObject = $ldap->auth($request->uid, $request->password);
 
-        if ($request->input('uid') == "guest01" || $request->input('uid') == "guest02") { # Guest user //TODO: create conatiner for guest
+        if (($request->input('uid') == "guest00" || $request->input('uid') == "guest01" || $request->input('uid') == "guest02") && $request->input('password') == "guest-password!") { # Guest user //TODO: create conatiner for guest
             $user = User::where('uid', $request->input('uid'))->first();
 
             Auth::login($user);
