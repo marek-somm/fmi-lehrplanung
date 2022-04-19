@@ -40,10 +40,23 @@ class AuthController extends Controller {
             ], 200);
         } else if ($authObject) {
             # Find User in Database
-            $user = User::where('uid', '=', $request->input('uid'))->first();
+            $user = User::where('uid', $request->input('uid'))->first();
             $data = $ldap->directory_entry($request->uid);
             $ldap->save_data($request->uid);
             $ldap->close();
+
+            if ($user == null) {
+                $user = User::where('surname', $data['fsucompletesurname'])
+                    ->where('forename', $data['fsufirstname'])
+                    ->first();
+
+                if ($user != null) {
+                    $user->uid = $data["uid"];
+                    $user->email = $data["mail"];
+                    $user->salutaion = $data['thuedusalutation'];
+                    $user->displayname = $data['displayname'];
+                }
+            }
 
             $roles = $data["edupersonaffiliation"];
             if (!is_array($roles)) {
@@ -57,10 +70,10 @@ class AuthController extends Controller {
                         'email' => $data["mail"],
                         'forename' => $data['fsufirstname'],
                         'surname' => $data['fsucompletesurname'],
-                        'salutation' => $data['thuedusalutation'],
+                        'salutaion' => $data['thuedusalutation'],
                         'displayname' => $data['displayname']
                     ]);
-                    $user = User::where('uid', '=', $request->input('uid'))->first();
+                    $user = User::where('uid', $request->input('uid'))->first();
                 }
 
                 # Login user
@@ -79,7 +92,7 @@ class AuthController extends Controller {
                         'email' => $data["mail"],
                         'forename' => $data['fsufirstname'],
                         'surname' => $data['fsucompletesurname'],
-                        'salutation' => $data['thuedusalutation'],
+                        'salutaion' => $data['thuedusalutation'],
                         'displayname' => $data['displayname'],
                         'level' => 0
                     ]);
