@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Helpers\LDAP;
+use App\Helpers\General;
 use App\Rules\Username;
 
 class AuthController extends Controller {
@@ -26,7 +27,7 @@ class AuthController extends Controller {
         $ldap->connect();
         $authObject = $ldap->auth($request->uid, $request->password);
 
-        if (($request->input('uid') == "guest00" || $request->input('uid') == "guest01" || $request->input('uid') == "guest02") && $request->input('password') == "guest-password!") { # Guest user //TODO: create conatiner for guest
+        if (($request->input('uid') == "stud" || $request->input('uid') == "prof" || $request->input('uid') == "prfamt") && $request->input('password') == "show") { # Guest user //TODO: create conatiner for guest
             $user = User::where('uid', $request->input('uid'))->first();
 
             Auth::login($user);
@@ -35,6 +36,7 @@ class AuthController extends Controller {
                 'success' => true,
                 'level' => Auth::user()->level,
                 'uid' => Auth::user()->uid,
+                'currentSemester' => General::get_current_semester(),
             ], 200);
         } else if ($authObject) {
             # Find User in Database
@@ -68,6 +70,7 @@ class AuthController extends Controller {
                     'success' => true,
                     'level' => Auth::user()->level,
                     'uid' => Auth::user()->uid,
+                    'currentSemester' => General::get_current_semester(),
                 ], 200);
             } else if (in_array("Student", $roles)) {    # User is Student
                 if ($user == null) {
@@ -89,6 +92,7 @@ class AuthController extends Controller {
                         'success' => true,
                         'level' => Auth::user()->level,
                         'uid' => Auth::user()->uid,
+                        'currentSemester' => General::get_current_semester(),
                     ], 200);
                 }
             } else {    # User is not allowed to login
@@ -122,7 +126,8 @@ class AuthController extends Controller {
             return response([
                 'success' => true,
                 'level' => Auth::user()->level,
-                'uid' => Auth::user()->uid
+                'uid' => Auth::user()->uid,
+                'currentSemester' => General::get_current_semester(),
             ], 200);
         }
         return response([

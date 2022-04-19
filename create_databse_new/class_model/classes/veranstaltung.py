@@ -1,4 +1,5 @@
 import json
+import os
 
 import classes.pruefung as pruefung
 import classes.person as person
@@ -42,7 +43,7 @@ class Veranstaltung:
 def convertSemester(string_semester):
 	semester = string_semester.replace("Veranstaltungen_", "")
 	semester += "1" if semester.__contains__("WiSe") else "0"
-	semester = semester.replace("SoSe", "20").replace("WiSe", "20")
+	semester = semester.replace("SoSe", "20").replace("WiSe", "20").replace(".json", "")
 	return int(semester)
 
 
@@ -54,7 +55,7 @@ def processFile(file, length):
 	}
 
 	elements = None
-	with open("data/Lehrveranstaltungen/" + file + ".json", "r", encoding="utf-8") as f:
+	with open("data/Lehrveranstaltungen/" + file, "r", encoding="utf-8") as f:
 		elements = json.load(f)
 
 	veranstaltungen = []
@@ -85,9 +86,8 @@ def processFile(file, length):
 
 
 def init():
-	files = ['Veranstaltungen_SoSe15', 'Veranstaltungen_WiSe15', 'Veranstaltungen_SoSe16', 'Veranstaltungen_WiSe16', 'Veranstaltungen_SoSe17', 'Veranstaltungen_WiSe17',
-        'Veranstaltungen_SoSe18', 'Veranstaltungen_WiSe18', 'Veranstaltungen_SoSe19', 'Veranstaltungen_WiSe19', 'Veranstaltungen_SoSe20', 'Veranstaltungen_WiSe20', 'Veranstaltungen_SoSe21']
-
+	files = os.listdir("data/Lehrveranstaltungen/")
+	
 	veranstaltungen = []
 
 	for file in files:

@@ -60,5 +60,28 @@ export default {
 			currentSem: currentSem
 		})
 		return rs.get("user/events", payload);
+	},
+
+	async getSubjects() {
+		return rs.get("get/subjects");
+	},
+
+	async getFieldOfStudies(subject) {
+		const payload = makePayload({
+			"subject": subject
+		})
+		return rs.get("get/fieldOfStudies", payload);
+	},
+
+	async getCategories(fieldOfStudy) {
+		const payload = makePayload({
+			"fieldOfStudy": fieldOfStudy
+		})
+		return rs.get("get/categories", payload);
+	},
+
+	async getStudentEvents(filter) {
+		const payload = makePayload(filter)
+		return rs.get("student/events", payload);
 	}
 }

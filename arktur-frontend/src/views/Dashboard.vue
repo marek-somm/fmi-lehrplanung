@@ -1,5 +1,5 @@
 <template>
-	<div class="dashboard-container">
+	<div id="dashboard-container" v-if="user.level > 0">
 		<InfoVeranstaltung
 			:selected="data.selectedVeranstaltung"
 			:filterActive="data.filterActive"
@@ -26,24 +26,32 @@
 			</div>
 		</div>
 	</div>
+
+	<StudentDashboard	 v-if="user.level == 0" />
 </template>
 
 <script>
 import Accordion from "@/components/Accordion";
 
-import { onMounted, reactive } from "@vue/runtime-core";
+import { computed, onMounted, reactive } from "@vue/runtime-core";
 import search from "@/services/SearchService.js";
 import helper from "@/services/HelperService.js";
 import InfoVeranstaltung from "@/components/Search/InfoVeranstaltung.vue";
 import InfoModul from "@/components/Search/InfoModul.vue";
+import { useStore } from 'vuex';
+import StudentDashboard from './StudentDashboard.vue';
 
 export default {
 	components: {
 		Accordion,
 		InfoVeranstaltung,
 		InfoModul,
+		StudentDashboard,
 	},
 	setup() {
+		const store = useStore();
+		const user = computed(() => store.state.User);
+
 		const data = reactive({
 			events: {
 				data: {
@@ -61,14 +69,17 @@ export default {
 		});
 
 		onMounted(() => {
-			getEvents();
+			if(user.value.level > 0) {
+				getEvents();
+			} else {
+
+			}
 		});
 
 		async function getEvents() {
 			let events = await search.getUserEvents(helper.getCurrentSemester());
 			data.events.data = events.data;
 			data.events.selected = Object.keys(data.events.data["future"]).length
-			console.log(events)
 		}
 
 		async function updateVeranstaltung(vnr, semester) {
@@ -95,6 +106,9 @@ export default {
 
 		return {
 			data,
+			user,
+			store,
+			helper,
 			updateVeranstaltung,
 			updateVeranstaltungWithModul,
 			updateModul,
@@ -106,7 +120,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dashboard-container {
+#dashboard-container {
 	display: flex;
 	flex-direction: row;
 	height: calc(100vh - 9.676rem);

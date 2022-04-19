@@ -1,3 +1,6 @@
+import { computed } from "vue";
+import { useStore } from "vuex";
+
 export default {
 	convertSemester(value) {
 		if (value % 10 == 0) {
@@ -46,7 +49,8 @@ export default {
 	},
 
 	getCurrentSemester() {
-		return 20210;
+		const store = useStore()
+		return store.state.currentSemester;
 	},
 
 	sortObj(obj) {

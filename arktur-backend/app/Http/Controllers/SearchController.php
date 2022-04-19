@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\General;
 use App\Models\Category;
-use App\Models\Degree;
 use App\Models\Event;
 use App\Models\FieldOfStudy;
 use App\Models\Module;
@@ -12,7 +12,6 @@ use App\Models\User;
 use App\Rules\Search;
 use App\Rules\Username;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class SearchController extends Controller {
 
@@ -43,6 +42,15 @@ class SearchController extends Controller {
     private function in_event_array($event, $array) {
         foreach ($array as $elem) {
             if ($event["vnr"] == $elem["vnr"]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private function in_category_array($category, $array) {
+        foreach ($array as $elem) {
+            if ($category["id"] == $elem["id"]) {
                 return true;
             }
         }
@@ -101,7 +109,7 @@ class SearchController extends Controller {
             ->get();
 
         $module_extra = [];
-        foreach($module_categories as $module_category) {
+        foreach ($module_categories as $module_category) {
             $field_of_study = FieldOfStudy::select('degree_id', 'subject_id', 'po_version', 'name', 'name_short')
                 ->where('id', $module_category["field_of_study_id"])
                 ->get()->first();
@@ -115,8 +123,8 @@ class SearchController extends Controller {
                 ->get()->first();
 
             $module_category["field_of_study"] = $field_of_study;
-            if($parent != null) {
-                while($parent->parent_id != null) {
+            if ($parent != null) {
+                while ($parent->parent_id != null) {
                     $parent = Category::select('name', 'parent_id')
                         ->where('id', $parent["parent_id"])
                         ->get()->first();
@@ -314,5 +322,119 @@ class SearchController extends Controller {
             ->where("semester", $event["semester"])
             ->get()
             ->first() != null;
+    }
+
+    public function getStudentEvents_old() {
+        $events = Event::where('semester', General::get_current_semester())
+            ->where('active', True)
+            ->get();
+
+        foreach ($events as &$event) {
+            $modules = $event->modules()->get();
+            $categories = array();
+
+            foreach ($modules as &$module) {
+                $module_categories = $module
+                    ->categories()
+                    ->select('categories.id', 'field_of_study_id', 'parent_id', 'name', 'obligational')
+                    ->get();
+                foreach ($module_categories as &$category) {
+                    if (!$this->in_category_array($category, $categories)) {
+                        $field_of_study = $category->field_of_study()
+                            ->get()->first();
+
+                        $subject = $field_of_study->subject()
+                            ->get()->first()->name;
+
+                        $field_of_study = $field_of_study->name;
+
+                        $parent = $category->parent()
+                            ->get()->first();
+
+                        $category["field_of_study"] = $field_of_study;
+                        $category["subject"] = $subject;
+
+                        if ($parent != null) {
+                            while ($parent->parent_id != null) {
+                                $parent = $parent->parent()
+                                    ->get()->first();
+                            }
+                            $category["parent"] = $parent->name;
+                        }
+
+                        unset($category["pivot"]);
+                        unset($category["field_of_study_id"]);
+                        unset($category["parent_id"]);
+                        array_push($categories, $category);
+                    }
+                }
+            }
+
+            $event["categories"] = $categories;
+
+            unset($event["active"]);
+            unset($event["id"]);
+            unset($event["semester"]);
+        }
+
+        return response(['current' => $events], 200);
+    }
+
+    public function getStudentEvents(Request $request) {
+        $request->validate([
+            'subject' => ['string'],
+            'fieldOfStudy' => ['string'],
+            'category' => ['string']
+        ]);
+
+        if ($request->input('category')) {
+            $events = Event::where('semester', General::get_current_semester())
+                ->select('id', 'changed', 'rotation', 'sws', 'title', 'type')
+                ->where('active', True)
+                ->whereHas('modules', function ($q) use ($request) {
+                    $q->whereHas('categories', function ($q) use ($request) {
+                        $q->whereHas('field_of_study', function ($q) use ($request) {
+                            $q->whereHas('subject', function ($q) use ($request) {
+                                $q->where('name', $request->input('subject'));
+                            })->where('name', 'LIKE', '%' . $request->input('fieldOfStudy') . '%');
+                        })->where('name', $request->input('category'));
+                    });
+                })
+                ->get();
+                
+            return response(['current' => $events], 200);
+        } else if ($request->input('fieldOfStudy')) {
+            $events = Event::where('semester', General::get_current_semester())
+                ->select('id', 'changed', 'rotation', 'sws', 'title', 'type')
+                ->where('active', True)
+                ->whereHas('modules', function ($q) use ($request) {
+                    $q->whereHas('categories', function ($q) use ($request) {
+                        $q->whereHas('field_of_study', function ($q) use ($request) {
+                            $q->whereHas('subject', function ($q) use ($request) {
+                                $q->where('name', $request->input('subject'));
+                            })->where('name', 'LIKE', '%' . $request->input('fieldOfStudy') . '%');
+                        });
+                    });
+                })
+                ->get();
+                
+            return response(['current' => $events], 200);
+        } else if($request->input('subject')) {
+            $events = Event::where('semester', General::get_current_semester())
+                ->select('id', 'changed', 'rotation', 'sws', 'title', 'type')
+                ->where('active', True)
+                ->whereHas('modules', function ($q) use ($request) {
+                    $q->whereHas('categories', function ($q) use ($request) {
+                        $q->whereHas('field_of_study', function ($q) use ($request) {
+                            $q->whereHas('subject', function ($q) use ($request) {
+                                $q->where('name', $request->input('subject'));
+                            });
+                        });
+                    });
+                })
+                ->get();
+                
+            return response(['current' => $events], 200);
+        }
     }
 }

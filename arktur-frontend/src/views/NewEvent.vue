@@ -5,15 +5,17 @@
 			<label>Titel </label>
 			<SearchPanel class="searchpanel" v-model="data.title.value" />
 			<label>SWS </label>
-			<label v-if="data.existing" class="data">{{ data.sws.value }}</label>
+			<label v-if="data.sws.existing" class="data">{{
+				data.sws.value
+			}}</label>
 			<SearchPanel
 				class="searchpanel"
 				v-model="data.sws.value"
 				regex="\B|\d"
-				v-if="!data.existing"
+				v-if="!data.sws.existing"
 			/>
 			<label>Turnus </label>
-			<label v-if="data.existing" class="data">{{
+			<label v-if="data.rotation.existing" class="data">{{
 				data.rotation.value
 			}}</label>
 			<SearchPanel
@@ -24,10 +26,12 @@
 				:dropdown="true"
 				@blur="resetValue(data.rotation)"
 				@enter="selectValue(data.rotation)"
-				v-if="!data.existing"
+				v-if="!data.rotation.existing"
 			/>
 			<label>Art </label>
-			<label v-if="data.existing" class="data">{{ data.type.value }}</label>
+			<label v-if="data.type.existing" class="data">{{
+				data.type.value
+			}}</label>
 			<SearchPanel
 				class="searchpanel"
 				v-model="data.type.input"
@@ -36,7 +40,7 @@
 				:dropdown="true"
 				@blur="resetValue(data.type)"
 				@enter="selectValue(data.type)"
-				v-if="!data.existing"
+				v-if="!data.type.existing"
 			/>
 			<label>Semester</label>
 			<select id="semesters" class="selection" v-model="data.semester.value">
@@ -48,8 +52,6 @@
 					{{ convertSemester(semester) }}
 				</option>
 			</select>
-			<label>Zielgruppe </label>
-			<SearchPanel class="searchpanel" v-model="data.target.value" />
 		</div>
 
 		<h3>Personen</h3>
@@ -115,8 +117,13 @@
 			</div>
 		</div>
 
-		<div class="create" role="button" @click="createEvent">
-			Veranstaltung erstellen
+		<div class="button-bar">
+			<button class="create button" role="button" @click="createEvent">
+				Veranstaltung erstellen
+			</button>
+			<button class="cancel button" role="button" @click="cancel">
+				Abbrechen
+			</button>
 		</div>
 	</div>
 </template>
@@ -134,7 +141,7 @@ export default {
 	props: {
 		vnr: String,
 		sem: Number,
-		sel: Number
+		sel: Number,
 	},
 	setup(props) {
 		const data = reactive({
@@ -144,10 +151,12 @@ export default {
 			},
 			sws: {
 				value: null,
+				existing: false,
 			},
 			rotation: {
 				input: "",
 				value: "",
+				existing: false,
 				suggestions: [
 					helper.convertTurnus(0),
 					helper.convertTurnus(1),
@@ -157,6 +166,7 @@ export default {
 			type: {
 				input: "",
 				value: "",
+				existing: false,
 				suggestions: [
 					"Arbeitsgemeinschaft",
 					"Begleitveranstaltung zum Praxissemester",
@@ -190,9 +200,6 @@ export default {
 				value: null,
 				list: null,
 			},
-			target: {
-				value: "",
-			},
 			person: {
 				input: "",
 				value: "",
@@ -213,8 +220,8 @@ export default {
 			let sem3 = helper.addTurnus(sem2, 1);
 			let sem4 = helper.addTurnus(sem3, 1);
 			data.semester.list = [sem1, sem2, sem3, sem4];
-			data.semester.value = props.sel ? props.sel : data.semester.list[0]
-			console.log(props)
+			data.semester.value = props.sel ? props.sel : data.semester.list[0];
+			console.log(props);
 
 			getVeranstaltung(props.vnr, props.sem);
 		});
@@ -225,10 +232,13 @@ export default {
 				let event = await search.getEvent(vnr, sem);
 				data.title.value = event.data.content.title;
 				data.sws.value = event.data.content.sws;
+				data.sws.existing = data.sws.value != null;
 				data.rotation.value = helper.convertTurnus(
 					event.data.content.rotation
 				);
+				data.rotation.existing = data.rotation.value != null;
 				data.type.value = event.data.content.type;
+				data.type.existing = data.type.value != null;
 				event.data.people.forEach((person) => {
 					addPerson(person.surname + ", " + person.forename);
 				});
@@ -316,7 +326,6 @@ export default {
 		}
 
 		async function create() {
-			console.log("create");
 			let response = await update.createEvent({
 				vnr: props.vnr,
 				sem: data.semester.value,
@@ -324,11 +333,9 @@ export default {
 				sws: data.sws.value,
 				rotation: helper.convertTurnusToNumber(data.rotation.value),
 				type: data.type.value,
-				targets: data.target.value,
 				people: data.person.list,
 				exams: data.exams,
 			});
-			console.log(response);
 			if (response) {
 				if (response.status == 422) {
 					alert("Diese Veranstaltung existiert so bereits.");
@@ -338,6 +345,15 @@ export default {
 				}
 			} else {
 				alert("Ein unerwarteter Fehler ist aufgetreten.");
+			}
+		}
+
+		function cancel() {
+			let value = confirm(
+				"Wollen Sie wirklich abbrechen? Alle Änderungen gehen verloren."
+			);
+			if (value == true) {
+				router.push({ name: "Home" });
 			}
 		}
 
@@ -354,6 +370,7 @@ export default {
 			addExam,
 			removeExam,
 			createEvent,
+			cancel,
 			convertSemester,
 		};
 	},
@@ -483,19 +500,36 @@ $border-color: #8c8c8c;
 		font-size: 0.9rem;
 	}
 
-	.create {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		margin: 1rem 0 2rem 0;
-		height: 3rem;
-		border: 1px solid $border-color;
-		cursor: pointer;
-		background-color: white;
+	.button-bar {
+		display: grid;
+		grid-gap: 0.7rem 0.4rem;
+		margin: 3rem 0 2rem 0;
 
-		&:hover {
-			background: rgb(245, 245, 245);
+		.button {
+			font: inherit;
+			color: inherit;
+			height: 3rem;
+			border: 1px solid $border-color;
+			cursor: pointer;
+			background-color: rgb(255, 220, 220);
+
+			&:hover {
+				background-color: rgb(255, 100, 100);
+			}
+
+			&.cancel {
+				grid-column: 1;
+				grid-row: 2;
+			}
+
+			&.create {
+				grid-row: 1;
+				background-color: white;
+
+				&:hover {
+					background: rgb(245, 245, 245);
+				}
+			}
 		}
 	}
 }

@@ -24,7 +24,7 @@ class UpdateController extends Controller {
             ->get());
 
         if($exists) {
-            return response("Element already exists", 422);
+            //return response("Element already exists", 422);
         }
 
         $event_id = Event::create([
@@ -34,14 +34,13 @@ class UpdateController extends Controller {
             'active' => 1,
             'sws' => $request->sws ? $request->sws : Null,
             'type' => $request->type,
-            'targets' => $request->targets ? $request->target : Null,
             'rotation' => $request->rotation ? $request->rotation : Null,
             'changed' => 1
         ])->id;
 
         foreach($request->exams as $exam) {
             $module_id = Module::select("id")
-                ->where("modulecode", $exam["modulecode"])
+                ->where("code", $exam["modulecode"])
                 ->get()
                 ->first();
             

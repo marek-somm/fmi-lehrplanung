@@ -31,7 +31,7 @@ class Category extends Model
         return $this->hasMany(Category::class);
     }
 
-    public function main_subject() {
+    public function field_of_study() {
         return $this->belongsTo(FieldOfStudy::class);
     }
 

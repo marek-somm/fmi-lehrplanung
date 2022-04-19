@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\GetController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UpdateController;
 
@@ -32,7 +33,13 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('/get/new', [SearchController::class, 'getNewEntries']);
         Route::get('/search/person', [SearchController::class, 'searchPerson']);
 
+        Route::get('/get/subjects', [GetController::class, 'getSubjects']);
+        Route::get('/get/fieldOfStudies', [GetController::class, 'getFieldOfStudies']);
+        Route::get('/get/categories', [GetController::class, 'getCategories']);
+    
         Route::get('/user/events', [SearchController::class, 'getUserEvents']);
+
+        Route::get('/student/events', [SearchController::class, 'getStudentEvents']);
 
         Route::put('/add/event', [UpdateController::class, 'addEvent']);
         Route::put('/update/event', [UpdateController::class, 'updateEvent']);

@@ -4,7 +4,7 @@
 			<div class="nav-container left">
 				<router-link class="identity-link" :to="{ name: 'Home' }">
 					<div class="identity"></div>
-					<span class="name">Arktur</span>
+					<span class="name">Lehre</span>
 					<span class="subidentity"
 						>Fakultät für Mathematik und Informatik</span
 					>
@@ -109,6 +109,7 @@ export default {
 	justify-content: center;
 	position: sticky;
 	top: 0;
+	z-index: 1;
 
 	.head-top {
 		display: flex;

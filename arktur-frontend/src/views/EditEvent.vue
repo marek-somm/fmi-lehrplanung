@@ -48,8 +48,6 @@
 					{{ convertSemester(semester) }}
 				</option>
 			</select>
-			<label>Zielgruppe </label>
-			<SearchPanel class="searchpanel" v-model="data.target.value" />
 		</div>
 
 		<h3>Personen</h3>
@@ -198,9 +196,6 @@ export default {
 				value: null,
 				list: null
 			},
-			target: {
-				value: "",
-			},
 			person: {
 				input: "",
 				value: "",
@@ -239,13 +234,13 @@ export default {
 					});
 
 					//semester list
-					let currentSem = helper.getCurrentSemester();
+					let currentSem = event.data.content.semester;
 					let sem1 = helper.addTurnus(currentSem, 1);
 					let sem2 = helper.addTurnus(sem1, 1);
 					let sem3 = helper.addTurnus(sem2, 1);
 					let sem4 = helper.addTurnus(sem3, 1);
-					data.semester.list = [sem1, sem2, sem3, sem4];
-					data.semester.value = sem;
+					data.semester.list = [currentSem, sem1, sem2, sem3, sem4];
+					data.semester.value = currentSem;
 				}
 			}
 		}
@@ -336,19 +331,18 @@ export default {
 				sws: data.sws.value,
 				rotation: helper.convertTurnusToNumber(data.rotation.value),
 				type: data.type.value,
-				targets: data.target.value,
 				people: data.person.list,
 				exams: data.exams,
 			});
 			if (response) {
 				if (response.status == 422) {
-					alert("Leider ist ein Fehler aufgetreten. Bitte kontaktieren Sie mit Ihrem Anliegen das Prüfungsamt.");
+					alert("Leider ist ein Fehler aufgetreten. Bitte kontaktieren Sie einen zuständigen Administratoren.");
 				} else if ((response.status = 200)) {
-					alert("Die Verasntaltung wurde erfolgreich angelegt");
+					alert("Die Veranstaltung wurde erfolgreich angelegt");
 					router.push({ name: "Home" });
 				}
 			} else {
-				alert("Ein unerwarteter Fehler ist aufgetreten. Bitte kontaktieren Sie das Prüfungsamt.");
+				alert("Ein unerwarteter Fehler ist aufgetreten. Bitte kontaktieren Sie einen zuständigen Administratoren.");
 			}
 		}
 
@@ -531,26 +525,26 @@ $border-color: #8c8c8c;
 			&:hover {
 				background-color: rgb(255, 100, 100);
 			}
-		}
 
-		.cancel {
-			grid-column: 1;
-			grid-row: 2;
-		}
-
-		.save {
-			grid-column: 1 / span 2;
-			grid-row: 1;
-			background-color: white;
-
-			&:hover {
-				background: rgb(245, 245, 245);
+			&.cancel {
+				grid-column: 1;
+				grid-row: 2;
 			}
-		}
 
-		.delete {
-			grid-column: 2;
-			grid-row: 2;
+			&.save {
+				grid-column: 1 / span 2;
+				grid-row: 1;
+				background-color: white;
+
+				&:hover {
+					background: rgb(245, 245, 245);
+				}
+			}
+
+			&.delete {
+				grid-column: 2;
+				grid-row: 2;
+			}
 		}
 	}
 }

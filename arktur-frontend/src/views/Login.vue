@@ -69,6 +69,7 @@ export default {
 				store.dispatch('User/setLogin', answer.data.success)
 				store.dispatch('User/setLevel', answer.data.level)
 				store.dispatch('User/setUid', answer.data.uid)
+				store.dispatch('setCurrentSemester', answer.data.currentSemester)
 				router.push({ name: "Home" });
 			} else {
 				data.output = answer.data
