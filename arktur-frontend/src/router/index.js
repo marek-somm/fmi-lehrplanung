@@ -18,62 +18,92 @@ const routes = [
 		path: '/',
 		name: 'Home',
 		component: Home,
-		beforeEnter: [checkSession, redirectHome]
+		beforeEnter: [checkSession, redirectHome],
+		meta: {
+			title: "Lehre"
+		 }
 	},
 	{
 		path: '/login',
 		name: 'Login',
 		component: Login,
 		beforeEnter: checkAccess,
+		meta: {
+			title: "Login | Lehre"
+		}
 	},
 	{
 		path: '/logout',
 		name: 'Logout',
 		component: Logout,
+		meta: {
+			title: "Logout | Lehre"
+		}
 	},
 	{
 		path: '/veranstaltungen',
 		name: 'Veranstaltungen',
 		component: Veranstaltungen,
-		beforeEnter: checkAccess
+		beforeEnter: checkAccess,
+		meta: {
+			title: "Veranstaltungen | Lehre"
+		}
 	},
 	{
 		path: '/module',
 		name: 'Module',
 		component: Module,
-		beforeEnter: checkAccess
+		beforeEnter: checkAccess,
+		meta: {
+			title: "Module | Lehre"
+		}
 	},
 	{
 		path: '/export',
 		name: 'Export',
 		component: Export,
-		beforeEnter: checkAccess
+		beforeEnter: checkAccess,
+		meta: {
+			title: "Export | Lehre"
+		}
 	},
 	{
 		path: '/neu/:vnr?/:sem?/:sel?',
 		name: 'Neu',
 		component: NewEvent,
 		beforeEnter: checkAccess,
-		props: true
+		props: true,
+		meta: {
+			title: "Neu | Lehre"
+		}
 	},
 	{
 		path: '/bearbeiten/:vnr?/:sem?',
 		name: 'Bearbeiten',
 		component: EditEvent,
 		beforeEnter: checkAccess,
-		props: true
+		props: true,
+		meta: {
+			title: "Bearbeiten | Lehre"
+		}
 	},
 	{
 		path: '/',
 		name: 'Dashboard',
 		component: Dashboard,
-		beforeEnter: checkAccess
+		beforeEnter: checkAccess,
+		meta: {
+			title: "Dashboard | Lehre"
+		}
 	},
 	{
 		path: '/:catchAll(.*)',
 		name: 'NotFound',
 		component: NotFound,
 		redirect: Home,
+		meta: {
+			title: "Not Found | Lehre"
+		}
 	},
 ];
 
@@ -112,5 +142,9 @@ const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
 });
+
+router.afterEach((to, from) => {
+	document.title = to.meta.title;
+ })
 
 export default router;
