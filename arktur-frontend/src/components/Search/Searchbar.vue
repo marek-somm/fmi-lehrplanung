@@ -22,7 +22,7 @@
 			>
 		</div>
 		<div class="filter" :class="{ show: data.filterActive }">
-			<div class="filter-item">
+			<div class="filter-item" v-if="false">
 				<label class="label">Studiengang: </label>
 				<select v-model="filter.study">
 					<option :value="null">Alle</option>
