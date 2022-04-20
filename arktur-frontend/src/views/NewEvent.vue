@@ -139,13 +139,12 @@ import SearchPanel from "../components/SearchPanel.vue";
 export default {
 	components: { SearchPanel },
 	props: {
-		vnr: String,
-		sem: Number,
-		sel: Number,
+		id: Number,
 	},
 	setup(props) {
 		const data = reactive({
 			existing: false,
+			vnr: null,
 			title: {
 				value: null,
 			},
@@ -223,13 +222,14 @@ export default {
 			data.semester.value = props.sel ? props.sel : data.semester.list[0];
 			console.log(props);
 
-			getVeranstaltung(props.vnr, props.sem);
+			getVeranstaltung(props.id);
 		});
 
-		async function getVeranstaltung(vnr, sem) {
-			if (vnr && sem) {
+		async function getVeranstaltung(id) {
+			if (id) {
 				data.existing = true;
-				let event = await search.getEvent(vnr, sem);
+				let event = await search.getEvent(id);
+				data.vnr = event.data.content.vnr;
 				data.title.value = event.data.content.title;
 				data.sws.value = event.data.content.sws;
 				data.sws.existing = data.sws.value != null;
@@ -306,7 +306,8 @@ export default {
 				data.sws.value &&
 				data.rotation.value &&
 				data.type.value &&
-				data.semester.value
+				data.semester.value &&
+				data.person.list.length > 0
 			) {
 				if (data.exams.length > 0) {
 					data.exams.forEach((exam) => {
@@ -327,7 +328,8 @@ export default {
 
 		async function create() {
 			let response = await update.createEvent({
-				vnr: props.vnr,
+				id: props.id,
+				vnr: data.vnr,
 				sem: data.semester.value,
 				title: data.title.value,
 				sws: data.sws.value,

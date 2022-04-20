@@ -19,13 +19,11 @@ class EventController extends Controller {
     
     public function getEvent(Request $request) {
         $request->validate([
-            'vnr' => ['required', 'integer'],
-            'semester' => ['required', 'integer']
+            'id' => ['required', 'integer'],
         ]);
 
         $event = Event::select('id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr')
-            ->where('vnr', $request->vnr)
-            ->where('semester', $request->semester)
+            ->where('id', $request->id)
             ->get()
             ->first();
 

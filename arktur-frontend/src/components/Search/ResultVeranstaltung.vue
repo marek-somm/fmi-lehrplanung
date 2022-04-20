@@ -18,7 +18,7 @@
 				}"
 				v-for="(item, index) in semester[1]"
 				:key="index"
-				@click="select(item.vnr, item.semester)"
+				@click="select(item.id)"
 			>
 				<a class="text"> {{ item.title }} ({{ item.vnr }}) </a>
 			</div>
@@ -47,8 +47,8 @@ export default {
 			emit("loadMore");
 		}
 
-		function select(nr, semester) {
-			emit("select", nr, semester);
+		function select(id) {
+			emit("select", id);
 		}
 
 		function scroll(data) {

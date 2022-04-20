@@ -67,7 +67,6 @@ export default {
 		searchModul()
 
 		async function updateModul(value) {
-			console.log(value);
 			data.selectedModul = await search.getModule(value);
 			data.showModul = true;
 		}
@@ -76,12 +75,8 @@ export default {
 			updateModul(veranstaltung.modulecode);
 		}
 
-		async function updateVeranstaltung(modul) {
-			console.log(modul);
-			data.selectedVeranstaltung = await search.getEvent(
-				modul.vnr,
-				modul.semester
-			);
+		async function updateVeranstaltung(id) {
+			data.selectedVeranstaltung = await search.getEvent(id);
 			data.showVeranstaltung = true;
 		}
 

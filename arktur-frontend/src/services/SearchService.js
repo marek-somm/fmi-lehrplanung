@@ -8,10 +8,9 @@ function makePayload (params) {
 }
 
 export default {
-	async getEvent(vnr, semester) {
+	async getEvent(id) {
 		const payload = makePayload({
-			vnr: vnr,
-			semester: semester
+			id: id,
 		})
 		return rs.get("get/event", payload)
 	},

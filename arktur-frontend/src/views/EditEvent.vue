@@ -138,13 +138,12 @@ import SearchPanel from "../components/SearchPanel.vue";
 export default {
 	components: { SearchPanel },
 	props: {
-		vnr: String,
-		sem: String,
+		id: Number,
 	},
 	setup(props) {
 		const data = reactive({
 			existing: false,
-			id: null,
+			vnr: null,
 			title: {
 				value: null,
 			},
@@ -194,7 +193,8 @@ export default {
 			},
 			semester: {
 				value: null,
-				list: null
+				list: null,
+				current: helper.getCurrentSemester()
 			},
 			person: {
 				input: "",
@@ -209,17 +209,17 @@ export default {
 
 		onMounted(() => {
 			getPersons();
-			getVeranstaltung(props.vnr, props.sem);
+			getVeranstaltung(props.id);
 		});
 
-		async function getVeranstaltung(vnr, sem) {
-			if (vnr && sem) {
+		async function getVeranstaltung(id) {
+			if (id) {
 				data.existing = true;
-				let event = await search.getEvent(vnr, sem);
+				let event = await search.getEvent(id);
 				if (event.status == 404) {
 					await router.push({ name: "Home" });
 				} else {
-					data.id = event.data.content.id;
+					data.vnr = event.data.content.vnr;
 					data.title.value = event.data.content.title;
 					data.sws.value = event.data.content.sws;
 					data.rotation.value = helper.convertTurnus(
@@ -234,13 +234,13 @@ export default {
 					});
 
 					//semester list
-					let currentSem = event.data.content.semester;
+					let currentSem = data.semester.current;
 					let sem1 = helper.addTurnus(currentSem, 1);
 					let sem2 = helper.addTurnus(sem1, 1);
 					let sem3 = helper.addTurnus(sem2, 1);
 					let sem4 = helper.addTurnus(sem3, 1);
 					data.semester.list = [currentSem, sem1, sem2, sem3, sem4];
-					data.semester.value = currentSem;
+					data.semester.value = event.data.content.semester;
 				}
 			}
 		}
@@ -303,7 +303,8 @@ export default {
 				data.sws.value &&
 				data.rotation.value &&
 				data.type.value &&
-				data.semester.value
+				data.semester.value && 
+				data.person.list.length > 0
 			) {
 				if (data.exams.length > 0) {
 					data.exams.forEach((exam) => {
@@ -324,8 +325,8 @@ export default {
 
 		async function save() {
 			let response = await update.saveEvent({
-				id: data.id,
-				vnr: props.vnr,
+				id: props.id,
+				vnr: data.vnr,
 				sem: data.semester.value,
 				title: data.title.value,
 				sws: data.sws.value,
@@ -359,7 +360,7 @@ export default {
 			let value = confirm("Wollen Sie die Veranstaltung wirklich löschen?");
 			if (value == true) {
 				await update.deleteEvent({
-					id: data.id,
+					id: props.id,
 				});
 				router.push({ name: "Home" });
 			}

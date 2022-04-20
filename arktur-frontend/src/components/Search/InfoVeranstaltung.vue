@@ -100,8 +100,7 @@ export default {
 			router.push({
 				name: "Neu",
 				params: {
-					vnr: props.selected.data.content.vnr,
-					sem: props.selected.data.content.semester,
+					id: props.selected.data.content.id,
 				},
 			});
 		}
@@ -110,8 +109,7 @@ export default {
 			router.push({
 				name: "Bearbeiten",
 				params: {
-					vnr: props.selected.data.content.vnr,
-					sem: props.selected.data.content.semester,
+					id: props.selected.data.content.id,
 				},
 			});
 		}

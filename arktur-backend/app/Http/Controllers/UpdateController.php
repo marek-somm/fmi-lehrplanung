@@ -12,19 +12,23 @@ use Illuminate\Http\Request;
 class UpdateController extends Controller {
     function addEvent(Request $request) {
         $request->validate([
-            'vnr' => ['integer','required'],
-            'sem' => ['integer','required'],
+            'sem' => ['integer', 'required'],
             'title' => ['string', 'required'],
             'type' => ['string', 'required'],
-            'exams' => ['array', 'required']
         ]);
 
-        $exists = count(Event::where("vnr", $request->vnr)
-            ->where("semester", $request->sem)    
-            ->get());
+        if ($request->id) {
+            $exists = count(Event::where("id", $request->id)
+                ->where("semester", $request->sem)
+                ->get());
+        } else {
+            $exists = count(Event::where("vnr", $request->vnr)
+                ->where("semester", $request->sem)
+                ->get());
+        }
 
-        if($exists) {
-            //return response("Element already exists", 422);
+        if ($exists) {
+            return response("Element already exists", 422);
         }
 
         $event_id = Event::create([
@@ -38,13 +42,13 @@ class UpdateController extends Controller {
             'changed' => 1
         ])->id;
 
-        foreach($request->exams as $exam) {
+        foreach ($request->exams as $exam) {
             $module_id = Module::select("id")
                 ->where("code", $exam["modulecode"])
                 ->get()
                 ->first();
-            
-            if($module_id) {
+
+            if ($module_id) {
                 $module_id = $module_id->id;
             }
 
@@ -58,7 +62,7 @@ class UpdateController extends Controller {
             ]);
         }
 
-        foreach($request->people as $person) {
+        foreach ($request->people as $person) {
             $split = explode(", ", $person);
             $forename = $split[1];
             $surname = $split[0];
@@ -68,8 +72,8 @@ class UpdateController extends Controller {
                 ->where("surname", $surname)
                 ->get()
                 ->first();
-            
-            if($user) {
+
+            if ($user) {
                 EventUser::create([
                     'event_id' => $event_id,
                     'user_id' => $user->id
@@ -83,61 +87,59 @@ class UpdateController extends Controller {
     function updateEvent(Request $request) {
         $request->validate([
             'id' => ['integer', 'required'],
-            'vnr' => ['integer','required'],
-            'sem' => ['integer','required'],
+            'sem' => ['integer', 'required'],
             'title' => ['string', 'required'],
             'sws' => ['integer', 'required'],
             'rotation' => ['integer', 'required'],
             'type' => ['string', 'required'],
             'people' => ['array', 'required'],
-            'exams' => ['array', 'required']
         ]);
 
         $event = Event::where("id", $request->id)
             ->get()
             ->first();
 
-        if(!$event) {
+        if (!$event) {
             return response("Element does not exist", 422);
         }
 
         EventUser::where("event_id", $request->id)
             ->delete();
-        
+
         EventModule::where("event_id", $request->id)
             ->delete();
-        
+
         Event::where("id", $request->id)
             ->delete();
-        
+
         return $this->addEvent($request);
     }
 
     function removeEvent(Request $request) {
         $request->validate([
-            'id' => ['integer','required']
+            'id' => ['integer', 'required']
         ]);
 
         $exists = count(Event::where("id", $request->id)
             ->get());
 
-        if(!$exists) {
+        if (!$exists) {
             return response("Element does not exists", 422);
         }
-        
+
         EventUser::where("event_id", $request->id)
             ->delete();
-        
+
         EventModule::where("event_id", $request->id)
             ->delete();
-        
+
         Event::where("id", $request->id)
             ->delete();
 
         $exists = count(Event::where("id", $request->id)
             ->get());
 
-        if(!$exists) {
+        if (!$exists) {
             return response("success", 200);
         }
 

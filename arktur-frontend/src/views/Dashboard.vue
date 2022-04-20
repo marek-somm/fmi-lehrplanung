@@ -82,13 +82,13 @@ export default {
 			data.events.selected = Object.keys(data.events.data["future"]).length
 		}
 
-		async function updateVeranstaltung(vnr, semester) {
-			data.selectedVeranstaltung = await search.getEvent(vnr, semester);
+		async function updateVeranstaltung(id) {
+			data.selectedVeranstaltung = await search.getEvent(id);
 			data.showVeranstaltung = true;
 		}
 
-		async function updateVeranstaltungWithModul(modul) {
-			updateVeranstaltung(modul.vnr, modul.semester);
+		async function updateVeranstaltungWithModul(event_id) {
+			updateVeranstaltung(event_id);
 		}
 
 		async function updateModul(relation) {

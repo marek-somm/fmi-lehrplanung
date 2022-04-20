@@ -74,13 +74,13 @@ export default {
 				router.push({
 					name: "Neu",
 					params: {
-						vnr: event["vnr"],
+						id: event["id"],
 						sem: event["semester_org"],
 						sel: event["semester"]
 					},
 				});
 			} else {
-				emit("select", event.vnr, event.semester);
+				emit("select", event.id);
 			}
 		}
 

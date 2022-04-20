@@ -66,13 +66,13 @@ export default {
 
 		searchVeranstaltung();
 
-		async function updateVeranstaltung(vnr, semester) {
-			data.selectedVeranstaltung = await search.getEvent(vnr, semester);
+		async function updateVeranstaltung(id) {
+			data.selectedVeranstaltung = await search.getEvent(id);
 			data.showVeranstaltung = true;
 		}
 
-		async function updateVeranstaltungWithModul(modul) {
-			updateVeranstaltung(modul.vnr, modul.semester);
+		async function updateVeranstaltungWithModul(id) {
+			updateVeranstaltung(id);
 		}
 
 		async function updateModul(relation) {

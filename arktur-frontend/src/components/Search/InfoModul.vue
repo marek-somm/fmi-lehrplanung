@@ -177,7 +177,7 @@ export default {
 		}
 
 		function view(relation) {
-			emit("relation", relation);
+			emit("relation", relation.pivot.event_id);
 		}
 
 		return {

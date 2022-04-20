@@ -68,7 +68,7 @@ class SearchController extends Controller {
         $filter = json_decode($request->filter, true);
 
         if (count($filter) > 0 && $filter["inactive"] == False) {
-            $events = Event::select('active', 'semester', 'title', 'vnr')
+            $events = Event::select('id','active', 'semester', 'title', 'vnr')
                 ->where('active', "1")
                 ->where(function ($query) use ($request) {
                     $query->where('title', 'LIKE', '%' . $request->value . '%')
@@ -78,7 +78,7 @@ class SearchController extends Controller {
                 ->orderBy('semester', 'desc')
                 ->get();
         } else {
-            $events = Event::select('active', 'semester', 'title', 'vnr')
+            $events = Event::select('id','active', 'semester', 'title', 'vnr')
                 ->where(function ($query) use ($request) {
                     $query->where('title', 'LIKE', '%' . $request->value . '%')
                         ->orWhere('vnr', 'LIKE', '%' . $request->value . '%');
@@ -272,10 +272,19 @@ class SearchController extends Controller {
             ->get()
             ->toArray();
 
+        $events_future = User::where('uid', $request->user)
+            ->firstOrFail()
+            ->events()
+            ->where('semester', '>', $request->currentSem)
+            ->get()
+            ->toArray();
+
 
         $past = $this->group_by_semester($events_past);
         $current = $this->group_by_semester($events_current);
-        $future = $this->generate_future_events($events_all, $request->currentSem);
+        $future = $this->generate_future_events(array_merge($events_current, $events_past), $request->currentSem);
+
+        $future = $this->group_by_semester(array_merge($events_future, $future));
 
         return response(["future" => $future, "current" => $current, "past" => $past], 200);
     }
@@ -300,25 +309,27 @@ class SearchController extends Controller {
                 } else {
                     if ($current_semester % 10 == 0) {
                         $event["semester"] = $current_semester + 1;
-                        $event["active"] = $this->event_exists($event) ? $event["active"] : false;
+                        $event["active"] = $this->event_exists($event) ? true : false;
                         $filtered_events[] = $event;
                     } else {
                         $event["semester"] = $current_semester + 9;
-                        $event["active"] = $this->event_exists($event) ? $event["active"] : false;
+                        $event["active"] = $this->event_exists($event) ? true : false;
                         $filtered_events[] = $event;
                     }
                     $event["semester"] = $current_semester + 10;
-                    $event["active"] = $this->event_exists($event) ? $event["active"] : false;
+                    $event["active"] = $this->event_exists($event) ? true : false;
                     $filtered_events[] = $event;
                 }
             }
         }
 
-        return $this->group_by_semester($filtered_events);
+
+
+        return $filtered_events;
     }
 
     private function event_exists($event) {
-        return Event::where("vnr", $event["vnr"])
+        return Event::where("id", $event["id"])
             ->where("semester", $event["semester"])
             ->get()
             ->first() != null;
