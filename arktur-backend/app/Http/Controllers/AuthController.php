@@ -27,7 +27,7 @@ class AuthController extends Controller {
         $ldap->connect();
         $authObject = $ldap->auth($request->uid, $request->password);
 
-        if (($request->input('uid') == "stud" || $request->input('uid') == "prof" || $request->input('uid') == "prfamt") && $request->input('password') == "show") { # Guest user //TODO: create conatiner for guest
+        if (($request->input('uid') == "student" || $request->input('uid') == "lehre" || $request->input('uid') == "prfamt") && $request->input('password') == "show") { # Guest user //TODO: create conatiner for guest
             $user = User::where('uid', $request->input('uid'))->first();
 
             Auth::login($user);
@@ -55,6 +55,16 @@ class AuthController extends Controller {
                     $user->email = $data["mail"];
                     $user->salutaion = $data['thuedusalutation'];
                     $user->displayname = $data['displayname'];
+                    $user->save();
+
+                    Auth::login($user);
+
+                    return response([
+                        'success' => true,
+                        'level' => Auth::user()->level,
+                        'uid' => Auth::user()->uid,
+                        'currentSemester' => General::get_current_semester(),
+                    ], 200);
                 }
             }
 
@@ -97,17 +107,17 @@ class AuthController extends Controller {
                         'level' => 0
                     ]);
                     $user = User::where('uid', '=', $request->input('uid'))->first();
-
-                    # Login user
-                    Auth::login($user);
-                    # return success
-                    return response([
-                        'success' => true,
-                        'level' => Auth::user()->level,
-                        'uid' => Auth::user()->uid,
-                        'currentSemester' => General::get_current_semester(),
-                    ], 200);
                 }
+
+                # Login user
+                Auth::login($user);
+                # return success
+                return response([
+                    'success' => true,
+                    'level' => Auth::user()->level,
+                    'uid' => Auth::user()->uid,
+                    'currentSemester' => General::get_current_semester(),
+                ], 200);
             } else {    # User is not allowed to login
                 return response([
                     'success' => false,
