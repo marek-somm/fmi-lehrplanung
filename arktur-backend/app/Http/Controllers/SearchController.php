@@ -384,11 +384,12 @@ class SearchController extends Controller {
         $request->validate([
             'subject' => ['string'],
             'fieldOfStudy' => ['string'],
-            'category' => ['string']
+            'category' => ['string'],
+            'semester' => ['int', 'required']
         ]);
 
         if ($request->input('category')) {
-            $events = Event::where('semester', General::get_current_semester())
+            $events = Event::where('semester', $request->input("semester"))
                 ->select('id', 'changed', 'rotation', 'sws', 'title', 'type')
                 ->where('active', True)
                 ->whereHas('modules', function ($q) use ($request) {
@@ -402,9 +403,9 @@ class SearchController extends Controller {
                 })
                 ->get();
                 
-            return response(['current' => $events], 200);
+            return response($events, 200);
         } else if ($request->input('fieldOfStudy')) {
-            $events = Event::where('semester', General::get_current_semester())
+            $events = Event::where('semester', $request->input("semester"))
                 ->select('id', 'changed', 'rotation', 'sws', 'title', 'type')
                 ->where('active', True)
                 ->whereHas('modules', function ($q) use ($request) {
@@ -418,9 +419,9 @@ class SearchController extends Controller {
                 })
                 ->get();
                 
-            return response(['current' => $events], 200);
+            return response($events, 200);
         } else if($request->input('subject')) {
-            $events = Event::where('semester', General::get_current_semester())
+            $events = Event::where('semester', $request->input("semester"))
                 ->select('id', 'changed', 'rotation', 'sws', 'title', 'type')
                 ->where('active', True)
                 ->whereHas('modules', function ($q) use ($request) {
@@ -434,7 +435,7 @@ class SearchController extends Controller {
                 })
                 ->get();
                 
-            return response(['current' => $events], 200);
+            return response($events, 200);
         }
     }
 }

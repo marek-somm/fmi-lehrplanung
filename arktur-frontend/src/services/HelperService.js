@@ -10,6 +10,14 @@ export default {
 		}
 	},
 
+	convertSemesterFull(value) {
+		if (value % 10 == 0) {
+			return 'Sommersemester ' + parseInt(value / 10);
+		} else {
+			return 'Wintersemester ' + parseInt(value / 10);
+		}
+	},
+
 	convertTurnus(value) {
 		if (value == 0) {
 			return 'Keine Übernahme';
@@ -38,6 +46,9 @@ export default {
 		}
 		if (turnus == 2) {
 			return Number(semester) + 10;
+		}
+		if (turnus == -1) {
+			return Number(semester % 10) == 1 ? Number(semester) - 1 : Number(semester) - 9;
 		}
 	},
 

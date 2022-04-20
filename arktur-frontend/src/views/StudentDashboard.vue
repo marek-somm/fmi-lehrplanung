@@ -1,6 +1,31 @@
 <template>
 	<div id="dashboard-student-container">
 		<div class="filter">
+			<div class="row semester">
+				<button
+					:class="{
+						hidden: data.semester.selected <= data.semester.current,
+					}"
+					class="button"
+					@click="prevSemester"
+				>
+					&lt;
+				</button>
+				<p class="name">
+					{{ helper.convertSemesterFull(data.semester.selected) }}
+				</p>
+				<button
+					:class="{
+						hidden:
+							data.semester.selected >=
+							helper.addTurnus(data.semester.current, 2),
+					}"
+					class="button"
+					@click="nextSemester"
+				>
+					&gt;
+				</button>
+			</div>
 			<div class="row">
 				<div
 					class="item"
@@ -59,14 +84,11 @@
 				</div>
 			</div>
 		</div>
-		<p v-show="data.events.current.length > 0">Gefundene Treffer: {{ data.events.current.length }}</p>
+		<p v-show="data.selected.subject">
+			Gefundene Treffer: {{ data.events.length }}
+		</p>
 		<div class="event-container">
-			<div
-				class="event"
-				v-for="(item, index) in data.events.current"
-				:key="index"
-				@click="select(item.modulecode)"
-			>
+			<div class="event" v-for="(item, index) in data.events" :key="index">
 				<a class="text"> {{ item.title }} </a>
 			</div>
 		</div>
@@ -77,13 +99,12 @@
 import { reactive } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 import search from "@/services/SearchService.js";
+import helper from "@/services/HelperService.js";
 
 export default {
 	setup() {
 		const data = reactive({
-			events: {
-				current: {},
-			},
+			events: {},
 			selected: {
 				subject: null,
 				fieldOfStudy: "Alle",
@@ -92,6 +113,10 @@ export default {
 			subjects: null,
 			fieldOfStudies: null,
 			categories: null,
+			semester: {
+				current: helper.getCurrentSemester(),
+				selected: helper.getCurrentSemester(),
+			},
 		});
 
 		onMounted(() => {
@@ -114,8 +139,9 @@ export default {
 		}
 
 		async function setEvents(filter) {
+			filter["semester"] = data.semester.selected;
 			let events = await search.getStudentEvents(filter);
-			data.events.current = events.data.current;
+			data.events = events.data;
 		}
 
 		function onClickSubject(subject) {
@@ -124,48 +150,90 @@ export default {
 				data.selected.fieldOfStudy = "Alle";
 				data.categories = null;
 				setEvents({
-					"subject": subject
-				})
+					subject: subject,
+				});
 			}
 		}
 
 		function onClickFieldOfStudy(fieldOfStudy) {
 			if (data.selected.fieldOfStudy == "Alle") {
-				data.categories = null
+				data.categories = null;
 				data.selected.category = "Alle";
 				setEvents({
-					"subject": data.selected.subject,
-				})
+					subject: data.selected.subject,
+				});
 			} else if (fieldOfStudy != data.selected.fieldOfStudy) {
 				data.categories = setCategories(data.selected.fieldOfStudy);
 				data.selected.category = "Alle";
 				setEvents({
-					"subject": data.selected.subject,
-					"fieldOfStudy": data.selected.fieldOfStudy
-				})
+					subject: data.selected.subject,
+					fieldOfStudy: data.selected.fieldOfStudy,
+				});
 			}
 		}
 
 		function onClickCategory(category) {
 			if (data.selected.category == "Alle") {
 				setEvents({
-					"subject": data.selected.subject,
-					"fieldOfStudy": data.selected.fieldOfStudy,
+					subject: data.selected.subject,
+					fieldOfStudy: data.selected.fieldOfStudy,
 				});
 			} else if (category != data.selected.category) {
 				setEvents({
-					"subject": data.selected.subject,
-					"fieldOfStudy": data.selected.fieldOfStudy,
-					"category": data.selected.category
+					subject: data.selected.subject,
+					fieldOfStudy: data.selected.fieldOfStudy,
+					category: data.selected.category,
 				});
+			}
+		}
+
+		function updateEvents() {
+			if (data.selected.subject) {
+				console.log(data.selected);
+				setEvents({
+					subject: data.selected.subject,
+					fieldOfStudy:
+						data.selected.fieldOfStudy == "Alle"
+							? null
+							: data.selected.fieldOfStudy,
+					category:
+						data.selected.category == "Alle"
+							? null
+							: data.selected.category,
+				});
+			}
+		}
+
+		function prevSemester() {
+			if (data.semester.selected > data.semester.current) {
+				data.semester.selected = helper.addTurnus(
+					data.semester.selected,
+					-1
+				);
+				updateEvents();
+			}
+		}
+
+		function nextSemester() {
+			if (
+				data.semester.selected < helper.addTurnus(data.semester.current, 2)
+			) {
+				data.semester.selected = helper.addTurnus(
+					data.semester.selected,
+					1
+				);
+				updateEvents();
 			}
 		}
 
 		return {
 			data,
+			helper,
 			onClickSubject,
 			onClickFieldOfStudy,
 			onClickCategory,
+			prevSemester,
+			nextSemester,
 		};
 	},
 };
@@ -190,6 +258,44 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 	position: relative;
 	overflow-y: auto;
 	height: calc(100vh - 10.676rem);
+
+	.semester {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		background-color: $filter;
+
+		.name {
+			margin: 1rem 0rem;
+			color: white;
+			font-weight: bold;
+		}
+
+		.button {
+			height: 100%;
+			width: max-content;
+			font-size: 2rem;
+			text-align: center;
+			padding-bottom: 0.4rem;
+
+			background-color: $filter;
+			color: white;
+			border: none;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&.hidden {
+				opacity: 0;
+
+				&:hover {
+					cursor: auto;
+				}
+			}
+		}
+	}
 
 	.event-container {
 		padding: 1rem 0;
