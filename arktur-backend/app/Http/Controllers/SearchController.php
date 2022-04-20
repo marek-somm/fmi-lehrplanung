@@ -297,6 +297,7 @@ class SearchController extends Controller {
             if (!$this->in_event_array($event, $filtered_events) && $event["active"] == true && $event["rotation"] > 0 && $event["semester"] > ($current_semester - 20)) {
                 $event["semester_org"] = $event["semester"];
                 $event["own"] = true;
+                $event["active"] = false;
 
                 if ($event["rotation"] == 2) {
                     if ($event["semester"] % 10 == 0) {
@@ -304,21 +305,25 @@ class SearchController extends Controller {
                     } else {
                         $event["semester"] = $current_semester + ($current_semester % 10 == 0 ? 1 : 10);
                     }
-                    $event["active"] = $this->event_exists($event) ? $event["active"] : false;
-                    $filtered_events[] = $event;
+                    if(!$this->event_exists($event)) {
+                        $filtered_events[] = $event;
+                    }
                 } else {
                     if ($current_semester % 10 == 0) {
                         $event["semester"] = $current_semester + 1;
-                        $event["active"] = $this->event_exists($event) ? true : false;
-                        $filtered_events[] = $event;
+                        if(!$this->event_exists($event)) {
+                            $filtered_events[] = $event;
+                        }
                     } else {
                         $event["semester"] = $current_semester + 9;
-                        $event["active"] = $this->event_exists($event) ? true : false;
-                        $filtered_events[] = $event;
+                        if(!$this->event_exists($event)) {
+                            $filtered_events[] = $event;
+                        }
                     }
                     $event["semester"] = $current_semester + 10;
-                    $event["active"] = $this->event_exists($event) ? true : false;
-                    $filtered_events[] = $event;
+                    if(!$this->event_exists($event)) {
+                        $filtered_events[] = $event;
+                    }
                 }
             }
         }
@@ -329,7 +334,7 @@ class SearchController extends Controller {
     }
 
     private function event_exists($event) {
-        return Event::where("id", $event["id"])
+        return Event::where("vnr", $event["vnr"])
             ->where("semester", $event["semester"])
             ->get()
             ->first() != null;

@@ -38,7 +38,7 @@
 						:key="index"
 						@click="click(value)"
 					>
-						<h3>{{ value.title }} ({{ value.vnr }})</h3>
+						<h3>{{ value.title }} ({{ value.vnr ? value.vnr : "nicht vorhanden" }})</h3>
 						<p>
 							<b>[{{ value.type }}]</b>
 							{{ convertTurnus(value.rotation) }}

@@ -17,12 +17,12 @@ class UpdateController extends Controller {
             'type' => ['string', 'required'],
         ]);
 
-        if ($request->id) {
-            $exists = count(Event::where("id", $request->id)
+        if ($request->vnr) {
+            $exists = count(Event::where("vnr", $request->vnr)
                 ->where("semester", $request->sem)
                 ->get());
         } else {
-            $exists = count(Event::where("vnr", $request->vnr)
+            $exists = count(Event::where("id", $request->id)
                 ->where("semester", $request->sem)
                 ->get());
         }
