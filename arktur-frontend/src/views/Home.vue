@@ -1,29 +1,27 @@
 <template>
 	<div class="home--container">
-		<h1 class="title">Willkommen bei Arktur!</h1>
-		<h2>Was ist Arktur?</h2>
+		<h2>Willkommen auf der Seite der Lehrplanungsplattform der Fakultät für Mathematik und Informatik der Universität Jena.</h2>
 		<p class="textbox">
-			Arktur ist ein Planungstool für Lehveranstaltungen an der Fakultät für Mathematik und Informatik. Mit diesem Tool können Sie als lehrende Person Ihre Veranstaltungen für die kommenden Semester ganz einfach dem Prüfungsamt mitteilen.
+			Um die Lehrplannung transparenter zu machen und um den Studierenden eine Anlaufstelle zur Plannung ihre kommenden Semester zu ermöglichen wurde dieses Lehrplannungswerkzeugt entwickelt. Hier können Dozierende ihr kommende Lehre planen und so für Studierende der Fakultät sichtbar stellen.
 		</p>
-		<h2>Wie funktioniert Arktur?</h2>
 		<p class="textbox">
-			Für Lehrende gibt es zwei Möglichkeiten Lehrveranstaltungen anzulegen:
+			Für Lehrende gibt es dabei zwei Möglichkeiten Lehrveranstaltungen anzulegen:
 		</p>
 		<p class="textbox">
 			1. Basierend auf einer vergangenen Veranstaltung:<br>
-			Wenn Sie bereits eine ähnliche Lehrveranstaltung angeboten haben, können Sie ganz einfach in der Veranstaltungsübersicht nach dieser suchen. Anschließend können Sie in der Veranstaltungsübersicht über den Knopf "Neu" eine Veranstaltung mit bereits ausgefüllten Informationen, basierend auf Ihrer Alten, anlegen.
+			Auf Ihrer Startseite werden Ihnen Vorschläge für zukünftige Veranstaltungen gemacht. Diese können Sie mit einem klick auf die entsprechende Verasntaltung erstellen. Alternativ haben Sie die Möglichkeit, in der Veranstaltungsübersicht einer beliebigen Veranstaltung über den Knopf "Neu" eine Veranstaltung mit bereits ausgefüllten Informationen anzulegen. 
 		</p>
 		<p class="textbox">
 			2. Eine neue Veranstaltung:<br>
-			Um eine neue Lehrveranstaltung anzulegen, wechseln Sie ganz einfach in die Veranstaltungsübersicht und klciken auf den Knopf "Neu" links neben der Suchleiste. Anschließend können Sie eine vollkommen neue Veranstaltung anlegen. Vergessen Sie nicht sich selbst als Person hinzuzufügen, damit die Veranstaltung anschließend auf Ihrer Startseite angezeigt wird.
+			Um eine neue Lehrveranstaltung anzulegen, wechseln Sie zur Veranstaltungsübersicht und klicken auf den Knopf "Neu" links neben der Suchleiste. Anschließend können Sie eine vollkommen neue Veranstaltung anlegen. Vergessen Sie nicht sich selbst als Person hinzuzufügen, damit die Veranstaltung anschließend auf Ihrer Startseite angezeigt wird.
 		</p>
 		<p class="textbox">
 			Auf Ihrer Startseite sehen Sie Ihre eigenen Veranstaltungen, sowohl Vergangene, als auch Kommende. Dort werden Ihnen ebenfalls zukünftige Veranstaltungen vorgeschlagen, basierend auf den vergangenen 4 Semestern. Diese sind ausgegraut und müssen mittles klick erst hinzugefügt werden, bevor diese als Veranstaltung angezeigt wird.<br>
-			Dort können Sie Ihre kommenden Veranstaltungen über den Knopf "Ändern" auf der jeweiligen Veranstaltungsübersicht zu Bearbeiten. Vergangenen und laufende Veranstaltungen lassen sich nur noch vom Prüfungsamt ändern.
+			Dort können Sie Ihre kommenden Veranstaltungen über den Knopf "Ändern" auf der jeweiligen Veranstaltungsübersicht bearbeiten. Vergangene und laufende Veranstaltungen lassen sich nur noch vom Prüfungsamt ändern.
 		</p>
-		<h2>Woher kommt Arktur?</h2>
+		<h2>Woher kommt die Lehrplannungsplattform?</h2>
 		<p class="textbox">
-			Arktur ist im Auftrag der Fakultät von Studierenden im Umfang des Softwareentwicklungsprojektes gestartet worden. Anschließend wurde es von Marek Sommerfeld auf einen benutzbaren Stand gebracht.
+			Die Plattform ist im Auftrag der Fakultät von Studierenden im Umfang des Softwareentwicklungsprojektes gestartet worden. Anschließend wurde sie von Marek Sommerfeld auf einen benutzbaren Stand gebracht
 		</p>
 	</div>
 </template>
