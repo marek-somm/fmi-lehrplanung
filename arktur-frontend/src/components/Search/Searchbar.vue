@@ -60,7 +60,6 @@ export default {
 		});
 
 		watchEffect(() => {
-			console.log("change")
 			emit("changeFilter", filter)
 		})
 

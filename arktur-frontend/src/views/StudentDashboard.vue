@@ -189,7 +189,6 @@ export default {
 
 		function updateEvents() {
 			if (data.selected.subject) {
-				console.log(data.selected);
 				setEvents({
 					subject: data.selected.subject,
 					fieldOfStudy:

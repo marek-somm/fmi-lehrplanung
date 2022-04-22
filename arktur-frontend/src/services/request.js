@@ -96,12 +96,10 @@ export class request {
 	}
 
 	async saveVeranstaltung(veranstaltung){
-		console.log(veranstaltung)
 		await this.sendData('update/', {
 			typ: 'n',
 			data: veranstaltung
 		})
-		console.log("done")
 		return this.data
 		// speichert die übergebene veranstaltung in db
 			// veranstaltung hat gleiches format wie return wert von getVeranstaltung
@@ -112,14 +110,12 @@ export class request {
 	}
 
 	async editVeranstaltung(veranstaltung, vnr, semester){
-		console.log(veranstaltung, vnr, semester)
 		await this.sendData('update/', {
 			typ: 'c',
 			data: veranstaltung,
 			vnr: vnr,
 			semester: semester
 		})
-		console.log("done")
 		return this.data
 		// speichert die übergebene veranstaltung in db
 		// wobei veranstalltung mit gegebenen vnr und semester überschrieben wird
@@ -139,7 +135,6 @@ export class request {
 			modulcode: modulcode,
 			pnr: pnr,
 		})
-		console.log(vnr, sem, modulcode, pnr)
 		// wechselt den aktivstatus der gegebenen veranstaltung
 	}
 

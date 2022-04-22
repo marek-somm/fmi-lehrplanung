@@ -96,7 +96,6 @@ export default {
 		}
 
 		function newEvent() {
-			console.log(props.selected);
 			router.push({
 				name: "Neu",
 				params: {

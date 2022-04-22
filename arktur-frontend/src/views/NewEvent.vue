@@ -220,7 +220,6 @@ export default {
 			let sem4 = helper.addTurnus(sem3, 1);
 			data.semester.list = [sem1, sem2, sem3, sem4];
 			data.semester.value = props.sel ? props.sel : data.semester.list[0];
-			console.log(props);
 
 			getVeranstaltung(props.id);
 		});
