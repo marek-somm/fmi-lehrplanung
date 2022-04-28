@@ -41,6 +41,9 @@
 							: "Nicht angegeben"
 					}}
 				</p>
+				<p class="attrib" v-if="selected.data.content.extra">
+					Sonstiges: {{ selected.data.content.extra }}
+				</p>
 			</div>
 			<People :people="selected.data.people" />
 			<h3><u>Module:</u></h3>

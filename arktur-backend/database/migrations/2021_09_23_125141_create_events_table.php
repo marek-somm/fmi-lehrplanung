@@ -20,6 +20,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->boolean('active');
             $table->integer('sws')->nullable();
+            $table->string('extra')->nullable();
             $table->string('type');
             $table->integer('rotation')->nullable();
             $table->boolean('changed')->default(true);

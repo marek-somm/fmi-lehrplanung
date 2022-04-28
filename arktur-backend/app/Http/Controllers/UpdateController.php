@@ -37,6 +37,7 @@ class UpdateController extends Controller {
             'title' => $request->title,
             'active' => 1,
             'sws' => $request->sws ? $request->sws : Null,
+            'extra' => $request->extra ? $request->extra : Null,
             'type' => $request->type,
             'rotation' => $request->rotation ? $request->rotation : Null,
             'changed' => 1

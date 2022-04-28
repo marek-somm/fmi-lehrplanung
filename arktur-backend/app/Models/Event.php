@@ -11,6 +11,7 @@ class Event extends Model {
         'title',
         'active',
         'sws',
+        'extra',
         'type',
         'targets',
         'rotation',

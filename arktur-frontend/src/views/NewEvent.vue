@@ -52,6 +52,8 @@
 					{{ convertSemester(semester) }}
 				</option>
 			</select>
+			<label>Sonstiges</label>
+			<SearchPanel class="searchpanel" placeholder="z.B. Sprachen" v-model="data.extra.value" />
 		</div>
 
 		<h3>Personen</h3>
@@ -162,6 +164,9 @@ export default {
 					helper.convertTurnus(2),
 				],
 			},
+			extra: {
+				value: null,
+			},
 			type: {
 				input: "",
 				value: "",
@@ -244,6 +249,7 @@ export default {
 				event.data.modules.forEach((module) => {
 					addExam(module);
 				});
+				data.extra.value = event.data.content.extra;
 			}
 		}
 
@@ -332,6 +338,7 @@ export default {
 				sem: data.semester.value,
 				title: data.title.value,
 				sws: data.sws.value,
+				extra: data.extra.value,
 				rotation: helper.convertTurnusToNumber(data.rotation.value),
 				type: data.type.value,
 				people: data.person.list,
