@@ -81,7 +81,7 @@
 		<h3>Prüfungen</h3>
 		<div class="exams">
 			<div class="box" v-for="(exam, index) in data.exams" :key="index">
-				<button class="remove" @click="removeExam(exam)">x</button>
+				<button class="remove" @click="removeExam(exam)" v-if="user.level >= 2">x</button>
 				<div class="grid">
 					<label>Titel </label>
 					<SearchPanel
@@ -109,7 +109,7 @@
 					/>
 				</div>
 			</div>
-			<div class="new" @click="addExam" role="button">
+			<div class="new" @click="addExam" role="button" v-if="user.level >= 2">
 				<span class="circle"></span>
 				<span class="plus">+</span>
 			</div>
@@ -130,12 +130,13 @@
 </template>
 
 <script>
-import { onMounted, reactive } from "vue";
+import { computed, onMounted, reactive } from "vue";
 import { useRouter } from "vue-router";
 import search from "@/services/SearchService.js";
 import helper from "@/services/HelperService.js";
 import update from "@/services/UpdateService.js";
 import SearchPanel from "../components/SearchPanel.vue";
+import { useStore } from 'vuex';
 
 export default {
 	components: { SearchPanel },
@@ -210,7 +211,9 @@ export default {
 			exams: [],
 		});
 
+		const store = useStore();
 		const router = useRouter();
+		const user = computed(() => store.state.User);
 
 		onMounted(() => {
 			getPersons();
@@ -389,6 +392,7 @@ export default {
 			cancel,
 			deleteEvent,
 			convertSemester,
+			user
 		};
 	},
 };
