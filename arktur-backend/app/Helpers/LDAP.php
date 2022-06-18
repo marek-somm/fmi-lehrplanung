@@ -69,7 +69,7 @@ class LDAP {
 			$entries = ldap_get_entries($this->conn, $result);
 			$json = json_encode($entries, JSON_UNESCAPED_UNICODE);
 
-			file_put_contents("data/".$username.".json", $json);
+			file_put_contents("/var/www/storage/data/".$username.".json", $json);
 		}
 	}
 
