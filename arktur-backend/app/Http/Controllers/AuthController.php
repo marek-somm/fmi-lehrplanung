@@ -95,7 +95,7 @@ class AuthController extends Controller {
                     'uid' => Auth::user()->uid,
                     'currentSemester' => General::get_current_semester(),
                 ], 200);
-            } else if (in_array("Student", $roles)) {    # User is Student
+            } else if (false && in_array("Student", $roles)) {    # User is Student - is never reached: Student shouldn't be able to login
                 if ($user == null) {
                     User::create([
                         'uid' => $data["uid"],
@@ -122,7 +122,7 @@ class AuthController extends Controller {
                 return response([
                     'success' => false,
                     'errors' => [
-                        'Berechtigung' => ['Sie besitzen nicht über ausreichende Rechte um auf diese Resource zuzugreifen. Bitte Kontaktieren Sie den Seiten-Admin.']
+                        'Berechtigung' => ['Sie besitzen nicht über ausreichende Rechte um auf diese Resource zuzugreifen. Bei Fragen kontaktieren Sie bitte den Seiten-Administrator.']
                     ]
                 ], 401);
             }
