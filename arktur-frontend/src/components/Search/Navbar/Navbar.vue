@@ -30,6 +30,9 @@
 				<router-link class="link" v-if="!user.login" :to="{ name: 'Login' }"
 					>Anmelden</router-link
 				>
+				<router-link class="link" :to="{ name: 'Overview' }"
+					>Übersicht</router-link
+				>
 				<router-link class="link" v-if="user.login" :to="{ name: 'Logout' }"
 					>Abmelden</router-link
 				>

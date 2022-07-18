@@ -6,7 +6,7 @@ export default {
 		if (value % 10 == 0) {
 			return 'SoSe ' + parseInt(value / 10);
 		} else {
-			return 'WiSe ' + parseInt(value / 10);
+			return 'WiSe ' + parseInt(value / 10) + '/' + (parseInt(value / 10) % 100 + 1);
 		}
 	},
 
@@ -14,7 +14,7 @@ export default {
 		if (value % 10 == 0) {
 			return 'Sommersemester ' + parseInt(value / 10);
 		} else {
-			return 'Wintersemester ' + parseInt(value / 10);
+			return 'Wintersemester ' + parseInt(value / 10) + '/' + (parseInt(value / 10) % 100 + 1);
 		}
 	},
 

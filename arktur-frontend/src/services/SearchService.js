@@ -81,6 +81,6 @@ export default {
 
 	async getStudentEvents(filter) {
 		const payload = makePayload(filter)
-		return rs.get("student/events", payload);
+		return rs.get("get/events", payload);
 	}
 }

@@ -84,12 +84,37 @@
 				</div>
 			</div>
 		</div>
-		<p v-show="data.selected.subject">
-			Gefundene Treffer: {{ data.events.length }}
-		</p>
-		<div class="event-container">
-			<div class="event" v-for="(item, index) in data.events" :key="index">
-				<a class="text"> {{ item.title }} </a>
+		<div class="content">
+			<InfoVeranstaltung
+				:selected="event.selected"
+				:filterActive="false"
+				:class="{ show: event.show, smaller: data.categories }"
+				class="info"
+				@close="closeVeranstaltung"
+				@relation="updateModul"
+			/>
+			<InfoModul
+				:selected="module.selected"
+				:filterActive="false"
+				:class="{ show: module.show, smaller: data.categories }"
+				class="info"
+				@close="closeModul"
+				@relation="updateVeranstaltung"
+			/>
+			<div class="result-container" :class="{ smaller: data.categories }">
+				<div class="event-container">
+					<p v-show="data.selected.subject">
+						Gefundene Treffer: {{ data.events.length }}
+					</p>
+					<div
+						class="event"
+						v-for="(item, index) in data.events"
+						:key="index"
+						@click="updateVeranstaltung(item.id)"
+					>
+						<a class="text"> {{ item.title }} </a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -100,9 +125,24 @@ import { reactive } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
 import search from "@/services/SearchService.js";
 import helper from "@/services/HelperService.js";
+import InfoVeranstaltung from "@/components/Search/InfoVeranstaltung.vue";
+import InfoModul from "@/components/Search/InfoModul.vue";
 
 export default {
+	components: {
+		InfoVeranstaltung,
+		InfoModul,
+	},
 	setup() {
+		const event = reactive({
+			show: false,
+			selected: null,
+		});
+		const module = reactive({
+			show: false,
+			selected: null,
+		});
+
 		const data = reactive({
 			events: {},
 			selected: {
@@ -187,6 +227,10 @@ export default {
 			}
 		}
 
+		function onClickEvent() {
+			console.log("clock");
+		}
+
 		function updateEvents() {
 			if (data.selected.subject) {
 				setEvents({
@@ -225,14 +269,39 @@ export default {
 			}
 		}
 
+		async function updateVeranstaltung(id) {
+			event.selected = await search.getEvent(id);
+			event.show = true;
+		}
+
+		async function updateModul(relation) {
+			module.selected = await search.getModule(relation.modulecode);
+			module.show = true;
+		}
+
+		function closeVeranstaltung() {
+			event.show = false;
+		}
+
+		function closeModul() {
+			module.show = false;
+		}
+
 		return {
 			data,
+			event,
+			module,
 			helper,
 			onClickSubject,
 			onClickFieldOfStudy,
 			onClickCategory,
+			onClickEvent,
 			prevSemester,
 			nextSemester,
+			updateVeranstaltung,
+			updateModul,
+			closeVeranstaltung,
+			closeModul,
 		};
 	},
 };
@@ -256,7 +325,7 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 	transition: height 0.2s ease;
 	position: relative;
 	overflow-y: auto;
-	height: calc(100vh - 10.676rem);
+	height: calc(100vh - 13.85rem);
 
 	.semester {
 		display: flex;
@@ -296,20 +365,49 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 		}
 	}
 
-	.event-container {
-		padding: 1rem 0;
-		width: 40%;
+	.content {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
 
-		.event {
-			border: 1px black solid;
-			transition: all 0.1s ease;
-			padding: 2rem;
-			margin-bottom: 0.5rem;
-			z-index: 0;
+		.info {
+			height: calc(100vh - 22.98rem);
 
-			&:hover {
-				cursor: pointer;
-				background-color: rgb(240, 240, 240);
+			&.smaller {
+				height: calc(100vh - 26.98rem) !important;
+			}
+		}
+		
+		.result-container {
+			display: flex;
+			flex-flow: column;
+			flex-grow: 1;
+			align-items: center;
+			overflow-y: auto;
+			height: calc(100vh - 23.98rem);
+			padding: 0 0 1rem 0;
+			transition: height 0.2s ease;
+
+			&.smaller {
+				height: calc(100vh - 27.98rem) !important;
+			}
+
+			.event-container {
+				padding: 1rem 0;
+				width: 40%;
+	
+				.event {
+					border: 1px black solid;
+					transition: all 0.1s ease;
+					padding: 2rem;
+					margin-bottom: 0.5rem;
+					z-index: 0;
+	
+					&:hover {
+						cursor: pointer;
+						background-color: rgb(240, 240, 240);
+					}
+				}
 			}
 		}
 	}

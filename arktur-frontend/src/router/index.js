@@ -10,6 +10,7 @@ import NotFound from '@/views/NotFound';
 import NewEvent from '@/views/NewEvent';
 import EditEvent from '@/views/EditEvent';
 import Dashboard from '@/views/Dashboard';
+import Overview from '@/views/Overview.vue';
 import store from '@/store/index';
 import auth from "@/services/AuthService";
 
@@ -97,6 +98,15 @@ const routes = [
 		}
 	},
 	{
+		path: '/overview',
+		name: 'Overview',
+		component: Overview,
+		beforeEnter: checkSession,
+		meta: {
+			title: "Overview | Lehre"
+		}
+	},
+	{
 		path: '/:catchAll(.*)',
 		name: 'NotFound',
 		component: NotFound,
@@ -104,7 +114,7 @@ const routes = [
 		meta: {
 			title: "Not Found | Lehre"
 		}
-	},
+	}
 ];
 
 async function redirectHome(to, from, next) {

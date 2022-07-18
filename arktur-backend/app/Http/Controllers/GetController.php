@@ -57,8 +57,17 @@ class GetController extends Controller {
                 $q->where('name', 'LIKE', '%' . $request->input('fieldOfStudy') . '%');
             })
             ->whereNotNull('parent_id')
+            ->whereNotIn('id', 
+                Category::select('parent_id')
+                    ->whereNotNull('parent_id')
+                    ->groupBy('parent_id')
+                    ->get()
+                    ->toArray()
+            )
             ->pluck('name')
             ->toArray();
+
+        sort($categories);
 
         $categories = array_merge(array("Alle"), array_unique($categories));
 

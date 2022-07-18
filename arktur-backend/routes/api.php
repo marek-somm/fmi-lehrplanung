@@ -24,22 +24,23 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/check', [AuthController::class, 'check']);
+
+    Route::get('/get/subjects', [GetController::class, 'getSubjects']);
+    Route::get('/get/fieldOfStudies', [GetController::class, 'getFieldOfStudies']);
+    Route::get('/get/categories', [GetController::class, 'getCategories']);
+
+    Route::get('/get/events', [SearchController::class, 'getStudentEvents']);
+
+    Route::get('/get/event', [EventController::class, 'getEvent']);
+    Route::get('/get/module', [SearchController::class, 'getModule']);
     
     Route::middleware('auth:sanctum')->group(function() {
         Route::get('/search/event', [SearchController::class, 'searchEvent']);
-        Route::get('/get/event', [EventController::class, 'getEvent']);
         Route::get('/search/module', [SearchController::class, 'searchModule']);
-        Route::get('/get/module', [SearchController::class, 'getModule']);
         Route::get('/get/new', [SearchController::class, 'getNewEntries']);
         Route::get('/search/person', [SearchController::class, 'searchPerson']);
-
-        Route::get('/get/subjects', [GetController::class, 'getSubjects']);
-        Route::get('/get/fieldOfStudies', [GetController::class, 'getFieldOfStudies']);
-        Route::get('/get/categories', [GetController::class, 'getCategories']);
     
         Route::get('/user/events', [SearchController::class, 'getUserEvents']);
-
-        Route::get('/student/events', [SearchController::class, 'getStudentEvents']);
 
         Route::put('/add/event', [UpdateController::class, 'addEvent']);
         Route::put('/update/event', [UpdateController::class, 'updateEvent']);

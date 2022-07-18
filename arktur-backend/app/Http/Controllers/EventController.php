@@ -16,7 +16,7 @@ class EventController extends Controller {
         }
         return false;
     }
-    
+
     public function getEvent(Request $request) {
         $request->validate([
             'id' => ['required', 'integer'],
@@ -42,11 +42,14 @@ class EventController extends Controller {
             ->get()
             ->toArray();
 
-        $user = Auth::user()->uid;
 
-        $event["own"] = false;
-        if ($this->in_sub_array($user, $users, 'uid')) {
-            $event["own"] = true;
+        if (Auth::user()) {
+            $user = Auth::user()->uid;
+
+            $event["own"] = false;
+            if ($this->in_sub_array($user, $users, 'uid')) {
+                $event["own"] = true;
+            }
         }
 
         $modules = Event::find($event->id)

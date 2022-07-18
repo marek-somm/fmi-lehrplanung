@@ -26,8 +26,6 @@
 			</div>
 		</div>
 	</div>
-
-	<StudentDashboard	 v-if="user.level == 0" />
 </template>
 
 <script>
@@ -39,14 +37,12 @@ import helper from "@/services/HelperService.js";
 import InfoVeranstaltung from "@/components/Search/InfoVeranstaltung.vue";
 import InfoModul from "@/components/Search/InfoModul.vue";
 import { useStore } from 'vuex';
-import StudentDashboard from './StudentDashboard.vue';
 
 export default {
 	components: {
 		Accordion,
 		InfoVeranstaltung,
-		InfoModul,
-		StudentDashboard,
+		InfoModul
 	},
 	setup() {
 		const store = useStore();

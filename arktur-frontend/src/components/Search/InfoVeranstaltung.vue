@@ -3,7 +3,7 @@
 		<div class="header" v-if="selected">
 			<h3 class="title">{{ selected.data.content.title }}</h3>
 			<div class="button-bar">
-				<button class="new button" @click="newEvent">Neu</button>
+				<button class="new button" @click="newEvent" v-if="user.login">Neu</button>
 				<button class="close button" @click="close">X</button>
 				<button class="delete button" @click="editEvent" v-if="user.level == 2 || isOwnEvent()">Ändern</button>
 			</div>
