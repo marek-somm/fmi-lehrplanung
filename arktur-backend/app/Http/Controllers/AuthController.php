@@ -156,7 +156,8 @@ class AuthController extends Controller {
         return response([
             'success' => false,
             'level' => 0,
-            'uid' => ''
+            'uid' => '',
+            'currentSemester' => General::get_current_semester(),
         ], 200);
     }
 
