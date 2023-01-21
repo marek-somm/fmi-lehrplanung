@@ -248,9 +248,10 @@ class SearchController extends Controller {
 
     public function getUserEvents(Request $request) {
         $request->validate([
-            'user' => [new Username],
-            'currentSem' => ['string', 'required']
+            'user' => [new Username]
         ]);
+
+        $current_semester = General::get_current_semester();
 
         $events_all = User::where('uid', $request->user)
             ->firstOrFail()
@@ -261,28 +262,29 @@ class SearchController extends Controller {
         $events_current = User::where('uid', $request->user)
             ->firstOrFail()
             ->events()
-            ->where('semester', $request->currentSem)
+            ->where('semester', $current_semester)
             ->get()
             ->toArray();
 
         $events_past = User::where('uid', $request->user)
             ->firstOrFail()
             ->events()
-            ->where('semester', '<', $request->currentSem)
+            ->where('semester', '<', $current_semester)
+            ->orderBy('semester', 'desc')
             ->get()
             ->toArray();
 
         $events_future = User::where('uid', $request->user)
             ->firstOrFail()
             ->events()
-            ->where('semester', '>', $request->currentSem)
+            ->where('semester', '>', $current_semester)
             ->get()
             ->toArray();
 
 
         $past = $this->group_by_semester($events_past);
         $current = $this->group_by_semester($events_current);
-        $future = $this->generate_future_events(array_merge($events_current, $events_past), $request->currentSem);
+        $future = $this->generate_future_events(array_merge($events_current, $events_past), $current_semester);
 
         $future = $this->group_by_semester(array_merge($events_future, $future));
 
@@ -293,7 +295,7 @@ class SearchController extends Controller {
         # remove duplicats
         $filtered_events = [];
 
-        foreach (array_reverse($events) as $event) {
+        foreach ($events as $event) {
             if (!$this->in_event_array($event, $filtered_events) && $event["active"] == true && $event["rotation"] > 0 && $event["semester"] > ($current_semester - 20)) {
                 $event["semester_org"] = $event["semester"];
                 $event["own"] = true;
