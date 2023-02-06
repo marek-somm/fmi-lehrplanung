@@ -2,31 +2,42 @@
 	<div id="dashboard-student-container">
 		<div class="filter">
 			<div class="row semester">
-				<button
-					:class="{
-						hidden: data.semester.selected <= data.semester.current,
-					}"
-					class="button"
-					@click="prevSemester"
-				>
-					&lt;
-				</button>
-				<p class="name">
-					{{ helper.convertSemesterFull(data.semester.selected) }}
-				</p>
-				<button
-					:class="{
-						hidden:
-							data.semester.selected >=
-							helper.addTurnus(data.semester.current, 2),
-					}"
-					class="button"
-					@click="nextSemester"
-				>
-					&gt;
-				</button>
+				<div class="placeholder"></div>
+				<div class="item">
+					<button
+						:class="{
+							hidden: data.semester.selected <= data.semester.current,
+						}"
+						class="button"
+						@click="prevSemester"
+					>
+						&larr;
+					</button>
+					<p class="name">
+						{{ helper.convertSemesterFull(data.semester.selected) }}
+					</p>
+					<button
+						:class="{
+							hidden:
+								data.semester.selected >=
+								helper.addTurnus(data.semester.current, 2),
+						}"
+						class="button"
+						@click="nextSemester"
+					>
+						&rarr;
+					</button>
+				</div>
+				<div class="button-pannel">
+					<button
+						v-show="data.hideFilter == true"
+						@click="data.hideFilter = false"
+					>
+						&plus;
+					</button>
+				</div>
 			</div>
-			<div class="row">
+			<div class="row" v-if="!data.fieldOfStudies">
 				<div
 					class="item"
 					v-for="(subject, index) in data.subjects"
@@ -44,7 +55,12 @@
 				</div>
 			</div>
 
-			<div class="row-more" v-if="data.fieldOfStudies">
+			<div
+				class="row-more"
+				v-if="data.fieldOfStudies"
+				:class="{ 'hide-filter': data.hideFilter }"
+			>
+				<div class="placeholder"></div>
 				<div class="item">
 					<label :for="fieldOfStudy">Studiengang: </label>
 					<select
@@ -62,9 +78,23 @@
 						</option>
 					</select>
 				</div>
+				<div class="button-pannel">
+					<button v-show="!data.categories">&#10226;</button>
+					<button
+						v-show="!data.categories"
+						@click="data.hideFilter = true"
+					>
+						&minus;
+					</button>
+				</div>
 			</div>
 
-			<div class="row-more" v-if="data.categories">
+			<div
+				class="row-more"
+				v-if="data.categories"
+				:class="{ 'hide-filter': data.hideFilter }"
+			>
+				<div class="placeholder"></div>
 				<div class="item">
 					<label :for="category">Säule: </label>
 					<select
@@ -81,6 +111,10 @@
 							{{ category }}
 						</option>
 					</select>
+				</div>
+				<div class="button-pannel">
+					<button>&#10226;</button>
+					<button @click="data.hideFilter = true">&minus;</button>
 				</div>
 			</div>
 		</div>
@@ -157,6 +191,7 @@ export default {
 				current: helper.getCurrentSemester(),
 				selected: helper.getCurrentSemester(),
 			},
+			hideFilter: null,
 		});
 
 		onMounted(() => {
@@ -343,7 +378,7 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 		.button {
 			height: 100%;
 			width: max-content;
-			font-size: 2rem;
+			font-size: 1.5rem;
 			text-align: center;
 			padding-bottom: 0.4rem;
 
@@ -371,38 +406,38 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 		flex-direction: row;
 
 		.info {
-			height: calc(100vh - 22.98rem);
+			height: calc(100vh - 20.1rem);
 
 			&.smaller {
-				height: calc(100vh - 26.98rem) !important;
+				height: calc(100vh - 24.1rem) !important;
 			}
 		}
-		
+
 		.result-container {
 			display: flex;
 			flex-flow: column;
 			flex-grow: 1;
 			align-items: center;
 			overflow-y: auto;
-			height: calc(100vh - 23.98rem);
+			height: calc(100vh - 21.1rem);
 			padding: 0 0 1rem 0;
 			transition: height 0.2s ease;
 
 			&.smaller {
-				height: calc(100vh - 27.98rem) !important;
+				height: calc(100vh - 25.1rem) !important;
 			}
 
 			.event-container {
 				padding: 1rem 0;
 				width: 40%;
-	
+
 				.event {
 					border: 1px black solid;
 					transition: all 0.1s ease;
 					padding: 2rem;
 					margin-bottom: 0.5rem;
 					z-index: 0;
-	
+
 					&:hover {
 						cursor: pointer;
 						background-color: rgb(240, 240, 240);
@@ -417,12 +452,47 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		background-color: $selected2;
 		position: sticky;
 		top: 0;
 
+		.hide-filter {
+			height: 0 !important;
+			padding: 0 !important;
+		}
+
+		.placeholder {
+			width: 10%;
+			margin: 0 1rem;
+		}
+
+		.button-pannel {
+			width: 10%;
+			margin: 0 1rem;
+
+			button {
+				font-size: 1.5rem;
+				width: 50%;
+				height: 100%;
+				color: white;
+				background-color: $selected1;
+				border: none;
+
+				&:hover {
+					cursor: pointer;
+					background: $hover;
+				}
+			}
+		}
+
 		.row-more {
-			padding: 0.75rem 2rem;
+			padding: 0.75rem 0rem;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			overflow: hidden;
 
 			.item {
 				* {
@@ -443,9 +513,15 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
+			align-items: center;
 
 			.item {
 				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: $filter;
 
 				input {
 					display: none;
@@ -453,11 +529,10 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 
 				input + label {
 					padding: 0.75rem 2rem;
-					height: calc(100% - 1.5rem);
 					width: calc(100% - 4rem);
+					height: max-content;
 					display: inline-block;
 					//border: solid 1px $filter-border;
-					background-color: $filter;
 					color: white;
 					line-height: 140%;
 					font-weight: bold;
@@ -466,24 +541,13 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 						background-color 0.15s ease-out, box-shadow 0.15s ease-out;
 				}
 
-				input:hover + label {
-					//border-color: $hover;
-					//background: $hover;
-					text-decoration: underline;
-					cursor: pointer;
-				}
-
-				input:checked + label {
-					background-color: $selected2;
-					//box-shadow: $activeShadow;
-					//border-color: $selected2;
-					//z-index: 1;
-					text-decoration: underline;
-				}
-
-				input:focus + label {
-					outline: dotted 1px #ccc;
-					outline-offset: 0.45rem;
+				&:hover {
+					label {
+						//border-color: $hover;
+						//background: $hover;
+						text-decoration: underline;
+						cursor: pointer;
+					}
 				}
 			}
 		}
