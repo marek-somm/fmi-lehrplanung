@@ -67,26 +67,23 @@ class SearchController extends Controller {
 
         $filter = json_decode($request->filter, true);
 
+        $events = Event::select('events.id', 'events.active', 'events.semester', 'events.title', 'events.vnr')
+            ->leftJoin('event_user as event_user', 'events.id', '=', 'event_user.event_id')
+            ->leftJoin('users as users', 'users.id', '=', 'event_user.user_id')
+            ->where(function ($query) use ($request) {
+                $query->where('events.title', 'LIKE', '%' . $request->value . '%')
+                    ->orWhere('events.vnr', 'LIKE', '%' . $request->value . '%')
+                    ->orWhere('users.displayname', 'LIKE', '%' . $request->value . '%');
+            });
+
         if (count($filter) > 0 && $filter["inactive"] == False) {
-            $events = Event::select('id','active', 'semester', 'title', 'vnr')
-                ->where('active', "1")
-                ->where(function ($query) use ($request) {
-                    $query->where('title', 'LIKE', '%' . $request->value . '%')
-                        ->orWhere('vnr', 'LIKE', '%' . $request->value . '%');
-                })
-                ->limit($request->limit)
-                ->orderBy('semester', 'desc')
-                ->get();
-        } else {
-            $events = Event::select('id','active', 'semester', 'title', 'vnr')
-                ->where(function ($query) use ($request) {
-                    $query->where('title', 'LIKE', '%' . $request->value . '%')
-                        ->orWhere('vnr', 'LIKE', '%' . $request->value . '%');
-                })
-                ->limit($request->limit)
-                ->orderBy('semester', 'desc')
-                ->get();
+            $events = $events->where('active', "1");
         }
+
+        $events = $events->groupBy('events.id')
+            ->limit($request->limit)
+            ->orderBy('semester', 'desc')
+            ->get();
 
         $response = $this->group_by_semester($events);
 
@@ -307,23 +304,23 @@ class SearchController extends Controller {
                     } else {
                         $event["semester"] = $current_semester + ($current_semester % 10 == 0 ? 1 : 10);
                     }
-                    if(!$this->event_exists($event)) {
+                    if (!$this->event_exists($event)) {
                         $filtered_events[] = $event;
                     }
                 } else {
                     if ($current_semester % 10 == 0) {
                         $event["semester"] = $current_semester + 1;
-                        if(!$this->event_exists($event)) {
+                        if (!$this->event_exists($event)) {
                             $filtered_events[] = $event;
                         }
                     } else {
                         $event["semester"] = $current_semester + 9;
-                        if(!$this->event_exists($event)) {
+                        if (!$this->event_exists($event)) {
                             $filtered_events[] = $event;
                         }
                     }
                     $event["semester"] = $current_semester + 10;
-                    if(!$this->event_exists($event)) {
+                    if (!$this->event_exists($event)) {
                         $filtered_events[] = $event;
                     }
                 }
@@ -420,7 +417,7 @@ class SearchController extends Controller {
                     });
                 })
                 ->get();
-                
+
             return response($events, 200);
         } else if ($request->input('fieldOfStudy')) {
             $events = Event::where('semester', $request->input("semester"))
@@ -436,9 +433,9 @@ class SearchController extends Controller {
                     });
                 })
                 ->get();
-                
+
             return response($events, 200);
-        } else if($request->input('subject')) {
+        } else if ($request->input('subject')) {
             $events = Event::where('semester', $request->input("semester"))
                 ->select('id', 'changed', 'rotation', 'sws', 'title', 'type')
                 ->where('active', True)
@@ -452,7 +449,7 @@ class SearchController extends Controller {
                     });
                 })
                 ->get();
-                
+
             return response($events, 200);
         }
     }
