@@ -24,12 +24,11 @@ class Event extends Model {
         'active' => 'boolean',
         'sws' => 'integer',
         'rotation' => 'integer',
-        'changed' => 'boolean',
+        'changed' => 'boolean'
     ];
 
     protected $hidden = [
         'created_at',
-        'updated_at'
     ];
 
     public function users() {

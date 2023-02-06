@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\GetController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UpdateController;
@@ -37,7 +38,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::middleware('auth:sanctum')->group(function() {
         Route::get('/search/event', [SearchController::class, 'searchEvent']);
         Route::get('/search/module', [SearchController::class, 'searchModule']);
-        Route::get('/get/new', [SearchController::class, 'getNewEntries']);
+        Route::get('/get/new', [ExportController::class, 'getEvents']);
         Route::get('/search/person', [SearchController::class, 'searchPerson']);
     
         Route::get('/user/events', [SearchController::class, 'getUserEvents']);
