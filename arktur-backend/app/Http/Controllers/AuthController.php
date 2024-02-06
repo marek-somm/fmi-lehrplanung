@@ -18,7 +18,7 @@ class AuthController extends Controller {
                 'password' => ['required']
             ],
             [
-                'uid.required' => 'Login ist erforderlich.',
+                'uid.required' => 'Benutzername ist erforderlich.',
                 'password.required' => 'Passwort ist erforderlich.'
             ]
         );
@@ -35,7 +35,7 @@ class AuthController extends Controller {
 
             if ($user_own == null || $user_other == null || $user_own->level < 2) {
                 return $this->login_failure([
-                    'Anmeldedaten' => ['Login und/oder Passwort sind nicht korrekt.']
+                    'Anmeldedaten' => ['Benutzername und/oder Passwort sind nicht korrekt.']
                 ]);
             }
 
@@ -73,7 +73,7 @@ class AuthController extends Controller {
 
         # ldap login not successful
         return $this->login_failure([
-            'Anmeldedaten' => ['Login und/oder Passwort sind nicht korrekt.']
+            'Anmeldedaten' => ['Benutzername und/oder Passwort sind nicht korrekt.']
         ]);
     }
 

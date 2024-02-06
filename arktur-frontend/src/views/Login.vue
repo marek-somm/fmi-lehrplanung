@@ -7,13 +7,13 @@
 		</div>
 		<div class="login-wrapper">
 			<div class="row username">
-				<div class="label"><label>Username: </label></div>
+				<div class="label"><label>Benutzername: </label></div>
 				<div class="input">
 					<input placeholder="" v-model="data.usernameInput" />
 				</div>
 			</div>
 			<div class="row password">
-				<div class="label"><label>Password: </label></div>
+				<div class="label"><label>Passwort: </label></div>
 				<div class="input">
 					<input type="password" placeholder="" v-model="data.passwordInput" @keyup.enter="loginSubmit" />
 				</div>
