@@ -2,28 +2,20 @@
 	<div class="login--container">
 		<div class="head-wrapper">
 			<div class="head">
-				<img
-					src="https://www.fmi.uni-jena.de/skin/_global/_images/blocks/meta_headline_white.svg"
-				/>
 				<h1 class="title">Login</h1>
 			</div>
 		</div>
 		<div class="login-wrapper">
 			<div class="row username">
-				<div class="label"><label>Login: </label></div>
+				<div class="label"><label>Username: </label></div>
 				<div class="input">
 					<input placeholder="" v-model="data.usernameInput" />
 				</div>
 			</div>
 			<div class="row password">
-				<div class="label"><label>Passwort: </label></div>
+				<div class="label"><label>Password: </label></div>
 				<div class="input">
-					<input
-						type="password"
-						placeholder=""
-						v-model="data.passwordInput"
-						@keyup.enter="loginSubmit"
-					/>
+					<input type="password" placeholder="" v-model="data.passwordInput" @keyup.enter="loginSubmit" />
 				</div>
 				<div class="submit"><button @click="loginSubmit"></button></div>
 			</div>
@@ -61,18 +53,18 @@ export default {
 			const payload = {
 				uid: data.usernameInput,
 				password: data.passwordInput
-			}
+			};
 			const answer = await auth.login(payload);
-			if(answer.data.errors) {
-				data.error = answer.data.errors[Object.keys(answer.data.errors)[0]][0]
+			if (answer.data.errors) {
+				data.error = answer.data.errors[Object.keys(answer.data.errors)[0]][0];
 			} else if (answer.data.success) {
-				store.dispatch('User/setLogin', answer.data.success)
-				store.dispatch('User/setLevel', answer.data.level)
-				store.dispatch('User/setUid', answer.data.uid)
-				store.dispatch('setCurrentSemester', answer.data.currentSemester)
+				store.dispatch('User/setLogin', answer.data.success);
+				store.dispatch('User/setLevel', answer.data.level);
+				store.dispatch('User/setUid', answer.data.uid);
+				store.dispatch('setCurrentSemester', answer.data.currentSemester);
 				router.push({ name: "Home" });
 			} else {
-				data.output = answer.data
+				data.output = answer.data;
 			}
 		}
 
@@ -86,9 +78,6 @@ export default {
 
 <style lang="scss" scoped>
 .login--container {
-	font-family: "Palatino Linotype", "AmiriRegular", "BookAntiqua", Georgia,
-		serif;
-	font-weight: 0;
 	font-size: 0.8rem;
 
 	.head-wrapper {
@@ -105,6 +94,7 @@ export default {
 			.title {
 				color: white;
 				margin: 0;
+				font-variation-settings: "opsz" 15, "slnt" 0, "wdth" 30, "wght" 600, "GRAD" 100 !important;
 			}
 		}
 	}
@@ -153,7 +143,8 @@ export default {
 					font-style: italic;
 					color: #002350;
 
-					&:focus, &:hover {
+					&:focus,
+					&:hover {
 						outline: 0;
 						border: 1px solid #2285ff;
 					}
