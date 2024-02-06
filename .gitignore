@@ -32,3 +32,4 @@ apache-sites/
 arktur-backend/.env
 arktur-frontend/src/services/RequestService.js
 arktur-storage/
+backend/api/session/data/*
