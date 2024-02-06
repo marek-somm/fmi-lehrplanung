@@ -37,8 +37,8 @@
 					Semester Wochenstunden (SWS):
 					{{
 						selected.data.content.sws
-							? selected.data.content.sws
-							: "Nicht angegeben"
+						? selected.data.content.sws
+						: "Nicht angegeben"
 					}}
 				</p>
 				<p class="attrib" v-if="selected.data.content.extra">
@@ -47,11 +47,7 @@
 			</div>
 			<People :people="selected.data.people" />
 			<h3><u>Module:</u></h3>
-			<div
-				class="block"
-				v-for="(relation, index) in selected.data.modules"
-				:key="index"
-			>
+			<div class="block" v-for="(relation, index) in selected.data.modules" :key="index">
 				<div class="box hover" :key="index" @click="view(relation)">
 					<p>
 						<b>{{ relation.pivot.title }}</b>
@@ -101,8 +97,8 @@ export default {
 		function newEvent() {
 			router.push({
 				name: "Neu",
-				params: {
-					id: props.selected.data.content.id,
+				query: {
+					ref: props.selected.data.content.id
 				},
 			});
 		}
@@ -129,7 +125,7 @@ export default {
 		}
 
 		function isOwnEvent() {
-			return props.selected.data.content.semester > helper.getCurrentSemester() && props.selected.data.content.own
+			return props.selected.data.content.semester > helper.getCurrentSemester() && props.selected.data.content.own;
 		}
 
 		return {
@@ -148,6 +144,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "info.scss";
+
 .attrib {
 	button {
 		height: 1.4em;
