@@ -21,7 +21,8 @@ body {
 }
 
 #app {
-	font-family: "Roboto", Arial, Geneva, sans-serif;
+	font-family: "Roboto Flex", "Roboto Flex Fallback", sans-serif;
+	letter-spacing: .02em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
