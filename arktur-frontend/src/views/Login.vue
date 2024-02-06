@@ -9,7 +9,7 @@
 			<div class="row username">
 				<div class="label"><label>Benutzername: </label></div>
 				<div class="input">
-					<input placeholder="" v-model="data.usernameInput" />
+					<input placeholder="" v-model="data.usernameInput" @keyup.enter="loginSubmit" />
 				</div>
 			</div>
 			<div class="row password">
