@@ -53,12 +53,18 @@
 			grid-gap: 0.2rem;
 			padding: 0;
 			height: max-content;
+			width: max-content;
 
 			.button {
-				height: 2rem;
-				width: 2rem;
+				width: max-content;
 				border: none;
 				padding: 0.4rem;
+				background-color: rgb(238, 238, 238);
+				text-decoration: none;
+				color: black;
+				font-size: 0.9rem;
+				line-height: 0.9rem;
+				text-align: center;
 
 				&:hover {
 					cursor: pointer;
@@ -66,6 +72,7 @@
 			}
 
 			.close {
+				width: 2rem;
 				background-color: rgb(255, 220, 220);
 				grid-column: 2;
 				grid-row: 1;
@@ -76,7 +83,6 @@
 			}
 
 			.new {
-				width: max-content;
 				grid-column: 1;
 				grid-row: 1;
 
@@ -86,9 +92,9 @@
 			}
 
 			.delete {
-				width: 100%;
 				grid-column: 1 / span 2;
 				grid-row: 2;
+				width: auto;
 
 				&:hover {
 					background-color: rgb(190, 190, 190);

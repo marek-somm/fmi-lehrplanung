@@ -87,7 +87,7 @@
 </template>
 
 <script setup>
-import { computed, onBeforeMount, onMounted, reactive } from "vue";
+import { computed, reactive } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import search from "@/services/SearchService.js";
 import helper from "@/services/HelperService.js";
@@ -152,7 +152,6 @@ const data = reactive({
 		],
 	},
 	semester: {
-		old: null,
 		value: null,
 		list: null,
 	},
@@ -199,9 +198,8 @@ async function loadVeranstaltung(id) {
 			addExam(module);
 		});
 		data.extra.value = event.data.content.extra;
-		data.semester.old = event.data.content.semester;
 
-		data.semester.list = getSemesterList(data.semester.old);
+		data.semester.list = getSemesterList(event.data.content.semester);
 		data.semester.value = data.semester.list[event.data.content.rotation - 1];
 	}
 }

@@ -3,9 +3,21 @@
 		<div class="header" v-if="selected">
 			<h3 class="title">{{ selected.data.content.title }}</h3>
 			<div class="button-bar">
-				<button class="new button" @click="newEvent" v-if="user.login">Neu</button>
+				<router-link class="new button" v-if="user.login" :to="{
+					name: 'Neu',
+					query: {
+						ref: props.selected.data.content.id
+					}
+				}">Neu</router-link>
+				<!-- <button class="new button" @click="newEvent" @mouseDown.middle="" v-if="user.login">Neu</button> -->
 				<button class="close button" @click="close">X</button>
-				<button class="delete button" @click="editEvent" v-if="user.level == 2 || isOwnEvent()">Ändern</button>
+				<router-link class="delete button" v-if="user.login" :to="{
+					name: 'Bearbeiten',
+					query: {
+						ref: props.selected.data.content.id
+					}
+				}">Ändern</router-link>
+				<!-- <button class="delete button" @click="editEvent" v-if="user.level == 2 || isOwnEvent()">Ändern</button> -->
 			</div>
 		</div>
 		<div class="info-content" v-if="selected">
@@ -61,7 +73,7 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import { computed, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import People from "./Info/People.vue";
@@ -69,77 +81,61 @@ import search from "@/services/SearchService.js";
 import helper from "@/services/HelperService.js";
 import { useStore } from 'vuex';
 
-export default {
-	components: { People },
-	props: {
-		selected: Object,
-		filterActive: Boolean,
-	},
-	emits: ["close", "relation"],
-	setup(props, { emit }) {
-		const router = useRouter();
-		const store = useStore();
+const props = defineProps({
+	selected: Object,
+	filterActive: Boolean,
+});
+const emit = defineEmits(["close", "relation"]);
+const router = useRouter();
+const store = useStore();
 
-		const user = computed(() => store.state.User);
+const user = computed(() => store.state.User);
 
-		onMounted(() => {
-			window.addEventListener("keyup", function (event) {
-				if (event.key === "Escape") {
-					close();
-				}
-			});
-		});
-
-		function close() {
-			emit("close");
+onMounted(() => {
+	window.addEventListener("keyup", function (event) {
+		if (event.key === "Escape") {
+			close();
 		}
+	});
+});
 
-		function newEvent() {
-			router.push({
-				name: "Neu",
-				query: {
-					ref: props.selected.data.content.id
-				},
-			});
-		}
+function close() {
+	emit("close");
+}
 
-		function editEvent() {
-			router.push({
-				name: "Bearbeiten",
-				params: {
-					id: props.selected.data.content.id,
-				},
-			});
-		}
+function newEvent(newTab = false) {
+	router.push({
+		name: "Neu",
+		query: {
+			ref: props.selected.data.content.id
+		},
+	});
+}
 
-		function toggleAktiv() {
-			// speichern von !props.selected.data.aktiv in der datenbank
-			search.toggleAktiv(
-				props.selected.data.veranstaltungsnummer,
-				props.selected.data.semester
-			);
-		}
+function editEvent() {
+	router.push({
+		name: "Bearbeiten",
+		params: {
+			id: props.selected.data.content.id,
+		},
+	});
+}
 
-		function view(relation) {
-			emit("relation", relation);
-		}
+function toggleAktiv() {
+	// speichern von !props.selected.data.aktiv in der datenbank
+	search.toggleAktiv(
+		props.selected.data.veranstaltungsnummer,
+		props.selected.data.semester
+	);
+}
 
-		function isOwnEvent() {
-			return props.selected.data.content.semester > helper.getCurrentSemester() && props.selected.data.content.own;
-		}
+function view(relation) {
+	emit("relation", relation);
+}
 
-		return {
-			helper,
-			close,
-			newEvent,
-			editEvent,
-			toggleAktiv,
-			view,
-			user,
-			isOwnEvent
-		};
-	},
-};
+function isOwnEvent() {
+	return props.selected.data.content.semester > helper.getCurrentSemester() && props.selected.data.content.own;
+}
 </script>
 
 <style lang="scss" scoped>

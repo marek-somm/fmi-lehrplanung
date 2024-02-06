@@ -6,45 +6,22 @@
 			<SearchPanel class="searchpanel" v-model="data.title.value" />
 			<label>SWS </label>
 			<label v-if="data.existing" class="data">{{ data.sws.value }}</label>
-			<SearchPanel
-				class="searchpanel"
-				v-model="data.sws.value"
-				regex="\B|\d"
-				v-if="!data.existing"
-			/>
+			<SearchPanel class="searchpanel" v-model="data.sws.value" regex="\B|\d" v-if="!data.existing" />
 			<label>Turnus </label>
 			<label v-if="data.existing" class="data">{{
 				data.rotation.value
 			}}</label>
-			<SearchPanel
-				class="searchpanel"
-				v-model="data.rotation.input"
-				:suggestions="data.rotation.suggestions"
-				:placeholder="data.rotation.value"
-				:dropdown="true"
-				@blur="resetValue(data.rotation)"
-				@enter="selectValue(data.rotation)"
-				v-if="!data.existing"
-			/>
+			<SearchPanel class="searchpanel" v-model="data.rotation.input" :suggestions="data.rotation.suggestions"
+				:placeholder="data.rotation.value" :dropdown="true" @blur="resetValue(data.rotation)"
+				@enter="selectValue(data.rotation)" v-if="!data.existing" />
 			<label>Art </label>
 			<label v-if="data.existing" class="data">{{ data.type.value }}</label>
-			<SearchPanel
-				class="searchpanel"
-				v-model="data.type.input"
-				:suggestions="data.type.suggestions"
-				:placeholder="data.type.value"
-				:dropdown="true"
-				@blur="resetValue(data.type)"
-				@enter="selectValue(data.type)"
-				v-if="!data.existing"
-			/>
+			<SearchPanel class="searchpanel" v-model="data.type.input" :suggestions="data.type.suggestions"
+				:placeholder="data.type.value" :dropdown="true" @blur="resetValue(data.type)" @enter="selectValue(data.type)"
+				v-if="!data.existing" />
 			<label>Semester</label>
 			<select id="semesters" class="selection" v-model="data.semester.value">
-				<option
-					v-for="(semester, index) in data.semester.list"
-					:key="index"
-					:value="semester"
-				>
+				<option v-for="(semester, index) in data.semester.list" :key="index" :value="semester">
 					{{ convertSemester(semester) }}
 				</option>
 			</select>
@@ -54,11 +31,7 @@
 
 		<h3>Personen</h3>
 		<div class="persons">
-			<div
-				class="list"
-				v-for="(person, index) in data.person.list"
-				:key="index"
-			>
+			<div class="list" v-for="(person, index) in data.person.list" :key="index">
 				<button class="remove" @click="removePerson(data.person, person)">
 					X
 				</button>
@@ -66,15 +39,9 @@
 			</div>
 			<div class="grid">
 				Person hinzufügen
-				<SearchPanel
-					class="searchpanel"
-					v-model="data.person.input"
-					:suggestions="data.person.suggestions"
-					:placeholder="data.person.value"
-					:dropdown="true"
-					@blur="resetValue(data.person)"
-					@enter="addPerson(data.person.input)"
-				/>
+				<SearchPanel class="searchpanel" v-model="data.person.input" :suggestions="data.person.suggestions"
+					:placeholder="data.person.value" :dropdown="true" @blur="resetValue(data.person)"
+					@enter="addPerson(data.person.input)" />
 			</div>
 		</div>
 
@@ -84,29 +51,18 @@
 				<button class="remove" @click="removeExam(exam)" v-if="user.level >= 2">x</button>
 				<div class="grid">
 					<label>Titel </label>
-					<SearchPanel
-						class="searchpanel"
-						:suggestions="data.title.value ? [data.title.value] : []"
-						v-model="exam.title"
-					/>
+					<SearchPanel class="searchpanel" :suggestions="data.title.value ? [data.title.value] : []"
+						v-model="exam.title" />
 					<label v-if="exam.pnr">Prüfungsnummer </label>
 					<label v-if="exam.pnr" class="data">{{ exam.pnr }}</label>
 					<label>Modulecode </label>
 					<label label v-if="exam.pnr" class="data">{{
 						exam.modulecode
 					}}</label>
-					<SearchPanel
-						class="searchpanel"
-						v-if="!exam.pnr"
-						v-model="exam.modulecode"
-					/>
+					<SearchPanel class="searchpanel" v-if="!exam.pnr" v-model="exam.modulecode" />
 					<label v-show="!exam.modulecode">Beschreibung </label>
-					<SearchPanel
-						class="searchpanel"
-						placeholder="Falls kein Modulcode"
-						v-model="exam.description"
-						v-show="!exam.modulecode"
-					/>
+					<SearchPanel class="searchpanel" placeholder="Falls kein Modulcode" v-model="exam.description"
+						v-show="!exam.modulecode" />
 				</div>
 			</div>
 			<div class="new" @click="addExam" role="button" v-if="user.level >= 2">
@@ -129,273 +85,262 @@
 	</div>
 </template>
 
-<script>
-import { computed, onMounted, reactive } from "vue";
-import { useRouter } from "vue-router";
+<script setup>
+import { computed, reactive } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import search from "@/services/SearchService.js";
 import helper from "@/services/HelperService.js";
 import update from "@/services/UpdateService.js";
 import SearchPanel from "../components/SearchPanel.vue";
 import { useStore } from 'vuex';
 
-export default {
-	components: { SearchPanel },
-	props: {
-		id: Number,
+const data = reactive({
+	existing: false,
+	vnr: null,
+	title: {
+		value: null,
 	},
-	setup(props) {
-		const data = reactive({
-			existing: false,
-			vnr: null,
-			title: {
-				value: null,
-			},
-			sws: {
-				value: null,
-			},
-			rotation: {
-				input: "",
-				value: "",
-				suggestions: [
-					helper.convertTurnus(0),
-					helper.convertTurnus(1),
-					helper.convertTurnus(2),
-				],
-			},
-			extra: {
-				value: null
-			},
-			type: {
-				input: "",
-				value: "",
-				suggestions: [
-					"Arbeitsgemeinschaft",
-					"Begleitveranstaltung zum Praxissemester",
-					"Einführungsveranstaltung",
-					"Klausur",
-					"Kolloquium",
-					"Kurs",
-					"Oberseminar",
-					"Praktikum",
-					"Praktikum/Seminar",
-					"Praxismodul",
-					"Projekt",
-					"Proseminar",
-					"Prüfungsvorbereitung",
-					"Ringvorlesung",
-					"Seminar",
-					"Seminar/Übung",
-					"Sonstiges",
-					"Tutorium",
-					"Vorlesung",
-					"Vorlesung/Praktikum",
-					"Vorlesung/Seminar",
-					"Vorlesung/Übung",
-					"Vortrag",
-					"Workshop",
-					"Übung",
-					"Übung/Praktikum",
-				],
-			},
-			semester: {
-				value: null,
-				list: null,
-				current: helper.getCurrentSemester()
-			},
-			person: {
-				input: "",
-				value: "",
-				suggestions: [],
-				list: [],
-			},
-			exams: [],
-		});
+	sws: {
+		value: null,
+	},
+	rotation: {
+		input: "",
+		value: "",
+		suggestions: [
+			helper.convertTurnus(0),
+			helper.convertTurnus(1),
+			helper.convertTurnus(2),
+		],
+	},
+	extra: {
+		value: null
+	},
+	type: {
+		input: "",
+		value: "",
+		suggestions: [
+			"Arbeitsgemeinschaft",
+			"Begleitveranstaltung zum Praxissemester",
+			"Einführungsveranstaltung",
+			"Klausur",
+			"Kolloquium",
+			"Kurs",
+			"Oberseminar",
+			"Praktikum",
+			"Praktikum/Seminar",
+			"Praxismodul",
+			"Projekt",
+			"Proseminar",
+			"Prüfungsvorbereitung",
+			"Ringvorlesung",
+			"Seminar",
+			"Seminar/Übung",
+			"Sonstiges",
+			"Tutorium",
+			"Vorlesung",
+			"Vorlesung/Praktikum",
+			"Vorlesung/Seminar",
+			"Vorlesung/Übung",
+			"Vortrag",
+			"Workshop",
+			"Übung",
+			"Übung/Praktikum",
+		],
+	},
+	semester: {
+		value: null,
+		list: null,
+		current: helper.getCurrentSemester()
+	},
+	person: {
+		input: "",
+		value: "",
+		suggestions: [],
+		list: [],
+	},
+	exams: [],
+});
 
-		const store = useStore();
-		const router = useRouter();
-		const user = computed(() => store.state.User);
+const store = useStore();
+const router = useRouter();
+const route = useRoute();
+const user = computed(() => store.state.User);
 
-		onMounted(() => {
-			getPersons();
-			getVeranstaltung(props.id);
-		});
+const params = route.query;
 
-		async function getVeranstaltung(id) {
-			if (id) {
-				data.existing = true;
-				let event = await search.getEvent(id);
-				if (event.status == 404) {
-					await router.push({ name: "Home" });
-				} else {
-					data.vnr = event.data.content.vnr;
-					data.title.value = event.data.content.title;
-					data.sws.value = event.data.content.sws;
-					data.rotation.value = helper.convertTurnus(
-						event.data.content.rotation
-					);
-					data.type.value = event.data.content.type;
-					event.data.people.forEach((person) => {
-						addPerson(person.surname + ", " + person.forename);
-					});
-					event.data.modules.forEach((module) => {
-						addExam(module);
-					});
-					data.extra.value = event.data.content.extra;
+loadVeranstaltung(params.ref);
+getPersons();
 
-					//semester list
-					let currentSem = data.semester.current;
-					let sem1 = helper.addTurnus(currentSem, 1);
-					let sem2 = helper.addTurnus(sem1, 1);
-					let sem3 = helper.addTurnus(sem2, 1);
-					let sem4 = helper.addTurnus(sem3, 1);
-					data.semester.list = [currentSem, sem1, sem2, sem3, sem4];
-					data.semester.value = event.data.content.semester;
-				}
-			}
-		}
+data.semester.list = getSemesterList(helper.getCurrentSemester());
+data.semester.value = data.semester.list[0];
 
-		async function getPersons() {
-			let res = await search.searchPerson("");
-			let persons = [];
-			res.data.forEach((item) => {
-				persons.push(item.surname + ", " + item.forename);
-			});
-			data.person.suggestions = persons;
-			data.person.suggestions.sort();
-		}
-
-		function addPerson(person) {
-			if (person) {
-				data.person.list.push(person);
-
-				helper.removeFromArray(data.person.suggestions, person);
-
-				data.person.input = "";
-			}
-		}
-
-		function removePerson(field, person) {
-			helper.removeFromArray(field.list, person);
-
-			field.suggestions.push(person);
-			field.suggestions.sort();
-		}
-
-		function resetValue(field) {
-			field.input = "";
-		}
-
-		function selectValue(field) {
-			if (field.input != "") {
-				field.value = field.input;
-			}
-			resetValue(field);
-		}
-
-		function addExam(exam) {
-			data.exams.push({
-				title: exam.modulecode ? exam.pivot.title : "",
-				pnr: exam.modulecode ? exam.pivot.pnr : null,
-				modulecode: exam.modulecode ? exam.modulecode : null,
-				description: "",
-			});
-		}
-
-		function removeExam(exam) {
-			data.exams.splice(data.exams.indexOf(exam), 1);
-		}
-
-		function saveEvent() {
-			let createEventBool = true;
-			if (
-				data.title.value &&
-				data.sws.value &&
-				data.rotation.value &&
-				data.type.value &&
-				data.semester.value && 
-				data.person.list.length > 0
-			) {
-				if (data.exams.length > 0) {
-					data.exams.forEach((exam) => {
-						if (!(exam.title && (exam.modulecode || exam.description))) {
-							alert("Es sind noch leere Felder vorhanden!");
-							createEventBool = false;
-						}
-					});
-				}
-			} else {
-				alert("Es sind noch leere Felder vorhanden!");
-				createEventBool = false;
-			}
-			if (createEventBool) {
-				save();
-			}
-		}
-
-		async function save() {
-			let response = await update.saveEvent({
-				id: props.id,
-				vnr: data.vnr,
-				sem: data.semester.value,
-				title: data.title.value,
-				sws: data.sws.value,
-				extra: data.extra.value,
-				rotation: helper.convertTurnusToNumber(data.rotation.value),
-				type: data.type.value,
-				people: data.person.list,
-				exams: data.exams,
-			});
-			if (response) {
-				if (response.status == 422) {
-					alert("Leider ist ein Fehler aufgetreten. Bitte kontaktieren Sie einen zuständigen Administratoren.");
-				} else if ((response.status = 200)) {
-					alert("Die Veranstaltung wurde erfolgreich angelegt");
-					router.push({ name: "Home" });
-				}
-			} else {
-				alert("Ein unerwarteter Fehler ist aufgetreten. Bitte kontaktieren Sie einen zuständigen Administratoren.");
-			}
-		}
-
-		function cancel() {
-			let value = confirm(
-				"Wollen Sie wirklich abbrechen? Alle Änderungen gehen verloren."
+async function loadVeranstaltung(id) {
+	if (id) {
+		data.existing = true;
+		let event = await search.getEvent(id);
+		if (event.status == 404) {
+			await router.push({ name: "Home" });
+		} else {
+			data.vnr = event.data.content.vnr;
+			data.title.value = event.data.content.title;
+			data.sws.value = event.data.content.sws;
+			data.rotation.value = helper.convertTurnus(
+				event.data.content.rotation
 			);
-			if (value == true) {
-				router.push({ name: "Home" });
-			}
-		}
+			data.type.value = event.data.content.type;
+			event.data.people.forEach((person) => {
+				addPerson(person.surname + ", " + person.forename);
+			});
+			event.data.modules.forEach((module) => {
+				addExam(module);
+			});
+			data.extra.value = event.data.content.extra;
 
-		async function deleteEvent() {
-			let value = confirm("Wollen Sie die Veranstaltung wirklich löschen?");
-			if (value == true) {
-				await update.deleteEvent({
-					id: props.id,
-				});
-				router.push({ name: "Home" });
-			}
-		}
+			data.semester.value = event.data.content.semester;
 
-		function convertSemester(sem) {
-			return helper.convertSemester(sem);
 		}
+	}
+}
 
-		return {
-			data,
-			addPerson,
-			removePerson,
-			resetValue,
-			selectValue,
-			addExam,
-			removeExam,
-			saveEvent,
-			cancel,
-			deleteEvent,
-			convertSemester,
-			user
-		};
-	},
-};
+async function getPersons() {
+	let res = await search.searchPerson("");
+	let persons = [];
+	res.data.forEach((item) => {
+		persons.push(item.surname + ", " + item.forename);
+	});
+	data.person.suggestions = persons;
+	data.person.suggestions.sort();
+
+	data.person.list.forEach((person) => {
+		helper.removeFromArray(data.person.suggestions, person);
+	});
+}
+
+function getSemesterList(startSemester) {
+	let sem1 = helper.addTurnus(startSemester, 1);
+	let sem2 = helper.addTurnus(sem1, 1);
+	let sem3 = helper.addTurnus(sem2, 1);
+	let sem4 = helper.addTurnus(sem3, 1);
+
+	return [sem1, sem2, sem3, sem4];
+}
+
+function addPerson(person) {
+	if (person) {
+		data.person.list.push(person);
+
+		helper.removeFromArray(data.person.suggestions, person);
+
+		data.person.input = "";
+	}
+}
+
+function removePerson(field, person) {
+	helper.removeFromArray(field.list, person);
+
+	field.suggestions.push(person);
+	field.suggestions.sort();
+}
+
+function resetValue(field) {
+	field.input = "";
+}
+
+function selectValue(field) {
+	if (field.input != "") {
+		field.value = field.input;
+	}
+	resetValue(field);
+}
+
+function addExam(exam) {
+	data.exams.push({
+		title: exam.modulecode ? exam.pivot.title : "",
+		pnr: exam.modulecode ? exam.pivot.pnr : null,
+		modulecode: exam.modulecode ? exam.modulecode : null,
+		description: "",
+	});
+}
+
+function removeExam(exam) {
+	data.exams.splice(data.exams.indexOf(exam), 1);
+}
+
+function saveEvent() {
+	let createEventBool = true;
+	if (
+		data.title.value &&
+		data.sws.value &&
+		data.rotation.value &&
+		data.type.value &&
+		data.semester.value &&
+		data.person.list.length > 0
+	) {
+		if (data.exams.length > 0) {
+			data.exams.forEach((exam) => {
+				if (!(exam.title && (exam.modulecode || exam.description))) {
+					alert("Es sind noch leere Felder vorhanden!");
+					createEventBool = false;
+				}
+			});
+		}
+	} else {
+		alert("Es sind noch leere Felder vorhanden!");
+		createEventBool = false;
+	}
+	if (createEventBool) {
+		save();
+	}
+}
+
+async function save() {
+	let response = await update.saveEvent({
+		id: props.id,
+		vnr: data.vnr,
+		sem: data.semester.value,
+		title: data.title.value,
+		sws: data.sws.value,
+		extra: data.extra.value,
+		rotation: helper.convertTurnusToNumber(data.rotation.value),
+		type: data.type.value,
+		people: data.person.list,
+		exams: data.exams,
+	});
+	if (response) {
+		if (response.status == 422) {
+			alert("Leider ist ein Fehler aufgetreten. Bitte kontaktieren Sie einen zuständigen Administratoren.");
+		} else if ((response.status = 200)) {
+			alert("Die Veranstaltung wurde erfolgreich angelegt");
+			router.push({ name: "Home" });
+		}
+	} else {
+		alert("Ein unerwarteter Fehler ist aufgetreten. Bitte kontaktieren Sie einen zuständigen Administratoren.");
+	}
+}
+
+function cancel() {
+	let value = confirm(
+		"Wollen Sie wirklich abbrechen? Alle Änderungen gehen verloren."
+	);
+	if (value == true) {
+		router.push({ name: "Home" });
+	}
+}
+
+async function deleteEvent() {
+	let value = confirm("Wollen Sie die Veranstaltung wirklich löschen?");
+	if (value == true) {
+		await update.deleteEvent({
+			id: props.id,
+		});
+		router.push({ name: "Home" });
+	}
+}
+
+function convertSemester(sem) {
+	return helper.convertSemester(sem);
+}
+
 </script>
 
 <style lang="scss" scoped>
