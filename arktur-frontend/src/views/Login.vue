@@ -28,52 +28,44 @@
 		</div>
 	</div>
 </template>
-<script>
+<script setup>
 import store from "@/store";
 import { reactive } from "vue";
 import { useRouter } from "vue-router";
 import auth from "@/services/AuthService";
 
-export default {
-	setup() {
-		const router = useRouter();
+const router = useRouter();
 
-		const data = reactive({
-			usernameInput: "",
-			passwordInput: "",
-			error: null,
-			output: null
-		});
+const data = reactive({
+	usernameInput: "",
+	passwordInput: "",
+	error: null,
+	output: null
+});
 
-		if (store.state.User.login) {
-			router.push({ name: "Home" });
-		}
+if (store.state.User.login) {
+	router.push({ name: "Home" });
+}
 
-		async function loginSubmit() {
-			const payload = {
-				uid: data.usernameInput,
-				password: data.passwordInput
-			};
-			const answer = await auth.login(payload);
-			if (answer.data.errors) {
-				data.error = answer.data.errors[Object.keys(answer.data.errors)[0]][0];
-			} else if (answer.data.success) {
-				store.dispatch('User/setLogin', answer.data.success);
-				store.dispatch('User/setLevel', answer.data.level);
-				store.dispatch('User/setUid', answer.data.uid);
-				store.dispatch('setCurrentSemester', answer.data.currentSemester);
-				router.push({ name: "Home" });
-			} else {
-				data.output = answer.data;
-			}
-		}
+async function loginSubmit() {
+	const payload = {
+		uid: data.usernameInput,
+		password: data.passwordInput
+	};
+	const answer = await auth.login(payload);
+	if (answer.data.errors) {
+		data.error = answer.data.errors[Object.keys(answer.data.errors)[0]][0];
+	} else if (answer.data.success) {
+		store.dispatch('User/setLogin', answer.data.success);
+		store.dispatch('User/setLevel', answer.data.level);
+		store.dispatch('User/setUid', answer.data.uid);
+		store.dispatch('setCurrentSemester', answer.data.currentSemester);
+		router.push({ name: "Home" });
+	} else {
+		data.output = answer.data;
+	}
+}
 
-		return {
-			data,
-			loginSubmit,
-		};
-	},
-};
 </script>
 
 <style lang="scss" scoped>
