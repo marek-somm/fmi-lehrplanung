@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\GetController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UpdateController;
 
 /*
@@ -22,29 +23,33 @@ use App\Http\Controllers\UpdateController;
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::post('/login', [AuthController::class, 'login']);
-    Route::post('/logout', [AuthController::class, 'logout']);
-    Route::get('/check', [AuthController::class, 'check']);
+	Route::post('/login', [AuthController::class, 'login']);
+	Route::post('/logout', [AuthController::class, 'logout']);
+	Route::get('/check', [AuthController::class, 'check']);
 
-    Route::get('/get/subjects', [GetController::class, 'getSubjects']);
-    Route::get('/get/fieldOfStudies', [GetController::class, 'getFieldOfStudies']);
-    Route::get('/get/categories', [GetController::class, 'getCategories']);
+	Route::get('/get/subjects', [GetController::class, 'getSubjects']);
+	Route::get('/get/fieldOfStudies', [GetController::class, 'getFieldOfStudies']);
+	Route::get('/get/categories', [GetController::class, 'getCategories']);
 
-    Route::get('/get/events', [SearchController::class, 'getStudentEvents']);
+	Route::get('/get/events', [SearchController::class, 'getStudentEvents']);
 
-    Route::get('/get/event', [EventController::class, 'getEvent']);
-    Route::get('/get/module', [SearchController::class, 'getModule']);
-    
-    Route::middleware('auth:sanctum')->group(function() {
-        Route::get('/search/event', [SearchController::class, 'searchEvent']);
-        Route::get('/search/module', [SearchController::class, 'searchModule']);
-        Route::get('/get/new', [ExportController::class, 'getEvents']);
-        Route::get('/search/person', [SearchController::class, 'searchPerson']);
-    
-        Route::get('/user/events', [SearchController::class, 'getUserEvents']);
+	Route::get('/get/event', [EventController::class, 'getEvent']);
+	Route::get('/get/module', [SearchController::class, 'getModule']);
 
-        Route::put('/add/event', [UpdateController::class, 'addEvent']);
-        Route::put('/update/event', [UpdateController::class, 'updateEvent']);
-        Route::put('/remove/event', [UpdateController::class, 'removeEvent']);
-    });
+	Route::get('/get/semester', [SettingController::class, 'getSemester']);
+
+	Route::middleware('auth:sanctum')->group(function () {
+		Route::get('/search/event', [SearchController::class, 'searchEvent']);
+		Route::get('/search/module', [SearchController::class, 'searchModule']);
+		Route::get('/get/new', [ExportController::class, 'getEvents']);
+		Route::get('/search/person', [SearchController::class, 'searchPerson']);
+
+		Route::get('/user/events', [SearchController::class, 'getUserEvents']);
+
+		Route::put('/add/event', [UpdateController::class, 'addEvent']);
+		Route::put('/update/event', [UpdateController::class, 'updateEvent']);
+		Route::put('/remove/event', [UpdateController::class, 'removeEvent']);
+
+		Route::put('/update/setting', [SettingController::class, 'setSetting']);
+	});
 });

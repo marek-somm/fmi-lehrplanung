@@ -3,7 +3,9 @@
 namespace App\Helpers;
 
 class General {
-    static function get_current_semester() {
-        return 20221;
-    }
+	static int $current_semester = 20221;
+	
+	static function get_current_semester() {
+		return General::$current_semester;
+	}
 }

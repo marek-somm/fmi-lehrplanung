@@ -82,5 +82,9 @@ export default {
 	async getStudentEvents(filter) {
 		const payload = makePayload(filter)
 		return rs.get("get/events", payload);
+	},
+
+	async getCurrentSemester() {
+		return rs.get("get/semester");
 	}
 }
