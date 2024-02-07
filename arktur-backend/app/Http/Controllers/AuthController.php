@@ -100,7 +100,7 @@ class AuthController extends Controller {
 			'success' => true,
 			'level' => Auth::user()->level,
 			'uid' => Auth::user()->uid,
-			'currentSemester' => SettingController::getSetting('semester')['semester']
+			'currentSemester' => SettingController::getSetting('semester')
 		], 200);
 	}
 
@@ -117,7 +117,7 @@ class AuthController extends Controller {
 			'success' => false,
 			'level' => 0,
 			'uid' => '',
-			'currentSemester' => General::get_current_semester(),
+			'currentSemester' => SettingController::getSetting('semester')
 		], 401);
 	}
 

@@ -249,13 +249,7 @@ class SearchController extends Controller {
 			'user' => [new Username]
 		]);
 
-		$current_semester = General::get_current_semester();
-
-		$events_all = User::where('uid', $request->user)
-			->firstOrFail()
-			->events()
-			->get()
-			->toArray();
+		$current_semester = SettingController::getSetting('semester');
 
 		$events_current = User::where('uid', $request->user)
 			->firstOrFail()

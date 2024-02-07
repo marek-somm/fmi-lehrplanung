@@ -15,7 +15,7 @@ class SettingController extends Controller {
 			return null;
 		}
 
-		return [$setting['key'] => $setting['value']];
+		return $setting['value'];
 	}
 
 	public function setSetting(Request $request) {
@@ -61,6 +61,6 @@ class SettingController extends Controller {
 			return response("semester setting not found.", 500);
 		}
 
-		return response($semester, 200);
+		return response($semester['semester'], 200);
 	}
 }

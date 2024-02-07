@@ -14,8 +14,6 @@ import { useStore } from "vuex";
 
 const store = useStore();
 
-console.log(store.state.currentSemester);
-
 async function nextSemester() {
 	let value = confirm("Sind sie sicher, dass sie das Semester wechseln möchten? Dieser Schritt kann nicht rückgängig gemacht werden!");
 	if (value == true) {

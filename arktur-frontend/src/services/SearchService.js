@@ -53,10 +53,9 @@ export default {
 		return rs.get("search/person", payload);
 	},
 
-	async getUserEvents(currentSem) {
+	async getUserEvents() {
 		const payload = makePayload({
 			user: store.state.User.uid,
-			currentSem: currentSem
 		})
 		return rs.get("user/events", payload);
 	},

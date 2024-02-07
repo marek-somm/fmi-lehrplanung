@@ -18,7 +18,6 @@ import Accordion from "@/components/Accordion";
 
 import { computed, onMounted, reactive } from "@vue/runtime-core";
 import search from "@/services/SearchService.js";
-import helper from "@/services/HelperService.js";
 import InfoVeranstaltung from "@/components/Search/InfoVeranstaltung.vue";
 import InfoModul from "@/components/Search/InfoModul.vue";
 import { useStore } from 'vuex';
@@ -51,7 +50,7 @@ onMounted(() => {
 });
 
 async function getEvents() {
-	let events = await search.getUserEvents(helper.getCurrentSemester());
+	let events = await search.getUserEvents();
 	data.events.data = events.data;
 	data.events.selected = Object.keys(data.events.data["future"]).length;
 }
