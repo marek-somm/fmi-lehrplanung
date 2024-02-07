@@ -5,9 +5,7 @@
 				<router-link class="identity-link" :to="{ name: 'Home' }">
 					<div class="identity"></div>
 					<span class="name">Lehre</span>
-					<span class="subidentity"
-						>Fakultät für Mathematik und Informatik</span
-					>
+					<span class="subidentity">Fakultät für Mathematik und Informatik</span>
 				</router-link>
 			</div>
 			<div class="nav-container center"></div>
@@ -15,27 +13,12 @@
 		</div>
 		<div class="head-bottom-wrapper">
 			<div class="head-bottom">
-				<router-link
-					class="link"
-					v-if="user.level > 0"
-					:to="{ name: 'Veranstaltungen' }"
-					>Veranstaltungen</router-link
-				>
-				<router-link class="link" v-if="user.level > 0" :to="{ name: 'Module' }"
-					>Module</router-link
-				>
-				<router-link class="link" v-if="user.level >= 2" :to="{ name: 'Export' }"
-					>Export</router-link
-				>
-				<router-link class="link" v-if="!user.login" :to="{ name: 'Login' }"
-					>Anmelden</router-link
-				>
-				<router-link class="link" :to="{ name: 'Overview' }"
-					>Übersicht</router-link
-				>
-				<router-link class="link" v-if="user.login" :to="{ name: 'Logout' }"
-					>Abmelden</router-link
-				>
+				<router-link class="link" v-if="user.level > 0" :to="{ name: 'Veranstaltungen' }">Veranstaltungen</router-link>
+				<router-link class="link" v-if="user.level > 0" :to="{ name: 'Module' }">Module</router-link>
+				<router-link class="link" v-if="user.level >= 2" :to="{ name: 'Export' }">Export</router-link>
+				<router-link class="link" v-if="!user.login" :to="{ name: 'Login' }">Anmelden</router-link>
+				<router-link class="link" :to="{ name: 'Overview' }">Übersicht</router-link>
+				<router-link class="link" v-if="user.login" :to="{ name: 'Logout' }">Abmelden</router-link>
 			</div>
 			<div class="uid-wrapper" v-if="user.login">
 				Angemeldet&nbsp;als&nbsp;
@@ -43,21 +26,14 @@
 			</div>
 		</div>
 	</div>
-	<div
-		id="history-wrapper"
-		v-show="getPathElements()[0] != '' && getPathElements()[0] != 'Logout'"
-	>
+	<div id="history-wrapper" v-show="getPathElements()[0] != '' && getPathElements()[0] != 'Logout'">
 		<ul class="history">
 			<li class="history-item home">
 				<router-link class="link" :to="{ name: 'Home' }">
 					Startseite
 				</router-link>
 			</li>
-			<li
-				class="history-item"
-				v-for="(item, index) in getPathElements()"
-				:key="index"
-			>
+			<li class="history-item" v-for="(item, index) in getPathElements()" :key="index">
 				<router-link class="link" :to="{ name: item }">
 					{{ item }}
 				</router-link>
@@ -66,42 +42,30 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import { useStore } from "vuex";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import Settings from "./Settings.vue";
 
-export default {
-	components: {
-		Settings
-	},
-	setup() {
-		const store = useStore();
-		const route = useRoute();
+const store = useStore();
+const route = useRoute();
 
-		const user = computed(() => store.state.User);
+const user = computed(() => store.state.User);
 
-		const path = computed(() => route.path);
+const path = computed(() => route.path);
 
-		function getPathElements() {
-			var path = route.path;
-			var nodes = path.slice(1).split("/");
-			if (nodes[0] == "neu" || nodes[0] == "bearbeiten")
-				nodes = nodes.splice(0, 1);
-			nodes = nodes.map(
-				(node) => node.charAt(0).toUpperCase() + node.slice(1)
-			);
-			return nodes;
-		}
+function getPathElements() {
+	var path = route.path;
+	var nodes = path.slice(1).split("/");
+	if (nodes[0] == "neu" || nodes[0] == "bearbeiten")
+		nodes = nodes.splice(0, 1);
+	nodes = nodes.map(
+		(node) => node.charAt(0).toUpperCase() + node.slice(1)
+	);
+	return nodes;
+}
 
-		return {
-			user,
-			path,
-			getPathElements,
-		};
-	},
-};
 </script>
 
 <style lang="scss" scoped>
@@ -135,6 +99,7 @@ export default {
 				width: 19rem;
 
 				&:hover {
+
 					.subidentity,
 					.name {
 						color: $color2_dark;
@@ -247,8 +212,7 @@ export default {
 		.history-item {
 			padding: 0 1rem 0 1rem;
 			width: max-content;
-			background: url("https://arktur.fmi.uni-jena.de/assets/history_default.svg")
-				no-repeat left center;
+			background: url("https://arktur.fmi.uni-jena.de/assets/history_default.svg") no-repeat left center;
 
 			.link {
 				font-size: 0.9em;
@@ -265,8 +229,7 @@ export default {
 		}
 
 		.home {
-			background: url("https://arktur.fmi.uni-jena.de/assets/history_home.svg")
-				no-repeat left center;
+			background: url("https://arktur.fmi.uni-jena.de/assets/history_home.svg") no-repeat left center;
 		}
 	}
 }
