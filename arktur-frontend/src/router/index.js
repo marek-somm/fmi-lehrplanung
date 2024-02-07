@@ -6,6 +6,7 @@ import Logout from '@/views/Logout';
 import Veranstaltungen from '@/views/Veranstaltungen';
 import Module from '@/views/Module';
 import Export from '@/views/Export';
+import Settings from '@/views/Settings';
 import NotFound from '@/views/NotFound';
 import NewEvent from '@/views/NewEvent';
 import EditEvent from '@/views/EditEvent';
@@ -66,6 +67,15 @@ const routes = [
 		beforeEnter: checkAccess,
 		meta: {
 			title: "Export | Lehre"
+		}
+	},
+	{
+		path: '/settings',
+		name: 'Settings',
+		component: Settings,
+		beforeEnter: checkAccess,
+		meta: {
+			title: "Einstellungen | Lehre"
 		}
 	},
 	{

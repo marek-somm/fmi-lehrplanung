@@ -16,6 +16,7 @@
 				<router-link class="link" v-if="user.level > 0" :to="{ name: 'Veranstaltungen' }">Veranstaltungen</router-link>
 				<router-link class="link" v-if="user.level > 0" :to="{ name: 'Module' }">Module</router-link>
 				<router-link class="link" v-if="user.level >= 2" :to="{ name: 'Export' }">Export</router-link>
+				<router-link class="link" v-if="user.level >= 2" :to="{ name: 'Settings' }">Einstellungen</router-link>
 				<router-link class="link" v-if="!user.login" :to="{ name: 'Login' }">Anmelden</router-link>
 				<router-link class="link" :to="{ name: 'Overview' }">Übersicht</router-link>
 				<router-link class="link" v-if="user.login" :to="{ name: 'Logout' }">Abmelden</router-link>
