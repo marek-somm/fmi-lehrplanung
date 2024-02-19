@@ -11,7 +11,7 @@
 				}">Neu</router-link>
 				<!-- <button class="new button" @click="newEvent" @mouseDown.middle="" v-if="user.login">Neu</button> -->
 				<button class="close button" @click="close">X</button>
-				<router-link class="delete button" v-if="user.login" :to="{
+				<router-link class="delete button" v-if="user.level == 2 || isOwnEvent()" :to="{
 					name: 'Bearbeiten',
 					query: {
 						ref: props.selected.data.content.id
