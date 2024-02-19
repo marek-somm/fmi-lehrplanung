@@ -1,43 +1,24 @@
 <template>
 	<div class="accordion-container">
-		<div
-			v-for="(time, key, indexT) in content.data"
-			:key="indexT"
-			class="section"
-		>
-			<div
-				v-for="(semester, index) in helper.sortObj(time)"
-				:key="index + getIndex(indexT)"
-			>
-				<button
-					class="accordion"
-					:class="{ active: content.selected == index + getIndex(indexT) }"
-					@click="
-						content.selected =
-							content.selected == index + getIndex(indexT)
-								? -1
-								: index + getIndex(indexT)
-					"
-				>
+		<div v-for="(time, key, indexT) in content.data" :key="indexT" class="section">
+			<div v-for="(semester, index) in helper.sortObj(time)" :key="index + getIndex(indexT)">
+				<button class="accordion" :class="{ active: content.selected == index + getIndex(indexT) }" @click="
+					content.selected =
+					content.selected == index + getIndex(indexT)
+						? -1
+						: index + getIndex(indexT)
+					">
 					{{ indexT == 1 ? "Dieses Semester" : helper.convertSemester(semester[0]) }}
 				</button>
-				<div
-					class="panel"
-					:style="{
-						maxHeight:
-							9 *
-								semester[1].length *
-								(content.selected == index + getIndex(indexT)) +
-							'rem',
-					}"
-				>
-					<div
-						class="content"
-						:class="{ deactive: !value.active }"
-						v-for="(value, index) in semester[1]"
-						:key="index"
-						@click="click(value)"
-					>
+				<div class="panel" :style="{
+					maxHeight:
+						9 *
+						semester[1].length *
+						(content.selected == index + getIndex(indexT)) +
+						'rem',
+				}">
+					<div class="content" :class="{ deactive: !value.active }" v-for="(value, index) in semester[1]" :key="index"
+						@click="click(value)">
 						<h3>{{ value.title }} ({{ value.vnr ? value.vnr : "nicht vorhanden" }})</h3>
 						<p>
 							<b>[{{ value.type }}]</b>
@@ -71,12 +52,11 @@ export default {
 				event["semester_org"] &&
 				event["semester_org"] != event["semester"]
 			) {
+
 				router.push({
-					name: "Neu",
-					params: {
-						id: event["id"],
-						sem: event["semester_org"],
-						sel: event["semester"]
+					name: 'Neu',
+					query: {
+						ref: event["id"]
 					},
 				});
 			} else {
