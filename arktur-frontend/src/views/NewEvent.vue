@@ -220,6 +220,9 @@ async function getPersons() {
 
 function getSemesterList(startSemester) {
 	let sem1 = helper.addTurnus(startSemester, 1);
+	if (sem1 == helper.getCurrentSemester()) {
+		sem1 = helper.addTurnus(sem1, 1);
+	}
 	let sem2 = helper.addTurnus(sem1, 1);
 	let sem3 = helper.addTurnus(sem2, 1);
 	let sem4 = helper.addTurnus(sem3, 1);
