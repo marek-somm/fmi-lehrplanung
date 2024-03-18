@@ -206,7 +206,7 @@ class AuthController extends Controller {
 		if ($user != null) {
 			$user->uid = $ldap_data["uid"];
 			$user->email = $ldap_data["mail"];
-			$user->salutaion = $ldap_data['thuedusalutation'];
+			$user->salutation = $ldap_data['thuedusalutation'];
 			$user->displayname = $ldap_data['displayname'];
 			$user->save();
 
@@ -219,7 +219,7 @@ class AuthController extends Controller {
 			'email' => $ldap_data["mail"],
 			'forename' => $ldap_data['fsufirstname'],
 			'surname' => $ldap_data['fsucompletesurname'],
-			'salutaion' => $ldap_data['thuedusalutation'],
+			'salutation' => $ldap_data['thuedusalutation'],
 			'displayname' => $ldap_data['displayname']
 		]);
 
