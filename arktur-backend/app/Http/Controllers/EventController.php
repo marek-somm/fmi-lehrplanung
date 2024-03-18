@@ -24,11 +24,12 @@ class EventController extends Controller {
 			'id' => ['required', 'integer'],
 		]);
 
-		if (!AuthController::isAuthenticated()) {
-			return $this->getEventLight($request);
+		$selection = ['id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr', 'extra'];
+		if (AuthController::isAuthenticated()) {
+			array_push($selection, 'room', 'time', 'exam');
 		}
 
-		$event = Event::select('id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr', 'extra', 'room', 'time', 'exam')
+		$event = Event::select($selection)
 			->where('id', $request->id)
 			->get()
 			->first();
@@ -37,59 +38,31 @@ class EventController extends Controller {
 			return response("Event not found", 404);
 		}
 
+		$selection = ['displayname', 'forename', 'surname'];
+		if (AuthController::isAuthenticated()) {
+			array_push($selection, 'email');
+		}
+
 		$people = Event::find($event->id)
 			->users()
-			->select('displayname', 'forename', 'surname', 'email')
+			->select($selection)
 			->get();
 
-		$users = Event::find($event->id)
-			->users()
-			->select('uid')
-			->get()
-			->toArray();
+		if (AuthController::isAuthenticated()) {
+			$users = Event::find($event->id)
+				->users()
+				->select('uid')
+				->get()
+				->toArray();
 
+			if (Auth::user()) {
+				$user = Auth::user()->uid;
 
-		if (Auth::user()) {
-			$user = Auth::user()->uid;
-
-			$event["own"] = false;
-			if ($this->in_sub_array($user, $users, 'uid')) {
-				$event["own"] = true;
+				if ($this->in_sub_array($user, $users, 'uid')) {
+					$event["own"] = true;
+				}
 			}
 		}
-
-		$modules = Event::find($event->id)
-			->modules()
-			->select('code as modulecode')
-			->get();
-
-		$response = [
-			'information' => $event,
-			'people' => $people,
-			'modules' => $modules
-		];
-
-		return response($response, 200);
-	}
-
-	private function getEventLight(Request $request) {
-		$request->validate([
-			'id' => ['required', 'integer'],
-		]);
-
-		$event = Event::select('id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr', 'extra')
-			->where('id', $request->id)
-			->get()
-			->first();
-
-		if (!$event) {
-			return response("Event not found", 404);
-		}
-
-		$people = Event::find($event->id)
-			->users()
-			->select('displayname', 'forename', 'surname')
-			->get();
 
 		$modules = Event::find($event->id)
 			->modules()
