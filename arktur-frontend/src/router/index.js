@@ -129,7 +129,11 @@ const routes = [
 
 async function redirectHome(to, from, next) {
 	if (store.state.User.login) {
-		next({ name: 'Dashboard' });
+		if (store.state.User.level >= 2) {
+			next({ name: 'Export' });
+		} else {
+			next({ name: 'Dashboard' });
+		}
 	} else {
 		next();
 	}
