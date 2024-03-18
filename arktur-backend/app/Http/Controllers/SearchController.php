@@ -139,7 +139,7 @@ class SearchController extends Controller {
 
 		$people = Module::find($module->id)
 			->users()
-			->select('displayname', 'forename', 'surname', 'uid')
+			->select('displayname', 'forename', 'surname')
 			->get();
 
 		$events = Module::find($module->id)
