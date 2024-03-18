@@ -9,7 +9,7 @@ class Module extends Model {
     use HasFactory;
 
     protected $fillable = [
-        'modulecode',
+        'code',
         'active_from',
         'active_to',
         'active',
