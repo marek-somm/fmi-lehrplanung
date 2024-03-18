@@ -1,22 +1,22 @@
 <template>
 	<div class="info--container" :class="{ filter: filterActive }">
 		<div class="header" v-if="selected">
-			<h3 class="title">{{ selected.data.content.title }}</h3>
+			<h3 class="title">{{ selected.data.information.title }}</h3>
 			<div class="button-bar">
 				<router-link class="new button" v-if="user.login" :to="{
-					name: 'Neu',
-					query: {
-						ref: props.selected.data.content.id
-					}
-				}">Neu</router-link>
+		name: 'Neu',
+		query: {
+			ref: props.selected.data.information.id
+		}
+	}">Neu</router-link>
 				<!-- <button class="new button" @click="newEvent" @mouseDown.middle="" v-if="user.login">Neu</button> -->
 				<button class="close button" @click="close">X</button>
 				<router-link class="delete button" v-if="user.level == 2 || isOwnEvent()" :to="{
-					name: 'Bearbeiten',
-					query: {
-						ref: props.selected.data.content.id
-					}
-				}">Ändern</router-link>
+		name: 'Bearbeiten',
+		query: {
+			ref: props.selected.data.information.id
+		}
+	}">Ändern</router-link>
 				<!-- <button class="delete button" @click="editEvent" v-if="user.level == 2 || isOwnEvent()">Ändern</button> -->
 			</div>
 		</div>
@@ -24,37 +24,37 @@
 			<h3><u>Informationen:</u></h3>
 			<div class="block">
 				<p class="attrib">
-					Veranstaltungsnummer: {{ selected.data.content.vnr }}
+					Veranstaltungsnummer: {{ selected.data.information.vnr }}
 				</p>
 				<p class="attrib">
 					Semester:
-					{{ helper.convertSemester(selected.data.content.semester) }}
+					{{ helper.convertSemester(selected.data.information.semester) }}
 				</p>
 			</div>
 			<div class="block">
 				<p class="attrib">
 					Aktiv:
-					<b>{{ selected.data.content.active ? "Ja" : "Nein" }}</b>
+					<b>{{ selected.data.information.active ? "Ja" : "Nein" }}</b>
 				</p>
 				<p class="attrib">
 					Turnus:
-					{{ helper.convertTurnus(selected.data.content.rotation) }}
+					{{ helper.convertTurnus(selected.data.information.rotation) }}
 				</p>
 				<p class="attrib">
-					Veranstaltungsart: {{ selected.data.content.type }}
+					Veranstaltungsart: {{ selected.data.information.type }}
 				</p>
 			</div>
 			<div class="block">
 				<p class="attrib">
 					Semester Wochenstunden (SWS):
 					{{
-						selected.data.content.sws
-						? selected.data.content.sws
-						: "Nicht angegeben"
-					}}
+		selected.data.information.sws
+			? selected.data.information.sws
+			: "Nicht angegeben"
+	}}
 				</p>
-				<p class="attrib" v-if="selected.data.content.extra">
-					Sonstiges: {{ selected.data.content.extra }}
+				<p class="attrib" v-if="selected.data.information.extra">
+					Sonstiges: {{ selected.data.information.extra }}
 				</p>
 			</div>
 			<People :people="selected.data.people" />
@@ -75,9 +75,7 @@
 
 <script setup>
 import { computed, onMounted } from "vue";
-import { useRouter } from "vue-router";
 import People from "./Info/People.vue";
-import search from "@/services/SearchService.js";
 import helper from "@/services/HelperService.js";
 import { useStore } from 'vuex';
 
@@ -86,7 +84,6 @@ const props = defineProps({
 	filterActive: Boolean,
 });
 const emit = defineEmits(["close", "relation"]);
-const router = useRouter();
 const store = useStore();
 
 const user = computed(() => store.state.User);
@@ -103,38 +100,12 @@ function close() {
 	emit("close");
 }
 
-function newEvent(newTab = false) {
-	router.push({
-		name: "Neu",
-		query: {
-			ref: props.selected.data.content.id
-		},
-	});
-}
-
-function editEvent() {
-	router.push({
-		name: "Bearbeiten",
-		params: {
-			id: props.selected.data.content.id,
-		},
-	});
-}
-
-function toggleAktiv() {
-	// speichern von !props.selected.data.aktiv in der datenbank
-	search.toggleAktiv(
-		props.selected.data.veranstaltungsnummer,
-		props.selected.data.semester
-	);
-}
-
 function view(relation) {
 	emit("relation", relation);
 }
 
 function isOwnEvent() {
-	return props.selected.data.content.semester > helper.getCurrentSemester() && props.selected.data.content.own;
+	return props.selected.data.information.semester > helper.getCurrentSemester() && props.selected.data.information.own;
 }
 </script>
 
