@@ -29,6 +29,16 @@
 			<SearchPanel class="searchpanel" placeholder="z.B. Sprachen" v-model="data.extra.value" />
 		</div>
 
+		<h3>Anmerkungen (optional)</h3>
+		<div class="grid">
+			<label>Raumwunsch </label>
+			<SearchPanel class="searchpanel" v-model="data.comments.room" />
+			<label>Zeitwunsch </label>
+			<SearchPanel class="searchpanel" v-model="data.comments.time" />
+			<label>Prüfungstermin </label>
+			<SearchPanel class="searchpanel" v-model="data.comments.exam" />
+		</div>
+
 		<h3>Personen</h3>
 		<div class="persons">
 			<div class="list" v-for="(person, index) in data.person.list" :key="index">
@@ -115,6 +125,11 @@ const data = reactive({
 	extra: {
 		value: null
 	},
+	comments: {
+		room: null,
+		time: null,
+		exam: null,
+	},
 	type: {
 		input: "",
 		value: "",
@@ -195,6 +210,10 @@ async function loadVeranstaltung(id) {
 				addExam(module);
 			});
 			data.extra.value = event.data.content.extra;
+
+			data.comments.room = event.data.content.room;
+			data.comments.time = event.data.content.time;
+			data.comments.exam = event.data.content.exam;
 
 			data.semester.value = event.data.content.semester;
 
@@ -295,7 +314,7 @@ function saveEvent() {
 
 async function save() {
 	let response = await update.saveEvent({
-		id: props.id,
+		id: params.ref,
 		vnr: data.vnr,
 		sem: data.semester.value,
 		title: data.title.value,
@@ -305,6 +324,7 @@ async function save() {
 		type: data.type.value,
 		people: data.person.list,
 		exams: data.exams,
+		comments: data.comments,
 	});
 	if (response) {
 		if (response.status == 422) {
@@ -331,7 +351,7 @@ async function deleteEvent() {
 	let value = confirm("Wollen Sie die Veranstaltung wirklich löschen?");
 	if (value == true) {
 		await update.deleteEvent({
-			id: props.id,
+			id: params.ref,
 		});
 		router.push({ name: "Home" });
 	}

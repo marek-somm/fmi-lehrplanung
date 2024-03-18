@@ -56,7 +56,8 @@ export default {
 				router.push({
 					name: 'Neu',
 					query: {
-						ref: event["id"]
+						ref: event["id"],
+						sem: event["semester"],
 					},
 				});
 			} else {

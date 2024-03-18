@@ -33,6 +33,16 @@
 			<SearchPanel class="searchpanel" placeholder="z.B. Sprachen" v-model="data.extra.value" />
 		</div>
 
+		<h3>Anmerkungen (optional)</h3>
+		<div class="grid">
+			<label>Raumwunsch </label>
+			<SearchPanel class="searchpanel" v-model="data.comments.room" />
+			<label>Zeitwunsch </label>
+			<SearchPanel class="searchpanel" v-model="data.comments.time" />
+			<label>Prüfungstermin </label>
+			<SearchPanel class="searchpanel" v-model="data.comments.exam" />
+		</div>
+
 		<h3>Personen</h3>
 		<div class="persons">
 			<div class="list" v-for="(person, index) in data.person.list" :key="index">
@@ -118,6 +128,11 @@ const data = reactive({
 	extra: {
 		value: null,
 	},
+	comments: {
+		room: null,
+		time: null,
+		exam: null,
+	},
 	type: {
 		input: "",
 		value: "",
@@ -169,12 +184,14 @@ const router = useRouter();
 const route = useRoute();
 const user = computed(() => store.state.User);
 
+const currentSemester = helper.getCurrentSemester();
+
 const params = route.query;
 
 loadVeranstaltung(params.ref);
 getPersons();
 
-data.semester.list = getSemesterList(helper.getCurrentSemester());
+data.semester.list = getSemesterList(currentSemester);
 data.semester.value = data.semester.list[0];
 
 async function loadVeranstaltung(id) {
@@ -199,8 +216,22 @@ async function loadVeranstaltung(id) {
 		});
 		data.extra.value = event.data.content.extra;
 
-		data.semester.list = getSemesterList(event.data.content.semester);
-		data.semester.value = data.semester.list[event.data.content.rotation - 1];
+		data.comments.room = event.data.content.room;
+		data.comments.time = event.data.content.time;
+		data.comments.exam = event.data.content.exam;
+
+		let startSemester = helper.addTurnus(event.data.content.semester, event.data.content.rotation);
+		if (params.sem) {
+			startSemester = params.sem;
+		}
+		if (startSemester <= currentSemester) {
+			startSemester = helper.addTurnus(currentSemester, 1);
+		}
+		data.semester.list = getSemesterList(currentSemester);
+		data.semester.value = data.semester.list[0];
+		if (params.sem && params.sem > currentSemester) {
+			data.semester.value = data.semester.list[helper.getSemesterDifference(currentSemester, helper.addTurnus(params.sem, -1))];
+		}
 	}
 }
 
@@ -220,9 +251,6 @@ async function getPersons() {
 
 function getSemesterList(startSemester) {
 	let sem1 = helper.addTurnus(startSemester, 1);
-	if (sem1 == helper.getCurrentSemester()) {
-		sem1 = helper.addTurnus(sem1, 1);
-	}
 	let sem2 = helper.addTurnus(sem1, 1);
 	let sem3 = helper.addTurnus(sem2, 1);
 	let sem4 = helper.addTurnus(sem3, 1);
@@ -300,7 +328,7 @@ function createEvent() {
 
 async function create() {
 	let response = await update.createEvent({
-		id: props.id,
+		id: params.ref,
 		vnr: data.vnr,
 		sem: data.semester.value,
 		title: data.title.value,
@@ -310,6 +338,7 @@ async function create() {
 		type: data.type.value,
 		people: data.person.list,
 		exams: data.exams,
+		comments: data.comments,
 	});
 	if (response) {
 		if (response.status == 422) {

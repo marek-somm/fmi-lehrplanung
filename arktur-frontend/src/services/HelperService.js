@@ -51,6 +51,20 @@ export default {
 		}
 	},
 
+	getSemesterDifference(sem1, sem2) {
+		if (sem1 > sem2) {
+			let tmp = sem1;
+			sem1 = sem2;
+			sem2 = tmp;
+		}
+
+		let diff = sem2 - sem1;
+		if (sem1 % 10 > 1 || sem2 % 10 > 1) {
+			return 0;
+		}
+		return Math.floor(diff / 5);
+	},
+
 	removeFromArray(array, element) {
 		const index = array.indexOf(element);
 		if (index > -1) {
@@ -59,15 +73,15 @@ export default {
 	},
 
 	getCurrentSemester() {
-		const store = useStore()
+		const store = useStore();
 		return store.state.currentSemester;
 	},
 
 	sortObj(obj) {
-		var obj = Object.keys(obj).sort(function(a,b){ return +b - +a;}).reduce(function(t,k) {
-			t.set(k,obj[k]);
+		var obj = Object.keys(obj).sort(function (a, b) { return +b - +a; }).reduce(function (t, k) {
+			t.set(k, obj[k]);
 			return t;
-	  },new Map());
-	  return obj
+		}, new Map());
+		return obj;
 	}
 };
