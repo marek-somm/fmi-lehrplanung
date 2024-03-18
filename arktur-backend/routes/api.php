@@ -25,7 +25,7 @@ use App\Http\Controllers\UpdateController;
 Route::group(['middleware' => ['web']], function () {
 	Route::post('/login', [AuthController::class, 'login']);
 	Route::post('/logout', [AuthController::class, 'logout']);
-	Route::get('/check', [AuthController::class, 'isAuthenticated']);
+	Route::get('/check', [AuthController::class, 'authenticationCheck']);
 
 	Route::get('/get/subjects', [GetController::class, 'getSubjects']);
 	Route::get('/get/fieldOfStudies', [GetController::class, 'getFieldOfStudies']);

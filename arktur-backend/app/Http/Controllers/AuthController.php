@@ -95,26 +95,11 @@ class AuthController extends Controller {
 	 * 
 	 * @return Response HTTP response [200] on successful authentication, [401] on failure.
 	 */
-	public function isAuthenticated(): Response {
-		if (Auth::check()) {
+	public function authenticationCheck(): Response {
+		if (self::isAuthenticated()) {
 			return self::loginSuccess();
 		}
 		return self::loginFailure();
-	}
-
-	/**
-	 * Handles queries for examination office statues.
-	 * 
-	 * @return Response true if user is examination office, false if not.
-	 */
-	public static function isExaminationOffice(): bool {
-		$user = Auth::user();
-
-		if (!$user) {
-			return false;
-		}
-
-		return $user->level >= 2;
 	}
 
 
@@ -228,6 +213,31 @@ class AuthController extends Controller {
 	}
 
 
+
+	/**
+	 * Checks if a user is authenticated.
+	 * 
+	 * @return Response true if user is authenticated, false if not.
+	 */
+	public static function isAuthenticated(): bool {
+		return Auth::check();
+	}
+
+	/**
+	 * Checks if a user has examination office statues.
+	 * 
+	 * @return Response true if user is examination office, false if not.
+	 */
+	public static function isExaminationOffice(): bool {
+		$user = Auth::user();
+
+		if (!$user) {
+			return false;
+		}
+
+		return $user->level >= 2;
+	}
+
 	/**
 	 * Uniformed response for successful login attempts.
 	 * 
@@ -249,7 +259,7 @@ class AuthController extends Controller {
 	 */
 	private static function loginFailure(array $errors = []): Response {
 		if ($errors == []) {
-			return response("", 401);
+			return response(['currentSemester' => SettingController::getSetting('semester')], 401);
 		}
 
 		return response([
