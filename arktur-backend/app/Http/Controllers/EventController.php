@@ -22,7 +22,9 @@ class EventController extends Controller {
             'id' => ['required', 'integer'],
         ]);
 
-        $event = Event::select('id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr', 'extra')
+		  $selection = ['id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr', 'extra'];
+
+        $event = Event::select('id', 'active', 'rotation', 'semester', 'sws', 'title', 'type', 'vnr', 'extra', 'room', 'time', 'exam')
             ->where('id', $request->id)
             ->get()
             ->first();

@@ -15,7 +15,10 @@ class Event extends Model {
         'type',
         'targets',
         'rotation',
-        'changed'
+        'changed',
+		  'room',
+		  'time',
+		  'exam'
     ];
 
     protected $casts = [

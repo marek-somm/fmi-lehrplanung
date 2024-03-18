@@ -41,7 +41,10 @@ class UpdateController extends Controller {
 			'extra' => $request->extra ? $request->extra : Null,
 			'type' => $request->type,
 			'rotation' => $request->rotation ? $request->rotation : Null,
-			'changed' => 1
+			'changed' => 1,
+			'room' => $request->comments["room"] ? $request->comments["room"] : Null,
+			'time' => $request->comments["time"] ? $request->comments["time"] : Null,
+			'exam' => $request->comments["exam"] ? $request->comments["exam"] : Null,
 		])->id;
 
 		foreach ($request->exams as $exam) {
