@@ -55,8 +55,8 @@ async function loginSubmit() {
 	const answer = await auth.login(payload);
 	if (answer.data.errors) {
 		data.error = answer.data.errors[Object.keys(answer.data.errors)[0]][0];
-	} else if (answer.data.success) {
-		store.dispatch('User/setLogin', answer.data.success);
+	} else if (answer.status == 200) {
+		store.dispatch('User/setLogin', 1);
 		store.dispatch('User/setLevel', answer.data.level);
 		store.dispatch('User/setUid', answer.data.uid);
 		store.dispatch('setCurrentSemester', answer.data.currentSemester);
