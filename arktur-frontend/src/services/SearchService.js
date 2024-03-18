@@ -42,8 +42,11 @@ export default {
 		return result
 	},
 
-	async getNewEntries() {
-		return rs.get("get/new")
+	async getNewEntries(semester) {
+		const payload = makePayload({
+			semester: semester
+		})
+		return rs.get("get/new", payload)
 	},
 
 	async searchPerson(value) {
