@@ -35,5 +35,21 @@ async function prevSemester() {
 </script>
 
 <style lang="scss" scoped>
-.settings-container {}
+.settings-container {
+	padding-top: 5rem;
+
+	button {
+		// color: white;
+		// background-color: $color2_dark;
+		padding: 0.5rem;
+		margin: 0rem 1rem;
+		border-radius: 0;
+		border: 1px solid gray;
+
+		&:hover {
+			cursor: pointer;
+			// background-color: $color2_dark;
+		}
+	}
+}
 </style>
