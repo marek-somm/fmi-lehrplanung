@@ -4,110 +4,61 @@
 			<div class="row semester">
 				<div class="placeholder"></div>
 				<div class="item">
-					<button
-						:class="{
-							hidden: data.semester.selected <= data.semester.current,
-						}"
-						class="button"
-						@click="prevSemester"
-					>
+					<button :class="{
+						hidden: data.semester.selected <= data.semester.current,
+					}" class="button" @click="prevSemester">
 						&larr;
 					</button>
 					<p class="name">
 						{{ helper.convertSemesterFull(data.semester.selected) }}
 					</p>
-					<button
-						:class="{
-							hidden:
-								data.semester.selected >=
-								helper.addTurnus(data.semester.current, 2),
-						}"
-						class="button"
-						@click="nextSemester"
-					>
+					<button :class="{
+						hidden:
+							data.semester.selected >=
+							helper.addTurnus(data.semester.current, 2),
+					}" class="button" @click="nextSemester">
 						&rarr;
 					</button>
 				</div>
 				<div class="button-pannel">
-					<button
-						v-show="data.hideFilter == true"
-						@click="data.hideFilter = false"
-					>
+					<button v-show="data.hideFilter == true" @click="data.hideFilter = false">
 						&plus;
 					</button>
 				</div>
 			</div>
 			<div class="row" v-if="!data.fieldOfStudies">
-				<div
-					class="item"
-					v-for="(subject, index) in data.subjects"
-					:key="index"
-				>
-					<input
-						type="radio"
-						:value="subject"
-						v-model="data.selected.subject"
-						name="subject"
-						@click="onClickSubject(subject)"
-						:id="subject"
-					/>
+				<div class="item" v-for="(subject, index) in data.subjects" :key="index">
+					<input type="radio" :value="subject" v-model="data.selected.subject" name="subject"
+						@click="onClickSubject(subject)" :id="subject" />
 					<label :for="subject">{{ subject }}</label>
 				</div>
 			</div>
 
-			<div
-				class="row-more"
-				v-if="data.fieldOfStudies"
-				:class="{ 'hide-filter': data.hideFilter }"
-			>
+			<div class="row-more" v-if="data.fieldOfStudies" :class="{ 'hide-filter': data.hideFilter }">
 				<div class="placeholder"></div>
 				<div class="item">
 					<label :for="fieldOfStudy">Studiengang: </label>
-					<select
-						name="fieldOfStudy"
-						id="fieldOfStudy"
-						v-model="data.selected.fieldOfStudy"
-						@change="onClickFieldOfStudy"
-					>
-						<option
-							v-for="(fieldOfStudy, index) in data.fieldOfStudies"
-							:key="index"
-							:value="fieldOfStudy"
-						>
+					<select name="fieldOfStudy" id="fieldOfStudy" v-model="data.selected.fieldOfStudy"
+						@change="onClickFieldOfStudy">
+						<option v-for="(fieldOfStudy, index) in data.fieldOfStudies" :key="index" :value="fieldOfStudy">
 							{{ fieldOfStudy }}
 						</option>
 					</select>
 				</div>
 				<div class="button-pannel">
 					<button v-show="!data.categories">&#10226;</button>
-					<button
-						v-show="!data.categories"
-						@click="data.hideFilter = true"
-					>
+					<button v-show="!data.categories" @click="data.hideFilter = true">
 						&minus;
 					</button>
 				</div>
 			</div>
 
-			<div
-				class="row-more"
-				v-if="data.categories"
-				:class="{ 'hide-filter': data.hideFilter }"
-			>
+			<div class="row-more" v-if="data.categories" :class="{ 'hide-filter': data.hideFilter }">
 				<div class="placeholder"></div>
 				<div class="item">
 					<label :for="category">Säule: </label>
-					<select
-						name="category"
-						id="category"
-						v-model="data.selected.category"
-						@change="onClickCategory"
-					>
-						<option
-							v-for="(category, index) in data.categories"
-							:key="index"
-							:value="category"
-						>
+					<select name="category" id="category" v-model="data.selected.category" @change="onClickCategory">
+						<option v-for="(category, index) in data.categories" :key="index" :value="category">
 							{{ category }}
 						</option>
 					</select>
@@ -119,33 +70,19 @@
 			</div>
 		</div>
 		<div class="content">
-			<InfoVeranstaltung
-				:selected="event.selected"
-				:filterActive="false"
-				:class="{ show: event.show, smaller: data.categories }"
-				class="info"
-				@close="closeVeranstaltung"
-				@relation="updateModul"
-			/>
-			<InfoModul
-				:selected="module.selected"
-				:filterActive="false"
-				:class="{ show: module.show, smaller: data.categories }"
-				class="info"
-				@close="closeModul"
-				@relation="updateVeranstaltung"
-			/>
+			<InfoVeranstaltung :selected="event.selected" :filterActive="false"
+				:class="{ show: event.show, smaller: data.categories }" class="info" @close="closeVeranstaltung"
+				@relation="updateModul" />
+			<InfoModul :selected="module.selected" :filterActive="false"
+				:class="{ show: module.show, smaller: data.categories }" class="info" @close="closeModul"
+				@relation="updateVeranstaltung" />
 			<div class="result-container" :class="{ smaller: data.categories }">
 				<div class="event-container">
 					<p v-show="data.selected.subject">
 						Gefundene Treffer: {{ data.events.length }}
 					</p>
-					<div
-						class="event"
-						v-for="(item, index) in data.events"
-						:key="index"
-						@click="updateVeranstaltung(item.id)"
-					>
+					<div class="event" v-for="(item, index) in data.events" :key="index"
+						@click="updateVeranstaltung(item.id)">
 						<a class="text"> {{ item.title }} </a>
 					</div>
 				</div>
@@ -527,7 +464,7 @@ $activeShadow: 0 0 10px rgba($selected1, 0.5);
 					display: none;
 				}
 
-				input + label {
+				input+label {
 					padding: 0.75rem 2rem;
 					width: calc(100% - 4rem);
 					height: max-content;
