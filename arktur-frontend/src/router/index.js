@@ -23,7 +23,7 @@ const routes = [
 		beforeEnter: [checkSession, redirectHome],
 		meta: {
 			title: "Lehre"
-		 }
+		}
 	},
 	{
 		path: '/login',
@@ -156,7 +156,7 @@ async function checkSession(to, from) {
 
 async function setSession() {
 	const answer = await auth.check();
-	store.dispatch('User/setLogin', answer.data.success);
+	store.dispatch('User/setLogin', answer.status == 200);
 	store.dispatch('User/setLevel', answer.data.level);
 	store.dispatch('User/setUid', answer.data.uid);
 	store.dispatch('setCurrentSemester', answer.data.currentSemester);
@@ -169,6 +169,6 @@ const router = createRouter({
 
 router.afterEach((to, from) => {
 	document.title = to.meta.title;
- })
+});
 
 export default router;
